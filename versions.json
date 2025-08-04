@@ -5,7 +5,7 @@
 			"download_url": "https://github.com/Fouton/SnapTracker/releases/download/V1.1.4.6/SnapTracker.zip",
 			"sha256": "81eda3d764a325a17b61d8e9bd7b520958cd15cf81432ffc02cb4eb406ca7af4",
 			"changelog": [
-				"Same PKMN: Sandslash is now logically obtainable with Dash Engine OR Pester Ball"
+				"Wonderful Sandslash is now logically obtainable with Dash Engine OR Pester Ball"
 			]
 		},
 		{
@@ -108,4 +108,5 @@
 		}
 	]
 }
+
 
