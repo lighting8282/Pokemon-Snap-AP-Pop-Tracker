@@ -2,7 +2,7 @@
 		{
 			"package_version": "1.1.5.0",
 			"download_url": "https://github.com/Fouton/SnapTracker/releases/download/V1.1.5.0/SnapTracker.zip",
-			"sha256": "419d3f7d3e3094882a212cb29c62c8b94437ed2d095dc4e13dd7ab9203181eff",
+			"sha256": "018961adc938df3a3891a44f079a13e27c009c1f0683149b461651a003bc66fd",
 			"changelog": [
 				"Included new AP World setting for Hard Checks. Maintained autotracking old versions."
 			]
@@ -115,6 +115,7 @@
 		}
 	]
 }
+
 
 
 
