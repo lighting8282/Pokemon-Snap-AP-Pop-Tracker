@@ -20,12 +20,14 @@
           "wonderful"
         ],
         "access_rules": [
-          "river"
+          "river, food",
+          "river, pester"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
+          "river, food",
           "river, pester"
         ]
       }

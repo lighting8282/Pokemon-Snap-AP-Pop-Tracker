@@ -20,13 +20,13 @@
           "wonderful"
         ],
         "access_rules": [
-          "river"
+          "river, dash"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "river"
+          "river, dash"
         ]
       }
     ]

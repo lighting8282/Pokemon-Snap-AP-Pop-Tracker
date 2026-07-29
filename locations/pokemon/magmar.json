@@ -1,9 +1,9 @@
 [
   {
     "name": "Magmar",
-	"chest_unopened_img": "images/pokemon/Magmar.png",
-	"chest_opened_img": "images/oakface.png",
-	"chest_opened_img_mods": "@disabled",
+    "chest_unopened_img": "images/pokemon/Magmar.png",
+    "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",
@@ -32,8 +32,7 @@
       {
         "name": "Fighting Magmar",
         "access_rules": [
-          "volcano, food",
-          "volcano, [food], pester"
+          "volcano, food"
         ]
       }
     ]

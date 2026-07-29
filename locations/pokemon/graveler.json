@@ -20,13 +20,14 @@
           "wonderful"
         ],
         "access_rules": [
-          "valley"
+          "valley, flute",
+          "valley, pester"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "valley"
+          "valley, flute"
         ]
       },
       {

@@ -1,9 +1,9 @@
 [
   {
     "name": "Metapod",
-	"chest_unopened_img": "images/pokemon/Metapod.png",
-	"chest_opened_img": "images/oakface.png",
-	"chest_opened_img_mods": "@disabled",
+    "chest_unopened_img": "images/pokemon/Metapod.png",
+    "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",
@@ -20,13 +20,13 @@
           "wonderful"
         ],
         "access_rules": [
-          "river"
+          "river, pester"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "river"
+          "river, pester"
         ]
       }
     ]

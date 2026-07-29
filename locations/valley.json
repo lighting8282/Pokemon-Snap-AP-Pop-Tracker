@@ -171,11 +171,15 @@
         "sections": [
           {
             "name": "Magikarp: Picture",
-            "ref": "Magikarp/Picture"
+            "ref": "Magikarp/Valley Picture"
           },
           {
             "name": "Magikarp: Wonderful Picture",
-            "ref": "Magikarp/Wonderful Picture"
+            "ref": "Magikarp/Valley Wonderful Picture"
+          },
+          {
+            "name": "Magikarp: Same Pkmn",
+            "ref": "Magikarp/Same Pkmn"
           },
           {
             "name": "Graveler: Picture",

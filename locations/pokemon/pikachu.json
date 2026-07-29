@@ -86,7 +86,8 @@
           "{beach}",
           "{tunnel}",
           "{river}",
-          "cave"
+          "cave, food",
+          "cave, pester"
         ]
       },
       {

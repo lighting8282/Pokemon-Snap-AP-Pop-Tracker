@@ -1,9 +1,9 @@
 [
   {
     "name": "Arcanine",
-		"chest_unopened_img": "images/pokemon/Arcanine.png",
-		"chest_opened_img": "images/oakface.png",
-		"chest_opened_img_mods": "@disabled",
+    "chest_unopened_img": "images/pokemon/Arcanine.png",
+    "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",
@@ -26,7 +26,7 @@
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "volcano, [food], pester"
+          "volcano, food, pester"
         ],
         "visibility_rules": [
           "hardchecks"

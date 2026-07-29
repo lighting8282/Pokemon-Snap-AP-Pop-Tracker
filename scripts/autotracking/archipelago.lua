@@ -218,55 +218,6 @@ function onBounce(json)
     -- your code goes here
 end
 
-magikarp = {
-    "@Magikarp/Beach Picture",
-    "@Magikarp/Tunnel Picture",
-    "@Magikarp/Volcano Picture",
-    "@Magikarp/River Picture",
-    "@Magikarp/Cave Picture",
-    "@Magikarp/Valley Picture"
-}
-magikarpWonderful = {
-    "@Magikarp/Beach Wonderful Picture",
-    "@Magikarp/Tunnel Wonderful Picture",
-    "@Magikarp/Volcano Wonderful Picture",
-    "@Magikarp/River Wonderful Picture",
-    "@Magikarp/Cave Wonderful Picture",
-    "@Magikarp/Valley Wonderful Picture"
-}
-pikachu = {
-    "@Pikachu/Beach Picture",
-    "@Pikachu/Tunnel Picture",
-    "@Pikachu/River Picture",
-    "@Pikachu/Cave Picture"
-}
-pikachuWonderful = {
-    "@Pikachu/Beach Wonderful Picture",
-    "@Pikachu/Tunnel Wonderful Picture",
-    "@Pikachu/River Wonderful Picture",
-    "@Pikachu/Cave Wonderful Picture"
-}
-bulbasaur = {
-    "@Bulbasaur/River Picture",
-    "@Bulbasaur/Cave Picture"
-}
-bulbasaurWonderful = {
-    "@Bulbasaur/River Wonderful Picture",
-    "@Bulbasaur/Cave Wonderful Picture"
-}
-bulbasaurSamePkmn = {
-    "@Bulbasaur/River Same Pkmn",
-    "@Bulbasaur/Cave Same Pkmn"
-}
-zubat = {
-    "@Zubat/Tunnel Picture",
-    "@Zubat/Cave Picture"
-}
-zubatWonderful = {
-    "@Zubat/Tunnel Wonderful Picture",
-    "@Zubat/Cave Wonderful Picture"
-}
-
 ScriptHost:AddOnLocationSectionChangedHandler("manual", function(section)
     local sectionID = section.FullID
     if sectionID == "Mew/Picture (Game Completion)" and section.AvailableChestCount == 0 then

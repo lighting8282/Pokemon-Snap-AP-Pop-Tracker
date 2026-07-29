@@ -156,7 +156,9 @@
           "{volcano, @Logic/Throwable}",
           "{river, @Logic/Throwable}",
           "{cave, @Logic/Throwable}",
-          "valley"
+          "valley, food",
+          "valley, dash",
+          "valley, pester"
         ]
       },
       {
