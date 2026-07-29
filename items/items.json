@@ -95,7 +95,7 @@
     "overlay_font_size": "16",
     "allow_disabled": false
   },
-	{
+  {
     "name": "New Pokemon Pic",
     "type": "consumable",
     "img": "images/newpic.png",

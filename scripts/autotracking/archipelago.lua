@@ -11,6 +11,20 @@ CUR_INDEX = -1
 SLOT_DATA = nil
 LOCAL_ITEMS = {}
 GLOBAL_ITEMS = {}
+NEW_VERSION = false
+
+-- Course item code -> tab title in layouts/tracker.json. Used to jump to the
+-- starting course's map on connect. STARTING_TAB_SET makes sure only the first
+-- course we receive wins, so later course unlocks don't yank the view around.
+COURSE_TABS = {
+    beach   = "Beach",
+    tunnel  = "Tunnel",
+    volcano = "Volcano",
+    river   = "River",
+    cave    = "Cave",
+    valley  = "Valley",
+}
+STARTING_TAB_SET = false
 
 function onClear(slot_data)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
@@ -18,7 +32,8 @@ function onClear(slot_data)
     end
     SLOT_DATA = slot_data
     CUR_INDEX = -1
-    
+    STARTING_TAB_SET = false
+
     -- reset locations
     for _, v in pairs(LOCATION_MAPPING) do
         if v[1] then
@@ -67,19 +82,17 @@ function onClear(slot_data)
 
     print(dump_table(slot_data))
     
-    local obj = Tracker:FindObjectForCode("normal")
-    if slot_data["Normal_Pic_Checks_enabled"] == 1 then
-        obj.Active = true
-    else    
-        obj.Active = false
-    end
+    -- The native "Pokemon Snap" apworld defines no options and sends empty slot_data.
+    -- Every seed always contains the normal, wonderful and multiple photo checks, so
+    -- both visibility toggles are simply turned on. NEW_VERSION selects the current
+    -- (non-Manual) id tables further down.
+    NEW_VERSION = true
 
-    local obj = Tracker:FindObjectForCode("wonderful")
-    if slot_data["Wonderful_Pic_Checks_enabled"] == 1 then
-        obj.Active = true
-    else    
-        obj.Active = false
-    end
+    local obj = Tracker:FindObjectForCode("normal")
+    if obj then obj.Active = true end
+
+    obj = Tracker:FindObjectForCode("wonderful")
+    if obj then obj.Active = true end
 
     LOCAL_ITEMS = {}
     GLOBAL_ITEMS = {}
@@ -111,6 +124,15 @@ function onItem(index, item_id, item_name, player_number)
     end
     if not v[1] then
         return
+    end
+    -- Open the map tab for the first course received (the precollected starting area).
+    -- UiHint is PopTracker-only, so check it exists before calling.
+    if not STARTING_TAB_SET and COURSE_TABS[v[1]] and Tracker.UiHint then
+        STARTING_TAB_SET = true
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+            print(string.format("activating starting tab: %s", COURSE_TABS[v[1]]))
+        end
+        Tracker:UiHint("ActivateTab", COURSE_TABS[v[1]])
     end
     local obj = Tracker:FindObjectForCode(v[1])
     if obj then
@@ -256,23 +278,40 @@ ScriptHost:AddOnLocationSectionChangedHandler("manual", function(section)
         else
             print("Error sending Victory")
         end
-    elseif sectionID == "Release/Release/Click Here To !release Game" and section.AvailableChestCount == 0 then
-        for _, apID in pairs(sectionIDToAPID) do
+    elseif sectionID == "Release/Release/Click Here To !release Game" and section.AvailableChestCount == 0 and NEW_VERSION then
+        for _, apID in pairs(newSectionIDToAPID) do
             if apID ~= nil then
-                local res = Archipelago:LocationChecks({apID})
-                if res then
-                    print("Sent " .. tostring(apID) .. " for " .. tostring(sectionID))
-                else
-                    print("Error sending " .. tostring(apID) .. " for " .. tostring(sectionID))
-                end
+                onLocation(apID,"")
             else
                 print(tostring(sectionID) .. " is not an AP location")
             end
         end
+    elseif sectionID == "Release/Release/Click Here To !release Game" and section.AvailableChestCount == 0 then
+        for _, apID in pairs(oldSectionIDtoAPID) do
+            if apID ~= nil then
+                onLocation(apID,"")
+            else
+                print(tostring(sectionID) .. " is not an AP location")
+            end
+        end
+    elseif (section.AvailableChestCount == 0) and NEW_VERSION then  -- this only works for 1 chest per section
+        -- AP location cleared
+        local sectionID = section.FullID
+        local apID = newSectionIDToAPID[sectionID]
+        if apID ~= nil then
+            local res = Archipelago:LocationChecks({apID})
+            if res then
+                print("Sent " .. tostring(apID) .. " for " .. tostring(sectionID))
+            else
+                print("Error sending " .. tostring(apID) .. " for " .. tostring(sectionID))
+            end
+        else
+            print(tostring(sectionID) .. " is not an AP location")
+        end
     elseif (section.AvailableChestCount == 0) then  -- this only works for 1 chest per section
         -- AP location cleared
         local sectionID = section.FullID
-        local apID = sectionIDToAPID[sectionID]
+        local apID = oldSectionIDtoAPID[sectionID]
         if apID ~= nil then
             local res = Archipelago:LocationChecks({apID})
             if res then
@@ -285,72 +324,11 @@ ScriptHost:AddOnLocationSectionChangedHandler("manual", function(section)
         end
     end
 
-    local newState = section.AvailableChestCount
-    if sectionID == "Bulbasaur/River Picture" or sectionID == "Bulbasaur/Cave Picture" then
-        for i, location in ipairs(bulbasaur) do
-            local obj = Tracker:FindObjectForCode(location)
-            if obj then
-                obj.AvailableChestCount = newState
-                print("help")
-            end
-        end
-    elseif sectionID == "Bulbasaur/River Wonderful Picture" or sectionID == "Bulbasaur/Cave Wonderful Picture" then
-        for i, location in ipairs(bulbasaurWonderful) do
-            local obj = Tracker:FindObjectForCode(location)
-            if obj then
-                obj.AvailableChestCount = newState
-            end
-        end
-    elseif sectionID == "Bulbasaur/River Same Pkmn" or sectionID == "Bulbasaur/Cave Same Pkmn" then
-        for i, location in ipairs(bulbasaurSamePkmn) do
-            local obj = Tracker:FindObjectForCode(location)
-            if obj then
-                obj.AvailableChestCount = newState
-            end
-        end
-    elseif sectionID == "Zubat/Tunnel Picture" or sectionID == "Zubat/Cave Picture" then
-        for i, location in ipairs(zubat) do
-            local obj = Tracker:FindObjectForCode(location)
-            if obj then
-                obj.AvailableChestCount = newState
-            end
-        end
-    elseif sectionID == "Zubat/Tunnel Wonderful Picture" or sectionID == "Zubat/Cave Wonderful Picture" then
-        for i, location in ipairs(zubatWonderful) do
-            local obj = Tracker:FindObjectForCode(location)
-            if obj then
-                obj.AvailableChestCount = newState
-            end
-        end
-    elseif sectionID == "Pikachu/Tunnel Picture" or sectionID == "Pikachu/Cave Picture" or sectionID == "Pikachu/Beach Picture" or sectionID == "Pikachu/River Picture" then
-        for i, location in ipairs(pikachu) do
-            local obj = Tracker:FindObjectForCode(location)
-            if obj then
-                obj.AvailableChestCount = newState
-            end
-        end
-    elseif sectionID == "Pikachu/Tunnel Wonderful Picture" or sectionID == "Pikachu/Cave Wonderful Picture" or sectionID == "Pikachu/Beach Wonderful Picture" or sectionID == "Pikachu/River Wonderful Picture" then
-        for i, location in ipairs(pikachuWonderful) do
-            local obj = Tracker:FindObjectForCode(location)
-            if obj then
-                obj.AvailableChestCount = newState
-            end
-        end
-    elseif sectionID == "Magikarp/Tunnel Picture" or sectionID == "Magikarp/Cave Picture" or sectionID == "Magikarp/Beach Picture" or sectionID == "Magikarp/River Picture" or sectionID == "Magikarp/Volcano Picture" or sectionID == "Magikarp/Valley Picture" then
-        for i, location in ipairs(magikarp) do
-            local obj = Tracker:FindObjectForCode(location)
-            if obj then
-                obj.AvailableChestCount = newState
-            end
-        end
-    elseif sectionID == "Magikarp/Tunnel Wonderful Picture" or sectionID == "Magikarp/Cave Wonderful Picture" or sectionID == "Magikarp/Beach Wonderful Picture" or sectionID == "Magikarp/River Wonderful Picture" or sectionID == "Magikarp/Volcano Wonderful Picture" or sectionID == "Magikarp/Valley Wonderful Picture" then
-        for i, location in ipairs(magikarpWonderful) do
-            local obj = Tracker:FindObjectForCode(location)
-            if obj then
-                obj.AvailableChestCount = newState
-            end
-        end
-    end
+    -- NOTE: the old Manual world had ONE check covering all courses for Bulbasaur,
+    -- Zubat, Pikachu and Magikarp, so this handler used to mirror a cleared section
+    -- onto its siblings. The native apworld gives each course its own location
+    -- (e.g. Bulbasaur (River) = 1, Bulbasaur (Cave) = 64), so mirroring would clear
+    -- checks the player has not actually done. Intentionally removed.
 
 end)
 

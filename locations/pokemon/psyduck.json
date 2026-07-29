@@ -26,6 +26,9 @@
         "name": "Same Pkmn",
         "access_rules": [
           "river, @Logic/Throwable"
+        ],
+        "visibility_rules": [
+          "hardchecks"
         ]
       }
     ]

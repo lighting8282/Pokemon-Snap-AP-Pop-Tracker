@@ -19,7 +19,8 @@
           "wonderful"
         ],
         "access_rules": [
-          "valley, pester"
+          "valley, pester",
+		  "valley, dash"
         ]
       }
     ]

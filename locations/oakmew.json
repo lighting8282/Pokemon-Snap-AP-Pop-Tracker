@@ -29,7 +29,7 @@
         "map_locations": [
           {
             "map": "oakmew",
-            "x": 104,
+            "x": 78,
             "y": 85
           }
         ]
@@ -49,24 +49,7 @@
         "map_locations": [
           {
             "map": "oakmew",
-            "x": 156,
-            "y": 85
-          }
-        ]
-      },
-      {
-        "name": "Zero-One",
-        "chest_unopened_img": "images/otherchecks/ZeroOne.png",
-        "chest_opened_img": "images/oakface.png",
-        "sections": [
-          {
-            "name": "Free"
-          }
-        ],
-        "map_locations": [
-          {
-            "map": "oakmew",
-            "x": 52,
+            "x": 130,
             "y": 85
           }
         ]

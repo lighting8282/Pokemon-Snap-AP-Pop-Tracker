@@ -12,6 +12,12 @@
     "codes": "wonderful"
   },
 	{
+    "name": "Hard Checks",
+    "type": "toggle",
+    "img": "images/hard.png",
+    "codes": "hardchecks"
+  },
+	{
     "name": "Show Release Button",
     "type": "toggle",
     "img": "images/otherchecks/release.png",
