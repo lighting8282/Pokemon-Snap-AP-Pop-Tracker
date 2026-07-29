@@ -3,6 +3,7 @@
     "name": "Zubat",
     "chest_unopened_img": "images/pokemon/Zubat.png",
     "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Tunnel Picture",

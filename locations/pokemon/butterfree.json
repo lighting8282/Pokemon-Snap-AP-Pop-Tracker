@@ -3,6 +3,7 @@
     "name": "Butterfree",
     "chest_unopened_img": "images/pokemon/Butterfree.png",
     "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",

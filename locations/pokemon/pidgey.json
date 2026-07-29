@@ -3,6 +3,7 @@
     "name": "Pidgey",
     "chest_unopened_img": "images/pokemon/Pidgey.png",
     "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",

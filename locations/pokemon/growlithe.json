@@ -3,6 +3,7 @@
     "name": "Growlithe",
     "chest_unopened_img": "images/pokemon/Growlithe.png",
     "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",

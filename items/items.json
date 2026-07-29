@@ -104,6 +104,12 @@
     "codes": "newpic"
   },
   {
+    "name": "Legend: a faded Prof. Oak marks a check you have already submitted",
+    "type": "static",
+    "img": "images/oakface.png",
+    "codes": "oaklegend"
+  },
+  {
     "name": "Pokemon Sign Pic",
     "type": "progressive",
     "codes": "signpics",

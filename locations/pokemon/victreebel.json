@@ -3,6 +3,7 @@
     "name": "Victreebel",
     "chest_unopened_img": "images/pokemon/Victreebel.png",
     "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",

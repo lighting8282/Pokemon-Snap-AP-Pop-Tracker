@@ -3,6 +3,7 @@
     "name": "Staryu",
     "chest_unopened_img": "images/pokemon/Staryu.png",
     "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",

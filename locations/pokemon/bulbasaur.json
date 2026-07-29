@@ -3,6 +3,7 @@
     "name": "Bulbasaur",
     "chest_unopened_img": "images/pokemon/Bulbasaur.png",
     "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "River Picture",
