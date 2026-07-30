@@ -1,0 +1,25 @@
+{
+  "versions": [
+    {
+      "package_version": "1.3.0.1",
+      "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.3.0.1/SnapTracker-1.3.0.1.zip",
+      "sha256": "16a2ed98e20bb8f1d3087df509f406dc2cffbee769b021168425846ce2c3f78e",
+      "changelog": [
+        "Added versions.json so PopTracker can offer updates automatically."
+      ]
+    },
+    {
+      "package_version": "1.3.0.0",
+      "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.3.0.0/SnapTracker-1.3.0.0.zip",
+      "sha256": "70ab618cbfbcd535b5c4c50129e7805be7b188da4b0cbdfc75a8967d07b67a81",
+      "changelog": [
+        "Retargeted to the native Pokemon Snap apworld, world_version 0.4.0.",
+        "All 200 locations autotrack, including the three secret exits.",
+        "Access rules corrected to match the apworld's logic.",
+        "Removed five locations that only existed in the Manual implementation.",
+        "Checks now use PopTracker's standard closed/open chest icons.",
+        "The starting course's map tab opens automatically on connect."
+      ]
+    }
+  ]
+}
