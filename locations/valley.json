@@ -83,9 +83,6 @@
       },
       {
         "name": "Pokemon Sign",
-        "chest_unopened_img": "images/otherchecks/MtDugtrio.png",
-        "chest_opened_img": "images/oakface.png",
-        "chest_opened_img_mods": "@disabled",
         "sections": [
           {
             "name": "Mt Dugtrio",
@@ -331,9 +328,6 @@
           },
           {
             "name": "Secret Exit: Valley",
-            "chest_unopened_img": "images/pokemon/mankey.png",
-            "chest_opened_img": "images/oakface.png",
-            "chest_opened_img_mods": "@disabled",
             "access_rules": [
               "pester"
             ]

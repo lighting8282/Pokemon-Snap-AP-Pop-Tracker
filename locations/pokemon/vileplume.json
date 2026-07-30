@@ -1,9 +1,6 @@
 [
   {
     "name": "Vileplume",
-    "chest_unopened_img": "images/pokemon/Vileplume.png",
-    "chest_opened_img": "images/oakface.png",
-    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",

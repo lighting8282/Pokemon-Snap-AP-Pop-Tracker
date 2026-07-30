@@ -1,9 +1,6 @@
 [
   {
     "name": "Electrode",
-    "chest_unopened_img": "images/pokemon/Electrode.png",
-    "chest_opened_img": "images/oakface.png",
-    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",

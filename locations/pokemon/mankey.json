@@ -1,9 +1,6 @@
 [
   {
     "name": "Mankey",
-    "chest_unopened_img": "images/pokemon/Mankey.png",
-    "chest_opened_img": "images/oakface.png",
-    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",

@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "name": "Pokemon Food",
     "type": "toggle",
@@ -102,12 +102,6 @@
     "max_quantity": 63,
     "overlay_font_size": "16",
     "codes": "newpic"
-  },
-  {
-    "name": "Legend: a faded Prof. Oak marks a check you have already submitted",
-    "type": "static",
-    "img": "images/oakface.png",
-    "codes": "oaklegend"
   },
   {
     "name": "Pokemon Sign Pic",

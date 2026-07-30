@@ -255,9 +255,6 @@
       },
       {
         "name": "Pokemon Sign",
-        "chest_unopened_img": "images/otherchecks/PinsirShadow.png",
-        "chest_opened_img": "images/oakface.png",
-        "chest_opened_img_mods": "@disabled",
         "sections": [
           {
             "name": "Pinsir Shadow",
@@ -308,9 +305,6 @@
       },
       {
         "name": "Secret Exit",
-        "chest_unopened_img": "images/pokemon/Electrode.png",
-        "chest_opened_img": "images/oakface.png",
-        "chest_opened_img_mods": "@disabled",
         "sections": [
           {
             "name": "Tunnel",
