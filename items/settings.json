@@ -1,29 +1,25 @@
 [
-	{
+  {
     "name": "Normal Pictures",
     "type": "toggle",
     "img": "images/otherchecks/new.png",
-    "codes": "normal"
+    "codes": "normal",
+    "initial_active_state": true
   },
-	{
+  {
     "name": "Wonderful Pictures",
     "type": "toggle",
     "img": "images/wonderful.png",
-    "codes": "wonderful"
+    "codes": "wonderful",
+    "initial_active_state": true
   },
-	{
-    "name": "Hard Checks",
-    "type": "toggle",
-    "img": "images/hard.png",
-    "codes": "hardchecks"
-  },
-	{
+  {
     "name": "Show Release Button",
     "type": "toggle",
     "img": "images/otherchecks/release.png",
     "codes": "release"
   },
-	{
+  {
     "name": "Complete",
     "type": "toggle",
     "codes": "complete"

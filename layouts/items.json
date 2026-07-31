@@ -11,12 +11,24 @@
         "item_width": 176,
         "item_height": 40,
         "rows": [
-          [ "beach"],
-          [ "tunnel"],
-          [ "volcano"],
-          [ "river"],
-          [ "cave"],
-          [ "valley"]
+          [
+            "beach"
+          ],
+          [
+            "tunnel"
+          ],
+          [
+            "volcano"
+          ],
+          [
+            "river"
+          ],
+          [
+            "cave"
+          ],
+          [
+            "valley"
+          ]
         ]
       },
       {
@@ -31,10 +43,22 @@
             "item_width": 40,
             "item_height": 40,
             "rows": [
-              [ "food","pester"],
-              [ "flute","dash"],
-              [ "sign","signpics"],
-              [ "","oaklegend"]
+              [
+                "food",
+                "pester"
+              ],
+              [
+                "flute",
+                "dash"
+              ],
+              [
+                "sign",
+                "signpics"
+              ],
+              [
+                "",
+                "oaklegend"
+              ]
             ]
           },
           {
@@ -44,7 +68,9 @@
             "item_width": 0,
             "item_height": 0,
             "rows": [
-              [ ""]
+              [
+                ""
+              ]
             ]
           },
           {
@@ -54,8 +80,12 @@
             "item_width": 55,
             "item_height": 40,
             "rows": [
-              [ "newpic"],
-              [ "film" ]
+              [
+                "newpic"
+              ],
+              [
+                "film"
+              ]
             ]
           }
         ]
@@ -74,7 +104,11 @@
         "margin": "0,0",
         "h_alignment": "left",
         "rows": [
-          ["normal", "wonderful", "hardchecks", "release"]
+          [
+            "normal",
+            "wonderful",
+            "release"
+          ]
         ]
       }
     ]
