@@ -32,8 +32,8 @@ AP button.
 - **Your starting course** — the randomly precollected course is detected on connect and its
   map tab is opened automatically
 
-Checks use PopTracker's standard chest icons: closed while outstanding, open once submitted
-to Prof. Oak.
+Each check shows the Pokemon's own sprite while outstanding, and Prof. Oak once the photo has
+been submitted to him.
 
 ## Naming
 
