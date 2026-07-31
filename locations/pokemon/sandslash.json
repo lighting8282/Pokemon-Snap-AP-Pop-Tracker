@@ -1,6 +1,9 @@
 [
   {
     "name": "Sandslash",
+    "chest_unopened_img": "images/pokemon/Sandslash.png",
+    "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",
@@ -18,7 +21,7 @@
         ],
         "access_rules": [
           "valley, pester",
-          "valley, dash"
+		  "valley, dash"
         ]
       }
     ]

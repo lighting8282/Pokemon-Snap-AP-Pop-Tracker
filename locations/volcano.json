@@ -7,6 +7,9 @@
     "children": [
       {
         "name": "Pokemon Sign",
+        "chest_unopened_img": "images/otherchecks/KoffingSmoke.png",
+        "chest_opened_img": "images/oakface.png",
+        "chest_opened_img_mods": "@disabled",
         "sections": [
           {
             "name": "Koffing Smoke",

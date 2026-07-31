@@ -1,6 +1,9 @@
 [
   {
     "name": "Geodude",
+    "chest_unopened_img": "images/pokemon/Geodude.png",
+    "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",

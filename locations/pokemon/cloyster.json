@@ -1,6 +1,9 @@
 [
   {
     "name": "Cloyster",
+    "chest_unopened_img": "images/pokemon/Cloyster.png",
+    "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",

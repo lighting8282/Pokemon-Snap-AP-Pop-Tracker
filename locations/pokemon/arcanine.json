@@ -1,6 +1,9 @@
 [
   {
     "name": "Arcanine",
+    "chest_unopened_img": "images/pokemon/Arcanine.png",
+    "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",

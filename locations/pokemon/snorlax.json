@@ -1,6 +1,9 @@
 [
   {
     "name": "Snorlax",
+    "chest_unopened_img": "images/pokemon/Snorlax.png",
+    "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",

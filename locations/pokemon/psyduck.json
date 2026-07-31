@@ -1,6 +1,9 @@
 [
   {
     "name": "Psyduck",
+    "chest_unopened_img": "images/pokemon/Psyduck.png",
+    "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",
