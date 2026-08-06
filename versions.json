@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "package_version": "1.4.0.0",
+      "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.4.0.0/SnapTracker-1.4.0.0.zip",
+      "sha256": "9507d34a0d273373cd74f5f94b1fbf69a6be768d7a0c2c5fed221585c2772b19",
+      "changelog": [
+        "The map now follows you automatically as you move between courses, thanks to nielrenned.",
+        "New Pokedex tab showing which of the 63 Pokemon you have photographed.",
+        "The sign pictures are tracked individually, so you can see which ones you still need to hint for.",
+        "Clicking a course item opens its map. Course items can no longer be toggled by hand."
+      ]
+    },
+    {
       "package_version": "1.3.0.2",
       "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.3.0.2/SnapTracker-1.3.0.2.zip",
       "sha256": "8700f62fe65587f0bbfdc177002e22cc1a473c5f2e1ac4cd6fd98167ed8b1209",
