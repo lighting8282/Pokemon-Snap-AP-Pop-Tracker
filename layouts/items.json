@@ -53,11 +53,29 @@
               ],
               [
                 "sign",
-                "signpics"
+                ""
+              ]
+            ]
+          },
+          {
+            "_signs": true,
+            "type": "itemgrid",
+            "h_alignment": "left",
+            "item_margin": "8,4",
+            "item_width": 40,
+            "item_height": 40,
+            "rows": [
+              [
+                "signkingler",
+                "signpinsir"
               ],
               [
-                "",
-                "oaklegend"
+                "signkoffing",
+                "signcubone"
+              ],
+              [
+                "signmewtwo",
+                "signdugtrio"
               ]
             ]
           },
@@ -108,6 +126,99 @@
             "normal",
             "wonderful",
             "release"
+          ]
+        ]
+      }
+    ]
+  },
+  "dex_grid": {
+    "type": "array",
+    "orientation": "vertical",
+    "margin": "4,4",
+    "content": [
+      {
+        "type": "itemgrid",
+        "h_alignment": "left",
+        "item_margin": "4,4",
+        "item_width": 40,
+        "item_height": 40,
+        "rows": [
+          [
+            "dexarcanine",
+            "dexarticuno",
+            "dexbulbasaur",
+            "dexbutterfree",
+            "dexchansey",
+            "dexcharizard",
+            "dexcharmander",
+            "dexcharmeleon",
+            "dexcloyster"
+          ],
+          [
+            "dexdiglett",
+            "dexditto",
+            "dexdoduo",
+            "dexdragonite",
+            "dexdratini",
+            "dexdugtrio",
+            "dexeevee",
+            "dexelectabuzz",
+            "dexelectrode"
+          ],
+          [
+            "dexgeodude",
+            "dexgoldeen",
+            "dexgraveler",
+            "dexgrimer",
+            "dexgrowlithe",
+            "dexgyarados",
+            "dexhaunter",
+            "dexjigglypuff",
+            "dexjynx"
+          ],
+          [
+            "dexkakuna",
+            "dexkangaskhan",
+            "dexkoffing",
+            "dexlapras",
+            "dexmagikarp",
+            "dexmagmar",
+            "dexmagnemite",
+            "dexmagneton",
+            "dexmankey"
+          ],
+          [
+            "dexmeowth",
+            "dexmetapod",
+            "dexmew",
+            "dexmoltres",
+            "dexmuk",
+            "dexpidgey",
+            "dexpikachu",
+            "dexpoliwag",
+            "dexporygon"
+          ],
+          [
+            "dexpsyduck",
+            "dexrapidash",
+            "dexsandshrew",
+            "dexsandslash",
+            "dexscyther",
+            "dexshellder",
+            "dexslowbro",
+            "dexslowpoke",
+            "dexsnorlax"
+          ],
+          [
+            "dexsquirtle",
+            "dexstarmie",
+            "dexstaryu",
+            "dexvictreebel",
+            "dexvileplume",
+            "dexvulpix",
+            "dexweepinbell",
+            "dexzapdos",
+            "dexzubat"
           ]
         ]
       }

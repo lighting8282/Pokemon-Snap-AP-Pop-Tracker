@@ -22,10 +22,10 @@ for id = 5000, 5062 do
     ITEM_MAPPING[id] = {"newpic","consumable"}
 end
 
--- 6 sign pictures all advance the signpics progressive
-for id = 6000, 6005 do
-    ITEM_MAPPING[id] = {"signpics","progressive"}
-end
-
-
-
+-- the six sign pictures, tracked individually so you can see which are missing
+ITEM_MAPPING[6000] = {"signkingler","toggle"}   -- A Picture of Kingler Rock
+ITEM_MAPPING[6001] = {"signpinsir","toggle"}   -- A Picture of Pinsir's Shadow
+ITEM_MAPPING[6002] = {"signkoffing","toggle"}   -- A Picture of Koffing Smoke
+ITEM_MAPPING[6003] = {"signcubone","toggle"}   -- A Picture of Cubone Tree
+ITEM_MAPPING[6004] = {"signmewtwo","toggle"}   -- A Picture of The Mewtwo Constellation
+ITEM_MAPPING[6005] = {"signdugtrio","toggle"}   -- A Picture of Dugtrio Mountain

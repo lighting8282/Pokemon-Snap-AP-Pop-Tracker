@@ -6,6 +6,7 @@
 ScriptHost:LoadScript("scripts/autotracking/item_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/location_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/sectionID.lua")
+ScriptHost:LoadScript("scripts/autotracking/dex_mapping.lua")
 
 CUR_INDEX = -1
 SLOT_DATA = nil
@@ -35,6 +36,30 @@ TAB_NAMES = {
     COURSE_TABS.valley,
 }
 
+-- The course items also jump to their map when clicked. They hold autotracked
+-- state, so COURSE_OWNED shadows what the server has actually sent: a click
+-- flips the toggle, we switch tabs and put the state straight back. This means
+-- the course items cannot be toggled by hand - autotracking is the only thing
+-- that sets them.
+COURSE_OWNED = {}
+JUMP_BUSY = false
+
+for code, tab in pairs(COURSE_TABS) do
+    ScriptHost:AddWatchForCode("coursewatch_" .. code, code, function(c)
+        if JUMP_BUSY then return end
+        local obj = Tracker:FindObjectForCode(c)
+        if not obj then return end
+        local owned = COURSE_OWNED[c] and true or false
+        if obj.Active == owned then return end   -- autotracking, not a click
+        JUMP_BUSY = true
+        if Tracker.UiHint then
+            Tracker:UiHint("ActivateTab", COURSE_TABS[c])
+        end
+        obj.Active = owned                       -- undo the click
+        JUMP_BUSY = false
+    end)
+end
+
 function onClear(slot_data)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
         print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
@@ -42,6 +67,15 @@ function onClear(slot_data)
     SLOT_DATA = slot_data
     CUR_INDEX = -1
     STARTING_TAB_SET = false
+    COURSE_OWNED = {}
+
+    -- reset the Pokedex
+    if PHOTO_DEX then
+        for _, code in pairs(PHOTO_DEX) do
+            local d = Tracker:FindObjectForCode(code)
+            if d then d.Active = false end
+        end
+    end
 
     -- reset locations
     for _, v in pairs(LOCATION_MAPPING) do
@@ -70,6 +104,7 @@ function onClear(slot_data)
             local obj = Tracker:FindObjectForCode(v[1])
             if obj then
                 if v[2] == "toggle" then
+                    if COURSE_TABS[v[1]] then COURSE_OWNED[v[1]] = nil end
                     obj.Active = false
                 elseif v[2] == "progressive" then
                     obj.CurrentStage = 0
@@ -146,6 +181,8 @@ function onItem(index, item_id, item_name, player_number)
     local obj = Tracker:FindObjectForCode(v[1])
     if obj then
         if v[2] == "toggle" then
+            -- shadow first, so the watch reads this as autotracking not a click
+            if COURSE_TABS[v[1]] then COURSE_OWNED[v[1]] = true end
             obj.Active = true
         elseif v[2] == "progressive" then
             if obj.Active then
@@ -193,6 +230,13 @@ function onLocation(location_id, location_name)
     if not location_array or not location_array[1] then
         print(string.format("onLocation: could not find location mapping for id %s", location_id))
         return
+    end
+
+    -- a cleared base photo also marks the Pokemon as photographed
+    local dex = PHOTO_DEX and PHOTO_DEX[location_id]
+    if dex then
+        local d = Tracker:FindObjectForCode(dex)
+        if d then d.Active = true end
     end
 
     for _, location in pairs(location_array) do

@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "name": "Pokemon Food",
     "type": "toggle",
@@ -110,41 +110,480 @@
     "codes": "oaklegend"
   },
   {
-    "name": "Pokemon Sign Pic",
-    "type": "progressive",
-    "codes": "signpics",
-    "loop": false,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/signpic0.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "inherit_codes": false,
-        "img": "images/signpic1.png"
-      },
-      {
-        "inherit_codes": false,
-        "img": "images/signpic2.png"
-      },
-      {
-        "inherit_codes": false,
-        "img": "images/signpic3.png"
-      },
-      {
-        "inherit_codes": false,
-        "img": "images/signpic4.png"
-      },
-      {
-        "inherit_codes": false,
-        "img": "images/signpic5.png"
-      },
-      {
-        "inherit_codes": false,
-        "img": "images/signpic6.png",
-        "codes": "allsigns"
-      }
-    ]
+    "name": "A Picture of Kingler Rock",
+    "type": "toggle",
+    "img": "images/otherchecks/KinglerRock.png",
+    "codes": "signkingler"
+  },
+  {
+    "name": "A Picture of Pinsir's Shadow",
+    "type": "toggle",
+    "img": "images/otherchecks/PinsirShadow.png",
+    "codes": "signpinsir"
+  },
+  {
+    "name": "A Picture of Koffing Smoke",
+    "type": "toggle",
+    "img": "images/otherchecks/KoffingSmoke.png",
+    "codes": "signkoffing"
+  },
+  {
+    "name": "A Picture of Cubone Tree",
+    "type": "toggle",
+    "img": "images/otherchecks/CuboneTree.png",
+    "codes": "signcubone"
+  },
+  {
+    "name": "A Picture of The Mewtwo Constellation",
+    "type": "toggle",
+    "img": "images/otherchecks/MewtwoConstellation.png",
+    "codes": "signmewtwo"
+  },
+  {
+    "name": "A Picture of Dugtrio Mountain",
+    "type": "toggle",
+    "img": "images/otherchecks/MtDugtrio.png",
+    "codes": "signdugtrio"
+  },
+  {
+    "name": "Arcanine photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Arcanine.png",
+    "img_mods": "@disabled",
+    "codes": "dexarcanine"
+  },
+  {
+    "name": "Articuno photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Articuno.png",
+    "img_mods": "@disabled",
+    "codes": "dexarticuno"
+  },
+  {
+    "name": "Bulbasaur photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Bulbasaur.png",
+    "img_mods": "@disabled",
+    "codes": "dexbulbasaur"
+  },
+  {
+    "name": "Butterfree photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Butterfree.png",
+    "img_mods": "@disabled",
+    "codes": "dexbutterfree"
+  },
+  {
+    "name": "Chansey photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Chansey.png",
+    "img_mods": "@disabled",
+    "codes": "dexchansey"
+  },
+  {
+    "name": "Charizard photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Charizard.png",
+    "img_mods": "@disabled",
+    "codes": "dexcharizard"
+  },
+  {
+    "name": "Charmander photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Charmander.png",
+    "img_mods": "@disabled",
+    "codes": "dexcharmander"
+  },
+  {
+    "name": "Charmeleon photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Charmeleon.png",
+    "img_mods": "@disabled",
+    "codes": "dexcharmeleon"
+  },
+  {
+    "name": "Cloyster photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Cloyster.png",
+    "img_mods": "@disabled",
+    "codes": "dexcloyster"
+  },
+  {
+    "name": "Diglett photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Diglett.png",
+    "img_mods": "@disabled",
+    "codes": "dexdiglett"
+  },
+  {
+    "name": "Ditto photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Ditto.png",
+    "img_mods": "@disabled",
+    "codes": "dexditto"
+  },
+  {
+    "name": "Doduo photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Doduo.png",
+    "img_mods": "@disabled",
+    "codes": "dexdoduo"
+  },
+  {
+    "name": "Dragonite photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Dragonite.png",
+    "img_mods": "@disabled",
+    "codes": "dexdragonite"
+  },
+  {
+    "name": "Dratini photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Dratini.png",
+    "img_mods": "@disabled",
+    "codes": "dexdratini"
+  },
+  {
+    "name": "Dugtrio photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Dugtrio.png",
+    "img_mods": "@disabled",
+    "codes": "dexdugtrio"
+  },
+  {
+    "name": "Eevee photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Eevee.png",
+    "img_mods": "@disabled",
+    "codes": "dexeevee"
+  },
+  {
+    "name": "Electabuzz photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Electabuzz.png",
+    "img_mods": "@disabled",
+    "codes": "dexelectabuzz"
+  },
+  {
+    "name": "Electrode photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Electrode.png",
+    "img_mods": "@disabled",
+    "codes": "dexelectrode"
+  },
+  {
+    "name": "Geodude photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Geodude.png",
+    "img_mods": "@disabled",
+    "codes": "dexgeodude"
+  },
+  {
+    "name": "Goldeen photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Goldeen.png",
+    "img_mods": "@disabled",
+    "codes": "dexgoldeen"
+  },
+  {
+    "name": "Graveler photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Graveler.png",
+    "img_mods": "@disabled",
+    "codes": "dexgraveler"
+  },
+  {
+    "name": "Grimer photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Grimer.png",
+    "img_mods": "@disabled",
+    "codes": "dexgrimer"
+  },
+  {
+    "name": "Growlithe photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Growlithe.png",
+    "img_mods": "@disabled",
+    "codes": "dexgrowlithe"
+  },
+  {
+    "name": "Gyarados photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Gyarados.png",
+    "img_mods": "@disabled",
+    "codes": "dexgyarados"
+  },
+  {
+    "name": "Haunter photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Haunter.png",
+    "img_mods": "@disabled",
+    "codes": "dexhaunter"
+  },
+  {
+    "name": "Jigglypuff photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Jigglypuff.png",
+    "img_mods": "@disabled",
+    "codes": "dexjigglypuff"
+  },
+  {
+    "name": "Jynx photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Jynx.png",
+    "img_mods": "@disabled",
+    "codes": "dexjynx"
+  },
+  {
+    "name": "Kakuna photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Kakuna.png",
+    "img_mods": "@disabled",
+    "codes": "dexkakuna"
+  },
+  {
+    "name": "Kangaskhan photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Kangaskhan.png",
+    "img_mods": "@disabled",
+    "codes": "dexkangaskhan"
+  },
+  {
+    "name": "Koffing photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Koffing.png",
+    "img_mods": "@disabled",
+    "codes": "dexkoffing"
+  },
+  {
+    "name": "Lapras photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Lapras.png",
+    "img_mods": "@disabled",
+    "codes": "dexlapras"
+  },
+  {
+    "name": "Magikarp photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Magikarp.png",
+    "img_mods": "@disabled",
+    "codes": "dexmagikarp"
+  },
+  {
+    "name": "Magmar photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Magmar.png",
+    "img_mods": "@disabled",
+    "codes": "dexmagmar"
+  },
+  {
+    "name": "Magnemite photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Magnemite.png",
+    "img_mods": "@disabled",
+    "codes": "dexmagnemite"
+  },
+  {
+    "name": "Magneton photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Magneton.png",
+    "img_mods": "@disabled",
+    "codes": "dexmagneton"
+  },
+  {
+    "name": "Mankey photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Mankey.png",
+    "img_mods": "@disabled",
+    "codes": "dexmankey"
+  },
+  {
+    "name": "Meowth photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Meowth.png",
+    "img_mods": "@disabled",
+    "codes": "dexmeowth"
+  },
+  {
+    "name": "Metapod photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Metapod.png",
+    "img_mods": "@disabled",
+    "codes": "dexmetapod"
+  },
+  {
+    "name": "Mew photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Mew.png",
+    "img_mods": "@disabled",
+    "codes": "dexmew"
+  },
+  {
+    "name": "Moltres photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Moltres.png",
+    "img_mods": "@disabled",
+    "codes": "dexmoltres"
+  },
+  {
+    "name": "Muk photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Muk.png",
+    "img_mods": "@disabled",
+    "codes": "dexmuk"
+  },
+  {
+    "name": "Pidgey photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Pidgey.png",
+    "img_mods": "@disabled",
+    "codes": "dexpidgey"
+  },
+  {
+    "name": "Pikachu photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Pikachu.png",
+    "img_mods": "@disabled",
+    "codes": "dexpikachu"
+  },
+  {
+    "name": "Poliwag photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Poliwag.png",
+    "img_mods": "@disabled",
+    "codes": "dexpoliwag"
+  },
+  {
+    "name": "Porygon photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Porygon.png",
+    "img_mods": "@disabled",
+    "codes": "dexporygon"
+  },
+  {
+    "name": "Psyduck photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Psyduck.png",
+    "img_mods": "@disabled",
+    "codes": "dexpsyduck"
+  },
+  {
+    "name": "Rapidash photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Rapidash.png",
+    "img_mods": "@disabled",
+    "codes": "dexrapidash"
+  },
+  {
+    "name": "Sandshrew photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Sandshrew.png",
+    "img_mods": "@disabled",
+    "codes": "dexsandshrew"
+  },
+  {
+    "name": "Sandslash photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Sandslash.png",
+    "img_mods": "@disabled",
+    "codes": "dexsandslash"
+  },
+  {
+    "name": "Scyther photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Scyther.png",
+    "img_mods": "@disabled",
+    "codes": "dexscyther"
+  },
+  {
+    "name": "Shellder photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Shellder.png",
+    "img_mods": "@disabled",
+    "codes": "dexshellder"
+  },
+  {
+    "name": "Slowbro photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Slowbro.png",
+    "img_mods": "@disabled",
+    "codes": "dexslowbro"
+  },
+  {
+    "name": "Slowpoke photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Slowpoke.png",
+    "img_mods": "@disabled",
+    "codes": "dexslowpoke"
+  },
+  {
+    "name": "Snorlax photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Snorlax.png",
+    "img_mods": "@disabled",
+    "codes": "dexsnorlax"
+  },
+  {
+    "name": "Squirtle photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Squirtle.png",
+    "img_mods": "@disabled",
+    "codes": "dexsquirtle"
+  },
+  {
+    "name": "Starmie photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Starmie.png",
+    "img_mods": "@disabled",
+    "codes": "dexstarmie"
+  },
+  {
+    "name": "Staryu photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Staryu.png",
+    "img_mods": "@disabled",
+    "codes": "dexstaryu"
+  },
+  {
+    "name": "Victreebel photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Victreebel.png",
+    "img_mods": "@disabled",
+    "codes": "dexvictreebel"
+  },
+  {
+    "name": "Vileplume photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Vileplume.png",
+    "img_mods": "@disabled",
+    "codes": "dexvileplume"
+  },
+  {
+    "name": "Vulpix photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Vulpix.png",
+    "img_mods": "@disabled",
+    "codes": "dexvulpix"
+  },
+  {
+    "name": "Weepinbell photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Weepinbell.png",
+    "img_mods": "@disabled",
+    "codes": "dexweepinbell"
+  },
+  {
+    "name": "Zapdos photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Zapdos.png",
+    "img_mods": "@disabled",
+    "codes": "dexzapdos"
+  },
+  {
+    "name": "Zubat photographed",
+    "type": "toggle",
+    "img": "images/pokemon/Zubat.png",
+    "img_mods": "@disabled",
+    "codes": "dexzubat"
   }
 ]
