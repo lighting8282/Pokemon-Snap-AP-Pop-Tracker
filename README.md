@@ -6,11 +6,11 @@ An auto-tracking [PopTracker](https://github.com/black-sliver/PopTracker) pack f
 ## Requirements
 
 - **PopTracker 0.28.0** or newer
-- **Pokemon Snap apworld `world_version` 0.4.0**
+- **Pokemon Snap apworld 0.5.x** (also works on 0.4.0)
 
-The apworld version matters. Location ids changed between 0.3.2 and 0.4.0 (signs moved to
-400-405, poses to 301-312, and the three secret exits were added), so running this pack
-against an older world will clear the wrong checks.
+The apworld version matters, because location ids move between releases. This pack maps all
+400 locations of 0.5.x, and the 200 of 0.4.0 are a subset of those, so both work. Anything
+older than 0.4.0 will clear the wrong checks.
 
 ## Install
 
@@ -23,17 +23,29 @@ AP button.
 
 ## What it tracks
 
-- **All 200 locations** — photos, Good Technique photos, Multiple photos, the 11 special
-  poses, the 6 Pokemon Signs and the 3 secret exits
+- **All 400 locations** — photos, Good Technique photos, Multiple photos, the 11 special
+  poses, the 6 Pokemon Signs and the 3 secret exits, each of which exists twice in 0.5.x
+  (the base check and its bonus twin). Both share one entry on the tracker, which takes two
+  clears to complete
 - **Items** — the six courses, Apple, Pester Ball, PokeFlute, Dash Engine, Pokemon Sign
-  Detector, film capacity, and counters for Pokemon and Sign pictures
+  Detector, film capacity, and a count of the Pokemon pictures you have been sent
 - **Logic** — access rules match the apworld's own rules, so a check shows as reachable
   exactly when Archipelago considers it reachable
 - **Your starting course** — the randomly precollected course is detected on connect and its
   map tab is opened automatically
+- **The current course** — the map follows you as you move between courses in game
+- **A Pokedex tab** — all 63 Pokemon, greyed until you have photographed them
+- **The six sign pictures** — tracked individually, so you can see which ones to hint for
+
+Clicking a course item opens its map. Because those items carry autotracked state, they can
+no longer be toggled by hand.
 
 Each check shows the Pokemon's own sprite while outstanding, and Prof. Oak once the photo has
 been submitted to him.
+
+`tools/check_apworld.py` compares the pack against any apworld and reports new or stale
+locations, broken section references and logic disagreements. Run it whenever a new apworld
+is released.
 
 ## Naming
 

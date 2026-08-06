@@ -12,7 +12,8 @@
         ],
         "access_rules": [
           "volcano"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Wonderful Picture",
@@ -21,13 +22,15 @@
         ],
         "access_rules": [
           "volcano"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
           "volcano"
-        ]
+        ],
+        "item_count": 2
       }
     ]
   }

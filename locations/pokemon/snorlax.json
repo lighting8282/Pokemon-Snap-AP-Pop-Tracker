@@ -13,7 +13,8 @@
         "access_rules": [
           "beach, flute",
           "beach, pester"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Wonderful Picture",
@@ -23,7 +24,8 @@
         "access_rules": [
           "beach, flute",
           "beach, pester"
-        ]
+        ],
+        "item_count": 2
       }
     ]
   }

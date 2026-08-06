@@ -13,7 +13,8 @@
         "access_rules": [
           "river",
           "{cave}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "River Wonderful Picture",
@@ -23,7 +24,8 @@
         "access_rules": [
           "river, @Logic/Throwable",
           "{cave}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Cave Picture",
@@ -33,7 +35,8 @@
         "access_rules": [
           "{river}",
           "cave"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Cave Wonderful Picture",
@@ -43,21 +46,24 @@
         "access_rules": [
           "{river, @Logic/Throwable}",
           "cave"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "River Same Pkmn",
         "access_rules": [
           "river, @Logic/Throwable",
           "{cave}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Cave Same Pkmn",
         "access_rules": [
           "{river, @Logic/Throwable}",
           "cave"
-        ]
+        ],
+        "item_count": 2
       }
     ]
   }

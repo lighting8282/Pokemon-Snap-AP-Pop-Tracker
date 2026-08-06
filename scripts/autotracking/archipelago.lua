@@ -283,6 +283,22 @@ function onBounce(json)
     end
 end
 
+-- newSectionIDToAPID values are lists (base photo + bonus twin), so send them all.
+function sendSectionChecks(sectionID)
+    local ids = newSectionIDToAPID[sectionID]
+    if ids == nil then
+        print(tostring(sectionID) .. " is not an AP location")
+        return
+    end
+    if type(ids) ~= "table" then ids = {ids} end
+    local res = Archipelago:LocationChecks(ids)
+    if res then
+        print("Sent " .. table.concat(ids, ", ") .. " for " .. tostring(sectionID))
+    else
+        print("Error sending " .. table.concat(ids, ", ") .. " for " .. tostring(sectionID))
+    end
+end
+
 ScriptHost:AddOnLocationSectionChangedHandler("manual", function(section)
     local sectionID = section.FullID
     if sectionID == "Mew/Picture (Game Completion)" and section.AvailableChestCount == 0 then
@@ -295,11 +311,9 @@ ScriptHost:AddOnLocationSectionChangedHandler("manual", function(section)
             print("Error sending Victory")
         end
     elseif sectionID == "Release/Release/Click Here To !release Game" and section.AvailableChestCount == 0 and NEW_VERSION then
-        for _, apID in pairs(newSectionIDToAPID) do
-            if apID ~= nil then
+        for _, ids in pairs(newSectionIDToAPID) do
+            for _, apID in ipairs(ids) do
                 onLocation(apID,"")
-            else
-                print(tostring(sectionID) .. " is not an AP location")
             end
         end
     elseif sectionID == "Release/Release/Click Here To !release Game" and section.AvailableChestCount == 0 then
@@ -310,20 +324,9 @@ ScriptHost:AddOnLocationSectionChangedHandler("manual", function(section)
                 print(tostring(sectionID) .. " is not an AP location")
             end
         end
-    elseif (section.AvailableChestCount == 0) and NEW_VERSION then  -- this only works for 1 chest per section
-        -- AP location cleared
-        local sectionID = section.FullID
-        local apID = newSectionIDToAPID[sectionID]
-        if apID ~= nil then
-            local res = Archipelago:LocationChecks({apID})
-            if res then
-                print("Sent " .. tostring(apID) .. " for " .. tostring(sectionID))
-            else
-                print("Error sending " .. tostring(apID) .. " for " .. tostring(sectionID))
-            end
-        else
-            print(tostring(sectionID) .. " is not an AP location")
-        end
+    elseif (section.AvailableChestCount == 0) and NEW_VERSION then
+        -- section fully cleared: send every AP location it covers
+        sendSectionChecks(section.FullID)
     elseif (section.AvailableChestCount == 0) then  -- this only works for 1 chest per section
         -- AP location cleared
         local sectionID = section.FullID

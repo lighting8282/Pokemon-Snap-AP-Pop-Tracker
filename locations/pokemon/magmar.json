@@ -12,7 +12,8 @@
         ],
         "access_rules": [
           "volcano"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Wonderful Picture",
@@ -21,19 +22,22 @@
         ],
         "access_rules": [
           "volcano"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
           "volcano, @Logic/Throwable"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Fighting Magmar",
         "access_rules": [
           "volcano, food"
-        ]
+        ],
+        "item_count": 2
       }
     ]
   }

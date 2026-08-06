@@ -12,7 +12,8 @@
         ],
         "access_rules": [
           "river, food"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Wonderful Picture",
@@ -21,7 +22,8 @@
         ],
         "access_rules": [
           "river, food"
-        ]
+        ],
+        "item_count": 2
       }
     ]
   }

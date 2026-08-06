@@ -15,7 +15,8 @@
             "name": "Koffing Smoke",
             "access_rules": [
               "sign, pester"
-            ]
+            ],
+            "item_count": 2
           }
         ],
         "map_locations": [

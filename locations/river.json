@@ -103,7 +103,8 @@
             "name": "Cubone Tree",
             "access_rules": [
               "sign, flute"
-            ]
+            ],
+            "item_count": 2
           }
         ],
         "map_locations": [
@@ -284,7 +285,8 @@
             "chest_opened_img_mods": "@disabled",
             "access_rules": [
               "pester"
-            ]
+            ],
+            "item_count": 2
           }
         ],
         "map_locations": [

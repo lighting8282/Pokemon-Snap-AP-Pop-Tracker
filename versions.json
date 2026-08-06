@@ -3,9 +3,10 @@
     {
       "package_version": "1.4.0.0",
       "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.4.0.0/SnapTracker-1.4.0.0.zip",
-      "sha256": "9507d34a0d273373cd74f5f94b1fbf69a6be768d7a0c2c5fed221585c2772b19",
+      "sha256": "a9c9ba6a9e93bcd048a444443e37d701ac1539a57b84b3c6ea1b62b784a9e041",
       "changelog": [
-        "The map now follows you automatically as you move between courses, thanks to nielrenned.",
+        "Supports apworld 0.5.x: all 400 locations now track, including the bonus twin of every check.",
+        "The map follows you automatically as you move between courses, thanks to nielrenned.",
         "New Pokedex tab showing which of the 63 Pokemon you have photographed.",
         "The sign pictures are tracked individually, so you can see which ones you still need to hint for.",
         "Clicking a course item opens its map. Course items can no longer be toggled by hand."

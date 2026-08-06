@@ -17,7 +17,8 @@
           "{river, @Logic/Throwable}",
           "{cave, @Logic/Throwable}",
           "{valley}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Beach Wonderful Picture",
@@ -31,7 +32,8 @@
           "{river, @Logic/Throwable}",
           "{cave, @Logic/Throwable}",
           "{valley, @Logic/Throwable}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Tunnel Picture",
@@ -45,7 +47,8 @@
           "{river, @Logic/Throwable}",
           "{cave, @Logic/Throwable}",
           "{valley}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Tunnel Wonderful Picture",
@@ -59,7 +62,8 @@
           "{river, @Logic/Throwable}",
           "{cave, @Logic/Throwable}",
           "{valley, @Logic/Throwable}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Volcano Picture",
@@ -73,7 +77,8 @@
           "{river, @Logic/Throwable}",
           "{cave, @Logic/Throwable}",
           "{valley}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Volcano Wonderful Picture",
@@ -87,7 +92,8 @@
           "{river, @Logic/Throwable}",
           "{cave, @Logic/Throwable}",
           "{valley, @Logic/Throwable}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "River Picture",
@@ -101,7 +107,8 @@
           "river, @Logic/Throwable",
           "{cave, @Logic/Throwable}",
           "{valley}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "River Wonderful Picture",
@@ -115,7 +122,8 @@
           "river, @Logic/Throwable",
           "{cave, @Logic/Throwable}",
           "{valley, @Logic/Throwable}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Cave Picture",
@@ -129,7 +137,8 @@
           "{river, @Logic/Throwable}",
           "cave, @Logic/Throwable",
           "{valley}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Cave Wonderful Picture",
@@ -143,7 +152,8 @@
           "{river, @Logic/Throwable}",
           "cave, @Logic/Throwable",
           "{valley, @Logic/Throwable}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Valley Picture",
@@ -159,7 +169,8 @@
           "valley, food",
           "valley, dash",
           "valley, pester"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Valley Wonderful Picture",
@@ -173,13 +184,15 @@
           "{river, @Logic/Throwable}",
           "{cave, @Logic/Throwable}",
           "valley, @Logic/Throwable"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
           "valley, @Logic/Throwable"
-        ]
+        ],
+        "item_count": 2
       }
     ]
   }

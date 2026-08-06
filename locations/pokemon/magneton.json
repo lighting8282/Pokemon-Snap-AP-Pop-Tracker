@@ -1,9 +1,9 @@
 [
   {
     "name": "Magneton",
-	"chest_unopened_img": "images/pokemon/Magneton.png",
-	"chest_opened_img": "images/oakface.png",
-	"chest_opened_img_mods": "@disabled",
+    "chest_unopened_img": "images/pokemon/Magneton.png",
+    "chest_opened_img": "images/oakface.png",
+    "chest_opened_img_mods": "@disabled",
     "sections": [
       {
         "name": "Picture",
@@ -12,7 +12,8 @@
         ],
         "access_rules": [
           "tunnel, food"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Wonderful Picture",
@@ -21,7 +22,8 @@
         ],
         "access_rules": [
           "tunnel, food"
-        ]
+        ],
+        "item_count": 2
       }
     ]
   }

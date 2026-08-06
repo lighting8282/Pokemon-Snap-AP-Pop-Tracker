@@ -15,7 +15,8 @@
           "{tunnel}",
           "{river}",
           "{cave}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Beach Wonderful Picture",
@@ -27,7 +28,8 @@
           "{tunnel}",
           "{river}",
           "{cave, @Logic/Throwable}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Tunnel Picture",
@@ -39,7 +41,8 @@
           "tunnel",
           "{river}",
           "{cave}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Tunnel Wonderful Picture",
@@ -51,7 +54,8 @@
           "tunnel",
           "{river}",
           "{cave, @Logic/Throwable}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "River Picture",
@@ -63,7 +67,8 @@
           "{tunnel}",
           "river",
           "{cave}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "River Wonderful Picture",
@@ -75,7 +80,8 @@
           "{tunnel}",
           "river",
           "{cave, @Logic/Throwable}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Cave Picture",
@@ -88,7 +94,8 @@
           "{river}",
           "cave, food",
           "cave, pester"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Cave Wonderful Picture",
@@ -100,49 +107,57 @@
           "{tunnel}",
           "{river}",
           "cave, @Logic/Throwable"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
           "beach, pester"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Surfing Pikachu",
         "access_rules": [
           "beach, food"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Pikachu on a Stump",
         "access_rules": [
           "beach, pester"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Pikachu on a Ball",
         "access_rules": [
           "tunnel"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Speed Pikachu",
         "access_rules": [
           "river"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Balloon Pikachu",
         "access_rules": [
           "cave, @Logic/Throwable"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Flying Pikachu",
         "access_rules": [
           "cave, @Logic/Throwable, flute"
-        ]
+        ],
+        "item_count": 2
       }
     ]
   }

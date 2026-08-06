@@ -9,7 +9,8 @@
         "name": "Picture (Game Completion)",
         "access_rules": [
           "signkingler, signpinsir, signkoffing, signcubone, signmewtwo, signdugtrio, pester"
-        ]
+        ],
+        "item_count": 2
       }
     ]
   }

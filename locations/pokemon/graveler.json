@@ -12,7 +12,8 @@
         ],
         "access_rules": [
           "valley"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Wonderful Picture",
@@ -22,19 +23,22 @@
         "access_rules": [
           "valley, flute",
           "valley, pester"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
           "valley, flute"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Graveler's Group Dance",
         "access_rules": [
           "valley, flute"
-        ]
+        ],
+        "item_count": 2
       }
     ]
   }

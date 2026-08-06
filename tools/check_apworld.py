@@ -123,8 +123,10 @@ def load_pack():
         lm[int(m.group(1))] = re.findall(r'"([^"]+)"', m.group(2))
     txt = open(PACK / "scripts/autotracking/sectionID.lua", encoding="utf-8").read()
     head = txt.split("oldSectionIDtoAPID")[0]
-    for m in re.finditer(r'\["([^"]+)"\]\s*=\s*(\d+)', head):
-        sm[m.group(1)] = int(m.group(2))
+    # values may be a bare id or a list of ids (base photo + bonus twin)
+    for m in re.finditer(r'\["([^"]+)"\]\s*=\s*(\{[^}]*\}|\d+)', head):
+        v = m.group(2)
+        sm[m.group(1)] = sorted(int(x) for x in re.findall(r"\d+", v))
     txt = open(PACK / "scripts/autotracking/item_mapping.lua", encoding="utf-8").read()
     for m in re.finditer(r'\[(\d+)\]\s*=\s*\{"([^"]+)"', txt):
         im[int(m.group(1))] = m.group(2)
@@ -190,8 +192,11 @@ def main(apworld):
     pack_version = json.load(open(PACK / "manifest.json", encoding="utf-8-sig"))["package_version"]
 
     print(f"apworld world_version {version}   |   pack {pack_version}")
+    print("   (world_version is read from archipelago.json, which upstream has shipped"
+          " stale before; hash the file against the GitHub releases if it matters)")
     print(f"world: {len(locs)} locations, {len(items)} items"
-          f"   |   pack maps {len(lm)} locations, {len(im)} items\n")
+          f"   |   pack maps {len(lm)} locations, {len(im)} items")
+    print()
     problems = 0
 
     new = sorted(set(locs) - set(lm))
@@ -218,7 +223,10 @@ def main(apworld):
             print(f"      {s}")
         print()
 
-    inverse = {s.lstrip('@'): i for i, ss in lm.items() for s in ss}
+    inverse = {}
+    for i, ss in lm.items():
+        inverse.setdefault(ss[0].lstrip('@'), []).append(i)
+    inverse = {k: sorted(v) for k, v in inverse.items()}
     if inverse != sm:
         problems += 1
         print("[3b] sectionID.lua is not the exact inverse of location_mapping.lua\n")

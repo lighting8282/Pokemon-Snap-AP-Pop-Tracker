@@ -263,7 +263,8 @@
             "name": "Pinsir Shadow",
             "access_rules": [
               "sign, food, flute"
-            ]
+            ],
+            "item_count": 2
           }
         ],
         "map_locations": [
@@ -316,7 +317,8 @@
             "name": "Tunnel",
             "access_rules": [
               "@Logic/Throwable"
-            ]
+            ],
+            "item_count": 2
           }
         ],
         "map_locations": [

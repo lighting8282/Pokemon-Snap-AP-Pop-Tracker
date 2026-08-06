@@ -103,7 +103,8 @@
             "name": "Kingler Rock",
             "access_rules": [
               "sign"
-            ]
+            ],
+            "item_count": 2
           }
         ],
         "map_locations": [

@@ -12,7 +12,8 @@
         ],
         "access_rules": [
           "cave"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Wonderful Picture",
@@ -21,25 +22,29 @@
         ],
         "access_rules": [
           "cave"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
           "cave, @Logic/Throwable"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Jigglypuff on Stage",
         "access_rules": [
           "cave, @Logic/Throwable"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Jigglypuff Trio on Stage",
         "access_rules": [
           "cave, @Logic/Throwable"
-        ]
+        ],
+        "item_count": 2
       }
     ]
   }

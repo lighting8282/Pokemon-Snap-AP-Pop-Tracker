@@ -13,7 +13,8 @@
         "access_rules": [
           "tunnel",
           "{cave}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Tunnel Wonderful Picture",
@@ -23,7 +24,8 @@
         "access_rules": [
           "tunnel",
           "{cave}"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Cave Picture",
@@ -33,7 +35,8 @@
         "access_rules": [
           "{tunnel}",
           "cave"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Cave Wonderful Picture",
@@ -43,13 +46,15 @@
         "access_rules": [
           "{tunnel}",
           "cave"
-        ]
+        ],
+        "item_count": 2
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
           "cave"
-        ]
+        ],
+        "item_count": 2
       }
     ]
   }
