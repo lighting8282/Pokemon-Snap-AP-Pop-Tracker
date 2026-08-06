@@ -26,6 +26,15 @@ COURSE_TABS = {
 }
 STARTING_TAB_SET = false
 
+TAB_NAMES = {
+    COURSE_TABS.beach,
+    COURSE_TABS.tunnel,
+    COURSE_TABS.volcano,
+    COURSE_TABS.river,
+    COURSE_TABS.cave,
+    COURSE_TABS.valley,
+}
+
 function onClear(slot_data)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
         print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
@@ -215,7 +224,19 @@ function onBounce(json)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
         print(string.format("called onBounce: %s", dump_table(json)))
     end
-    -- your code goes here
+
+    local data = json["data"]
+    if data then
+        if data["type"] == "MapUpdate" and data["mapId"] ~= nil and Tracker.UiHint then
+            tabName = TAB_NAMES[data["mapId"] + 1] -- stupid Lua 1-indexed arrays
+            if tabName then
+                if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+                    print(string.format("activating tab: %s", tabName))
+                end
+                Tracker:UiHint("ActivateTab", tabName)
+            end
+        end
+    end
 end
 
 ScriptHost:AddOnLocationSectionChangedHandler("manual", function(section)
@@ -289,4 +310,4 @@ Archipelago:AddClearHandler("clear handler", onClear)
 Archipelago:AddItemHandler("item handler", onItem)
 Archipelago:AddLocationHandler("location handler", onLocation)
 -- Archipelago:AddScoutHandler("scout handler", onScout)
--- Archipelago:AddBouncedHandler("bounce handler", onBounce)
+Archipelago:AddBouncedHandler("bounce handler", onBounce)
