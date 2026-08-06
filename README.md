@@ -6,11 +6,13 @@ An auto-tracking [PopTracker](https://github.com/black-sliver/PopTracker) pack f
 ## Requirements
 
 - **PopTracker 0.28.0** or newer
-- **Pokemon Snap apworld 0.5.x** (also works on 0.4.0)
+- **Pokemon Snap apworld 0.5.x** — required, not optional
 
-The apworld version matters, because location ids move between releases. This pack maps all
-400 locations of 0.5.x, and the 200 of 0.4.0 are a subset of those, so both work. Anything
-older than 0.4.0 will clear the wrong checks.
+Every check in 0.5.x exists twice: the base photo and a bonus twin. This pack folds the pair
+into one entry that takes two clears, so on an older apworld only one of the two ever
+arrives and **no check will ever complete**. Use pack 1.3.0.2 if you are on apworld 0.4.0.
+
+Older apworlds than 0.4.0 also used different location ids and will clear the wrong checks.
 
 ## Install
 
@@ -24,9 +26,9 @@ AP button.
 ## What it tracks
 
 - **All 400 locations** — photos, Good Technique photos, Multiple photos, the 11 special
-  poses, the 6 Pokemon Signs and the 3 secret exits, each of which exists twice in 0.5.x
-  (the base check and its bonus twin). Both share one entry on the tracker, which takes two
-  clears to complete
+  poses, the 6 Pokemon Signs and the 3 secret exits, each of which exists twice (the base
+  check and its bonus twin). Both share one entry on the tracker, which takes two clears to
+  complete
 - **Items** — the six courses, Apple, Pester Ball, PokeFlute, Dash Engine, Pokemon Sign
   Detector, film capacity, and a count of the Pokemon pictures you have been sent
 - **Logic** — access rules match the apworld's own rules, so a check shows as reachable
@@ -74,7 +76,7 @@ the older `Manual_PokemonSnap_AliRobotnik` implementation, and has been ported t
 - `manifest.json` targets game `Pokemon Snap`
 - `item_mapping.lua` rebuilt against the apworld's item ids (tools 1000-1004, courses
   2000-2005, film 3000, Pokemon pictures 5000-5062, sign pictures 6000-6005, victory 10000)
-- `location_mapping.lua` and `sectionID.lua` rebuilt against the apworld's 200 location ids,
+- `location_mapping.lua` and `sectionID.lua` rebuilt against the apworld's 400 location ids,
   and kept as exact inverses of each other
 - access rules corrected against the apworld's `rules.py`
 - locations that only existed in the Manual implementation were removed
