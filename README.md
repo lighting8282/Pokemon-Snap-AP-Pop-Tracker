@@ -6,13 +6,13 @@ An auto-tracking [PopTracker](https://github.com/black-sliver/PopTracker) pack f
 ## Requirements
 
 - **PopTracker 0.28.0** or newer
-- **Pokemon Snap apworld 0.5.x** — required, not optional
+- **Pokemon Snap apworld 0.4.0 or newer**
 
-Every check in 0.5.x exists twice: the base photo and a bonus twin. This pack folds the pair
-into one entry that takes two clears, so on an older apworld only one of the two ever
-arrives and **no check will ever complete**. Use pack 1.3.0.2 if you are on apworld 0.4.0.
+Anything older used different location ids and will clear the wrong checks.
 
-Older apworlds than 0.4.0 also used different location ids and will clear the wrong checks.
+0.5.x seeds may also contain "bonus" locations - duplicates of random checks, created to hold
+surplus items. Which ones exist varies per seed and a seed may have none. Both the base check
+and its bonus twin map to the same entry here, which completes on whichever arrives first.
 
 ## Install
 
@@ -25,10 +25,9 @@ AP button.
 
 ## What it tracks
 
-- **All 400 locations** — photos, Good Technique photos, Multiple photos, the 11 special
-  poses, the 6 Pokemon Signs and the 3 secret exits, each of which exists twice (the base
-  check and its bonus twin). Both share one entry on the tracker, which takes two clears to
-  complete
+- **Every location** — photos, Good Technique photos, Multiple photos, the 11 special
+  poses, the 6 Pokemon Signs and the 3 secret exits, plus the bonus duplicates a 0.5.x seed
+  may generate
 - **Items** — the six courses, Apple, Pester Ball, PokeFlute, Dash Engine, Pokemon Sign
   Detector, film capacity, and a count of the Pokemon pictures you have been sent
 - **Logic** — access rules match the apworld's own rules, so a check shows as reachable
@@ -42,8 +41,7 @@ AP button.
 Clicking a course item opens its map. Because those items carry autotracked state, they can
 no longer be toggled by hand.
 
-Each check shows the Pokemon's own sprite while outstanding, and Prof. Oak once the photo has
-been submitted to him.
+Each check shows a closed Pokeball while outstanding and an open one once it is done.
 
 `tools/check_apworld.py` compares the pack against any apworld and reports new or stale
 locations, broken section references and logic disagreements. Run it whenever a new apworld

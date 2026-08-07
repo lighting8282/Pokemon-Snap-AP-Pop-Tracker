@@ -11,8 +11,7 @@
         ],
         "access_rules": [
           "beach, @Logic/Throwable"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Wonderful Picture",
@@ -21,8 +20,7 @@
         ],
         "access_rules": [
           "beach, @Logic/Throwable"
-        ],
-        "item_count": 2
+        ]
       }
     ]
   }

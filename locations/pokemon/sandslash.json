@@ -11,8 +11,7 @@
         ],
         "access_rules": [
           "valley"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Wonderful Picture",
@@ -22,8 +21,7 @@
         "access_rules": [
           "valley, pester",
           "valley, dash"
-        ],
-        "item_count": 2
+        ]
       }
     ]
   }

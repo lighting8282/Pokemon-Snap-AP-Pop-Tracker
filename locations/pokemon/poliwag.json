@@ -11,8 +11,7 @@
         ],
         "access_rules": [
           "river"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Wonderful Picture",
@@ -22,16 +21,14 @@
         "access_rules": [
           "river, food",
           "river, pester"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
           "river, food",
           "river, pester"
-        ],
-        "item_count": 2
+        ]
       }
     ]
   }

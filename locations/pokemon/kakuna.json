@@ -11,8 +11,7 @@
         ],
         "access_rules": [
           "tunnel"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Wonderful Picture",
@@ -21,8 +20,7 @@
         ],
         "access_rules": [
           "tunnel"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Same Pkmn",
@@ -30,8 +28,7 @@
           "tunnel, food",
           "tunnel, dash",
           "tunnel, pester"
-        ],
-        "item_count": 2
+        ]
       }
     ]
   }

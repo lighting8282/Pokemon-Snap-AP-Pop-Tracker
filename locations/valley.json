@@ -90,8 +90,7 @@
             "name": "Mt Dugtrio",
             "access_rules": [
               "sign"
-            ],
-            "item_count": 2
+            ]
           }
         ],
         "map_locations": [
@@ -335,8 +334,7 @@
             "chest_opened_img": "images/pokeball_open.png",
             "access_rules": [
               "pester"
-            ],
-            "item_count": 2
+            ]
           }
         ],
         "map_locations": [

@@ -244,7 +244,12 @@ function onLocation(location_id, location_name)
         -- print(location, obj)
         if obj then
             if location:sub(1, 1) == "@" then
-                obj.AvailableChestCount = obj.AvailableChestCount - 1
+                -- Bonus twins are random filler slots: a seed may include one for
+                -- this check, or none at all. Both ids map here, so clear on the
+                -- first and ignore a second rather than going negative.
+                if obj.AvailableChestCount > 0 then
+                    obj.AvailableChestCount = obj.AvailableChestCount - 1
+                end
             else
                 obj.Active = true
             end

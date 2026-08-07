@@ -12,8 +12,7 @@
         "access_rules": [
           "valley, dash",
           "valley, pester"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Wonderful Picture",
@@ -22,15 +21,13 @@
         ],
         "access_rules": [
           "valley, pester"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
           "valley, food, pester"
-        ],
-        "item_count": 2
+        ]
       }
     ]
   }

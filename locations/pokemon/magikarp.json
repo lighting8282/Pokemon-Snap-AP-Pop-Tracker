@@ -11,8 +11,7 @@
         ],
         "access_rules": [
           "beach, @Logic/Throwable"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Beach Wonderful Picture",
@@ -21,8 +20,7 @@
         ],
         "access_rules": [
           "beach, @Logic/Throwable"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Tunnel Picture",
@@ -31,8 +29,7 @@
         ],
         "access_rules": [
           "tunnel"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Tunnel Wonderful Picture",
@@ -41,8 +38,7 @@
         ],
         "access_rules": [
           "tunnel"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Volcano Picture",
@@ -51,8 +47,7 @@
         ],
         "access_rules": [
           "volcano, @Logic/Throwable"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Volcano Wonderful Picture",
@@ -61,8 +56,7 @@
         ],
         "access_rules": [
           "volcano, @Logic/Throwable"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "River Picture",
@@ -71,8 +65,7 @@
         ],
         "access_rules": [
           "river, @Logic/Throwable"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "River Wonderful Picture",
@@ -81,8 +74,7 @@
         ],
         "access_rules": [
           "river, @Logic/Throwable"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Cave Picture",
@@ -91,8 +83,7 @@
         ],
         "access_rules": [
           "cave, @Logic/Throwable"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Cave Wonderful Picture",
@@ -101,8 +92,7 @@
         ],
         "access_rules": [
           "cave, @Logic/Throwable"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Valley Picture",
@@ -113,8 +103,7 @@
           "valley, food",
           "valley, dash",
           "valley, pester"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Valley Wonderful Picture",
@@ -123,15 +112,13 @@
         ],
         "access_rules": [
           "valley, @Logic/Throwable"
-        ],
-        "item_count": 2
+        ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
           "valley, @Logic/Throwable"
-        ],
-        "item_count": 2
+        ]
       }
     ]
   }
