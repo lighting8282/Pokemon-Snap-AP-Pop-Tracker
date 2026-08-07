@@ -12,7 +12,6 @@ CUR_INDEX = -1
 SLOT_DATA = nil
 LOCAL_ITEMS = {}
 GLOBAL_ITEMS = {}
-NEW_VERSION = false
 
 -- Course item code -> tab title in layouts/tracker.json. Used to jump to the
 -- starting course's map on connect. STARTING_TAB_SET makes sure only the first
@@ -129,12 +128,8 @@ function onClear(slot_data)
 
     print(dump_table(slot_data))
     
-    -- The native "Pokemon Snap" apworld defines no options and sends empty slot_data.
-    -- Every seed always contains the normal, wonderful and multiple photo checks, so
-    -- both visibility toggles are simply turned on. NEW_VERSION selects the current
-    -- (non-Manual) id tables further down.
-    NEW_VERSION = true
-
+    -- The native apworld sends no slot data, and its seeds always contain the
+    -- normal and wonderful photo checks, so both visibility toggles go on.
     local obj = Tracker:FindObjectForCode("normal")
     if obj then obj.Active = true end
 
@@ -191,9 +186,6 @@ function onItem(index, item_id, item_name, player_number)
             if obj.Active then
                 obj.CurrentStage = obj.CurrentStage + 1
             else
-                if v[1] == "signpics" then
-                    obj.CurrentStage = obj.CurrentStage + 1
-                end
                 obj.Active = true
             end
         elseif v[2] == "consumable" then
@@ -319,37 +311,15 @@ ScriptHost:AddOnLocationSectionChangedHandler("manual", function(section)
         else
             print("Error sending Victory")
         end
-    elseif sectionID == "Release/Release/Click Here To !release Game" and section.AvailableChestCount == 0 and NEW_VERSION then
+    elseif sectionID == "Release/Release/Click Here To !release Game" and section.AvailableChestCount == 0 then
         for _, ids in pairs(newSectionIDToAPID) do
             for _, apID in ipairs(ids) do
                 onLocation(apID,"")
             end
         end
-    elseif sectionID == "Release/Release/Click Here To !release Game" and section.AvailableChestCount == 0 then
-        for _, apID in pairs(oldSectionIDtoAPID) do
-            if apID ~= nil then
-                onLocation(apID,"")
-            else
-                print(tostring(sectionID) .. " is not an AP location")
-            end
-        end
-    elseif (section.AvailableChestCount == 0) and NEW_VERSION then
+    elseif section.AvailableChestCount == 0 then
         -- section fully cleared: send every AP location it covers
         sendSectionChecks(section.FullID)
-    elseif (section.AvailableChestCount == 0) then  -- this only works for 1 chest per section
-        -- AP location cleared
-        local sectionID = section.FullID
-        local apID = oldSectionIDtoAPID[sectionID]
-        if apID ~= nil then
-            local res = Archipelago:LocationChecks({apID})
-            if res then
-                print("Sent " .. tostring(apID) .. " for " .. tostring(sectionID))
-            else
-                print("Error sending " .. tostring(apID) .. " for " .. tostring(sectionID))
-            end
-        else
-            print(tostring(sectionID) .. " is not an AP location")
-        end
     end
 
     -- NOTE: the old Manual world had ONE check covering all courses for Bulbasaur,

@@ -77,13 +77,6 @@
     "codes": "valley"
   },
   {
-    "name": "Rainbow Stage",
-    "type": "toggle",
-    "loop": "true",
-    "img": "images/rainbow.png",
-    "codes": "rainbow"
-  },
-  {
     "name": "Film Capacity",
     "type": "consumable",
     "img": "images/film.png",

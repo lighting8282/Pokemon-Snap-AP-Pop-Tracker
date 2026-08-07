@@ -1,9 +1,9 @@
 -- AP location id -> PopTracker section
 -- Target: Pokemon Snap apworld 0.5.x (400 locations)
 --
--- Each check exists twice in the world: the base photo and its "bonus" twin at
--- id + 1000. Both have identical logic, so both point at the same section and
--- the section carries item_count 2 - it takes two clears to complete.
+-- A 0.5.x seed may also generate "bonus" duplicates of random checks at
+-- id + 1000, as filler slots. Both ids point at the same section, which
+-- completes on whichever arrives first.
 LOCATION_MAPPING = {
 
     -- Beach
