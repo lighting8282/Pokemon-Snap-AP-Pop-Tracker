@@ -35,33 +35,10 @@ TAB_NAMES = {
     COURSE_TABS.valley,
 }
 
--- The course items also jump to their map when clicked. They carry autotracked
--- state, so the click has to be undone: the watch fires after the toggle has
--- already flipped, so inverting it puts the state back whichever way it went.
---
--- AUTOTRACK_BUSY is raised around every write this script makes, so anything
--- that reaches the watch with it lowered can only have come from the user.
--- An earlier version compared against a shadow copy of what the server had
--- sent, which failed for courses you owned: any drift in the shadow made the
--- "is this a click?" test wrong in one direction and swallowed the jump.
+-- Course icons are clickable LuaItems created in scripts/course_items.lua.
+-- AUTOTRACK_BUSY is kept: onClear and onItem raise it so nothing mistakes a
+-- script write for user input.
 AUTOTRACK_BUSY = false
-
-for code, tab in pairs(COURSE_TABS) do
-    ScriptHost:AddWatchForCode("coursewatch_" .. code, code, function(c)
-        if AUTOTRACK_BUSY then return end        -- our own write, not a click
-        local obj = Tracker:FindObjectForCode(c)
-        if not obj then return end
-        AUTOTRACK_BUSY = true
-        if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
-            print(string.format("course clicked: %s -> tab %s", c, COURSE_TABS[c]))
-        end
-        if Tracker.UiHint then
-            Tracker:UiHint("ActivateTab", COURSE_TABS[c])
-        end
-        obj.Active = not obj.Active              -- undo the click, either direction
-        AUTOTRACK_BUSY = false
-    end)
-end
 
 function onClear(slot_data)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then

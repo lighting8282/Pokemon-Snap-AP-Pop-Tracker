@@ -78,6 +78,8 @@ Tracker:AddLocations("locations/cave.json")
 Tracker:AddLocations("locations/valley.json")
 Tracker:AddLocations("locations/oakmew.json")
 
+ScriptHost:LoadScript("scripts/course_items.lua")
+
 Tracker:AddLayouts("layouts/items.json")
 Tracker:AddLayouts("layouts/tracker.json")
 Tracker:AddLayouts("layouts/broadcast.json")
