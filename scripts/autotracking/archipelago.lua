@@ -36,27 +36,31 @@ TAB_NAMES = {
     COURSE_TABS.valley,
 }
 
--- The course items also jump to their map when clicked. They hold autotracked
--- state, so COURSE_OWNED shadows what the server has actually sent: a click
--- flips the toggle, we switch tabs and put the state straight back. This means
--- the course items cannot be toggled by hand - autotracking is the only thing
--- that sets them.
-COURSE_OWNED = {}
-JUMP_BUSY = false
+-- The course items also jump to their map when clicked. They carry autotracked
+-- state, so the click has to be undone: the watch fires after the toggle has
+-- already flipped, so inverting it puts the state back whichever way it went.
+--
+-- AUTOTRACK_BUSY is raised around every write this script makes, so anything
+-- that reaches the watch with it lowered can only have come from the user.
+-- An earlier version compared against a shadow copy of what the server had
+-- sent, which failed for courses you owned: any drift in the shadow made the
+-- "is this a click?" test wrong in one direction and swallowed the jump.
+AUTOTRACK_BUSY = false
 
 for code, tab in pairs(COURSE_TABS) do
     ScriptHost:AddWatchForCode("coursewatch_" .. code, code, function(c)
-        if JUMP_BUSY then return end
+        if AUTOTRACK_BUSY then return end        -- our own write, not a click
         local obj = Tracker:FindObjectForCode(c)
         if not obj then return end
-        local owned = COURSE_OWNED[c] and true or false
-        if obj.Active == owned then return end   -- autotracking, not a click
-        JUMP_BUSY = true
+        AUTOTRACK_BUSY = true
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+            print(string.format("course clicked: %s -> tab %s", c, COURSE_TABS[c]))
+        end
         if Tracker.UiHint then
             Tracker:UiHint("ActivateTab", COURSE_TABS[c])
         end
-        obj.Active = owned                       -- undo the click
-        JUMP_BUSY = false
+        obj.Active = not obj.Active              -- undo the click, either direction
+        AUTOTRACK_BUSY = false
     end)
 end
 
@@ -67,7 +71,7 @@ function onClear(slot_data)
     SLOT_DATA = slot_data
     CUR_INDEX = -1
     STARTING_TAB_SET = false
-    COURSE_OWNED = {}
+    AUTOTRACK_BUSY = true          -- everything below is our own write
 
     -- reset the Pokedex
     if PHOTO_DEX then
@@ -104,7 +108,6 @@ function onClear(slot_data)
             local obj = Tracker:FindObjectForCode(v[1])
             if obj then
                 if v[2] == "toggle" then
-                    if COURSE_TABS[v[1]] then COURSE_OWNED[v[1]] = nil end
                     obj.Active = false
                 elseif v[2] == "progressive" then
                     obj.CurrentStage = 0
@@ -140,6 +143,7 @@ function onClear(slot_data)
 
     LOCAL_ITEMS = {}
     GLOBAL_ITEMS = {}
+    AUTOTRACK_BUSY = false
     -- manually run snes interface functions after onClear in case we are already ingame
     if PopVersion < "0.20.1" or AutoTracker:GetConnectionState("SNES") == 3 then
         -- add snes interface functions here
@@ -180,9 +184,8 @@ function onItem(index, item_id, item_name, player_number)
     end
     local obj = Tracker:FindObjectForCode(v[1])
     if obj then
+        AUTOTRACK_BUSY = true              -- this is autotracking, not a click
         if v[2] == "toggle" then
-            -- shadow first, so the watch reads this as autotracking not a click
-            if COURSE_TABS[v[1]] then COURSE_OWNED[v[1]] = true end
             obj.Active = true
         elseif v[2] == "progressive" then
             if obj.Active then
@@ -198,6 +201,7 @@ function onItem(index, item_id, item_name, player_number)
         elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
             print(string.format("onItem: unknown item type %s for code %s", v[2], v[1]))
         end
+        AUTOTRACK_BUSY = false
     elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
         print(string.format("onItem: could not find object for code %s", v[1]))
     end
