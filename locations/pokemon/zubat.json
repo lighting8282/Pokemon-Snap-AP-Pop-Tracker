@@ -10,8 +10,7 @@
           "normal"
         ],
         "access_rules": [
-          "tunnel",
-          "{cave}"
+          "tunnel"
         ],
         "item_count": 2
       },
@@ -21,8 +20,7 @@
           "wonderful"
         ],
         "access_rules": [
-          "tunnel",
-          "{cave}"
+          "tunnel"
         ],
         "item_count": 2
       },
@@ -32,7 +30,6 @@
           "normal"
         ],
         "access_rules": [
-          "{tunnel}",
           "cave"
         ],
         "item_count": 2
@@ -43,7 +40,6 @@
           "wonderful"
         ],
         "access_rules": [
-          "{tunnel}",
           "cave"
         ],
         "item_count": 2

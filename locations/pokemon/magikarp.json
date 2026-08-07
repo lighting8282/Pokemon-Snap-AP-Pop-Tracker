@@ -10,12 +10,7 @@
           "normal"
         ],
         "access_rules": [
-          "beach, @Logic/Throwable",
-          "{tunnel}",
-          "{volcano, @Logic/Throwable}",
-          "{river, @Logic/Throwable}",
-          "{cave, @Logic/Throwable}",
-          "{valley}"
+          "beach, @Logic/Throwable"
         ],
         "item_count": 2
       },
@@ -25,12 +20,7 @@
           "wonderful"
         ],
         "access_rules": [
-          "beach, @Logic/Throwable",
-          "{tunnel}",
-          "{volcano, @Logic/Throwable}",
-          "{river, @Logic/Throwable}",
-          "{cave, @Logic/Throwable}",
-          "{valley, @Logic/Throwable}"
+          "beach, @Logic/Throwable"
         ],
         "item_count": 2
       },
@@ -40,12 +30,7 @@
           "normal"
         ],
         "access_rules": [
-          "{beach, @Logic/Throwable}",
-          "tunnel",
-          "{volcano, @Logic/Throwable}",
-          "{river, @Logic/Throwable}",
-          "{cave, @Logic/Throwable}",
-          "{valley}"
+          "tunnel"
         ],
         "item_count": 2
       },
@@ -55,12 +40,7 @@
           "wonderful"
         ],
         "access_rules": [
-          "{beach, @Logic/Throwable}",
-          "tunnel",
-          "{volcano, @Logic/Throwable}",
-          "{river, @Logic/Throwable}",
-          "{cave, @Logic/Throwable}",
-          "{valley, @Logic/Throwable}"
+          "tunnel"
         ],
         "item_count": 2
       },
@@ -70,12 +50,7 @@
           "normal"
         ],
         "access_rules": [
-          "{beach, @Logic/Throwable}",
-          "{tunnel}",
-          "volcano, @Logic/Throwable",
-          "{river, @Logic/Throwable}",
-          "{cave, @Logic/Throwable}",
-          "{valley}"
+          "volcano, @Logic/Throwable"
         ],
         "item_count": 2
       },
@@ -85,12 +60,7 @@
           "wonderful"
         ],
         "access_rules": [
-          "{beach, @Logic/Throwable}",
-          "{tunnel}",
-          "volcano, @Logic/Throwable",
-          "{river, @Logic/Throwable}",
-          "{cave, @Logic/Throwable}",
-          "{valley, @Logic/Throwable}"
+          "volcano, @Logic/Throwable"
         ],
         "item_count": 2
       },
@@ -100,12 +70,7 @@
           "normal"
         ],
         "access_rules": [
-          "{beach, @Logic/Throwable}",
-          "{tunnel}",
-          "{volcano, @Logic/Throwable}",
-          "river, @Logic/Throwable",
-          "{cave, @Logic/Throwable}",
-          "{valley}"
+          "river, @Logic/Throwable"
         ],
         "item_count": 2
       },
@@ -115,12 +80,7 @@
           "wonderful"
         ],
         "access_rules": [
-          "{beach, @Logic/Throwable}",
-          "{tunnel}",
-          "{volcano, @Logic/Throwable}",
-          "river, @Logic/Throwable",
-          "{cave, @Logic/Throwable}",
-          "{valley, @Logic/Throwable}"
+          "river, @Logic/Throwable"
         ],
         "item_count": 2
       },
@@ -130,12 +90,7 @@
           "normal"
         ],
         "access_rules": [
-          "{beach, @Logic/Throwable}",
-          "{tunnel}",
-          "{volcano, @Logic/Throwable}",
-          "{river, @Logic/Throwable}",
-          "cave, @Logic/Throwable",
-          "{valley}"
+          "cave, @Logic/Throwable"
         ],
         "item_count": 2
       },
@@ -145,12 +100,7 @@
           "wonderful"
         ],
         "access_rules": [
-          "{beach, @Logic/Throwable}",
-          "{tunnel}",
-          "{volcano, @Logic/Throwable}",
-          "{river, @Logic/Throwable}",
-          "cave, @Logic/Throwable",
-          "{valley, @Logic/Throwable}"
+          "cave, @Logic/Throwable"
         ],
         "item_count": 2
       },
@@ -160,11 +110,6 @@
           "normal"
         ],
         "access_rules": [
-          "{beach, @Logic/Throwable}",
-          "{tunnel}",
-          "{volcano, @Logic/Throwable}",
-          "{river, @Logic/Throwable}",
-          "{cave, @Logic/Throwable}",
           "valley, food",
           "valley, dash",
           "valley, pester"
@@ -177,11 +122,6 @@
           "wonderful"
         ],
         "access_rules": [
-          "{beach, @Logic/Throwable}",
-          "{tunnel}",
-          "{volcano, @Logic/Throwable}",
-          "{river, @Logic/Throwable}",
-          "{cave, @Logic/Throwable}",
           "valley, @Logic/Throwable"
         ],
         "item_count": 2

@@ -10,10 +10,7 @@
           "normal"
         ],
         "access_rules": [
-          "beach",
-          "{tunnel}",
-          "{river}",
-          "{cave}"
+          "beach"
         ],
         "item_count": 2
       },
@@ -23,10 +20,7 @@
           "wonderful"
         ],
         "access_rules": [
-          "beach",
-          "{tunnel}",
-          "{river}",
-          "{cave, @Logic/Throwable}"
+          "beach"
         ],
         "item_count": 2
       },
@@ -36,10 +30,7 @@
           "normal"
         ],
         "access_rules": [
-          "{beach}",
-          "tunnel",
-          "{river}",
-          "{cave}"
+          "tunnel"
         ],
         "item_count": 2
       },
@@ -49,10 +40,7 @@
           "wonderful"
         ],
         "access_rules": [
-          "{beach}",
-          "tunnel",
-          "{river}",
-          "{cave, @Logic/Throwable}"
+          "tunnel"
         ],
         "item_count": 2
       },
@@ -62,10 +50,7 @@
           "normal"
         ],
         "access_rules": [
-          "{beach}",
-          "{tunnel}",
-          "river",
-          "{cave}"
+          "river"
         ],
         "item_count": 2
       },
@@ -75,10 +60,7 @@
           "wonderful"
         ],
         "access_rules": [
-          "{beach}",
-          "{tunnel}",
-          "river",
-          "{cave, @Logic/Throwable}"
+          "river"
         ],
         "item_count": 2
       },
@@ -88,9 +70,6 @@
           "normal"
         ],
         "access_rules": [
-          "{beach}",
-          "{tunnel}",
-          "{river}",
           "cave, food",
           "cave, pester"
         ],
@@ -102,9 +81,6 @@
           "wonderful"
         ],
         "access_rules": [
-          "{beach}",
-          "{tunnel}",
-          "{river}",
           "cave, @Logic/Throwable"
         ],
         "item_count": 2
