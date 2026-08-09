@@ -28,6 +28,9 @@
           "tunnel, food",
           "tunnel, dash",
           "tunnel, pester"
+        ],
+        "visibility_rules": [
+          "multiple"
         ]
       }
     ]

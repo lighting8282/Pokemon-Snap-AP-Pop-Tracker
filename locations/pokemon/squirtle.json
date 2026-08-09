@@ -26,6 +26,9 @@
         "name": "Same Pkmn",
         "access_rules": [
           "valley, pester"
+        ],
+        "visibility_rules": [
+          "multiple"
         ]
       }
     ]

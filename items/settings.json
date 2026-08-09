@@ -14,6 +14,13 @@
     "initial_active_state": true
   },
   {
+    "name": "Multiple Pokemon Pictures",
+    "type": "toggle",
+    "img": "images/hard.png",
+    "codes": "multiple",
+    "initial_active_state": true
+  },
+  {
     "name": "Show Release Button",
     "type": "toggle",
     "img": "images/otherchecks/release.png",

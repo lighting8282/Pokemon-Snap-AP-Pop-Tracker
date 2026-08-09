@@ -28,6 +28,9 @@
         "access_rules": [
           "river, food",
           "river, pester"
+        ],
+        "visibility_rules": [
+          "multiple"
         ]
       }
     ]

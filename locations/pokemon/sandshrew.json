@@ -27,6 +27,9 @@
         "name": "Same Pkmn",
         "access_rules": [
           "valley, food, pester"
+        ],
+        "visibility_rules": [
+          "multiple"
         ]
       }
     ]

@@ -105,13 +105,13 @@ function onClear(slot_data)
 
     print(dump_table(slot_data))
     
-    -- The native apworld sends no slot data, and its seeds always contain the
-    -- normal and wonderful photo checks, so both visibility toggles go on.
-    local obj = Tracker:FindObjectForCode("normal")
-    if obj then obj.Active = true end
-
-    obj = Tracker:FindObjectForCode("wonderful")
-    if obj then obj.Active = true end
+    -- The normal / wonderful / multiple visibility toggles are deliberately not
+    -- touched here. A 0.5.x seed can exclude Good Technique and Multiple checks
+    -- via the photo_bonuses option, but the world has no fill_slot_data, so
+    -- nothing tells the tracker which categories a seed actually contains.
+    -- Forcing them on used to override the player's own choice and made those
+    -- checks impossible to hide. They default on via initial_active_state and
+    -- are left to the player to match their yaml.
 
     LOCAL_ITEMS = {}
     GLOBAL_ITEMS = {}

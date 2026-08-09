@@ -81,6 +81,9 @@
         "name": "Same Pkmn",
         "access_rules": [
           "beach, pester"
+        ],
+        "visibility_rules": [
+          "multiple"
         ]
       },
       {

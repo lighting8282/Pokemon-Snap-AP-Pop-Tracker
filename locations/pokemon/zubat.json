@@ -44,6 +44,9 @@
         "name": "Same Pkmn",
         "access_rules": [
           "cave"
+        ],
+        "visibility_rules": [
+          "multiple"
         ]
       }
     ]

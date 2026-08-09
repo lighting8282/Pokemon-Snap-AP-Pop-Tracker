@@ -26,6 +26,9 @@
         "name": "Same Pkmn",
         "access_rules": [
           "tunnel"
+        ],
+        "visibility_rules": [
+          "multiple"
         ]
       }
     ]

@@ -26,6 +26,9 @@
         "name": "Same Pkmn",
         "access_rules": [
           "cave, flute"
+        ],
+        "visibility_rules": [
+          "multiple"
         ]
       }
     ]

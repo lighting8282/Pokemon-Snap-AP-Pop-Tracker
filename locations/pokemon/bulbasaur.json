@@ -44,12 +44,18 @@
         "name": "River Same Pkmn",
         "access_rules": [
           "river, @Logic/Throwable"
+        ],
+        "visibility_rules": [
+          "multiple"
         ]
       },
       {
         "name": "Cave Same Pkmn",
         "access_rules": [
           "cave"
+        ],
+        "visibility_rules": [
+          "multiple"
         ]
       }
     ]

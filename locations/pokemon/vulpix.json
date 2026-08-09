@@ -26,6 +26,9 @@
         "name": "Same Pkmn",
         "access_rules": [
           "volcano, food"
+        ],
+        "visibility_rules": [
+          "multiple"
         ]
       }
     ]
