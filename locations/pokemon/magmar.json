@@ -7,7 +7,7 @@
       {
         "name": "Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc50"
         ],
         "access_rules": [
           "volcano"
@@ -16,7 +16,7 @@
       {
         "name": "Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc150"
         ],
         "access_rules": [
           "volcano"
@@ -28,7 +28,7 @@
           "volcano, @Logic/Throwable"
         ],
         "visibility_rules": [
-          "multiple, seedmultiple"
+          "multiple, loc250"
         ]
       },
       {
@@ -37,7 +37,7 @@
           "volcano, food"
         ],
         "visibility_rules": [
-          "seedposes"
+          "loc311"
         ]
       }
     ]

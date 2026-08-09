@@ -7,7 +7,7 @@
       {
         "name": "Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc9"
         ],
         "access_rules": [
           "beach"
@@ -16,7 +16,7 @@
       {
         "name": "Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc109"
         ],
         "access_rules": [
           "beach"
@@ -28,7 +28,7 @@
           "beach"
         ],
         "visibility_rules": [
-          "multiple, seedmultiple"
+          "multiple, loc209"
         ]
       },
       {
@@ -37,7 +37,7 @@
           "beach"
         ],
         "visibility_rules": [
-          "seedposes"
+          "loc307"
         ]
       }
     ]

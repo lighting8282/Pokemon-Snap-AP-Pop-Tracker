@@ -7,7 +7,7 @@
       {
         "name": "Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc49"
         ],
         "access_rules": [
           "tunnel"
@@ -16,7 +16,7 @@
       {
         "name": "Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc149"
         ],
         "access_rules": [
           "tunnel"
@@ -28,7 +28,7 @@
           "tunnel, @Logic/Throwable"
         ],
         "visibility_rules": [
-          "multiple, seedmultiple"
+          "multiple, loc249"
         ]
       }
     ]

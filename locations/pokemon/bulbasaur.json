@@ -7,7 +7,7 @@
       {
         "name": "River Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc1"
         ],
         "access_rules": [
           "river"
@@ -16,7 +16,7 @@
       {
         "name": "River Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc101"
         ],
         "access_rules": [
           "river, @Logic/Throwable"
@@ -25,7 +25,7 @@
       {
         "name": "Cave Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc64"
         ],
         "access_rules": [
           "cave"
@@ -34,7 +34,7 @@
       {
         "name": "Cave Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc164"
         ],
         "access_rules": [
           "cave"
@@ -46,7 +46,7 @@
           "river, @Logic/Throwable"
         ],
         "visibility_rules": [
-          "multiple, seedmultiple"
+          "multiple, loc201"
         ]
       },
       {
@@ -55,7 +55,7 @@
           "cave"
         ],
         "visibility_rules": [
-          "multiple, seedmultiple"
+          "multiple, loc264"
         ]
       }
     ]

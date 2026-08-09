@@ -7,7 +7,7 @@
       {
         "name": "Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc28"
         ],
         "access_rules": [
           "valley"
@@ -16,7 +16,7 @@
       {
         "name": "Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc128"
         ],
         "access_rules": [
           "valley, flute",
@@ -29,7 +29,7 @@
           "valley, flute"
         ],
         "visibility_rules": [
-          "multiple, seedmultiple"
+          "multiple, loc228"
         ]
       },
       {
@@ -38,7 +38,7 @@
           "valley, flute"
         ],
         "visibility_rules": [
-          "seedposes"
+          "loc309"
         ]
       }
     ]

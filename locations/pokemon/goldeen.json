@@ -7,7 +7,7 @@
       {
         "name": "Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc44"
         ],
         "access_rules": [
           "valley, @Logic/Throwable"
@@ -16,7 +16,7 @@
       {
         "name": "Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc144"
         ],
         "access_rules": [
           "valley, @Logic/Throwable"

@@ -7,7 +7,7 @@
       {
         "name": "Tunnel Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc15"
         ],
         "access_rules": [
           "tunnel"
@@ -16,7 +16,7 @@
       {
         "name": "Tunnel Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc115"
         ],
         "access_rules": [
           "tunnel"
@@ -25,7 +25,7 @@
       {
         "name": "Cave Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc73"
         ],
         "access_rules": [
           "cave"
@@ -34,7 +34,7 @@
       {
         "name": "Cave Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc173"
         ],
         "access_rules": [
           "cave"
@@ -46,7 +46,7 @@
           "cave"
         ],
         "visibility_rules": [
-          "multiple, seedmultiple"
+          "multiple, loc273"
         ]
       }
     ]

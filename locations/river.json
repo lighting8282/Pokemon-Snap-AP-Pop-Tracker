@@ -104,7 +104,7 @@
               "sign, flute"
             ],
             "visibility_rules": [
-              "seedsigns"
+              "loc403"
             ]
           }
         ],
@@ -287,7 +287,7 @@
               "pester"
             ],
             "visibility_rules": [
-              "seedexits"
+              "loc503"
             ]
           }
         ],

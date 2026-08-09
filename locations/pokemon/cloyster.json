@@ -7,7 +7,7 @@
       {
         "name": "Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc38"
         ],
         "access_rules": [
           "river"
@@ -16,7 +16,7 @@
       {
         "name": "Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc138"
         ],
         "access_rules": [
           "river"
@@ -28,7 +28,7 @@
           "river"
         ],
         "visibility_rules": [
-          "multiple, seedmultiple"
+          "multiple, loc238"
         ]
       }
     ]

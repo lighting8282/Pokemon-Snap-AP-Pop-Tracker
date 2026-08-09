@@ -7,7 +7,7 @@
       {
         "name": "Beach Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc51"
         ],
         "access_rules": [
           "beach, @Logic/Throwable"
@@ -16,7 +16,7 @@
       {
         "name": "Beach Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc151"
         ],
         "access_rules": [
           "beach, @Logic/Throwable"
@@ -25,7 +25,7 @@
       {
         "name": "Tunnel Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc65"
         ],
         "access_rules": [
           "tunnel"
@@ -34,7 +34,7 @@
       {
         "name": "Tunnel Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc165"
         ],
         "access_rules": [
           "tunnel"
@@ -43,7 +43,7 @@
       {
         "name": "Volcano Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc66"
         ],
         "access_rules": [
           "volcano, @Logic/Throwable"
@@ -52,7 +52,7 @@
       {
         "name": "Volcano Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc166"
         ],
         "access_rules": [
           "volcano, @Logic/Throwable"
@@ -61,7 +61,7 @@
       {
         "name": "River Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc67"
         ],
         "access_rules": [
           "river, @Logic/Throwable"
@@ -70,7 +70,7 @@
       {
         "name": "River Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc167"
         ],
         "access_rules": [
           "river, @Logic/Throwable"
@@ -79,7 +79,7 @@
       {
         "name": "Cave Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc68"
         ],
         "access_rules": [
           "cave, @Logic/Throwable"
@@ -88,7 +88,7 @@
       {
         "name": "Cave Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc168"
         ],
         "access_rules": [
           "cave, @Logic/Throwable"
@@ -97,7 +97,7 @@
       {
         "name": "Valley Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc69"
         ],
         "access_rules": [
           "valley, food",
@@ -108,7 +108,7 @@
       {
         "name": "Valley Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc169"
         ],
         "access_rules": [
           "valley, @Logic/Throwable"
@@ -120,7 +120,7 @@
           "valley, @Logic/Throwable"
         ],
         "visibility_rules": [
-          "multiple, seedmultiple"
+          "multiple, loc269"
         ]
       }
     ]

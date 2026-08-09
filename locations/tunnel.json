@@ -264,7 +264,7 @@
               "sign, food, flute"
             ],
             "visibility_rules": [
-              "seedsigns"
+              "loc401"
             ]
           }
         ],
@@ -319,7 +319,7 @@
               "@Logic/Throwable"
             ],
             "visibility_rules": [
-              "seedexits"
+              "loc501"
             ]
           }
         ],

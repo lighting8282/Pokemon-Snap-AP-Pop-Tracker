@@ -40,19 +40,18 @@ TAB_NAMES = {
 -- script write for user input.
 AUTOTRACK_BUSY = false
 
--- Which check categories does this seed actually contain?
+-- Which locations does this seed actually contain?
 --
--- The apworld has no fill_slot_data, so nothing tells us the player's yaml.
--- But Archipelago reports every location in the slot, as CheckedLocations plus
--- MissingLocations, and the ids are banded by category. So the seed itself says
--- which categories exist, without needing the options.
+-- The apworld has no fill_slot_data, so nothing tells us the player's yaml. But
+-- Archipelago reports every location in the slot, as CheckedLocations plus
+-- MissingLocations, so the seed itself says what exists.
 --
---   1-99    base photo        100-199  Good Technique   200-299  Multiple
---   300-399 special pose      400-499  Pokemon Sign     500-599  secret exit
---   +1000   the bonus duplicate of any of the above
---
--- Each category has a hidden seed<category> flag that the sections' visibility
--- rules require, so a category the seed excluded disappears from the tracker.
+-- Each mapped location has a hidden loc<id> flag that its section's visibility
+-- rule requires. Working per location rather than per category matters: options
+-- like rng_checks and hard_checks drop eight individual Multiple photos while
+-- leaving the other twenty-seven in place, which a category-level flag cannot
+-- express. This also covers photo_bonuses, special_poses, pokemon_signs and
+-- secret_exits, and any future option, without naming any of them.
 function applySeedContents()
     local checked = Archipelago.CheckedLocations
     local missing = Archipelago.MissingLocations
@@ -61,28 +60,28 @@ function applySeedContents()
     end
 
     local present = {}
-    local function band(id)
-        local b = id > 1000 and (id - 1000) or id
-        if     b < 100 then return "normal"
-        elseif b < 200 then return "wonderful"
-        elseif b < 300 then return "multiple"
-        elseif b < 400 then return "poses"
-        elseif b < 500 then return "signs"
-        else                return "exits" end
-    end
     for _, list in ipairs({checked or {}, missing or {}}) do
-        for _, id in ipairs(list) do present[band(id)] = true end
+        for _, id in ipairs(list) do
+            present[id] = true
+            if id > 1000 then present[id - 1000] = true end   -- a bonus twin proves its base
+        end
+    end
+
+    local shown, hidden = 0, 0
+    for id, _ in pairs(LOCATION_MAPPING) do
+        if id < 1000 then
+            local obj = Tracker:FindObjectForCode("loc" .. id)
+            if obj then
+                local has = present[id] and true or false
+                obj.Active = has
+                if has then shown = shown + 1 else hidden = hidden + 1 end
+            end
+        end
     end
 
     local total = (checked and #checked or 0) + (missing and #missing or 0)
-    for _, cat in ipairs({"normal","wonderful","multiple","poses","signs","exits"}) do
-        local obj = Tracker:FindObjectForCode("seed" .. cat)
-        if obj then obj.Active = present[cat] and true or false end
-        if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
-            print(string.format("seed contains %-9s : %s", cat, present[cat] and "yes" or "no"))
-        end
-    end
-    print(string.format("seed has %d locations", total))
+    print(string.format("seed has %d locations: %d checks shown, %d hidden as not in this seed",
+                        total, shown, hidden))
 end
 
 function onClear(slot_data)

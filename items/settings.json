@@ -32,39 +32,1203 @@
     "codes": "complete"
   },
   {
-    "name": "seed contains normal checks",
+    "name": "seed contains location 1",
     "type": "toggle",
-    "codes": "seednormal",
+    "codes": "loc1",
     "initial_active_state": true
   },
   {
-    "name": "seed contains wonderful checks",
+    "name": "seed contains location 2",
     "type": "toggle",
-    "codes": "seedwonderful",
+    "codes": "loc2",
     "initial_active_state": true
   },
   {
-    "name": "seed contains multiple checks",
+    "name": "seed contains location 3",
     "type": "toggle",
-    "codes": "seedmultiple",
+    "codes": "loc3",
     "initial_active_state": true
   },
   {
-    "name": "seed contains poses checks",
+    "name": "seed contains location 4",
     "type": "toggle",
-    "codes": "seedposes",
+    "codes": "loc4",
     "initial_active_state": true
   },
   {
-    "name": "seed contains signs checks",
+    "name": "seed contains location 5",
     "type": "toggle",
-    "codes": "seedsigns",
+    "codes": "loc5",
     "initial_active_state": true
   },
   {
-    "name": "seed contains exits checks",
+    "name": "seed contains location 6",
     "type": "toggle",
-    "codes": "seedexits",
+    "codes": "loc6",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 7",
+    "type": "toggle",
+    "codes": "loc7",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 8",
+    "type": "toggle",
+    "codes": "loc8",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 9",
+    "type": "toggle",
+    "codes": "loc9",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 10",
+    "type": "toggle",
+    "codes": "loc10",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 11",
+    "type": "toggle",
+    "codes": "loc11",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 12",
+    "type": "toggle",
+    "codes": "loc12",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 13",
+    "type": "toggle",
+    "codes": "loc13",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 14",
+    "type": "toggle",
+    "codes": "loc14",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 15",
+    "type": "toggle",
+    "codes": "loc15",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 16",
+    "type": "toggle",
+    "codes": "loc16",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 17",
+    "type": "toggle",
+    "codes": "loc17",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 18",
+    "type": "toggle",
+    "codes": "loc18",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 19",
+    "type": "toggle",
+    "codes": "loc19",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 20",
+    "type": "toggle",
+    "codes": "loc20",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 21",
+    "type": "toggle",
+    "codes": "loc21",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 22",
+    "type": "toggle",
+    "codes": "loc22",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 23",
+    "type": "toggle",
+    "codes": "loc23",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 24",
+    "type": "toggle",
+    "codes": "loc24",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 25",
+    "type": "toggle",
+    "codes": "loc25",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 26",
+    "type": "toggle",
+    "codes": "loc26",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 27",
+    "type": "toggle",
+    "codes": "loc27",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 28",
+    "type": "toggle",
+    "codes": "loc28",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 29",
+    "type": "toggle",
+    "codes": "loc29",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 30",
+    "type": "toggle",
+    "codes": "loc30",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 31",
+    "type": "toggle",
+    "codes": "loc31",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 32",
+    "type": "toggle",
+    "codes": "loc32",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 33",
+    "type": "toggle",
+    "codes": "loc33",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 34",
+    "type": "toggle",
+    "codes": "loc34",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 35",
+    "type": "toggle",
+    "codes": "loc35",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 36",
+    "type": "toggle",
+    "codes": "loc36",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 37",
+    "type": "toggle",
+    "codes": "loc37",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 38",
+    "type": "toggle",
+    "codes": "loc38",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 39",
+    "type": "toggle",
+    "codes": "loc39",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 40",
+    "type": "toggle",
+    "codes": "loc40",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 41",
+    "type": "toggle",
+    "codes": "loc41",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 42",
+    "type": "toggle",
+    "codes": "loc42",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 43",
+    "type": "toggle",
+    "codes": "loc43",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 44",
+    "type": "toggle",
+    "codes": "loc44",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 45",
+    "type": "toggle",
+    "codes": "loc45",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 46",
+    "type": "toggle",
+    "codes": "loc46",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 47",
+    "type": "toggle",
+    "codes": "loc47",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 48",
+    "type": "toggle",
+    "codes": "loc48",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 49",
+    "type": "toggle",
+    "codes": "loc49",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 50",
+    "type": "toggle",
+    "codes": "loc50",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 51",
+    "type": "toggle",
+    "codes": "loc51",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 52",
+    "type": "toggle",
+    "codes": "loc52",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 53",
+    "type": "toggle",
+    "codes": "loc53",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 54",
+    "type": "toggle",
+    "codes": "loc54",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 55",
+    "type": "toggle",
+    "codes": "loc55",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 56",
+    "type": "toggle",
+    "codes": "loc56",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 57",
+    "type": "toggle",
+    "codes": "loc57",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 58",
+    "type": "toggle",
+    "codes": "loc58",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 59",
+    "type": "toggle",
+    "codes": "loc59",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 60",
+    "type": "toggle",
+    "codes": "loc60",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 61",
+    "type": "toggle",
+    "codes": "loc61",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 62",
+    "type": "toggle",
+    "codes": "loc62",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 63",
+    "type": "toggle",
+    "codes": "loc63",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 64",
+    "type": "toggle",
+    "codes": "loc64",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 65",
+    "type": "toggle",
+    "codes": "loc65",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 66",
+    "type": "toggle",
+    "codes": "loc66",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 67",
+    "type": "toggle",
+    "codes": "loc67",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 68",
+    "type": "toggle",
+    "codes": "loc68",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 69",
+    "type": "toggle",
+    "codes": "loc69",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 70",
+    "type": "toggle",
+    "codes": "loc70",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 71",
+    "type": "toggle",
+    "codes": "loc71",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 72",
+    "type": "toggle",
+    "codes": "loc72",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 73",
+    "type": "toggle",
+    "codes": "loc73",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 101",
+    "type": "toggle",
+    "codes": "loc101",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 102",
+    "type": "toggle",
+    "codes": "loc102",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 103",
+    "type": "toggle",
+    "codes": "loc103",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 104",
+    "type": "toggle",
+    "codes": "loc104",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 105",
+    "type": "toggle",
+    "codes": "loc105",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 106",
+    "type": "toggle",
+    "codes": "loc106",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 107",
+    "type": "toggle",
+    "codes": "loc107",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 108",
+    "type": "toggle",
+    "codes": "loc108",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 109",
+    "type": "toggle",
+    "codes": "loc109",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 110",
+    "type": "toggle",
+    "codes": "loc110",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 111",
+    "type": "toggle",
+    "codes": "loc111",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 112",
+    "type": "toggle",
+    "codes": "loc112",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 113",
+    "type": "toggle",
+    "codes": "loc113",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 114",
+    "type": "toggle",
+    "codes": "loc114",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 115",
+    "type": "toggle",
+    "codes": "loc115",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 116",
+    "type": "toggle",
+    "codes": "loc116",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 117",
+    "type": "toggle",
+    "codes": "loc117",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 118",
+    "type": "toggle",
+    "codes": "loc118",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 119",
+    "type": "toggle",
+    "codes": "loc119",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 120",
+    "type": "toggle",
+    "codes": "loc120",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 121",
+    "type": "toggle",
+    "codes": "loc121",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 122",
+    "type": "toggle",
+    "codes": "loc122",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 123",
+    "type": "toggle",
+    "codes": "loc123",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 124",
+    "type": "toggle",
+    "codes": "loc124",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 125",
+    "type": "toggle",
+    "codes": "loc125",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 126",
+    "type": "toggle",
+    "codes": "loc126",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 127",
+    "type": "toggle",
+    "codes": "loc127",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 128",
+    "type": "toggle",
+    "codes": "loc128",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 129",
+    "type": "toggle",
+    "codes": "loc129",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 130",
+    "type": "toggle",
+    "codes": "loc130",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 131",
+    "type": "toggle",
+    "codes": "loc131",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 132",
+    "type": "toggle",
+    "codes": "loc132",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 133",
+    "type": "toggle",
+    "codes": "loc133",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 134",
+    "type": "toggle",
+    "codes": "loc134",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 135",
+    "type": "toggle",
+    "codes": "loc135",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 136",
+    "type": "toggle",
+    "codes": "loc136",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 137",
+    "type": "toggle",
+    "codes": "loc137",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 138",
+    "type": "toggle",
+    "codes": "loc138",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 139",
+    "type": "toggle",
+    "codes": "loc139",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 140",
+    "type": "toggle",
+    "codes": "loc140",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 141",
+    "type": "toggle",
+    "codes": "loc141",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 142",
+    "type": "toggle",
+    "codes": "loc142",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 143",
+    "type": "toggle",
+    "codes": "loc143",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 144",
+    "type": "toggle",
+    "codes": "loc144",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 145",
+    "type": "toggle",
+    "codes": "loc145",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 146",
+    "type": "toggle",
+    "codes": "loc146",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 147",
+    "type": "toggle",
+    "codes": "loc147",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 148",
+    "type": "toggle",
+    "codes": "loc148",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 149",
+    "type": "toggle",
+    "codes": "loc149",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 150",
+    "type": "toggle",
+    "codes": "loc150",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 151",
+    "type": "toggle",
+    "codes": "loc151",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 152",
+    "type": "toggle",
+    "codes": "loc152",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 153",
+    "type": "toggle",
+    "codes": "loc153",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 154",
+    "type": "toggle",
+    "codes": "loc154",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 155",
+    "type": "toggle",
+    "codes": "loc155",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 156",
+    "type": "toggle",
+    "codes": "loc156",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 157",
+    "type": "toggle",
+    "codes": "loc157",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 158",
+    "type": "toggle",
+    "codes": "loc158",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 159",
+    "type": "toggle",
+    "codes": "loc159",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 160",
+    "type": "toggle",
+    "codes": "loc160",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 161",
+    "type": "toggle",
+    "codes": "loc161",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 162",
+    "type": "toggle",
+    "codes": "loc162",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 164",
+    "type": "toggle",
+    "codes": "loc164",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 165",
+    "type": "toggle",
+    "codes": "loc165",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 166",
+    "type": "toggle",
+    "codes": "loc166",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 167",
+    "type": "toggle",
+    "codes": "loc167",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 168",
+    "type": "toggle",
+    "codes": "loc168",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 169",
+    "type": "toggle",
+    "codes": "loc169",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 170",
+    "type": "toggle",
+    "codes": "loc170",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 171",
+    "type": "toggle",
+    "codes": "loc171",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 172",
+    "type": "toggle",
+    "codes": "loc172",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 173",
+    "type": "toggle",
+    "codes": "loc173",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 201",
+    "type": "toggle",
+    "codes": "loc201",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 202",
+    "type": "toggle",
+    "codes": "loc202",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 205",
+    "type": "toggle",
+    "codes": "loc205",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 206",
+    "type": "toggle",
+    "codes": "loc206",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 207",
+    "type": "toggle",
+    "codes": "loc207",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 208",
+    "type": "toggle",
+    "codes": "loc208",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 209",
+    "type": "toggle",
+    "codes": "loc209",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 210",
+    "type": "toggle",
+    "codes": "loc210",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 211",
+    "type": "toggle",
+    "codes": "loc211",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 213",
+    "type": "toggle",
+    "codes": "loc213",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 214",
+    "type": "toggle",
+    "codes": "loc214",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 218",
+    "type": "toggle",
+    "codes": "loc218",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 220",
+    "type": "toggle",
+    "codes": "loc220",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 222",
+    "type": "toggle",
+    "codes": "loc222",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 223",
+    "type": "toggle",
+    "codes": "loc223",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 224",
+    "type": "toggle",
+    "codes": "loc224",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 227",
+    "type": "toggle",
+    "codes": "loc227",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 228",
+    "type": "toggle",
+    "codes": "loc228",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 229",
+    "type": "toggle",
+    "codes": "loc229",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 232",
+    "type": "toggle",
+    "codes": "loc232",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 237",
+    "type": "toggle",
+    "codes": "loc237",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 238",
+    "type": "toggle",
+    "codes": "loc238",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 240",
+    "type": "toggle",
+    "codes": "loc240",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 245",
+    "type": "toggle",
+    "codes": "loc245",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 246",
+    "type": "toggle",
+    "codes": "loc246",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 248",
+    "type": "toggle",
+    "codes": "loc248",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 249",
+    "type": "toggle",
+    "codes": "loc249",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 250",
+    "type": "toggle",
+    "codes": "loc250",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 253",
+    "type": "toggle",
+    "codes": "loc253",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 254",
+    "type": "toggle",
+    "codes": "loc254",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 256",
+    "type": "toggle",
+    "codes": "loc256",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 261",
+    "type": "toggle",
+    "codes": "loc261",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 264",
+    "type": "toggle",
+    "codes": "loc264",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 269",
+    "type": "toggle",
+    "codes": "loc269",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 273",
+    "type": "toggle",
+    "codes": "loc273",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 301",
+    "type": "toggle",
+    "codes": "loc301",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 302",
+    "type": "toggle",
+    "codes": "loc302",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 303",
+    "type": "toggle",
+    "codes": "loc303",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 304",
+    "type": "toggle",
+    "codes": "loc304",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 305",
+    "type": "toggle",
+    "codes": "loc305",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 306",
+    "type": "toggle",
+    "codes": "loc306",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 307",
+    "type": "toggle",
+    "codes": "loc307",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 308",
+    "type": "toggle",
+    "codes": "loc308",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 309",
+    "type": "toggle",
+    "codes": "loc309",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 311",
+    "type": "toggle",
+    "codes": "loc311",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 312",
+    "type": "toggle",
+    "codes": "loc312",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 400",
+    "type": "toggle",
+    "codes": "loc400",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 401",
+    "type": "toggle",
+    "codes": "loc401",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 402",
+    "type": "toggle",
+    "codes": "loc402",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 403",
+    "type": "toggle",
+    "codes": "loc403",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 404",
+    "type": "toggle",
+    "codes": "loc404",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 405",
+    "type": "toggle",
+    "codes": "loc405",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 501",
+    "type": "toggle",
+    "codes": "loc501",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 503",
+    "type": "toggle",
+    "codes": "loc503",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 505",
+    "type": "toggle",
+    "codes": "loc505",
     "initial_active_state": true
   }
 ]

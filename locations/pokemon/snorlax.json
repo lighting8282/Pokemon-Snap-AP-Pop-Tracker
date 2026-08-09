@@ -7,7 +7,7 @@
       {
         "name": "Picture",
         "visibility_rules": [
-          "normal, seednormal"
+          "normal, loc57"
         ],
         "access_rules": [
           "beach, flute",
@@ -17,7 +17,7 @@
       {
         "name": "Wonderful Picture",
         "visibility_rules": [
-          "wonderful, seedwonderful"
+          "wonderful, loc157"
         ],
         "access_rules": [
           "beach, flute",

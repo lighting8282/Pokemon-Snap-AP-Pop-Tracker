@@ -92,7 +92,7 @@
               "sign"
             ],
             "visibility_rules": [
-              "seedsigns"
+              "loc405"
             ]
           }
         ],
@@ -339,7 +339,7 @@
               "pester"
             ],
             "visibility_rules": [
-              "seedexits"
+              "loc505"
             ]
           }
         ],

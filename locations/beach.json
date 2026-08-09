@@ -104,7 +104,7 @@
               "sign"
             ],
             "visibility_rules": [
-              "seedsigns"
+              "loc400"
             ]
           }
         ],
