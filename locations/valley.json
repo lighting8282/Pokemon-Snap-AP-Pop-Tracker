@@ -90,6 +90,9 @@
             "name": "Mt Dugtrio",
             "access_rules": [
               "sign"
+            ],
+            "visibility_rules": [
+              "seedsigns"
             ]
           }
         ],
@@ -334,6 +337,9 @@
             "chest_opened_img": "images/pokeball_open.png",
             "access_rules": [
               "pester"
+            ],
+            "visibility_rules": [
+              "seedexits"
             ]
           }
         ],

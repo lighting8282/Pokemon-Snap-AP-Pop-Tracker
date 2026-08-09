@@ -7,7 +7,7 @@
       {
         "name": "Picture",
         "visibility_rules": [
-          "normal"
+          "normal, seednormal"
         ],
         "access_rules": [
           "valley"
@@ -16,7 +16,7 @@
       {
         "name": "Wonderful Picture",
         "visibility_rules": [
-          "wonderful"
+          "wonderful, seedwonderful"
         ],
         "access_rules": [
           "valley, flute",
@@ -29,13 +29,16 @@
           "valley, flute"
         ],
         "visibility_rules": [
-          "multiple"
+          "multiple, seedmultiple"
         ]
       },
       {
         "name": "Graveler's Group Dance",
         "access_rules": [
           "valley, flute"
+        ],
+        "visibility_rules": [
+          "seedposes"
         ]
       }
     ]

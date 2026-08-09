@@ -7,7 +7,7 @@
       {
         "name": "Picture",
         "visibility_rules": [
-          "normal"
+          "normal, seednormal"
         ],
         "access_rules": [
           "beach"
@@ -16,7 +16,7 @@
       {
         "name": "Wonderful Picture",
         "visibility_rules": [
-          "wonderful"
+          "wonderful, seedwonderful"
         ],
         "access_rules": [
           "beach"
@@ -28,13 +28,16 @@
           "beach"
         ],
         "visibility_rules": [
-          "multiple"
+          "multiple, seedmultiple"
         ]
       },
       {
         "name": "Gust-Using Pidgey",
         "access_rules": [
           "beach"
+        ],
+        "visibility_rules": [
+          "seedposes"
         ]
       }
     ]

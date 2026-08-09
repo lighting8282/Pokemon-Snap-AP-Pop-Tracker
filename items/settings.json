@@ -30,5 +30,41 @@
     "name": "Complete",
     "type": "toggle",
     "codes": "complete"
+  },
+  {
+    "name": "seed contains normal checks",
+    "type": "toggle",
+    "codes": "seednormal",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains wonderful checks",
+    "type": "toggle",
+    "codes": "seedwonderful",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains multiple checks",
+    "type": "toggle",
+    "codes": "seedmultiple",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains poses checks",
+    "type": "toggle",
+    "codes": "seedposes",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains signs checks",
+    "type": "toggle",
+    "codes": "seedsigns",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains exits checks",
+    "type": "toggle",
+    "codes": "seedexits",
+    "initial_active_state": true
   }
 ]

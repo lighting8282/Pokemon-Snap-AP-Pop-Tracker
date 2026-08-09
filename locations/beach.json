@@ -102,6 +102,9 @@
             "name": "Kingler Rock",
             "access_rules": [
               "sign"
+            ],
+            "visibility_rules": [
+              "seedsigns"
             ]
           }
         ],

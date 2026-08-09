@@ -40,6 +40,51 @@ TAB_NAMES = {
 -- script write for user input.
 AUTOTRACK_BUSY = false
 
+-- Which check categories does this seed actually contain?
+--
+-- The apworld has no fill_slot_data, so nothing tells us the player's yaml.
+-- But Archipelago reports every location in the slot, as CheckedLocations plus
+-- MissingLocations, and the ids are banded by category. So the seed itself says
+-- which categories exist, without needing the options.
+--
+--   1-99    base photo        100-199  Good Technique   200-299  Multiple
+--   300-399 special pose      400-499  Pokemon Sign     500-599  secret exit
+--   +1000   the bonus duplicate of any of the above
+--
+-- Each category has a hidden seed<category> flag that the sections' visibility
+-- rules require, so a category the seed excluded disappears from the tracker.
+function applySeedContents()
+    local checked = Archipelago.CheckedLocations
+    local missing = Archipelago.MissingLocations
+    if not checked and not missing then
+        return          -- PopTracker too old to report them; leave everything visible
+    end
+
+    local present = {}
+    local function band(id)
+        local b = id > 1000 and (id - 1000) or id
+        if     b < 100 then return "normal"
+        elseif b < 200 then return "wonderful"
+        elseif b < 300 then return "multiple"
+        elseif b < 400 then return "poses"
+        elseif b < 500 then return "signs"
+        else                return "exits" end
+    end
+    for _, list in ipairs({checked or {}, missing or {}}) do
+        for _, id in ipairs(list) do present[band(id)] = true end
+    end
+
+    local total = (checked and #checked or 0) + (missing and #missing or 0)
+    for _, cat in ipairs({"normal","wonderful","multiple","poses","signs","exits"}) do
+        local obj = Tracker:FindObjectForCode("seed" .. cat)
+        if obj then obj.Active = present[cat] and true or false end
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+            print(string.format("seed contains %-9s : %s", cat, present[cat] and "yes" or "no"))
+        end
+    end
+    print(string.format("seed has %d locations", total))
+end
+
 function onClear(slot_data)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
         print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
@@ -105,13 +150,7 @@ function onClear(slot_data)
 
     print(dump_table(slot_data))
     
-    -- The normal / wonderful / multiple visibility toggles are deliberately not
-    -- touched here. A 0.5.x seed can exclude Good Technique and Multiple checks
-    -- via the photo_bonuses option, but the world has no fill_slot_data, so
-    -- nothing tells the tracker which categories a seed actually contains.
-    -- Forcing them on used to override the player's own choice and made those
-    -- checks impossible to hide. They default on via initial_active_state and
-    -- are left to the player to match their yaml.
+    applySeedContents()
 
     LOCAL_ITEMS = {}
     GLOBAL_ITEMS = {}

@@ -226,6 +226,9 @@
             "name": "Constellation of Mewtwo",
             "access_rules": [
               "sign"
+            ],
+            "visibility_rules": [
+              "seedsigns"
             ]
           }
         ],

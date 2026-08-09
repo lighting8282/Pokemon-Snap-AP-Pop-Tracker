@@ -7,7 +7,7 @@
       {
         "name": "Picture",
         "visibility_rules": [
-          "normal"
+          "normal, seednormal"
         ],
         "access_rules": [
           "volcano"
@@ -16,7 +16,7 @@
       {
         "name": "Wonderful Picture",
         "visibility_rules": [
-          "wonderful"
+          "wonderful, seedwonderful"
         ],
         "access_rules": [
           "volcano"
@@ -28,13 +28,16 @@
           "volcano, @Logic/Throwable"
         ],
         "visibility_rules": [
-          "multiple"
+          "multiple, seedmultiple"
         ]
       },
       {
         "name": "Fighting Magmar",
         "access_rules": [
           "volcano, food"
+        ],
+        "visibility_rules": [
+          "seedposes"
         ]
       }
     ]

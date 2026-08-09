@@ -102,6 +102,9 @@
             "name": "Cubone Tree",
             "access_rules": [
               "sign, flute"
+            ],
+            "visibility_rules": [
+              "seedsigns"
             ]
           }
         ],
@@ -282,6 +285,9 @@
             "chest_opened_img": "images/pokeball_open.png",
             "access_rules": [
               "pester"
+            ],
+            "visibility_rules": [
+              "seedexits"
             ]
           }
         ],

@@ -7,7 +7,7 @@
       {
         "name": "Beach Picture",
         "visibility_rules": [
-          "normal"
+          "normal, seednormal"
         ],
         "access_rules": [
           "beach"
@@ -16,7 +16,7 @@
       {
         "name": "Beach Wonderful Picture",
         "visibility_rules": [
-          "wonderful"
+          "wonderful, seedwonderful"
         ],
         "access_rules": [
           "beach"
@@ -25,7 +25,7 @@
       {
         "name": "Tunnel Picture",
         "visibility_rules": [
-          "normal"
+          "normal, seednormal"
         ],
         "access_rules": [
           "tunnel"
@@ -34,7 +34,7 @@
       {
         "name": "Tunnel Wonderful Picture",
         "visibility_rules": [
-          "wonderful"
+          "wonderful, seedwonderful"
         ],
         "access_rules": [
           "tunnel"
@@ -43,7 +43,7 @@
       {
         "name": "River Picture",
         "visibility_rules": [
-          "normal"
+          "normal, seednormal"
         ],
         "access_rules": [
           "river"
@@ -52,7 +52,7 @@
       {
         "name": "River Wonderful Picture",
         "visibility_rules": [
-          "wonderful"
+          "wonderful, seedwonderful"
         ],
         "access_rules": [
           "river"
@@ -61,7 +61,7 @@
       {
         "name": "Cave Picture",
         "visibility_rules": [
-          "normal"
+          "normal, seednormal"
         ],
         "access_rules": [
           "cave, food",
@@ -71,7 +71,7 @@
       {
         "name": "Cave Wonderful Picture",
         "visibility_rules": [
-          "wonderful"
+          "wonderful, seedwonderful"
         ],
         "access_rules": [
           "cave, @Logic/Throwable"
@@ -83,43 +83,61 @@
           "beach, pester"
         ],
         "visibility_rules": [
-          "multiple"
+          "multiple, seedmultiple"
         ]
       },
       {
         "name": "Surfing Pikachu",
         "access_rules": [
           "beach, food"
+        ],
+        "visibility_rules": [
+          "seedposes"
         ]
       },
       {
         "name": "Pikachu on a Stump",
         "access_rules": [
           "beach, pester"
+        ],
+        "visibility_rules": [
+          "seedposes"
         ]
       },
       {
         "name": "Pikachu on a Ball",
         "access_rules": [
           "tunnel"
+        ],
+        "visibility_rules": [
+          "seedposes"
         ]
       },
       {
         "name": "Speed Pikachu",
         "access_rules": [
           "river"
+        ],
+        "visibility_rules": [
+          "seedposes"
         ]
       },
       {
         "name": "Balloon Pikachu",
         "access_rules": [
           "cave, @Logic/Throwable"
+        ],
+        "visibility_rules": [
+          "seedposes"
         ]
       },
       {
         "name": "Flying Pikachu",
         "access_rules": [
           "cave, @Logic/Throwable, flute"
+        ],
+        "visibility_rules": [
+          "seedposes"
         ]
       }
     ]

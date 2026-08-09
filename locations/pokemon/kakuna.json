@@ -7,7 +7,7 @@
       {
         "name": "Picture",
         "visibility_rules": [
-          "normal"
+          "normal, seednormal"
         ],
         "access_rules": [
           "tunnel"
@@ -16,7 +16,7 @@
       {
         "name": "Wonderful Picture",
         "visibility_rules": [
-          "wonderful"
+          "wonderful, seedwonderful"
         ],
         "access_rules": [
           "tunnel"
@@ -30,7 +30,7 @@
           "tunnel, pester"
         ],
         "visibility_rules": [
-          "multiple"
+          "multiple, seedmultiple"
         ]
       }
     ]

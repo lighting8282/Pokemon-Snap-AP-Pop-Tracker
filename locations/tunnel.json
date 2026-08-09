@@ -262,6 +262,9 @@
             "name": "Pinsir Shadow",
             "access_rules": [
               "sign, food, flute"
+            ],
+            "visibility_rules": [
+              "seedsigns"
             ]
           }
         ],
@@ -314,6 +317,9 @@
             "name": "Tunnel",
             "access_rules": [
               "@Logic/Throwable"
+            ],
+            "visibility_rules": [
+              "seedexits"
             ]
           }
         ],

@@ -7,7 +7,7 @@
       {
         "name": "Picture",
         "visibility_rules": [
-          "normal"
+          "normal, seednormal"
         ],
         "access_rules": [
           "cave"
@@ -16,7 +16,7 @@
       {
         "name": "Wonderful Picture",
         "visibility_rules": [
-          "wonderful"
+          "wonderful, seedwonderful"
         ],
         "access_rules": [
           "cave"
@@ -28,19 +28,25 @@
           "cave, @Logic/Throwable"
         ],
         "visibility_rules": [
-          "multiple"
+          "multiple, seedmultiple"
         ]
       },
       {
         "name": "Jigglypuff on Stage",
         "access_rules": [
           "cave, @Logic/Throwable"
+        ],
+        "visibility_rules": [
+          "seedposes"
         ]
       },
       {
         "name": "Jigglypuff Trio on Stage",
         "access_rules": [
           "cave, @Logic/Throwable"
+        ],
+        "visibility_rules": [
+          "seedposes"
         ]
       }
     ]

@@ -8,6 +8,9 @@
         "name": "Picture (Game Completion)",
         "access_rules": [
           "signkingler, signpinsir, signkoffing, signcubone, signmewtwo, signdugtrio, pester"
+        ],
+        "visibility_rules": [
+          "normal, seednormal"
         ]
       }
     ]
