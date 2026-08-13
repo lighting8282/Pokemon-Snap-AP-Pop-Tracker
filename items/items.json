@@ -101,48 +101,42 @@
     "type": "toggle",
     "img": "images/otherchecks/KinglerRock.png",
     "codes": "signkingler",
-    "img_mods": "brightness|1.35, saturation|1.4",
-    "disabled_img_mods": "@disabled"
+    "disabled_img_mods": "grayscale, brightness|0.3"
   },
   {
     "name": "A Picture of Pinsir's Shadow",
     "type": "toggle",
     "img": "images/otherchecks/PinsirShadow.png",
     "codes": "signpinsir",
-    "img_mods": "brightness|1.35, saturation|1.4",
-    "disabled_img_mods": "@disabled"
+    "disabled_img_mods": "grayscale, brightness|0.3"
   },
   {
     "name": "A Picture of Koffing Smoke",
     "type": "toggle",
     "img": "images/otherchecks/KoffingSmoke.png",
     "codes": "signkoffing",
-    "img_mods": "brightness|1.35, saturation|1.4",
-    "disabled_img_mods": "@disabled"
+    "disabled_img_mods": "grayscale, brightness|0.3"
   },
   {
     "name": "A Picture of Cubone Tree",
     "type": "toggle",
     "img": "images/otherchecks/CuboneTree.png",
     "codes": "signcubone",
-    "img_mods": "brightness|1.35, saturation|1.4",
-    "disabled_img_mods": "@disabled"
+    "disabled_img_mods": "grayscale, brightness|0.3"
   },
   {
     "name": "A Picture of The Mewtwo Constellation",
     "type": "toggle",
     "img": "images/otherchecks/MewtwoConstellation.png",
     "codes": "signmewtwo",
-    "img_mods": "brightness|1.35, saturation|1.4",
-    "disabled_img_mods": "@disabled"
+    "disabled_img_mods": "grayscale, brightness|0.3"
   },
   {
     "name": "A Picture of Dugtrio Mountain",
     "type": "toggle",
     "img": "images/otherchecks/MtDugtrio.png",
     "codes": "signdugtrio",
-    "img_mods": "brightness|1.35, saturation|1.4",
-    "disabled_img_mods": "@disabled"
+    "disabled_img_mods": "grayscale, brightness|0.3"
   },
   {
     "name": "Arcanine photographed",
