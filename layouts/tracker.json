@@ -20,17 +20,6 @@
                 "type": "layout",
                 "key": "item_grid"
               }
-            },
-            {
-              "type": "group",
-              "header": "Oak's Lab & Rainbow Cloud",
-              "dock": "bottom",
-              "content": {
-                "type": "map",
-                "maps": [
-                  "oakmew"
-                ]
-              }
             }
           ]
         },

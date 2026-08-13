@@ -34,11 +34,5 @@
     "location_size": 15,
     "location_border_thickness": 1,
     "img": "images/ValleyMap.png"
-  },
-  {
-    "name": "oakmew",
-    "location_size": 15,
-    "location_border_thickness": 1,
-    "img": "images/OakLand.png"
   }
 ]

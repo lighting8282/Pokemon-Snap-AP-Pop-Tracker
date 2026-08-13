@@ -14,12 +14,6 @@
             "key": "item_grid"
           }
         ]
-      },
-      {
-        "type": "map",
-        "maps": [
-          "oakmew"
-        ]
       }
     ]
   }
