@@ -76,6 +76,7 @@ Tracker:AddLocations("locations/volcano.json")
 Tracker:AddLocations("locations/river.json")
 Tracker:AddLocations("locations/cave.json")
 Tracker:AddLocations("locations/valley.json")
+Tracker:AddLocations("locations/oakmew.json")
 
 ScriptHost:LoadScript("scripts/course_items.lua")
 
