@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "package_version": "1.4.0.2",
+      "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.4.0.2/SnapTracker-1.4.0.2.zip",
+      "sha256": "ed49d69636bc746ffa9d4a4fb5e313229783587a5817eda1d7725a8b2e3e7deb",
+      "changelog": [
+        "Checks your seed does not contain are now hidden, including the ones dropped by rng_checks and hard_checks such as Zubat (Cave): Multiple.",
+        "Fixed the Pokedex showing every Pokemon greyed, even ones you had photographed.",
+        "Unchecked sign pictures are darker, so the ones you have received stand out."
+      ]
+    },
+    {
       "package_version": "1.3.0.2",
       "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.3.0.2/SnapTracker-1.3.0.2.zip",
       "sha256": "8700f62fe65587f0bbfdc177002e22cc1a473c5f2e1ac4cd6fd98167ed8b1209",
