@@ -350,6 +350,32 @@ def main(apworld):
             print(f"      {n}\n          world  : {w}\n          tracker: {g}  [{s}]")
         print()
 
+    # [5] Image references, compared case-sensitively. Windows resolves
+    # "new.png" to "New.png" happily, so a wrong-case reference works in the
+    # unpacked working copy and then fails for everyone loading the zip, where
+    # entries are matched exactly. 1.4.0.2 shipped one of these.
+    on_disk = set()
+    for root_dir, _, files in os.walk(PACK / "images"):
+        for f in files:
+            rel = os.path.relpath(os.path.join(root_dir, f), PACK)
+            on_disk.add(rel.replace("\\", "/"))
+    bad = {}
+    for f in list((PACK).rglob("*.json")) + list((PACK / "scripts").rglob("*.lua")):
+        if ".git" in f.parts or "tools" in f.parts:
+            continue
+        for m in re.finditer(r'"(images/[^"]+\.png)"',
+                             f.read_text(encoding="utf-8-sig", errors="ignore")):
+            if m.group(1) not in on_disk:
+                bad.setdefault(m.group(1), set()).add(f.relative_to(PACK).as_posix())
+    if bad:
+        problems += len(bad)
+        print(f"[5] {len(bad)} image reference(s) do not match a file exactly:")
+        for img, where in sorted(bad.items()):
+            near = [d for d in on_disk if d.lower() == img.lower()]
+            hint = f"  (did you mean {near[0]}?)" if near else "  (no such file)"
+            print(f"      {img}{hint}\n          from {', '.join(sorted(where))}")
+        print()
+
     if problems:
         print(f"FAIL - {problems} thing(s) to fix")
         return 1

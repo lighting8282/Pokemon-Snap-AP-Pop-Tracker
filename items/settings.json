@@ -2,7 +2,7 @@
   {
     "name": "Normal Pictures",
     "type": "toggle",
-    "img": "images/otherchecks/new.png",
+    "img": "images/otherchecks/New.png",
     "codes": "normal",
     "initial_active_state": true
   },
