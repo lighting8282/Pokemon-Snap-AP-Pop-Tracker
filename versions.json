@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "package_version": "1.5.0.0",
+      "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.5.0.0/SnapTracker-1.5.0.0.zip",
+      "sha256": "864b7021c1e8843cb0a06f6e01f58076e8fef0495014e5ee51202ff4083e4474",
+      "changelog": [
+        "Supports apworld 0.6.0: the six Oak reward checks are tracked, and the Rainbow Cloud goal follows your yaml (sign pictures or Pokemon pictures, and how many).",
+        "Mew and Poliwag are now in logic with either the Pokemon Food or the Pester Ball, matching the apworld.",
+        "Sandshrew's picture no longer shows as reachable with only the Dash Engine.",
+        "Fixed the Normal Pictures toggle icon not loading."
+      ]
+    },
+    {
       "package_version": "1.4.0.2",
       "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.4.0.2/SnapTracker-1.4.0.2.zip",
       "sha256": "ed49d69636bc746ffa9d4a4fb5e313229783587a5817eda1d7725a8b2e3e7deb",
