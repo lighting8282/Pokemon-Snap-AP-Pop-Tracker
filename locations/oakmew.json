@@ -3,6 +3,70 @@
     "name": "Oak's Lab & Rainbow Cloud",
     "children": [
       {
+        "name": "Report Scores",
+        "chest_unopened_img": "images/pokeball_closed.png",
+        "chest_opened_img": "images/pokeball_open.png",
+        "sections": [
+          {
+            "name": "24,000 PKMN Report Score",
+            "visibility_rules": [
+              "loc601"
+            ]
+          },
+          {
+            "name": "72,500 PKMN Report Score",
+            "visibility_rules": [
+              "loc602"
+            ]
+          },
+          {
+            "name": "130,000 PKMN Report Score",
+            "visibility_rules": [
+              "loc603"
+            ]
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "oakmew",
+            "x": 78,
+            "y": 85
+          }
+        ]
+      },
+      {
+        "name": "Pokemon Photographed",
+        "chest_unopened_img": "images/pokeball_closed.png",
+        "chest_opened_img": "images/pokeball_open.png",
+        "sections": [
+          {
+            "name": "6 Pokemon Photographed",
+            "visibility_rules": [
+              "loc604"
+            ]
+          },
+          {
+            "name": "22 Pokemon Photographed",
+            "visibility_rules": [
+              "loc605"
+            ]
+          },
+          {
+            "name": "40 Pokemon Photographed",
+            "visibility_rules": [
+              "loc606"
+            ]
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "oakmew",
+            "x": 130,
+            "y": 85
+          }
+        ]
+      },
+      {
         "name": "Mew",
         "sections": [
           {

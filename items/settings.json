@@ -1230,5 +1230,41 @@
     "type": "toggle",
     "codes": "loc505",
     "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 601",
+    "type": "toggle",
+    "codes": "loc601",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 602",
+    "type": "toggle",
+    "codes": "loc602",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 603",
+    "type": "toggle",
+    "codes": "loc603",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 604",
+    "type": "toggle",
+    "codes": "loc604",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 605",
+    "type": "toggle",
+    "codes": "loc605",
+    "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 606",
+    "type": "toggle",
+    "codes": "loc606",
+    "initial_active_state": true
   }
 ]

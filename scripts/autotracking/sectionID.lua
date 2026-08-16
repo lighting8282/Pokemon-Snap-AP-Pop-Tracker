@@ -215,4 +215,12 @@ newSectionIDToAPID = {
 
     -- Rainbow Cloud
     ["Mew/Picture (Game Completion)"]           = {63, 1063},
+
+    -- Oak's Lab (apworld 0.6.0)
+    ["Oak's Lab & Rainbow Cloud/Report Scores/24,000 PKMN Report Score"]= {601, 1601},
+    ["Oak's Lab & Rainbow Cloud/Report Scores/72,500 PKMN Report Score"]= {602, 1602},
+    ["Oak's Lab & Rainbow Cloud/Report Scores/130,000 PKMN Report Score"]= {603, 1603},
+    ["Oak's Lab & Rainbow Cloud/Pokemon Photographed/6 Pokemon Photographed"]= {604, 1604},
+    ["Oak's Lab & Rainbow Cloud/Pokemon Photographed/22 Pokemon Photographed"]= {605, 1605},
+    ["Oak's Lab & Rainbow Cloud/Pokemon Photographed/40 Pokemon Photographed"]= {606, 1606},
 }

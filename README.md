@@ -6,7 +6,7 @@ An auto-tracking [PopTracker](https://github.com/black-sliver/PopTracker) pack f
 ## Requirements
 
 - **PopTracker 0.28.0** or newer
-- **Pokemon Snap apworld 0.4.0 or newer**
+- **Pokemon Snap apworld 0.4.0 or newer** (0.6.0 recommended)
 
 Anything older used different location ids and will clear the wrong checks.
 
@@ -26,8 +26,12 @@ AP button.
 ## What it tracks
 
 - **Every location** — photos, Good Technique photos, Multiple photos, the 11 special
-  poses, the 6 Pokemon Signs and the 3 secret exits, plus the bonus duplicates a 0.5.x seed
-  may generate
+  poses, the 6 Pokemon Signs, the 3 secret exits, the report score and photo count checks
+  added in 0.6.0, plus the bonus duplicates a seed may generate
+- **Only the checks your seed contains** — anything your yaml excluded is hidden, worked out
+  from the seed's own location list rather than the options
+- **The goal** — 0.6.0 makes the Rainbow Cloud requirement configurable (sign pictures or
+  Pokemon pictures, and how many), read from slot data
 - **Items** — the six courses, Apple, Pester Ball, PokeFlute, Dash Engine, Pokemon Sign
   Detector, film capacity, and a count of the Pokemon pictures you have been sent
 - **Logic** — access rules match the apworld's own rules, so a check shows as reachable

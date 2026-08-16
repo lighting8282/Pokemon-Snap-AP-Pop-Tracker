@@ -42,9 +42,11 @@ AUTOTRACK_BUSY = false
 
 -- Which locations does this seed actually contain?
 --
--- The apworld has no fill_slot_data, so nothing tells us the player's yaml. But
 -- Archipelago reports every location in the slot, as CheckedLocations plus
--- MissingLocations, so the seed itself says what exists.
+-- MissingLocations, so the seed itself says what exists. apworld 0.6.0 added
+-- fill_slot_data, but this stays keyed on the location list: it needs no option
+-- names, so options added later work with no change here. slot_data is used
+-- only for the goal, which is not expressible as a location.
 --
 -- Each mapped location has a hidden loc<id> flag that its section's visibility
 -- rule requires. Working per location rather than per category matters: options
@@ -52,6 +54,38 @@ AUTOTRACK_BUSY = false
 -- leaving the other twenty-seven in place, which a category-level flag cannot
 -- express. This also covers photo_bonuses, special_poses, pokemon_signs and
 -- secret_exits, and any future option, without naming any of them.
+-- The Rainbow Cloud requirement is per seed since apworld 0.6.0: goal_type
+-- picks between sign pictures and Pokemon pictures, and signs_required /
+-- pokemon_required set how many. slot_data now carries all three, so Mew's
+-- access rule calls this instead of hardcoding "all six signs".
+GOAL_TYPE      = 0      -- 0 = sign pictures, 1 = Pokemon pictures
+GOAL_REQUIRED  = 6
+SIGN_CODES = {"signkingler","signpinsir","signkoffing","signcubone","signmewtwo","signdugtrio"}
+
+function goal_unlocked()
+    local have = 0
+    if GOAL_TYPE == 1 then
+        have = Tracker:ProviderCountForCode("newpic")
+    else
+        for _, c in ipairs(SIGN_CODES) do
+            if Tracker:ProviderCountForCode(c) > 0 then have = have + 1 end
+        end
+    end
+    return have >= GOAL_REQUIRED
+end
+
+function readGoalFromSlotData(slot_data)
+    if type(slot_data) ~= "table" then return end
+    if slot_data["goal_type"] ~= nil then GOAL_TYPE = slot_data["goal_type"] end
+    if GOAL_TYPE == 1 then
+        GOAL_REQUIRED = slot_data["pokemon_required"] or 50
+    else
+        GOAL_REQUIRED = slot_data["signs_required"] or 6
+    end
+    print(string.format("goal: %d %s picture(s) to reach the Rainbow Cloud",
+          GOAL_REQUIRED, GOAL_TYPE == 1 and "Pokemon" or "sign"))
+end
+
 function applySeedContents()
     local checked = Archipelago.CheckedLocations
     local missing = Archipelago.MissingLocations
@@ -149,6 +183,7 @@ function onClear(slot_data)
 
     print(dump_table(slot_data))
     
+    readGoalFromSlotData(slot_data)
     applySeedContents()
 
     LOCAL_ITEMS = {}

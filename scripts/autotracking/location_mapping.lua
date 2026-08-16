@@ -419,4 +419,18 @@ LOCATION_MAPPING = {
     -- Rainbow Cloud
     [63]   = {"@Mew/Picture (Game Completion)"},              -- Mew
     [1063] = {"@Mew/Picture (Game Completion)"},              -- Mew 2
+
+    -- Oak's Lab (apworld 0.6.0)
+    [601]  = {"@Oak's Lab & Rainbow Cloud/Report Scores/24,000 PKMN Report Score"}, -- 24,000 PKMN Report Score
+    [1601] = {"@Oak's Lab & Rainbow Cloud/Report Scores/24,000 PKMN Report Score"}, -- 24,000 PKMN Report Score 2
+    [602]  = {"@Oak's Lab & Rainbow Cloud/Report Scores/72,500 PKMN Report Score"}, -- 72,500 PKMN Report Score
+    [1602] = {"@Oak's Lab & Rainbow Cloud/Report Scores/72,500 PKMN Report Score"}, -- 72,500 PKMN Report Score 2
+    [603]  = {"@Oak's Lab & Rainbow Cloud/Report Scores/130,000 PKMN Report Score"}, -- 130,000 PKMN Report Score
+    [1603] = {"@Oak's Lab & Rainbow Cloud/Report Scores/130,000 PKMN Report Score"}, -- 130,000 PKMN Report Score 2
+    [604]  = {"@Oak's Lab & Rainbow Cloud/Pokemon Photographed/6 Pokemon Photographed"}, -- 6 Pokemon Photographed
+    [1604] = {"@Oak's Lab & Rainbow Cloud/Pokemon Photographed/6 Pokemon Photographed"}, -- 6 Pokemon Photographed 2
+    [605]  = {"@Oak's Lab & Rainbow Cloud/Pokemon Photographed/22 Pokemon Photographed"}, -- 22 Pokemon Photographed
+    [1605] = {"@Oak's Lab & Rainbow Cloud/Pokemon Photographed/22 Pokemon Photographed"}, -- 22 Pokemon Photographed 2
+    [606]  = {"@Oak's Lab & Rainbow Cloud/Pokemon Photographed/40 Pokemon Photographed"}, -- 40 Pokemon Photographed
+    [1606] = {"@Oak's Lab & Rainbow Cloud/Pokemon Photographed/40 Pokemon Photographed"}, -- 40 Pokemon Photographed 2
 }

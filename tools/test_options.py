@@ -49,6 +49,9 @@ def seed_locations(L, opts):
     if opts["special_poses"]: cats.add("SPECIAL_POSE")
     if opts["pokemon_signs"]: cats.add("POKEMON_SIGN")
     if opts["secret_exits"]:  cats.add("SECRET_EXIT")
+    # apworld 0.6.0
+    if opts.get("report_photo_count", True): cats.add("PHOTO_COUNT")
+    if opts.get("report_score_total", True): cats.add("REPORT_SCORE")
 
     ids = set()
     for table in L.location_tables.values():
@@ -121,7 +124,8 @@ def report(L, sections, opts, toggles, verbose):
 
 
 DEFAULTS = dict(photo_bonuses="technique_and_multiple", special_poses=True,
-                pokemon_signs=True, secret_exits=True, rng_checks=False, hard_checks=False)
+                pokemon_signs=True, secret_exits=True, rng_checks=False, hard_checks=False,
+                report_photo_count=True, report_score_total=True)
 
 
 def main():
@@ -131,6 +135,8 @@ def main():
     ap.add_argument("--no-poses", action="store_true")
     ap.add_argument("--no-signs", action="store_true")
     ap.add_argument("--no-exits", action="store_true")
+    ap.add_argument("--no-photo-count", action="store_true")
+    ap.add_argument("--no-score-total", action="store_true")
     ap.add_argument("--rng-checks", action="store_true")
     ap.add_argument("--hard-checks", action="store_true")
     ap.add_argument("--hide", default="", help="user toggles to turn off, e.g. wonderful,multiple")
@@ -150,7 +156,8 @@ def main():
             for rng, hard in itertools.product([False, True], repeat=2):
                 report(L, sections, dict(DEFAULTS, photo_bonuses=pb, rng_checks=rng, hard_checks=hard),
                        toggles, a.verbose)
-        for flag in ["special_poses", "pokemon_signs", "secret_exits"]:
+        for flag in ["special_poses", "pokemon_signs", "secret_exits",
+                     "report_photo_count", "report_score_total"]:
             report(L, sections, dict(DEFAULTS, **{flag: False}), toggles, a.verbose)
         return 0
 
@@ -159,6 +166,8 @@ def main():
     if a.no_poses: opts["special_poses"] = False
     if a.no_signs: opts["pokemon_signs"] = False
     if a.no_exits: opts["secret_exits"] = False
+    if a.no_photo_count: opts["report_photo_count"] = False
+    if a.no_score_total: opts["report_score_total"] = False
     opts["rng_checks"] = a.rng_checks
     opts["hard_checks"] = a.hard_checks
     report(L, sections, opts, toggles, a.verbose)
