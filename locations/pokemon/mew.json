@@ -7,7 +7,8 @@
       {
         "name": "Picture (Game Completion)",
         "access_rules": [
-          "$goal_unlocked, pester"
+          "$goal_unlocked, pester",
+          "$goal_unlocked, food"
         ],
         "visibility_rules": [
           "normal, loc63"

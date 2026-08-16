@@ -2,3 +2,4 @@
 *.orig
 Thumbs.db
 *.hold
+tools/__pycache__/

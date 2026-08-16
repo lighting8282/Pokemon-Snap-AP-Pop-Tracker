@@ -10,7 +10,8 @@
           "normal, loc24"
         ],
         "access_rules": [
-          "river"
+          "river, food",
+          "river, pester"
         ]
       },
       {

@@ -35,7 +35,7 @@ def load_apworld(path):
     # BaseClasses only needs to exist; nothing here constructs a real world.
     bc = types.ModuleType("BaseClasses")
     for n in ["Location", "Region", "Item", "MultiWorld", "Entrance",
-              "Tutorial", "ItemClassification"]:
+              "Tutorial", "ItemClassification", "CollectionState"]:
         setattr(bc, n, type(n, (object,), {"__init__": lambda self, *a, **k: None}))
     sys.modules["BaseClasses"] = bc
 
@@ -57,61 +57,139 @@ def load_apworld(path):
             locs[d.id] = d.name
     for it in I._all_items:
         items[it.ps_code] = it.name
-    return version, locs, items, os.path.join(root, "rules.py")
+    return version, locs, items, root
 
 
-ALIAS = {"_HAS_PESTER": [{"pester"}], "_HAS_APPLE": [{"food"}],
-         "_HAS_FLUTE": [{"flute"}],
-         "_HAS_APPLE_OR_PESTER": [{"pester"}, {"food"}]}
-CONST = {"PESTER_BALL": "pester", "POKEMON_FOOD": "food", "POKEFLUTE": "flute",
-         "DASH_ENGINE": "dash", "SIGN_DETECTOR": "sign"}
-SIGNS = {"BEACH_SIGN": "Kingler Rock", "TUNNEL_SIGN": "Pinsir's Shadow",
-         "VOLCANO_SIGN": "Koffing Smoke", "RIVER_SIGN": "Cubone Tree",
-         "CAVE_SIGN": "The Mewtwo Constellation", "VALLEY_SIGN": "Dugtrio Mountain"}
-LVL = {"LVL_TUNNEL": "Tunnel", "LVL_RIVER": "River", "LVL_VALLEY": "Valley"}
+# AP item name -> the pack's item code. Keyed on the value, not the python
+# identifier, so renaming a constant upstream cannot silently drop a rule.
+ITEM_CODE = {"Pester Ball": "pester", "Apple": "food", "PokeFlute": "flute",
+             "Dash Engine": "dash", "Pokemon Sign Detector": "sign"}
 
 
-def dnf(expr):
-    """Turn a rule_builder expression into a set of alternative requirement sets."""
-    expr = expr.strip().rstrip(")")
-    if expr in ALIAS:
-        return {frozenset(s) for s in ALIAS[expr]}
-    toks = [CONST[t] for t in re.findall(r"\b([A-Z_]+)\b", expr) if t in CONST]
-    if expr.startswith("HasAny"):
-        return {frozenset({t}) for t in toks}
-    if expr.startswith("HasAll"):
-        return {frozenset(toks)}
-    if expr.startswith("Has("):
-        return {frozenset({toks[0]})} if toks else None
-    if expr.startswith("And("):
+def _stub_rule_builder():
+    """Enough of rule_builder for the world's rules.py to import and be read.
+
+    The world builds its rules as objects in a LOCATION_RULES table. Recording
+    what those constructors were called with is far more durable than reading
+    the source: upstream has restructured rules.py twice, and both times a
+    regex parser kept passing while silently comparing nothing.
+    """
+    class _Resolved:
+        def __init__(self, *a, **k): pass
+
+    class Rule:
+        # Rule["PokemonSnapWorld"] and `class X(Rule, game="...")` both appear,
+        # and subclasses annotate against Rule.Resolved.
+        Resolved = _Resolved
+        def __class_getitem__(cls, item): return cls
+        def __init_subclass__(cls, **kw): super().__init_subclass__()
+        def __init__(self, *a, **k): self.args = a
+
+    def _mk(name):
+        return type(name, (Rule,), {})
+
+    mod = types.ModuleType("rule_builder.rules")
+    pkg = types.ModuleType("rule_builder")
+    names = ["Has", "HasAll", "HasAny", "And", "Or", "CanReachLocation",
+             "CollectionState", "False_", "True_", "HasGroup", "NestedRule",
+             "FieldResolver", "OptionFilter"]
+    for n in names:
+        setattr(mod, n, _mk(n))
+    mod.Rule = Rule
+    mod.resolve_field = lambda *a, **k: None
+    pkg.rules = mod
+    sys.modules["rule_builder"] = pkg
+    sys.modules["rule_builder.rules"] = mod
+
+    nu = types.ModuleType("NetUtils")
+    nu.JSONMessagePart = dict
+    sys.modules["NetUtils"] = nu
+
+    # future_rules.py pulls these from typing_extensions, which a bare Python
+    # install does not have; the stdlib versions are equivalent here.
+    if "typing_extensions" not in sys.modules:
+        try:
+            import typing_extensions  # noqa: F401
+        except ImportError:
+            import typing
+            te = types.ModuleType("typing_extensions")
+            for n in ("TypeVar", "override", "Self", "Any", "Protocol"):
+                setattr(te, n, getattr(typing, n, object))
+            sys.modules["typing_extensions"] = te
+    return mod
+
+
+def to_dnf(rule, rb):
+    """A rule object -> alternative requirement sets, or None if not expressible.
+
+    None means "the tracker cannot be checked against this", e.g. HasGroup for
+    the goal or CanReachLocation for Oak's rewards. Those are counted and
+    reported rather than quietly dropped.
+    """
+    kind = type(rule).__name__
+    if kind == "Has":
+        c = ITEM_CODE.get(rule.args[0])
+        return {frozenset({c})} if c else None
+    if kind in ("HasAny", "HasAll"):
+        cs = [ITEM_CODE.get(a) for a in rule.args]
+        if any(c is None for c in cs):
+            return None
+        return {frozenset({c}) for c in cs} if kind == "HasAny" else {frozenset(cs)}
+    if kind == "And":
         acc = {frozenset()}
-        for part in re.split(r",\s*(?![^()]*\))", expr[4:]):
-            sub = dnf(part)
-            if not sub:
+        for sub in rule.args:
+            d = to_dnf(sub, rb)
+            if not d:
                 return None
-            acc = {a | b for a in acc for b in sub}
+            acc = {a | b for a in acc for b in d}
+        return acc
+    if kind == "Or":
+        acc = set()
+        for sub in rule.args:
+            d = to_dnf(sub, rb)
+            if not d:
+                return None
+            acc |= d
         return acc
     return None
 
 
-def parse_rules(path):
-    src = open(path, encoding="utf-8").read()
-    out = {}
-    for m in re.finditer(r"world\.set_rule\(world\.get_location\((.+?)\),\s*(.+?)\)\n", src):
-        loc, rule = m.group(1).strip(), m.group(2).strip()
-        lm = re.match(r'^(wdfl|mult)\("(.+?)"\)$', loc)
-        if lm:
-            name = lm.group(2) + (": Good Technique" if lm.group(1) == "wdfl" else ": Multiple")
-        elif loc.startswith("secret_exit("):
-            name = LVL.get(loc[12:-1], loc) + ": Secret Exit"
-        elif loc.startswith('"'):
-            name = loc.strip('"')
-        else:
-            name = SIGNS.get(loc, loc)
-        d = dnf(rule)
-        if d:
-            out[name] = d
-    return out
+def parse_rules(root):
+    """Read LOCATION_RULES out of the world and reduce it to AP name -> DNF.
+
+    Returns (comparable, opaque) - the second is the list of location names
+    whose rule this cannot express, so a shrinking comparable set is visible
+    instead of looking like a clean pass.
+    """
+    rb = _stub_rule_builder()
+    import importlib
+    R = importlib.import_module("pokemon_snap.rules")
+
+    out, opaque = {}, []
+    for name, categories in R.LOCATION_RULES.items():
+        for category, rule in categories.items():
+            try:
+                ap_name = R.location_name(name, category)
+            except Exception:
+                opaque.append(f"{name} [{category}]")
+                continue
+            d = to_dnf(rule, rb)
+            if d:
+                out[ap_name] = d
+            else:
+                opaque.append(ap_name)
+
+    # set_oak_rules() gives the six Oak rewards AtLeast/ReportScoreAchievable
+    # rules, which are "can you reach N other checks" rather than "do you hold
+    # tool X", so there is nothing for a tool-requirement comparison to check.
+    # The goal is likewise an entrance rule (HasGroup over picture items),
+    # modelled in the pack as $goal_unlocked. Listed so the count below never
+    # reads as fuller coverage than it is.
+    for n in ("POKEMON_TOTAL_6", "POKEMON_TOTAL_22", "POKEMON_TOTAL_40",
+              "REPORT_SCORE_24_000", "REPORT_SCORE_72_500", "REPORT_SCORE_130_000"):
+        opaque.append(getattr(R, n, n))
+    opaque.append("Rainbow Cloud entrance (goal)")
+    return out, opaque
 
 
 # ------------------------------------------------------------------- pack ---
@@ -164,7 +242,10 @@ def tracker_dnf(rules):
         for p in parts:
             if p.startswith("[") and p.endswith("]"):
                 continue
-            if p in COURSES or not p:
+            # $goal_unlocked mirrors the world's Start -> Rainbow Cloud
+            # entrance rule, so like a course code it is region access, not
+            # an item requirement.
+            if p in COURSES or p == "$goal_unlocked" or not p:
                 continue
             if p == "@Logic/Throwable":
                 opts = [o + [t] for o in opts for t in ("pester", "food")]
@@ -186,8 +267,8 @@ def show(d):
 # ------------------------------------------------------------------- main ---
 
 def main(apworld):
-    version, locs, items, rules_py = load_apworld(apworld)
-    rules = parse_rules(rules_py)
+    version, locs, items, root = load_apworld(apworld)
+    rules, opaque = parse_rules(root)
     lm, sm, im, sections = load_pack()
     pack_version = json.load(open(PACK / "manifest.json", encoding="utf-8-sig"))["package_version"]
 
@@ -241,14 +322,27 @@ def main(apworld):
         if i in locs:
             name_to_section[locs[i]] = ss[0].lstrip('@')
 
-    diffs = []
+    diffs, compared = [], 0
     for name, want in sorted(rules.items()):
         sec = name_to_section.get(name)
         if not sec:
             continue
+        compared += 1
         got = tracker_dnf(sections.get(sec, []))
         if got != want:
             diffs.append((name, sec, show(want), show(got)))
+
+    # A logic check that compares nothing has passed silently twice before, so
+    # say how much was actually compared and treat "almost nothing" as failure.
+    print(f"[4] logic: compared {compared} rule(s); "
+          f"{len(opaque)} not expressible in tracker terms"
+          + (f" ({', '.join(sorted(opaque)[:4])}"
+             + (", ..." if len(opaque) > 4 else "") + ")" if opaque else ""))
+    if compared < 50:
+        problems += 1
+        print(f"    !! only {compared} rules compared - the parser has probably"
+              " stopped understanding this apworld's rules.py; fix it before"
+              " trusting this run\n")
     if diffs:
         problems += len(diffs)
         print(f"[4] {len(diffs)} access rule(s) disagree with the world:")
