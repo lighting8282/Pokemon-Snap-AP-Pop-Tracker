@@ -39,6 +39,31 @@ def load_apworld(path):
         setattr(bc, n, type(n, (object,), {"__init__": lambda self, *a, **k: None}))
     sys.modules["BaseClasses"] = bc
 
+    # 0.7.0 made items.py import options.py, which needs Archipelago's Options.
+    # Stub it so option classes are readable as plain values (their `default`
+    # is a class attribute, which is all this tool looks at).
+    opt = types.ModuleType("Options")
+
+    class _Opt:
+        default = 0
+        option_true = 1
+        option_false = 0
+        def __init__(self, *a, **k):
+            self.value = type(self).default
+        def __class_getitem__(cls, item): return cls
+        def __init_subclass__(cls, **kw): super().__init_subclass__()
+
+    for n in ["Option", "Choice", "Toggle", "DefaultOnToggle", "Range",
+              "NamedRange", "StartInventoryPool", "OptionSet", "OptionList",
+              "FreeText", "TextChoice", "DeathLink", "ItemDict"]:
+        setattr(opt, n, type(n, (_Opt,), {}))
+    opt.DefaultOnToggle.default = 1
+    opt.PerGameCommonOptions = type("PerGameCommonOptions", (object,), {})
+    opt.OptionGroup = type("OptionGroup", (object,),
+                           {"__init__": lambda self, *a, **k: None})
+    opt.Visibility = type("Visibility", (object,), {"none": 0, "all": 0xFF})
+    sys.modules["Options"] = opt
+
     # addresses.py reads its symbol table via importlib.resources, which needs a
     # genuine package on sys.path. Blank the world's __init__ so importing the
     # package does not drag in worlds.AutoWorld and the rest of Archipelago.
@@ -84,6 +109,11 @@ def _stub_rule_builder():
         def __class_getitem__(cls, item): return cls
         def __init_subclass__(cls, **kw): super().__init_subclass__()
         def __init__(self, *a, **k): self.args = a
+        # 0.7.0 composes rules with & and |, e.g. _HAS_PESTER & HasFilm(4).
+        def __and__(self, other): return mod.And(self, other)
+        def __or__(self, other): return mod.Or(self, other)
+        def __rand__(self, other): return mod.And(other, self)
+        def __ror__(self, other): return mod.Or(other, self)
 
     def _mk(name):
         return type(name, (Rule,), {})
