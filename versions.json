@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "package_version": "1.6.0.0",
+      "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.6.0.0/SnapTracker-1.6.0.0.zip",
+      "sha256": "ea98951d41e3e1597f138f7cbc9f9209a85aaa3d5eb84d9703c4831696c3cba9",
+      "changelog": [
+        "Supports apworld 0.7.0. Older apworlds still work.",
+        "Photo scoring: Good Technique and Multiple PKMN checks stay out of logic until you have the unlock item, under progressive_unlocks and separate_unlocks.",
+        "Film capacity is read from your yaml, and is now a logic requirement for 13 checks as the apworld intends.",
+        "Map fragments: courses unlock from <Course>: Map Fragment items when map_fragments is 2 or more."
+      ]
+    },
+    {
       "package_version": "1.5.0.0",
       "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.5.0.0/SnapTracker-1.5.0.0.zip",
       "sha256": "864b7021c1e8843cb0a06f6e01f58076e8fef0495014e5ee51202ff4083e4474",
