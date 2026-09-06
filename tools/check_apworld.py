@@ -208,6 +208,7 @@ def parse_rules(root):
                 out[ap_name] = d
             else:
                 opaque.append(ap_name)
+    parse_rules.module = R
 
     # set_oak_rules() gives the six Oak rewards AtLeast/ReportScoreAchievable
     # rules, which are "can you reach N other checks" rather than "do you hold
@@ -291,7 +292,198 @@ def tracker_dnf(rules):
 
 
 def show(d):
+    if d is UNREACHABLE:
+        return "(unreachable)"
     return " OR ".join("+".join(sorted(x)) or "(free)" for x in sorted(d, key=sorted)) or "(free)"
+
+
+# ------------------------------------------------------- option-aware sweep ---
+#
+# Since 0.7.0 a location's rule depends on the yaml: photo scoring can put Good
+# Technique and Multiple behind items, film capacity is a real requirement, and
+# rng_checks can open an alternative. A single comparison can therefore only
+# ever check one yaml. This evaluates both sides under the same option set and
+# compares, which is what catches a rule the pack models for one setting only.
+
+UNREACHABLE = "UNREACHABLE"      # no combination of items satisfies the rule
+FREE = frozenset()
+
+# name -> (photo_scoring, starting_film, rng_checks)
+OPTION_SETS = [
+    ("defaults",                 (0, 15, 0)),
+    ("separate scoring",         (1, 15, 0)),
+    ("progressive unlocks",      (2, 15, 0)),
+    ("separate unlocks",         (3, 15, 0)),
+    ("separate + rng checks",    (1, 15, 1)),
+    ("starting_film 1",          (0,  1, 0)),
+    ("starting_film 5",          (0,  5, 0)),
+    ("starting_film 8",          (0,  8, 0)),
+]
+
+
+def _scoring_tokens(scoring, category):
+    """What holding the scoring unlock looks like, as requirement tokens."""
+    wonderful = category == "WONDERFUL_PHOTO"
+    if scoring in (0, 1):
+        return {FREE}
+    if scoring == 2:
+        return {frozenset({"progscore1" if wonderful else "progscore2"})}
+    return {frozenset({"wdflscore" if wonderful else "multscore"})}
+
+
+def world_dnf(rule, cfg):
+    """Reduce a world rule to requirement sets under one option configuration."""
+    scoring, film, rng = cfg
+    k = type(rule).__name__
+    if k == "True_":
+        return {FREE}
+    if k == "False_":
+        return UNREACHABLE
+    if k == "HasFilm":
+        return {FREE} if film >= rule.film_requirement else UNREACHABLE
+    if k == "OptionFilter":
+        # the world uses exactly two: separate scoring, and rng checks on
+        which = str(rule.args[0]) if rule.args else ""
+        on = (scoring in (1, 3)) if "PhotoScoring" in which else bool(rng)
+        return {FREE} if on else UNREACHABLE
+    if k == "Has":
+        c = ITEM_CODE.get(rule.args[0])
+        return {frozenset({c})} if c else UNREACHABLE
+    if k in ("HasAny", "HasAll"):
+        cs = [ITEM_CODE.get(a) for a in rule.args]
+        if any(c is None for c in cs):
+            return UNREACHABLE
+        return {frozenset({c}) for c in cs} if k == "HasAny" else {frozenset(cs)}
+    if k in ("And", "list"):
+        # a bare list where a rule is expected is an AND of its members
+        parts = rule if k == "list" else rule.args
+        acc = {FREE}
+        for sub in parts:
+            d = world_dnf(sub, cfg)
+            if d is UNREACHABLE:
+                return UNREACHABLE
+            acc = {a | b for a in acc for b in d}
+        return acc
+    if k == "Or":
+        acc = set()
+        for sub in rule.args:
+            d = world_dnf(sub, cfg)
+            if d is not UNREACHABLE:
+                acc |= d
+        return acc or UNREACHABLE
+    return None                                    # not expressible
+
+
+def pack_dnf(rules, cfg):
+    """The same reduction for a section's access_rules."""
+    scoring, film, rng = cfg
+    out = set()
+    for r in rules:
+        parts = [x.strip() for x in r.split(",")]
+        if any(p.startswith("{") for p in parts):
+            continue
+        opts, ok = [[]], True
+        for p in parts:
+            if p.startswith("[") and p.endswith("]"):
+                continue
+            if p in COURSES or p == "$goal_unlocked" or not p:
+                continue
+            if p == "@Logic/Throwable":
+                opts = [o + [t] for o in opts for t in ("pester", "food")]
+                continue
+            if p in TOOLS:
+                opts = [o + [p] for o in opts]
+                continue
+            if p.startswith("$has_film_"):
+                if film < int(p.rsplit("_", 1)[1]):
+                    ok = False
+                    break
+                continue
+            if p == "$separate_scoring":
+                if scoring not in (1, 3):
+                    ok = False
+                    break
+                continue
+            if p == "$rng_checks_on":
+                if not rng:
+                    ok = False
+                    break
+                continue
+            if p in ("$can_wonderful", "$can_multiple"):
+                tok = _scoring_tokens(scoring,
+                                      "WONDERFUL_PHOTO" if p.endswith("wonderful")
+                                      else "MULTIPLE_PHOTO")
+                opts = [o + sorted(t) for o in opts for t in tok]
+                continue
+            ok = False
+            break
+        if ok:
+            out.update(frozenset(o) for o in opts)
+    if not rules:
+        return {FREE}
+    if not out:
+        return UNREACHABLE
+    return {a for a in out if not any(b < a for b in out)}
+
+
+def applicable_option_sets(R):
+    """Only sweep settings this apworld actually has.
+
+    The pack supports several apworld versions at once, so it carries rules for
+    options an older world never had. Replaying 0.7.0's option sets against
+    0.6.0 would report those as disagreements when at runtime the option simply
+    never arrives in slot_data and the tracker falls back to vanilla.
+    """
+    src = ""
+    try:
+        src = open(os.path.join(os.path.dirname(R.__file__), "rules.py"),
+                   encoding="utf-8").read()
+    except Exception:
+        pass
+    has_scoring = "PhotoScoring" in src
+    has_film = "HasFilm" in src
+    out = []
+    for label, cfg in OPTION_SETS:
+        scoring, film, rng = cfg
+        if scoring and not has_scoring:
+            continue
+        if film != 15 and not has_film:
+            continue
+        out.append((label, cfg))
+    return out
+
+
+def sweep(R, sections, name_to_section):
+    """Compare every world rule against the pack under each option set."""
+    results = []
+    for label, cfg in applicable_option_sets(R):
+        diffs, compared, skipped = [], 0, 0
+        for name, categories in R.LOCATION_RULES.items():
+            for category, rule in categories.items():
+                try:
+                    ap_name = R.location_name(name, category)
+                except Exception:
+                    continue
+                sec = name_to_section.get(ap_name)
+                if not sec:
+                    continue
+                want = world_dnf(rule, cfg)
+                if want is None:
+                    skipped += 1
+                    continue
+                # set_rules() ANDs the scoring unlock onto these two categories
+                cat = getattr(category, "name", str(category))
+                if cat in ("WONDERFUL_PHOTO", "MULTIPLE_PHOTO") and want is not UNREACHABLE:
+                    tok = _scoring_tokens(cfg[0], cat)
+                    want = {a | b for a in want for b in tok}
+                if want is not UNREACHABLE:
+                    want = {a for a in want if not any(b < a for b in want)}
+                got = pack_dnf(sections.get(sec, []), cfg)
+                compared += 1
+                if got != want:
+                    diffs.append((ap_name, sec, show(want), show(got)))
+        results.append((label, compared, skipped, diffs))
+    return results
 
 
 # ------------------------------------------------------------------- main ---
@@ -342,43 +534,45 @@ def main(apworld):
         problems += 1
         print("[3b] sectionID.lua is not the exact inverse of location_mapping.lua\n")
 
+    # Item ids the pack maps but this world does not have. Not a failure: the
+    # pack supports several apworld versions, and an id that never arrives does
+    # nothing. Contrast with location ids, where a stale mapping clears the
+    # wrong check - that stays a failure above.
     bad_items = sorted(set(im) - set(items))
     if bad_items:
-        problems += len(bad_items)
-        print(f"[3c] {len(bad_items)} mapped item id(s) not in the world: {bad_items}\n")
+        print(f"[3c] note: {len(bad_items)} mapped item id(s) absent from this world"
+              f" (fine if they are newer than it): {bad_items}\n")
 
     name_to_section = {}
     for i, ss in lm.items():
         if i in locs:
             name_to_section[locs[i]] = ss[0].lstrip('@')
 
-    diffs, compared = [], 0
-    for name, want in sorted(rules.items()):
-        sec = name_to_section.get(name)
-        if not sec:
-            continue
-        compared += 1
-        got = tracker_dnf(sections.get(sec, []))
-        if got != want:
-            diffs.append((name, sec, show(want), show(got)))
+    # [4] Logic, swept across option sets. Since 0.7.0 a rule's meaning depends
+    # on the yaml, so one comparison can only ever vouch for one configuration.
+    results = sweep(parse_rules.module, sections, name_to_section)
+    total_compared = min(r[1] for r in results)
+    print("[4] logic, per option set:")
+    for label, compared, skipped, diffs in results:
+        mark = "ok" if not diffs else f"{len(diffs)} DISAGREE"
+        print(f"      {label:<24} compared {compared:3d}   {mark}")
+        for n, s, w, g in diffs[:6]:
+            print(f"          {n}\n              world  : {w}\n              tracker: {g}  [{s}]")
+        if len(diffs) > 6:
+            print(f"          ... and {len(diffs) - 6} more")
+        problems += len(diffs)
+    skipped = results[0][2]
+    if skipped:
+        print(f"      ({skipped} rule(s) not expressible as tool requirements)")
 
     # A logic check that compares nothing has passed silently twice before, so
-    # say how much was actually compared and treat "almost nothing" as failure.
-    print(f"[4] logic: compared {compared} rule(s); "
-          f"{len(opaque)} not expressible in tracker terms"
-          + (f" ({', '.join(sorted(opaque)[:4])}"
-             + (", ..." if len(opaque) > 4 else "") + ")" if opaque else ""))
-    if compared < 50:
+    # treat "almost nothing compared" as a failure in its own right.
+    if total_compared < 50:
         problems += 1
-        print(f"    !! only {compared} rules compared - the parser has probably"
+        print(f"    !! only {total_compared} rules compared - the reader has probably"
               " stopped understanding this apworld's rules.py; fix it before"
-              " trusting this run\n")
-    if diffs:
-        problems += len(diffs)
-        print(f"[4] {len(diffs)} access rule(s) disagree with the world:")
-        for n, s, w, g in diffs:
-            print(f"      {n}\n          world  : {w}\n          tracker: {g}  [{s}]")
-        print()
+              " trusting this run")
+    print()
 
     # [5] Image references, compared case-sensitively. Windows resolves
     # "new.png" to "New.png" happily, so a wrong-case reference works in the

@@ -19,13 +19,14 @@
           "wonderful, loc123"
         ],
         "access_rules": [
-          "volcano, pester"
+          "$can_wonderful, volcano, pester"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "volcano, food, pester"
+          "$can_multiple, volcano, food, pester",
+          "$can_multiple, volcano, pester, $separate_scoring"
         ],
         "visibility_rules": [
           "multiple, loc223"

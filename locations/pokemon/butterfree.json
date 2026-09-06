@@ -19,13 +19,13 @@
           "wonderful, loc107"
         ],
         "access_rules": [
-          "beach"
+          "$can_wonderful, beach"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "beach"
+          "$can_multiple, beach"
         ],
         "visibility_rules": [
           "multiple, loc207"

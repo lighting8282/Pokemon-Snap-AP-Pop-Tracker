@@ -19,7 +19,7 @@
           "wonderful, loc110"
         ],
         "access_rules": [
-          "beach"
+          "$can_wonderful, beach"
         ]
       },
       {
@@ -37,7 +37,7 @@
           "wonderful, loc170"
         ],
         "access_rules": [
-          "tunnel"
+          "$can_wonderful, tunnel"
         ]
       },
       {
@@ -55,7 +55,7 @@
           "wonderful, loc171"
         ],
         "access_rules": [
-          "river"
+          "$can_wonderful, river"
         ]
       },
       {
@@ -74,13 +74,13 @@
           "wonderful, loc172"
         ],
         "access_rules": [
-          "cave, @Logic/Throwable"
+          "$can_wonderful, cave, @Logic/Throwable"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "beach, pester"
+          "$can_multiple, beach, pester"
         ],
         "visibility_rules": [
           "multiple, loc210"
@@ -107,7 +107,7 @@
       {
         "name": "Pikachu on a Ball",
         "access_rules": [
-          "tunnel"
+          "$has_film_5, tunnel"
         ],
         "visibility_rules": [
           "loc302"
@@ -116,7 +116,9 @@
       {
         "name": "Speed Pikachu",
         "access_rules": [
-          "river"
+          "river, $has_film_5",
+          "river, food",
+          "river, pester"
         ],
         "visibility_rules": [
           "loc304"

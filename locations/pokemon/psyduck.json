@@ -19,13 +19,13 @@
           "wonderful, loc120"
         ],
         "access_rules": [
-          "river"
+          "$can_wonderful, river"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "river, @Logic/Throwable"
+          "$can_multiple, river, @Logic/Throwable"
         ],
         "visibility_rules": [
           "multiple, loc220"

@@ -19,7 +19,7 @@
           "wonderful, loc101"
         ],
         "access_rules": [
-          "river, @Logic/Throwable"
+          "$can_wonderful, river, @Logic/Throwable"
         ]
       },
       {
@@ -37,13 +37,13 @@
           "wonderful, loc164"
         ],
         "access_rules": [
-          "cave"
+          "$can_wonderful, cave"
         ]
       },
       {
         "name": "River Same Pkmn",
         "access_rules": [
-          "river, @Logic/Throwable"
+          "$can_multiple, river, @Logic/Throwable"
         ],
         "visibility_rules": [
           "multiple, loc201"
@@ -52,7 +52,7 @@
       {
         "name": "Cave Same Pkmn",
         "access_rules": [
-          "cave"
+          "$can_multiple, cave"
         ],
         "visibility_rules": [
           "multiple, loc264"

@@ -19,13 +19,13 @@
           "wonderful, loc149"
         ],
         "access_rules": [
-          "tunnel"
+          "$can_wonderful, tunnel"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "tunnel, @Logic/Throwable"
+          "$can_multiple, tunnel, @Logic/Throwable"
         ],
         "visibility_rules": [
           "multiple, loc249"

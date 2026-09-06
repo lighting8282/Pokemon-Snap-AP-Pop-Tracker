@@ -1,5 +1,8 @@
 -- Utility Script for helper functions etc.
 ScriptHost:LoadScript("scripts/utils.lua")
+-- Access-rule helpers for the per-seed options in apworld 0.7.0. Loaded before
+-- the locations, so the $functions their rules name already exist.
+ScriptHost:LoadScript("scripts/logic.lua")
 
 Tracker:AddItems("items/items.json")
 Tracker:AddItems("items/settings.json")

@@ -20,8 +20,8 @@
           "wonderful, loc157"
         ],
         "access_rules": [
-          "beach, flute",
-          "beach, pester"
+          "$can_wonderful, beach, flute",
+          "$can_wonderful, beach, pester"
         ]
       }
     ]

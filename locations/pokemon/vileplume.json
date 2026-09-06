@@ -19,7 +19,7 @@
           "wonderful, loc116"
         ],
         "access_rules": [
-          "river, flute"
+          "$can_wonderful, river, flute"
         ]
       }
     ]

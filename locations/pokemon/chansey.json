@@ -19,7 +19,7 @@
           "wonderful, loc142"
         ],
         "access_rules": [
-          "beach, @Logic/Throwable"
+          "$can_wonderful, beach, @Logic/Throwable"
         ]
       }
     ]

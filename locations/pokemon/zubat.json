@@ -19,7 +19,7 @@
           "wonderful, loc115"
         ],
         "access_rules": [
-          "tunnel"
+          "$can_wonderful, tunnel"
         ]
       },
       {
@@ -37,13 +37,13 @@
           "wonderful, loc173"
         ],
         "access_rules": [
-          "cave"
+          "$can_wonderful, cave"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "cave"
+          "$can_multiple, cave"
         ],
         "visibility_rules": [
           "multiple, loc273"

@@ -19,14 +19,14 @@
           "wonderful, loc128"
         ],
         "access_rules": [
-          "valley, flute",
-          "valley, pester"
+          "$can_wonderful, valley, flute",
+          "$can_wonderful, valley, pester"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "valley, flute"
+          "$can_multiple, valley, flute"
         ],
         "visibility_rules": [
           "multiple, loc228"

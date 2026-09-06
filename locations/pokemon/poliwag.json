@@ -20,15 +20,15 @@
           "wonderful, loc124"
         ],
         "access_rules": [
-          "river, food",
-          "river, pester"
+          "$can_wonderful, river, food",
+          "$can_wonderful, river, pester"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "river, food",
-          "river, pester"
+          "$can_multiple, river, food",
+          "$can_multiple, river, pester"
         ],
         "visibility_rules": [
           "multiple, loc224"

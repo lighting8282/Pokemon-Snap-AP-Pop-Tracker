@@ -19,7 +19,7 @@
           "wonderful, loc144"
         ],
         "access_rules": [
-          "valley, @Logic/Throwable"
+          "$can_wonderful, valley, @Logic/Throwable"
         ]
       }
     ]

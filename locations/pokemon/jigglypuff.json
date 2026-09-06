@@ -19,13 +19,13 @@
           "wonderful, loc114"
         ],
         "access_rules": [
-          "cave"
+          "$can_wonderful, cave"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "cave, @Logic/Throwable"
+          "$can_multiple, cave, @Logic/Throwable"
         ],
         "visibility_rules": [
           "multiple, loc214"

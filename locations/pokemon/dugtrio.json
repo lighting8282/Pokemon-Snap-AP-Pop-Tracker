@@ -10,7 +10,7 @@
           "normal, loc18"
         ],
         "access_rules": [
-          "tunnel"
+          "$has_film_5, tunnel"
         ]
       },
       {
@@ -19,13 +19,13 @@
           "wonderful, loc118"
         ],
         "access_rules": [
-          "tunnel"
+          "$has_film_5, $can_wonderful, tunnel"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "tunnel"
+          "$has_film_7, $can_multiple, tunnel"
         ],
         "visibility_rules": [
           "multiple, loc218"

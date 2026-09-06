@@ -6,7 +6,7 @@ An auto-tracking [PopTracker](https://github.com/black-sliver/PopTracker) pack f
 ## Requirements
 
 - **PopTracker 0.28.0** or newer
-- **Pokemon Snap apworld 0.4.0 or newer** (0.6.0 recommended)
+- **Pokemon Snap apworld 0.4.0 or newer** (0.7.0 recommended)
 
 Anything older used different location ids and will clear the wrong checks.
 
@@ -32,6 +32,16 @@ AP button.
   from the seed's own location list rather than the options
 - **The goal** — 0.6.0 makes the Rainbow Cloud requirement configurable (sign pictures or
   Pokemon pictures, and how many), read from slot data
+- **Photo scoring** — 0.7.0 can lock Good Technique and Multiple PKMN behind items. Those
+  are tracked, and Good Technique / Multiple checks stay out of logic until you have the
+  matching unlock. Under `separate` scoring, Multiple no longer requires Good Technique
+  first, and the checks that get cheaper are shown as such
+- **Film capacity** — 0.7.0 makes film a logic requirement for 13 checks. The displayed
+  capacity is derived from your yaml (`starting_film`, `film_upgrade_amount`,
+  `maximum_film`) rather than assumed, so a low-film seed reads correctly
+- **Map fragments** — with `map_fragments` at 2 or more a course unlocks from that many
+  `<Course>: Map Fragment` items instead of one course item; the course lights up when you
+  have enough
 - **Items** — the six courses, Apple, Pester Ball, PokeFlute, Dash Engine, Pokemon Sign
   Detector, film capacity, and a count of the Pokemon pictures you have been sent
 - **Logic** — access rules match the apworld's own rules, so a check shows as reachable
@@ -48,8 +58,12 @@ no longer be toggled by hand.
 Each check shows a closed Pokeball while outstanding and an open one once it is done.
 
 `tools/check_apworld.py` compares the pack against any apworld and reports new or stale
-locations, broken section references and logic disagreements. Run it whenever a new apworld
-is released.
+locations, broken section references, wrong-case image references and logic disagreements.
+Run it whenever a new apworld is released.
+
+Since 0.7.0 a location's logic depends on the yaml, so it checks the rules under several
+option sets rather than one, and fails if it ever ends up comparing almost nothing — an
+upstream restructure silently disabled that check twice before.
 
 ## Naming
 

@@ -10,7 +10,7 @@
           "normal, loc46"
         ],
         "access_rules": [
-          "valley"
+          "$has_film_5, valley"
         ]
       },
       {
@@ -19,13 +19,13 @@
           "wonderful, loc146"
         ],
         "access_rules": [
-          "valley"
+          "$has_film_7, $can_wonderful, valley"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "valley"
+          "$has_film_9, $can_multiple, valley"
         ],
         "visibility_rules": [
           "multiple, loc246"

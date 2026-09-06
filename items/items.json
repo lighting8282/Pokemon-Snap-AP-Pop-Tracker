@@ -82,11 +82,83 @@
     "img": "images/film.png",
     "codes": "film",
     "initial_quantity": 15,
-    "min_quantity": 15,
+    "min_quantity": 0,
     "max_quantity": 60,
     "increment": 5,
     "overlay_font_size": "16",
     "allow_disabled": false
+  },
+  {
+    "name": "Film Capacity Upgrades",
+    "type": "consumable",
+    "codes": "filmup",
+    "max_quantity": 99,
+    "increment": 1
+  },
+  {
+    "name": "Good Technique Scoring",
+    "type": "toggle",
+    "img": "images/wonderful.png",
+    "codes": "wdflscore",
+    "disabled_img_mods": "grayscale, brightness|0.3"
+  },
+  {
+    "name": "Multiple PKMN Scoring",
+    "type": "toggle",
+    "img": "images/hard.png",
+    "codes": "multscore",
+    "disabled_img_mods": "grayscale, brightness|0.3"
+  },
+  {
+    "name": "Progressive Scoring",
+    "type": "consumable",
+    "img": "images/otherchecks/PicRoll.png",
+    "codes": "progscore",
+    "max_quantity": 2,
+    "increment": 1,
+    "overlay_font_size": "16"
+  },
+  {
+    "name": "Beach Map Fragments",
+    "type": "consumable",
+    "codes": "fragbeach",
+    "max_quantity": 6,
+    "increment": 1
+  },
+  {
+    "name": "Tunnel Map Fragments",
+    "type": "consumable",
+    "codes": "fragtunnel",
+    "max_quantity": 6,
+    "increment": 1
+  },
+  {
+    "name": "Volcano Map Fragments",
+    "type": "consumable",
+    "codes": "fragvolcano",
+    "max_quantity": 6,
+    "increment": 1
+  },
+  {
+    "name": "River Map Fragments",
+    "type": "consumable",
+    "codes": "fragriver",
+    "max_quantity": 6,
+    "increment": 1
+  },
+  {
+    "name": "Cave Map Fragments",
+    "type": "consumable",
+    "codes": "fragcave",
+    "max_quantity": 6,
+    "increment": 1
+  },
+  {
+    "name": "Valley Map Fragments",
+    "type": "consumable",
+    "codes": "fragvalley",
+    "max_quantity": 6,
+    "increment": 1
   },
   {
     "name": "New Pokemon Pic",

@@ -19,7 +19,7 @@
           "wonderful, loc151"
         ],
         "access_rules": [
-          "beach, @Logic/Throwable"
+          "$can_wonderful, beach, @Logic/Throwable"
         ]
       },
       {
@@ -37,7 +37,7 @@
           "wonderful, loc165"
         ],
         "access_rules": [
-          "tunnel"
+          "$can_wonderful, tunnel"
         ]
       },
       {
@@ -55,7 +55,7 @@
           "wonderful, loc166"
         ],
         "access_rules": [
-          "volcano, @Logic/Throwable"
+          "$can_wonderful, volcano, @Logic/Throwable"
         ]
       },
       {
@@ -73,7 +73,7 @@
           "wonderful, loc167"
         ],
         "access_rules": [
-          "river, @Logic/Throwable"
+          "$can_wonderful, river, @Logic/Throwable"
         ]
       },
       {
@@ -91,7 +91,7 @@
           "wonderful, loc168"
         ],
         "access_rules": [
-          "cave, @Logic/Throwable"
+          "$can_wonderful, cave, @Logic/Throwable"
         ]
       },
       {
@@ -111,13 +111,13 @@
           "wonderful, loc169"
         ],
         "access_rules": [
-          "valley, @Logic/Throwable"
+          "$can_wonderful, valley, @Logic/Throwable"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "valley, @Logic/Throwable"
+          "$can_multiple, valley, @Logic/Throwable"
         ],
         "visibility_rules": [
           "multiple, loc269"

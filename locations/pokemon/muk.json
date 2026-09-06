@@ -10,7 +10,7 @@
           "normal, loc36"
         ],
         "access_rules": [
-          "cave, pester"
+          "$has_film_4, cave, pester"
         ]
       },
       {
@@ -19,7 +19,7 @@
           "wonderful, loc136"
         ],
         "access_rules": [
-          "cave, pester"
+          "$has_film_4, $can_wonderful, cave, pester"
         ]
       }
     ]

@@ -19,7 +19,7 @@
           "wonderful, loc141"
         ],
         "access_rules": [
-          "cave"
+          "$can_wonderful, cave"
         ]
       }
     ]

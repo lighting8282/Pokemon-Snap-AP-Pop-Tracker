@@ -74,6 +74,46 @@ function goal_unlocked()
     return have >= GOAL_REQUIRED
 end
 
+-- apworld 0.7.0 made photo scoring, film capacity and course unlocks per-seed.
+-- They all arrive in slot_data; logic.lua reads these globals from its rules.
+function readOptionsFromSlotData(slot_data)
+    if type(slot_data) ~= "table" then return end
+    PHOTO_SCORING = slot_data["photo_scoring"] or 0
+    FILM_START    = slot_data["starting_film"] or 15
+    FILM_STEP     = slot_data["film_upgrade_amount"] or 5
+    FILM_CAP      = slot_data["maximum_film"] or 60
+    MAP_FRAGMENTS = slot_data["map_fragments"] or 1
+    RNG_CHECKS    = slot_data["rng_checks"] or 0
+    if MAP_FRAGMENTS < 1 then MAP_FRAGMENTS = 1 end
+    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
+        print(string.format("options: photo_scoring=%s film=%s+%s cap %s, map_fragments=%s",
+              PHOTO_SCORING, FILM_START, FILM_STEP, FILM_CAP, MAP_FRAGMENTS))
+    end
+end
+
+-- Film capacity is shown as one number but derived from three per-seed values,
+-- and a course can be unlocked by fragments rather than its own item. Both are
+-- recomputed here rather than incremented, so replaying the item list on a
+-- reconnect lands on the same answer.
+function refreshDerivedItems()
+    local film = Tracker:FindObjectForCode("film")
+    if film then film.AcquiredCount = film_capacity() end
+    for course, _ in pairs(FRAGMENT_OF or {}) do
+        if fragments_satisfy(course) then
+            local obj = Tracker:FindObjectForCode(course)
+            if obj and not obj.Active then
+                obj.Active = true
+                -- On a fragment seed the plain course item never arrives, so
+                -- this is where the starting course becomes known.
+                if not STARTING_TAB_SET and COURSE_TABS[course] and Tracker.UiHint then
+                    STARTING_TAB_SET = true
+                    Tracker:UiHint("ActivateTab", COURSE_TABS[course])
+                end
+            end
+        end
+    end
+end
+
 function readGoalFromSlotData(slot_data)
     if type(slot_data) ~= "table" then return end
     if slot_data["goal_type"] ~= nil then GOAL_TYPE = slot_data["goal_type"] end
@@ -167,11 +207,7 @@ function onClear(slot_data)
                     obj.CurrentStage = 0
                     obj.Active = false
                 elseif v[2] == "consumable" then
-                    if v[1] == "film" then
-                        obj.AcquiredCount = 15
-                    else
-                        obj.AcquiredCount = 0
-                    end
+                    obj.AcquiredCount = 0
                 elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
                     print(string.format("onClear: unknown item type %s for code %s", v[2], v[1]))
                 end
@@ -182,8 +218,11 @@ function onClear(slot_data)
     end
 
     print(dump_table(slot_data))
-    
+
+    -- options first: the goal and the derived items both depend on them
+    readOptionsFromSlotData(slot_data)
     readGoalFromSlotData(slot_data)
+    refreshDerivedItems()
     applySeedContents()
 
     LOCAL_ITEMS = {}
@@ -242,6 +281,10 @@ function onItem(index, item_id, item_name, player_number)
             obj.AcquiredCount = obj.AcquiredCount + obj.Increment
         elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
             print(string.format("onItem: unknown item type %s for code %s", v[2], v[1]))
+        end
+        -- a film upgrade or a map fragment changes something else on the board
+        if v[1] == "filmup" or (FRAGMENT_OF and v[1]:sub(1, 4) == "frag") then
+            refreshDerivedItems()
         end
         AUTOTRACK_BUSY = false
     elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then

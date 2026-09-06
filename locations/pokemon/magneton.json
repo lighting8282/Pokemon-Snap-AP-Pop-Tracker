@@ -19,7 +19,7 @@
           "wonderful, loc133"
         ],
         "access_rules": [
-          "tunnel, food"
+          "$can_wonderful, tunnel, food"
         ]
       }
     ]

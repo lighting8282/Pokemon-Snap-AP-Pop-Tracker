@@ -19,7 +19,7 @@
           "wonderful, loc126"
         ],
         "access_rules": [
-          "cave, @Logic/Throwable"
+          "$can_wonderful, cave, @Logic/Throwable"
         ]
       }
     ]

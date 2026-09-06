@@ -12,9 +12,33 @@ ITEM_MAPPING = {
     [2004] = {"cave","toggle"},
     [2005] = {"valley","toggle"},
 
-    [3000] = {"film","consumable"},
+    -- apworld 0.7.0 photo scoring. Only one of these exists in a given seed:
+    -- separate_unlocks sends 1500/1501, progressive_unlocks sends 1502 twice.
+    [1500] = {"wdflscore","toggle"},
+    [1501] = {"multscore","toggle"},
+    [1502] = {"progscore","consumable"},
+
+    -- apworld 0.7.0 map fragments. Present instead of the plain course item
+    -- when map_fragments is 2 or more; the course unlocks at that many.
+    [2100] = {"fragbeach","consumable"},
+    [2101] = {"fragtunnel","consumable"},
+    [2102] = {"fragvolcano","consumable"},
+    [2103] = {"fragriver","consumable"},
+    [2104] = {"fragcave","consumable"},
+    [2105] = {"fragvalley","consumable"},
+
+    -- Counts upgrades rather than film. The displayed Film Capacity is derived
+    -- from this in refreshDerivedItems(), because starting_film, the step and
+    -- the cap are all per-seed since 0.7.0.
+    [3000] = {"filmup","consumable"},
 
     [10000] = {"complete","toggle"},
+}
+
+-- course code -> its fragment counter, for the map_fragments unlock path
+FRAGMENT_OF = {
+    beach = "fragbeach", tunnel = "fragtunnel", volcano = "fragvolcano",
+    river = "fragriver", cave  = "fragcave",   valley  = "fragvalley",
 }
 
 -- 63 Pokemon pictures all feed the single newpic counter

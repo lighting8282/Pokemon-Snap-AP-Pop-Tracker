@@ -19,13 +19,14 @@
           "wonderful, loc106"
         ],
         "access_rules": [
-          "river, pester"
+          "$can_wonderful, river, pester"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "river, pester"
+          "$can_multiple, river, pester",
+          "$can_multiple, river, $separate_scoring"
         ],
         "visibility_rules": [
           "multiple, loc206"

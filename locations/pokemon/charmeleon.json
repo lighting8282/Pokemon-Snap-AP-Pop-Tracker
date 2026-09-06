@@ -19,7 +19,7 @@
           "wonderful, loc103"
         ],
         "access_rules": [
-          "volcano, @Logic/Throwable"
+          "$can_wonderful, volcano, @Logic/Throwable"
         ]
       }
     ]

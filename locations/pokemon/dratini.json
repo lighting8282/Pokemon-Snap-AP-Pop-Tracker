@@ -19,13 +19,13 @@
           "wonderful, loc161"
         ],
         "access_rules": [
-          "valley"
+          "$can_wonderful, valley"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "valley, @Logic/Throwable"
+          "$can_multiple, valley, @Logic/Throwable"
         ],
         "visibility_rules": [
           "multiple, loc261"

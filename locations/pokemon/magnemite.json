@@ -19,13 +19,13 @@
           "wonderful, loc132"
         ],
         "access_rules": [
-          "tunnel, food"
+          "$can_wonderful, tunnel, food"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "tunnel, food"
+          "$can_multiple, tunnel, food"
         ],
         "visibility_rules": [
           "multiple, loc232"

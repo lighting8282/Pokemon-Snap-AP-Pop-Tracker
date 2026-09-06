@@ -25,17 +25,18 @@ PACK = Path(__file__).resolve().parent.parent
 
 
 def load_world(apworld):
-    tmp = tempfile.mkdtemp(prefix="opt_")
-    zipfile.ZipFile(apworld).extractall(tmp)
-    root = os.path.join(tmp, "pokemon_snap")
-    bc = types.ModuleType("BaseClasses")
-    for n in ["Location", "Region", "Item", "MultiWorld", "Entrance",
-              "Tutorial", "ItemClassification"]:
-        setattr(bc, n, type(n, (object,), {"__init__": lambda self, *a, **k: None}))
-    sys.modules["BaseClasses"] = bc
-    open(os.path.join(root, "__init__.py"), "w").close()
-    sys.path.insert(0, tmp)
-    import importlib
+    """Import the world's location table.
+
+    Shares check_apworld.py's loader rather than keeping a second copy: 0.7.0
+    added an Options import and operator-composed rules, and a duplicate stub
+    here would have gone stale exactly when it mattered.
+    """
+    import importlib.util, importlib
+    spec = importlib.util.spec_from_file_location(
+        "_check_apworld", Path(__file__).resolve().parent / "check_apworld.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    mod.load_apworld(apworld)
     return importlib.import_module("pokemon_snap.locations")
 
 

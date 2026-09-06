@@ -19,7 +19,7 @@
           "wonderful, loc162"
         ],
         "access_rules": [
-          "valley, pester"
+          "$can_wonderful, valley, pester"
         ]
       }
     ]

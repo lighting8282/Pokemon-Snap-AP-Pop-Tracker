@@ -19,7 +19,7 @@
           "wonderful, loc135"
         ],
         "access_rules": [
-          "cave"
+          "$has_film_4, $can_wonderful, cave"
         ]
       }
     ]
