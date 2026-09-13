@@ -26,6 +26,17 @@ OUT = CUR
 SPLIT = 119          # first row of the Mew scene; the banner's red edge ends at 118
 GAP = 2              # a thin seam so the two scenes read as separate panels
 
+# How wide the picture ends up decides how large it draws. The slot is roughly
+# 2:1, so a very wide picture uses only a band of it and leaves black above and
+# below. Trimming narrows the picture, which makes it render taller and bigger
+# in the same width.
+#
+# The banner cannot give much: its red border runs x=7..200. The Mew scene is
+# mostly empty starfield, with the ring only at x=49..158, so it can lose a
+# lot from both sides and stay centred on the ring.
+TOP_CROP = (4, 203)        # keeps the red border with a 3px margin
+BOTTOM_CROP = (40, 168)    # centred on the ring
+
 
 def main():
     # first run: preserve the original tall art under its own name
@@ -35,31 +46,39 @@ def main():
 
     im = Image.open(SRC).convert("RGB")
     w, h = im.size
-    top = im.crop((0, 0, w, SPLIT))          # Prof. Oak's Check
-    bottom = im.crop((0, SPLIT, w, h))       # Mew on the Rainbow Cloud
+    top = im.crop((TOP_CROP[0], 0, TOP_CROP[1], SPLIT))         # Prof. Oak's Check
+    bottom = im.crop((BOTTOM_CROP[0], SPLIT, BOTTOM_CROP[1], h))  # Mew on the Cloud
 
     height = max(top.height, bottom.height)
-    out = Image.new("RGB", (w * 2 + GAP, height), (0, 0, 0))
+    out = Image.new("RGB", (top.width + GAP + bottom.width, height), (0, 0, 0))
     top_y = (height - top.height) // 2
+    bottom_x = top.width + GAP
+    bottom_y = (height - bottom.height) // 2
     out.paste(top, (0, top_y))
-    out.paste(bottom, (w + GAP, (height - bottom.height) // 2))
+    out.paste(bottom, (bottom_x, bottom_y))
     out.save(OUT)
 
     print(f"wrote {OUT.relative_to(PACK).as_posix()}  {out.width}x{out.height}"
-          f"  (was {w}x{h})")
+          f"  (source was {w}x{h})")
     print(f"aspect {out.width / out.height:.2f} wide, was {w / h:.2f}")
     print()
-    print("pin coordinates for locations/oakmew.json:")
+    print("pin coordinates:")
     for name, (x, y) in {
-        "Report Scores":       (78, 85),
+        "Report Scores":        (78, 85),
         "Pokemon Photographed": (130, 85),
-        "Mew":                 (104, 155),
+        "Mew":                  (104, 155),
     }.items():
         if y < SPLIT:
-            nx, ny = x, y + top_y
+            nx, ny = x - TOP_CROP[0], y + top_y
         else:
-            nx, ny = x + w + GAP, (y - SPLIT) + (height - bottom.height) // 2
-        print(f"    {name:<22} ({x},{y})  ->  ({nx},{ny})")
+            nx = (x - BOTTOM_CROP[0]) + bottom_x
+            ny = (y - SPLIT) + bottom_y
+        inside = 0 <= nx < out.width and 0 <= ny < out.height
+        print(f"    {name:<22} ({x},{y})  ->  ({nx},{ny})"
+              f"{'' if inside else '   OFF-CANVAS'}")
+    # the release button is not anchored to any art, so it just sits in the
+    # bottom-right of the Mew panel rather than being mapped from the original
+    print(f"    {'Release button':<22} -> ({out.width - 12},{out.height - 14})")
     return 0
 
 
