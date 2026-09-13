@@ -98,20 +98,37 @@ end
 function refreshDerivedItems()
     local film = Tracker:FindObjectForCode("film")
     if film then film.AcquiredCount = film_capacity() end
-    for course, _ in pairs(FRAGMENT_OF or {}) do
-        if fragments_satisfy(course) then
-            local obj = Tracker:FindObjectForCode(course)
-            if obj and not obj.Active then
-                obj.Active = true
-                -- On a fragment seed the plain course item never arrives, so
-                -- this is where the starting course becomes known.
-                if not STARTING_TAB_SET and COURSE_TABS[course] and Tracker.UiHint then
-                    STARTING_TAB_SET = true
-                    Tracker:UiHint("ActivateTab", COURSE_TABS[course])
+    for course, frag in pairs(FRAGMENT_OF or {}) do
+        local obj = Tracker:FindObjectForCode(course)
+        if obj then
+            if fragments_satisfy(course) then
+                if not obj.Active then
+                    obj.Active = true
+                    -- On a fragment seed the plain course item never arrives,
+                    -- so this is where the starting course becomes known.
+                    if not STARTING_TAB_SET and COURSE_TABS[course] and Tracker.UiHint then
+                        STARTING_TAB_SET = true
+                        Tracker:UiHint("ActivateTab", COURSE_TABS[course])
+                    end
                 end
+                setCourseOverlay(obj, nil)
+            elseif MAP_FRAGMENTS > 1 then
+                -- Show progress towards the unlock on the course button itself,
+                -- so a fragment seed does not look like nothing is happening.
+                setCourseOverlay(obj, string.format("%d/%d",
+                    Tracker:ProviderCountForCode(frag) or 0, MAP_FRAGMENTS))
+            else
+                setCourseOverlay(obj, nil)
             end
         end
     end
+end
+
+-- SetOverlay is PopTracker-only, so every call is guarded. nil clears it.
+function setCourseOverlay(obj, text)
+    if not obj.SetOverlay then return end
+    obj:SetOverlay(text or "")
+    if text and obj.SetOverlayFontSize then obj:SetOverlayFontSize(14) end
 end
 
 function readGoalFromSlotData(slot_data)

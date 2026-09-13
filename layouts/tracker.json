@@ -7,15 +7,15 @@
       "dropshadow": true,
       "content": [
         {
-          "type": "array",
-          "orientation": "vertical",
+          "type": "dock",
           "dock": "left",
-          "v_alignment": "top",
+          "v_alignment": "stretch",
           "h_alignment": "stretch",
           "content": [
             {
               "type": "group",
               "header": "Items",
+              "dock": "top",
               "content": {
                 "type": "layout",
                 "key": "item_grid"
@@ -24,15 +24,17 @@
             {
               "type": "group",
               "header": "Oak's Lab & Rainbow Cloud",
-              "v_alignment": "top",
+              "dock": "top",
               "content": {
                 "type": "map",
-                "v_alignment": "top",
-                "h_alignment": "center",
                 "maps": [
                   "oakmew"
                 ]
               }
+            },
+            {
+              "type": "container",
+              "background": "#000000"
             }
           ]
         },
