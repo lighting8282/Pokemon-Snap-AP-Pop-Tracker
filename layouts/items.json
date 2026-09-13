@@ -50,10 +50,6 @@
               [
                 "flute",
                 "dash"
-              ],
-              [
-                "sign",
-                ""
               ]
             ]
           },
@@ -70,43 +66,24 @@
             ]
           },
           {
-            "type": "array",
-            "orientation": "horizontal",
-            "margin": "0,0",
-            "content": [
-              {
-                "type": "itemgrid",
-                "h_alignment": "left",
-                "item_margin": "8,4",
-                "item_width": 55,
-                "item_height": 40,
-                "rows": [
-                  [
-                    "newpic"
-                  ],
-                  [
-                    "film"
-                  ]
-                ]
-              },
-              {
-                "type": "itemgrid",
-                "h_alignment": "left",
-                "item_margin": "8,4",
-                "item_width": 55,
-                "item_height": 40,
-                "rows": [
-                  [
-                    "progscore"
-                  ],
-                  [
-                    "wdflscore"
-                  ],
-                  [
-                    "multscore"
-                  ]
-                ]
-              }
+            "type": "itemgrid",
+            "h_alignment": "left",
+            "item_margin": "8,4",
+            "item_width": 55,
+            "item_height": 40,
+            "rows": [
+              [
+                "sign",
+                "progscore"
+              ],
+              [
+                "newpic",
+                "wdflscore"
+              ],
+              [
+                "film",
+                "multscore"
+              ]
             ]
           },
           {
