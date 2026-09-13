@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "package_version": "1.6.0.3",
+      "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.6.0.3/SnapTracker-1.6.0.3.zip",
+      "sha256": "8f44d2011d59bc06fb964796962a96e9b07e5f781a8c6c5e6265e73d6cfd669f",
+      "changelog": [
+        "Oak's Lab map draws about a quarter larger, with much less black around it.",
+        "Items panel tidied: Pokemon Pics, Film and the three scoring icons sit together above the sign pictures, in aligned columns."
+      ]
+    },
+    {
       "package_version": "1.6.0.2",
       "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.6.0.2/SnapTracker-1.6.0.2.zip",
       "sha256": "b2ce29219db311aa41c468c1e9b42d70b14f4a73d4279633b6abd8df4c36f7b9",
