@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "package_version": "1.6.0.1",
+      "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.6.0.1/SnapTracker-1.6.0.1.zip",
+      "sha256": "7cfe73f4c2886bc3f269f7889b098c28457dae3718a5e4a4a00f7a7613ef3556",
+      "changelog": [
+        "Map fragments: the course nameplate now fills as fragments arrive, divided into as many parts as your seed needs, with the count alongside.",
+        "Multiple PKMN Scoring has its own icon instead of a leftover that read HARD; the Settings panel toggle is fixed too.",
+        "Prof. Oak's Check and Mew sit under their header instead of at the bottom of the column, and the black gap above them is gone."
+      ]
+    },
+    {
       "package_version": "1.6.0.0",
       "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.6.0.0/SnapTracker-1.6.0.0.zip",
       "sha256": "ea98951d41e3e1597f138f7cbc9f9209a85aaa3d5eb84d9703c4831696c3cba9",
