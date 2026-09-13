@@ -248,6 +248,8 @@ function onClear(slot_data)
     readOptionsFromSlotData(slot_data)
     readGoalFromSlotData(slot_data)
     refreshDerivedItems()
+    -- after readOptions, since the film plate reads the values it parked
+    if refreshSeedSettings then refreshSeedSettings(slot_data) end
     applySeedContents()
 
     LOCAL_ITEMS = {}

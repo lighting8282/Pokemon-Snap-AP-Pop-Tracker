@@ -86,6 +86,9 @@ Tracker:AddLocations("locations/valley.json")
 Tracker:AddLocations("locations/oakmew.json")
 
 ScriptHost:LoadScript("scripts/course_items.lua")
+-- Plates showing what the connected seed's yaml turned on. Also before the
+-- layouts, for the same reason: the layout places these items.
+ScriptHost:LoadScript("scripts/seed_settings.lua")
 
 Tracker:AddLayouts("layouts/items.json")
 Tracker:AddLayouts("layouts/tracker.json")

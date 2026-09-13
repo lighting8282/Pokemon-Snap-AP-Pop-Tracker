@@ -229,5 +229,48 @@
         ]
       }
     ]
+  },
+  "seed_settings_grid": {
+    "type": "array",
+    "orientation": "vertical",
+    "margin": "4,4",
+    "content": [
+      {
+        "type": "itemgrid",
+        "h_alignment": "left",
+        "item_margin": "4,2",
+        "item_width": 88,
+        "item_height": 20,
+        "rows": [
+          [
+            "seedgoodtechnique",
+            "seedmultiple"
+          ],
+          [
+            "seedposes",
+            "seedsigns"
+          ],
+          [
+            "seedexits",
+            "seedscoretotal"
+          ],
+          [
+            "seedphotocount",
+            "seedrng"
+          ],
+          [
+            "seedhard",
+            "seedscoring"
+          ],
+          [
+            "seedfragments",
+            "seedgoal"
+          ],
+          [
+            "seedfilm"
+          ]
+        ]
+      }
+    ]
   }
 }

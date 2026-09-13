@@ -18,6 +18,14 @@
                 "type": "layout",
                 "key": "settings_grid"
               }
+            },
+            {
+              "type": "group",
+              "header": "Your Seed",
+              "content": {
+                "type": "layout",
+                "key": "seed_settings_grid"
+              }
             }
           ]
         }
