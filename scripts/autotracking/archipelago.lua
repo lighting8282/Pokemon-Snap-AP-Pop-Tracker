@@ -96,8 +96,26 @@ end
 -- recomputed here rather than incremented, so replaying the item list on a
 -- reconnect lands on the same answer.
 function refreshDerivedItems()
+    -- Film capacity reads "15" on a fresh seed and "15->25" once upgrades have
+    -- landed, so the seed's starting_film stays visible instead of being lost
+    -- behind the running total. Both numbers matter: the start is what the
+    -- yaml rolled, the total is what the 13 film checks are measured against.
     local film = Tracker:FindObjectForCode("film")
-    if film then film.AcquiredCount = film_capacity() end
+    if film then
+        local total = film_capacity()
+        film.AcquiredCount = total
+        if film.MinCount ~= nil then film.MinCount = FILM_START end
+        if film.MaxCount ~= nil then film.MaxCount = FILM_CAP end
+        if film.SetOverlay then
+            if total > FILM_START then
+                film:SetOverlay(string.format("%d→%d", FILM_START, total))
+                if film.SetOverlayFontSize then film:SetOverlayFontSize(11) end
+            else
+                film:SetOverlay(tostring(total))
+                if film.SetOverlayFontSize then film:SetOverlayFontSize(16) end
+            end
+        end
+    end
     for course, frag in pairs(FRAGMENT_OF or {}) do
         local obj = Tracker:FindObjectForCode(course)
         if obj then
