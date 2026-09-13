@@ -3,6 +3,10 @@ ScriptHost:LoadScript("scripts/utils.lua")
 -- Access-rule helpers for the per-seed options in apworld 0.7.0. Loaded before
 -- the locations, so the $functions their rules name already exist.
 ScriptHost:LoadScript("scripts/logic.lua")
+-- Oak's rewards depend on how much of the game is reachable rather than on
+-- items, so they get their own rules and a generated table to drive them.
+ScriptHost:LoadScript("scripts/autotracking/oak_mapping.lua")
+ScriptHost:LoadScript("scripts/oak.lua")
 
 Tracker:AddItems("items/items.json")
 Tracker:AddItems("items/settings.json")

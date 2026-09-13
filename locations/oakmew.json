@@ -11,18 +11,27 @@
             "name": "24,000 PKMN Report Score",
             "visibility_rules": [
               "loc601"
+            ],
+            "access_rules": [
+              "$oak_score_24000"
             ]
           },
           {
             "name": "72,500 PKMN Report Score",
             "visibility_rules": [
               "loc602"
+            ],
+            "access_rules": [
+              "$oak_score_72500"
             ]
           },
           {
             "name": "130,000 PKMN Report Score",
             "visibility_rules": [
               "loc603"
+            ],
+            "access_rules": [
+              "$oak_score_130000"
             ]
           }
         ],
@@ -43,18 +52,27 @@
             "name": "6 Pokemon Photographed",
             "visibility_rules": [
               "loc604"
+            ],
+            "access_rules": [
+              "$oak_photo_6"
             ]
           },
           {
             "name": "22 Pokemon Photographed",
             "visibility_rules": [
               "loc605"
+            ],
+            "access_rules": [
+              "$oak_photo_22"
             ]
           },
           {
             "name": "40 Pokemon Photographed",
             "visibility_rules": [
               "loc606"
+            ],
+            "access_rules": [
+              "$oak_photo_40"
             ]
           }
         ],
