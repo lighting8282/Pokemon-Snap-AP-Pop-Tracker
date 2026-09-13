@@ -27,6 +27,8 @@
               "dock": "top",
               "content": {
                 "type": "map",
+                "v_alignment": "top",
+                "h_alignment": "center",
                 "maps": [
                   "oakmew"
                 ]
