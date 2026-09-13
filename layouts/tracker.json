@@ -24,7 +24,7 @@
             {
               "type": "group",
               "header": "Oak's Lab & Rainbow Cloud",
-              "dock": "bottom",
+              "dock": "top",
               "content": {
                 "type": "map",
                 "maps": [
