@@ -58,28 +58,6 @@
             ]
           },
           {
-            "_signs": true,
-            "type": "itemgrid",
-            "h_alignment": "left",
-            "item_margin": "8,4",
-            "item_width": 40,
-            "item_height": 40,
-            "rows": [
-              [
-                "signkingler",
-                "signpinsir"
-              ],
-              [
-                "signkoffing",
-                "signcubone"
-              ],
-              [
-                "signmewtwo",
-                "signdugtrio"
-              ]
-            ]
-          },
-          {
             "type": "itemgrid",
             "h_alignment": "left",
             "item_margin": "0,-24",
@@ -129,6 +107,28 @@
                   ]
                 ]
               }
+            ]
+          },
+          {
+            "_signs": true,
+            "type": "itemgrid",
+            "h_alignment": "left",
+            "item_margin": "8,4",
+            "item_width": 40,
+            "item_height": 40,
+            "rows": [
+              [
+                "signkingler",
+                "signpinsir"
+              ],
+              [
+                "signkoffing",
+                "signcubone"
+              ],
+              [
+                "signmewtwo",
+                "signdugtrio"
+              ]
             ]
           }
         ]
