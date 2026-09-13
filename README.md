@@ -40,8 +40,9 @@ AP button.
   capacity is derived from your yaml (`starting_film`, `film_upgrade_amount`,
   `maximum_film`) rather than assumed, so a low-film seed reads correctly
 - **Map fragments** — with `map_fragments` at 2 or more a course unlocks from that many
-  `<Course>: Map Fragment` items instead of one course item; the course lights up when you
-  have enough
+  `<Course>: Map Fragment` items instead of one course item. The course nameplate fills in
+  left to right as they arrive, split into as many segments as your seed requires, with the
+  count (`3/5`) alongside it. At the default of 1 nothing is drawn differently
 - **Items** — the six courses, Apple, Pester Ball, PokeFlute, Dash Engine, Pokemon Sign
   Detector, film capacity, and a count of the Pokemon pictures you have been sent
 - **Logic** — access rules match the apworld's own rules, so a check shows as reachable
@@ -57,13 +58,34 @@ no longer be toggled by hand.
 
 Each check shows a closed Pokeball while outstanding and an open one once it is done.
 
+## Tools
+
+None of these ship inside the pack zip; they live in the repo.
+
 `tools/check_apworld.py` compares the pack against any apworld and reports new or stale
-locations, broken section references, wrong-case image references and logic disagreements.
-Run it whenever a new apworld is released.
+locations, broken section references, wrong-case image references, missing map-fragment
+icons and logic disagreements. Run it whenever a new apworld is released:
+
+```
+python tools/check_apworld.py "path/to/pokemon_snap.apworld"
+```
 
 Since 0.7.0 a location's logic depends on the yaml, so it checks the rules under several
 option sets rather than one, and fails if it ever ends up comparing almost nothing — an
-upstream restructure silently disabled that check twice before.
+upstream restructure silently disabled that check twice before. It reads the world's rules
+as objects rather than parsing the source, which is what survived 0.7.0 moving them into a
+table and composing them with operators.
+
+`tools/test_options.py` shows what the tracker would display for a given set of yaml
+options, without generating a seed.
+
+`tools/make_fragment_icons.py` regenerates the 90 partially-filled course nameplates, and
+`tools/make_multiple_icon.py` the Multiple PKMN Scoring plate. Only needed if the art or the
+fragment range changes.
+
+PopTracker ships JSON schemas under `poptracker/schema/packs/`. Validating the pack's
+layouts and items against them catches malformed nodes that otherwise only show up as a
+wrong-looking window.
 
 ## Naming
 
@@ -91,8 +113,9 @@ the older `Manual_PokemonSnap_AliRobotnik` implementation, and has been ported t
 
 - `manifest.json` targets game `Pokemon Snap`
 - `item_mapping.lua` rebuilt against the apworld's item ids (tools 1000-1004, courses
-  2000-2005, film 3000, Pokemon pictures 5000-5062, sign pictures 6000-6005, victory 10000)
-- `location_mapping.lua` and `sectionID.lua` rebuilt against the apworld's 400 location ids,
+  2000-2005, film 3000, Pokemon pictures 5000-5062, sign pictures 6000-6005, victory 10000,
+  and since 0.7.0 photo scoring 1500-1502 and map fragments 2100-2105)
+- `location_mapping.lua` and `sectionID.lua` rebuilt against the apworld's 412 location ids,
   and kept as exact inverses of each other
 - access rules corrected against the apworld's `rules.py`
 - locations that only existed in the Manual implementation were removed
