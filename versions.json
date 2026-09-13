@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "package_version": "1.6.0.2",
+      "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.6.0.2/SnapTracker-1.6.0.2.zip",
+      "sha256": "b2ce29219db311aa41c468c1e9b42d70b14f4a73d4279633b6abd8df4c36f7b9",
+      "changelog": [
+        "Oak's six rewards are in logic properly. They used to show as available from the moment the tracker opened, including 130,000 Report Score on a fresh file.",
+        "New 'Your Seed' panel in the Settings popup listing what your yaml turned on and off.",
+        "The film counter states your seed's starting film, reading 15 then 15->25 once upgrades arrive.",
+        "Oak's Lab map is laid out side by side instead of stacked, so it renders about twice as wide."
+      ]
+    },
+    {
       "package_version": "1.6.0.1",
       "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.6.0.1/SnapTracker-1.6.0.1.zip",
       "sha256": "7cfe73f4c2886bc3f269f7889b098c28457dae3718a5e4a4a00f7a7613ef3556",
