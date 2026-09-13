@@ -105,7 +105,7 @@
   {
     "name": "Multiple PKMN Scoring",
     "type": "toggle",
-    "img": "images/hard.png",
+    "img": "images/multiple.png",
     "codes": "multscore",
     "disabled_img_mods": "grayscale, brightness|0.3"
   },

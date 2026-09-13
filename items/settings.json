@@ -16,7 +16,7 @@
   {
     "name": "Multiple Pokemon Pictures",
     "type": "toggle",
-    "img": "images/hard.png",
+    "img": "images/multiple.png",
     "codes": "multiple",
     "initial_active_state": true
   },
