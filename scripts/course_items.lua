@@ -13,6 +13,9 @@
 -- the layout that places them.
 
 COURSE_ITEMS = {}
+-- archipelago.lua calls these once slot_data has told us how many fragments a
+-- course needs, since the icons cannot be chosen before that is known.
+COURSE_REFRESH = {}
 
 local COURSES = {
     { code = "beach",   tab = "Beach",   img = "images/beach.png",   name = "Beach" },
@@ -55,10 +58,40 @@ for _, c in ipairs(COURSES) do
 
     COURSE_ITEMS[course.code] = item
 
+    local function overlay(text)
+        if item.SetOverlay then
+            item:SetOverlay(text)
+            if item.SetOverlayFontSize then item:SetOverlayFontSize(11) end
+            if item.SetOverlayBackground then item:SetOverlayBackground("#a0000000") end
+        end
+    end
+
+    -- On a map_fragments seed the nameplate fills left to right as the
+    -- fragments arrive, with the count alongside it. PopTracker cannot
+    -- composite at runtime, so the partial states are pre-baked by
+    -- tools/make_fragment_icons.py and simply selected here.
     local function refresh()
         local owned = Tracker:ProviderCountForCode(course.code) > 0
-        item.IconMods = owned and "" or "@disabled"
+        local required = MAP_FRAGMENTS or 1
+        local held = Tracker:ProviderCountForCode("frag" .. course.code) or 0
+
+        if owned or required < 2 then
+            item.Icon = ImageReference:FromPackRelativePath(course.img)
+            item.IconMods = owned and "" or "@disabled"
+            overlay("")
+        elseif held > 0 and held < required then
+            item.Icon = ImageReference:FromPackRelativePath(string.format(
+                "images/fragments/%s_%dof%d.png", course.code, held, required))
+            item.IconMods = ""
+            overlay(string.format("%d/%d", held, required))
+        else
+            item.Icon = ImageReference:FromPackRelativePath(course.img)
+            item.IconMods = "@disabled"
+            overlay(string.format("%d/%d", held, required))
+        end
     end
     refresh()
+    COURSE_REFRESH[course.code] = refresh
     ScriptHost:AddWatchForCode("courseicon_" .. course.code, course.code, refresh)
+    ScriptHost:AddWatchForCode("coursefrag_" .. course.code, "frag" .. course.code, refresh)
 end

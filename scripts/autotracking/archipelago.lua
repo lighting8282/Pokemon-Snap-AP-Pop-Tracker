@@ -111,24 +111,14 @@ function refreshDerivedItems()
                         Tracker:UiHint("ActivateTab", COURSE_TABS[course])
                     end
                 end
-                setCourseOverlay(obj, nil)
-            elseif MAP_FRAGMENTS > 1 then
-                -- Show progress towards the unlock on the course button itself,
-                -- so a fragment seed does not look like nothing is happening.
-                setCourseOverlay(obj, string.format("%d/%d",
-                    Tracker:ProviderCountForCode(frag) or 0, MAP_FRAGMENTS))
-            else
-                setCourseOverlay(obj, nil)
             end
         end
+        -- The nameplate the player actually sees is the Lua item in
+        -- course_items.lua, not this toggle, and it needs MAP_FRAGMENTS from
+        -- slot_data before it can pick the right partial icon.
+        local refresh = COURSE_REFRESH and COURSE_REFRESH[course]
+        if refresh then refresh() end
     end
-end
-
--- SetOverlay is PopTracker-only, so every call is guarded. nil clears it.
-function setCourseOverlay(obj, text)
-    if not obj.SetOverlay then return end
-    obj:SetOverlay(text or "")
-    if text and obj.SetOverlayFontSize then obj:SetOverlayFontSize(14) end
 end
 
 function readGoalFromSlotData(slot_data)

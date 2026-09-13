@@ -589,8 +589,11 @@ def main(apworld):
             continue
         for m in re.finditer(r'"(images/[^"]+\.png)"',
                              f.read_text(encoding="utf-8-sig", errors="ignore")):
-            if m.group(1) not in on_disk:
-                bad.setdefault(m.group(1), set()).add(f.relative_to(PACK).as_posix())
+            ref = m.group(1)
+            if "%" in ref:
+                continue          # built at runtime; covered by [5b] below
+            if ref not in on_disk:
+                bad.setdefault(ref, set()).add(f.relative_to(PACK).as_posix())
     if bad:
         problems += len(bad)
         print(f"[5] {len(bad)} image reference(s) do not match a file exactly:")
@@ -598,6 +601,23 @@ def main(apworld):
             near = [d for d in on_disk if d.lower() == img.lower()]
             hint = f"  (did you mean {near[0]}?)" if near else "  (no such file)"
             print(f"      {img}{hint}\n          from {', '.join(sorted(where))}")
+        print()
+
+    # [5b] The map-fragment nameplates are chosen at runtime by format string,
+    # so [5] cannot see them. Every state course_items.lua can ask for must
+    # exist, or a fragment seed shows a broken icon partway through.
+    want = {f"images/fragments/{c}_{held}of{req}.png"
+            for c in ("beach", "tunnel", "volcano", "river", "cave", "valley")
+            for req in range(2, 7) for held in range(1, req)}
+    gone = sorted(want - on_disk)
+    if gone:
+        problems += len(gone)
+        print(f"[5b] {len(gone)} map-fragment icon(s) missing; regenerate with"
+              f" tools/make_fragment_icons.py:")
+        for g in gone[:6]:
+            print(f"      {g}")
+        if len(gone) > 6:
+            print(f"      ... and {len(gone) - 6} more")
         print()
 
     if problems:
