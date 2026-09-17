@@ -10,9 +10,10 @@ An auto-tracking [PopTracker](https://github.com/black-sliver/PopTracker) pack f
 
 Anything older used different location ids and will clear the wrong checks.
 
-0.5.x seeds may also contain "bonus" locations - duplicates of random checks, created to hold
-surplus items. Which ones exist varies per seed and a seed may have none. Both the base check
-and its bonus twin map to the same entry here, which completes on whichever arrives first.
+0.5.0 and newer may also contain "bonus" locations - duplicates of random checks, created to
+hold surplus items. Which ones exist varies per seed and a seed may have none. Both the base
+check and its bonus twin map to the same entry here, which completes on whichever arrives
+first.
 
 ## Install
 
@@ -38,23 +39,37 @@ AP button.
   first, and the checks that get cheaper are shown as such
 - **Film capacity** — 0.7.0 makes film a logic requirement for 13 checks. The displayed
   capacity is derived from your yaml (`starting_film`, `film_upgrade_amount`,
-  `maximum_film`) rather than assumed, so a low-film seed reads correctly
+  `maximum_film`) rather than assumed, so a low-film seed reads correctly. The counter reads
+  `15` on a fresh seed and `15→25` once upgrades arrive, so the amount you started with stays
+  visible instead of disappearing behind the running total
 - **Map fragments** — with `map_fragments` at 2 or more a course unlocks from that many
   `<Course>: Map Fragment` items instead of one course item. The course nameplate fills in
   left to right as they arrive, split into as many segments as your seed requires, with the
   count (`3/5`) alongside it. At the default of 1 nothing is drawn differently
 - **Items** — the six courses, Apple, Pester Ball, PokeFlute, Dash Engine, Pokemon Sign
-  Detector, film capacity, and a count of the Pokemon pictures you have been sent
+  Detector, film capacity, a count of the Pokemon pictures you have been sent, and the three
+  photo scoring unlocks 0.7.0 can add (Progressive, Good Technique and Multiple PKMN Scoring)
 - **Logic** — access rules match the apworld's own rules, so a check shows as reachable
   exactly when Archipelago considers it reachable
+- **Oak's six rewards** — the three report scores and the three photo counts are not item
+  requirements: the apworld asks whether enough of the game is reachable. Both are worked out
+  the same way here, counting the Pokemon you can currently reach and running the apworld's
+  own per-species score estimate, so they light up only when they are genuinely available.
+  Before 1.6.0.2 all six showed as reachable from the moment the tracker opened
+- **What your seed rolled** — the Settings popup has a **Your Seed** panel listing every
+  yaml option, lit when enabled and dimmed when not, with the value alongside for the ones
+  that are not on/off (scoring mode, fragments per course, goal requirement, starting film)
+  and the setting spelled out in each tooltip
 - **Your starting course** — the randomly precollected course is detected on connect and its
   map tab is opened automatically
 - **The current course** — the map follows you as you move between courses in game
 - **A Pokedex tab** — all 63 Pokemon, greyed until you have photographed them
 - **The six sign pictures** — tracked individually, so you can see which ones to hint for
 
-Clicking a course item opens its map. Because those items carry autotracked state, they can
-no longer be toggled by hand.
+Clicking a course nameplate opens that course's map, whether or not you have unlocked it.
+The nameplates are display-and-click only and provide nothing to the logic; the course state
+the access rules read lives on hidden toggles that autotracking sets, which is why a
+nameplate cannot be switched on by hand.
 
 Each check shows a closed Pokeball while outstanding and an open one once it is done.
 
@@ -79,9 +94,24 @@ table and composing them with operators.
 `tools/test_options.py` shows what the tracker would display for a given set of yaml
 options, without generating a seed.
 
-`tools/make_fragment_icons.py` regenerates the 90 partially-filled course nameplates, and
-`tools/make_multiple_icon.py` the Multiple PKMN Scoring plate. Only needed if the art or the
-fragment range changes.
+`tools/make_oak_mapping.py` regenerates `scripts/autotracking/oak_mapping.lua`, which groups
+the base photo locations by species and lists the rng/hard bonus photos the score estimate
+ignores. Run it against a new apworld if the location table changes, or Oak's rewards will be
+scored against a stale species list.
+
+The rest generate artwork and only matter if the art changes:
+
+- `tools/make_fragment_icons.py` — the 90 partially-filled course nameplates
+- `tools/make_setting_labels.py` — the Your Seed plates
+- `tools/make_multiple_icon.py` — the Multiple PKMN Scoring plate
+- `tools/make_oak_map.py` — the Oak's Lab map
+
+`make_oak_map.py` is worth knowing about: `images/OakLand.png` is generated, and the original
+stacked artwork is kept alongside it as `images/OakLand-tall.png`. The two scenes are placed
+side by side and the Mew panel trimmed, because the panel the map lives in is wide and short
+and the original was taller than it was wide, so it could never draw at a useful size. To go
+back to the original, copy `OakLand-tall.png` over `OakLand.png` and restore the four pin
+coordinates in `locations/oakmew.json` and `locations/logic/general_logic.json`.
 
 PopTracker ships JSON schemas under `poptracker/schema/packs/`. Validating the pack's
 layouts and items against them catches malformed nodes that otherwise only show up as a
