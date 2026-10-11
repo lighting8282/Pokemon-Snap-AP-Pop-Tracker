@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "package_version": "1.7.0.0",
+      "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.7.0.0/SnapTracker-1.7.0.0.zip",
+      "sha256": "83b119b5c0ecadfbcd5e5d621c21ddb9fbbfa51908a840f9e0fb422c17c75fb4",
+      "changelog": [
+        "Supports apworld 0.8.0. If you play 0.8.0, update: on its default settings older versions never counted Pokemon pictures, never registered sign pictures (so the Rainbow Cloud never unlocked), and never lit the Apple.",
+        "New 0.8.0 options tracked: per-course Apple / Pester Balls / PokeFlute, hard logic, extra pictures, and the Mew Good Technique check and goal.",
+        "Access rules are now generated from the apworld's own logic."
+      ]
+    },
+    {
       "package_version": "1.6.0.3",
       "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.6.0.3/SnapTracker-1.6.0.3.zip",
       "sha256": "8f44d2011d59bc06fb964796962a96e9b07e5f781a8c6c5e6265e73d6cfd669f",
