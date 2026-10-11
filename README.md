@@ -6,7 +6,12 @@ An auto-tracking [PopTracker](https://github.com/black-sliver/PopTracker) pack f
 ## Requirements
 
 - **PopTracker 0.28.0** or newer
-- **Pokemon Snap apworld 0.4.0 or newer** (0.7.0 recommended)
+- **Pokemon Snap apworld 0.4.0 or newer** (0.8.0 recommended)
+
+**If you play apworld 0.8.0, use pack 1.7.0.0 or newer.** 0.8.0's default settings name
+pictures and the Apple differently, and older packs miss them: the Pokemon picture counter
+stays at 0, sign pictures never register so the Rainbow Cloud never unlocks, and the Apple
+never lights.
 
 Anything older used different location ids and will clear the wrong checks.
 
@@ -32,7 +37,16 @@ AP button.
 - **Only the checks your seed contains** — anything your yaml excluded is hidden, worked out
   from the seed's own location list rather than the options
 - **The goal** — 0.6.0 makes the Rainbow Cloud requirement configurable (sign pictures or
-  Pokemon pictures, and how many), read from slot data
+  Pokemon pictures, and how many), read from slot data. Every picture you are sent counts,
+  as it does in Archipelago — including the duplicates `extra_sign_pictures` and
+  `extra_pokemon_pictures` add in 0.8.0
+- **Generic picture names** — 0.8.0's `goal_item_names: generic`, the default, sends plain
+  `Pokemon Picture` and `Sign Picture` items that do not say which one they are. Both are
+  counted. Since a generic sign has no identity, the six sign icons fill in order as they
+  arrive, showing how many you have rather than which; with `specific` names they show
+  exactly which signs you hold
+- **Mew** — 0.8.0 adds a Good Technique photo of Mew as a check, and
+  `good_technique_mew_photo` can make it the photo that wins the game
 - **Photo scoring** — 0.7.0 can lock Good Technique and Multiple PKMN behind items. Those
   are tracked, and Good Technique / Multiple checks stay out of logic until you have the
   matching unlock. Under `separate` scoring, Multiple no longer requires Good Technique
@@ -48,9 +62,17 @@ AP button.
   count (`3/5`) alongside it. At the default of 1 nothing is drawn differently
 - **Items** — the six courses, Apple, Pester Ball, PokeFlute, Dash Engine, Pokemon Sign
   Detector, film capacity, a count of the Pokemon pictures you have been sent, and the three
-  photo scoring unlocks 0.7.0 can add (Progressive, Good Technique and Multiple PKMN Scoring)
-- **Logic** — access rules match the apworld's own rules, so a check shows as reachable
-  exactly when Archipelago considers it reachable
+  photo scoring unlocks 0.7.0 can add (Progressive, Good Technique and Multiple PKMN Scoring).
+  0.8.0 renamed the Apple and Pester Ball (`Pokemon Food` or `Apples`, `Pester Balls`); every
+  name is recognised
+- **Per-course unlocks** — with 0.8.0's `per_course_items`, the Apple, Pester Balls and
+  PokeFlute are found one course at a time. Each course's checks use that course's copy, and
+  the tool icons show how many courses you have it in (`3/7`) rather than lighting up as if
+  you had it everywhere
+- **Hard logic** — 0.8.0's `hard_logic` brings about a dozen checks into logic earlier, some
+  with less film. Followed automatically from slot data
+- **Logic** — access rules are generated from the apworld's own rule table, so a check shows
+  as reachable exactly when Archipelago considers it reachable, under every option
 - **Oak's six rewards** — the three report scores and the three photo counts are not item
   requirements: the apworld asks whether enough of the game is reachable. Both are worked out
   the same way here, counting the Pokemon you can currently reach and running the apworld's
@@ -93,6 +115,20 @@ table and composing them with operators.
 
 `tools/test_options.py` shows what the tracker would display for a given set of yaml
 options, without generating a seed.
+
+`tools/make_logic.py` **writes the access rules** for every photo, pose, sign and secret
+exit, compiled from the apworld's own rule table. Since 0.8.0 threaded hard logic and
+per-course tools through almost every rule, the rules are generated rather than edited by
+hand — so when a new apworld changes logic, run this and then `check_apworld.py`:
+
+```
+python tools/make_logic.py "path/to/pokemon_snap.apworld"
+python tools/check_apworld.py "path/to/pokemon_snap.apworld"
+```
+
+The checker re-derives the world's rules by a separate route and compares them under twelve
+option combinations, so a mistake in the generator surfaces there rather than being trusted.
+Oak's rewards and the release button are left alone; they are not item requirements.
 
 `tools/make_oak_mapping.py` regenerates `scripts/autotracking/oak_mapping.lua`, which groups
 the base photo locations by species and lists the rng/hard bonus photos the score estimate
@@ -144,8 +180,10 @@ the older `Manual_PokemonSnap_AliRobotnik` implementation, and has been ported t
 - `manifest.json` targets game `Pokemon Snap`
 - `item_mapping.lua` rebuilt against the apworld's item ids (tools 1000-1004, courses
   2000-2005, film 3000, Pokemon pictures 5000-5062, sign pictures 6000-6005, victory 10000,
-  and since 0.7.0 photo scoring 1500-1502 and map fragments 2100-2105)
-- `location_mapping.lua` and `sectionID.lua` rebuilt against the apworld's 412 location ids,
+  since 0.7.0 photo scoring 1500-1502 and map fragments 2100-2105, and since 0.8.0 the
+  per-course tools 1010-1072 and 1110-1170, `Apples` 1101, `Press L to Stop` 1005, and the
+  generic `Pokemon Picture` 5500 and `Sign Picture` 6500)
+- `location_mapping.lua` and `sectionID.lua` rebuilt against the apworld's 414 location ids,
   and kept as exact inverses of each other
 - access rules corrected against the apworld's `rules.py`
 - locations that only existed in the Manual implementation were removed
