@@ -20,6 +20,15 @@ import sys, os, re, json, zipfile, tempfile, types, importlib.util
 from pathlib import Path
 
 PACK = Path(__file__).resolve().parent.parent
+
+# The newest apworld this pack is built against. Ids the pack maps that are
+# missing from an OLDER world are expected; missing from this one they are a
+# real stale mapping. Bump it when the pack is updated for a new apworld.
+TARGET_APWORLD = "0.8.0"
+
+
+def _vtuple(v):
+    return tuple(int(x) for x in re.findall(r"\d+", str(v))[:3])
 COURSES = {"beach", "tunnel", "volcano", "river", "cave", "valley", "rainbow"}
 TOOLS = {"pester", "food", "flute", "dash", "sign", "allsigns"}
 
@@ -88,7 +97,26 @@ def load_apworld(path):
 # AP item name -> the pack's item code. Keyed on the value, not the python
 # identifier, so renaming a constant upstream cannot silently drop a rule.
 ITEM_CODE = {"Pester Ball": "pester", "Apple": "food", "PokeFlute": "flute",
-             "Dash Engine": "dash", "Pokemon Sign Detector": "sign"}
+             "Dash Engine": "dash", "Pokemon Sign Detector": "sign",
+             # apworld 0.8.0 renamed two of them, and can ship the Apple
+             # under either of two names; all spellings mean the same tool
+             "Pester Balls": "pester", "Pokemon Food": "food", "Apples": "food"}
+
+# apworld 0.8.0 per_course_items: "Pester Balls (Cave)" and friends
+_COURSE_KEY = {"Beach": "beach", "Tunnel": "tunnel", "Volcano": "volcano",
+               "River": "river", "Cave": "cave", "Valley": "valley",
+               "Rainbow Cloud": "cloud"}
+PER_COURSE_TOKEN = re.compile(r"^(food|pester|flute)_(beach|tunnel|volcano|river|cave|valley|cloud)$")
+
+
+def item_code(name):
+    """AP item name -> pack code, or None if the pack has no such code."""
+    if name in ITEM_CODE:
+        return ITEM_CODE[name]
+    m = re.match(r"^(.*) \((.*)\)$", name or "")
+    if m and m.group(1) in ITEM_CODE and m.group(2) in _COURSE_KEY:
+        return ITEM_CODE[m.group(1)] + "_" + _COURSE_KEY[m.group(2)]
+    return None
 
 
 def _stub_rule_builder():
@@ -308,16 +336,21 @@ def show(d):
 UNREACHABLE = "UNREACHABLE"      # no combination of items satisfies the rule
 FREE = frozenset()
 
-# name -> (photo_scoring, starting_film, rng_checks)
+# name -> (photo_scoring, starting_film, rng_checks, hard_logic)
 OPTION_SETS = [
-    ("defaults",                 (0, 15, 0)),
-    ("separate scoring",         (1, 15, 0)),
-    ("progressive unlocks",      (2, 15, 0)),
-    ("separate unlocks",         (3, 15, 0)),
-    ("separate + rng checks",    (1, 15, 1)),
-    ("starting_film 1",          (0,  1, 0)),
-    ("starting_film 5",          (0,  5, 0)),
-    ("starting_film 8",          (0,  8, 0)),
+    ("defaults",                 (0, 15, 0, 0)),
+    ("separate scoring",         (1, 15, 0, 0)),
+    ("progressive unlocks",      (2, 15, 0, 0)),
+    ("separate unlocks",         (3, 15, 0, 0)),
+    ("separate + rng checks",    (1, 15, 1, 0)),
+    ("starting_film 1",          (0,  1, 0, 0)),
+    ("starting_film 5",          (0,  5, 0, 0)),
+    ("starting_film 8",          (0,  8, 0, 0)),
+    # apworld 0.8.0 hard_logic, including the lower film thresholds it adds
+    ("hard logic",               (0, 15, 0, 1)),
+    ("hard logic, film 3",       (0,  3, 0, 1)),
+    ("hard logic, film 1",       (0,  1, 0, 1)),
+    ("hard + separate + rng",    (1, 15, 1, 1)),
 ]
 
 
@@ -333,7 +366,7 @@ def _scoring_tokens(scoring, category):
 
 def world_dnf(rule, cfg):
     """Reduce a world rule to requirement sets under one option configuration."""
-    scoring, film, rng = cfg
+    scoring, film, rng, hard = cfg
     k = type(rule).__name__
     if k == "True_":
         return {FREE}
@@ -342,15 +375,24 @@ def world_dnf(rule, cfg):
     if k == "HasFilm":
         return {FREE} if film >= rule.film_requirement else UNREACHABLE
     if k == "OptionFilter":
-        # the world uses exactly two: separate scoring, and rng checks on
-        which = str(rule.args[0]) if rule.args else ""
-        on = (scoring in (1, 3)) if "PhotoScoring" in which else bool(rng)
+        # Identify the option by its class. Until 0.8.0 there were only two
+        # filters and anything not PhotoScoring was read as rng_checks, which
+        # silently turned 0.8.0's hard-logic filter into an rng one.
+        which = getattr(rule.args[0], "__name__", str(rule.args[0])) if rule.args else ""
+        if "PhotoScoring" in which:
+            on = scoring in (1, 3)
+        elif "RNG" in which:
+            on = bool(rng)
+        elif "HardLogic" in which:
+            on = bool(hard)
+        else:
+            return None                            # an option we do not model
         return {FREE} if on else UNREACHABLE
     if k == "Has":
-        c = ITEM_CODE.get(rule.args[0])
+        c = item_code(rule.args[0])
         return {frozenset({c})} if c else UNREACHABLE
     if k in ("HasAny", "HasAll"):
-        cs = [ITEM_CODE.get(a) for a in rule.args]
+        cs = [item_code(a) for a in rule.args]
         if any(c is None for c in cs):
             return UNREACHABLE
         return {frozenset({c}) for c in cs} if k == "HasAny" else {frozenset(cs)}
@@ -376,7 +418,7 @@ def world_dnf(rule, cfg):
 
 def pack_dnf(rules, cfg):
     """The same reduction for a section's access_rules."""
-    scoring, film, rng = cfg
+    scoring, film, rng, hard = cfg
     out = set()
     for r in rules:
         parts = [x.strip() for x in r.split(",")]
@@ -391,11 +433,23 @@ def pack_dnf(rules, cfg):
             if p == "@Logic/Throwable":
                 opts = [o + [t] for o in opts for t in ("pester", "food")]
                 continue
-            if p in TOOLS:
+            if PER_COURSE_TOKEN.match(p) and not PER_COURSE_EXISTS:
+                # an older world never creates per-course items, so a branch
+                # that needs one can never be satisfied there - drop it
+                ok = False
+                break
+            if p in TOOLS or PER_COURSE_TOKEN.match(p):
                 opts = [o + [p] for o in opts]
                 continue
-            if p.startswith("$has_film_"):
-                if film < int(p.rsplit("_", 1)[1]):
+            # $has_film|5 since 0.8.0; $has_film_5 before it
+            m = re.match(r"^\$has_film[|_](\d+)$", p)
+            if m:
+                if film < int(m.group(1)):
+                    ok = False
+                    break
+                continue
+            if p == "$hard_logic_on":
+                if not hard:
                     ok = False
                     break
                 continue
@@ -442,19 +496,33 @@ def applicable_option_sets(R):
         pass
     has_scoring = "PhotoScoring" in src
     has_film = "HasFilm" in src
+    has_hard = "UseHardLogic" in src
     out = []
     for label, cfg in OPTION_SETS:
-        scoring, film, rng = cfg
+        scoring, film, rng, hard = cfg
         if scoring and not has_scoring:
             continue
         if film != 15 and not has_film:
+            continue
+        if hard and not has_hard:
             continue
         out.append((label, cfg))
     return out
 
 
+PER_COURSE_EXISTS = True
+
+
 def sweep(R, sections, name_to_section):
     """Compare every world rule against the pack under each option set."""
+    global PER_COURSE_EXISTS
+    try:
+        src = open(os.path.join(os.path.dirname(R.__file__), "rules.py"),
+                   encoding="utf-8").read()
+    except Exception:
+        src = ""
+    # per_course_items arrived in 0.8.0; before it those item ids never exist
+    PER_COURSE_EXISTS = "course_item" in src
     results = []
     for label, cfg in applicable_option_sets(R):
         diffs, compared, skipped = [], 0, 0
@@ -510,10 +578,19 @@ def main(apworld):
             print(f"      {i:<6} {locs[i]}")
         print()
 
+    # The pack supports several apworld versions, so against an older world
+    # some mapped ids are simply newer than it, and a seed from that world
+    # never contains them. Against the version the pack targets, a mapped id
+    # the world lacks really is stale, and stays a failure.
     stale = sorted(set(lm) - set(locs))
     if stale:
-        problems += len(stale)
-        print(f"[2] {len(stale)} mapped id(s) no longer exist in the world:")
+        older = _vtuple(version) < _vtuple(TARGET_APWORLD)
+        if older:
+            print(f"[2] note: {len(stale)} mapped id(s) are newer than this {version}"
+                  f" world (the pack targets {TARGET_APWORLD}):")
+        else:
+            problems += len(stale)
+            print(f"[2] {len(stale)} mapped id(s) no longer exist in the world:")
         for i in stale:
             print(f"      {i:<6} -> {lm[i]}")
         print()

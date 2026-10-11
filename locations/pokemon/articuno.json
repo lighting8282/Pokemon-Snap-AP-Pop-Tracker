@@ -10,7 +10,8 @@
           "normal, loc58"
         ],
         "access_rules": [
-          "cave, flute"
+          "cave, flute",
+          "cave, flute_cave"
         ]
       },
       {
@@ -19,7 +20,8 @@
           "wonderful, loc158"
         ],
         "access_rules": [
-          "$can_wonderful, cave, flute"
+          "cave, $can_wonderful, flute",
+          "cave, $can_wonderful, flute_cave"
         ]
       }
     ]

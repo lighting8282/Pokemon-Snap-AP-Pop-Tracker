@@ -261,7 +261,10 @@
           {
             "name": "Pinsir Shadow",
             "access_rules": [
-              "sign, food, flute"
+              "tunnel, flute, food, sign",
+              "tunnel, flute, food_tunnel, sign",
+              "tunnel, flute_tunnel, food, sign",
+              "tunnel, flute_tunnel, food_tunnel, sign"
             ],
             "visibility_rules": [
               "loc401"
@@ -316,7 +319,10 @@
           {
             "name": "Tunnel",
             "access_rules": [
-              "@Logic/Throwable"
+              "tunnel, food",
+              "tunnel, food_tunnel",
+              "tunnel, pester",
+              "tunnel, pester_tunnel"
             ],
             "visibility_rules": [
               "loc501"

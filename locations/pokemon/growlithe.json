@@ -10,7 +10,8 @@
           "normal, loc22"
         ],
         "access_rules": [
-          "volcano, pester"
+          "volcano, pester",
+          "volcano, pester_volcano"
         ]
       },
       {
@@ -19,14 +20,19 @@
           "wonderful, loc122"
         ],
         "access_rules": [
-          "$can_wonderful, volcano, pester"
+          "volcano, $can_wonderful, pester",
+          "volcano, $can_wonderful, pester_volcano"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, volcano, food, pester",
-          "$can_multiple, volcano, pester, $separate_scoring"
+          "volcano, $can_multiple, $separate_scoring, pester",
+          "volcano, $can_multiple, $separate_scoring, pester_volcano",
+          "volcano, $can_multiple, food, pester",
+          "volcano, $can_multiple, food, pester_volcano",
+          "volcano, $can_multiple, food_volcano, pester",
+          "volcano, $can_multiple, food_volcano, pester_volcano"
         ],
         "visibility_rules": [
           "multiple, loc222"

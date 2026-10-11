@@ -19,13 +19,14 @@
           "wonderful, loc148"
         ],
         "access_rules": [
-          "$can_wonderful, cave"
+          "cave, $can_wonderful"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, cave, flute"
+          "cave, $can_multiple, flute",
+          "cave, $can_multiple, flute_cave"
         ],
         "visibility_rules": [
           "multiple, loc248"

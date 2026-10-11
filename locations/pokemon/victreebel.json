@@ -10,7 +10,10 @@
           "normal, loc26"
         ],
         "access_rules": [
-          "cave, @Logic/Throwable"
+          "cave, food",
+          "cave, food_cave",
+          "cave, pester",
+          "cave, pester_cave"
         ]
       },
       {
@@ -19,7 +22,10 @@
           "wonderful, loc126"
         ],
         "access_rules": [
-          "$can_wonderful, cave, @Logic/Throwable"
+          "cave, $can_wonderful, food",
+          "cave, $can_wonderful, food_cave",
+          "cave, $can_wonderful, pester",
+          "cave, $can_wonderful, pester_cave"
         ]
       }
     ]

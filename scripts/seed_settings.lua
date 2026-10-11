@@ -28,6 +28,10 @@ local PLATES = {
     {"fragments",     "fragments",     "Map fragments"},
     {"goal",          "goal",          "Rainbow Cloud goal"},
     {"film",          "film",          "Film capacity"},
+    -- apworld 0.8.0
+    {"percourse",     "percourse",     "Per-course item unlocks"},
+    {"hardlogic",     "hardlogic",     "Hard logic"},
+    {"mewgt",         "mewgt",         "Good Technique Mew required"},
 }
 
 for _, p in ipairs(PLATES) do
@@ -119,4 +123,22 @@ function refreshSeedSettings(slot_data)
         string.format("Film: starts at %d, +%d per upgrade, max %d",
             FILM_START or 15, FILM_STEP or 5, FILM_CAP or 60),
         tostring(FILM_START or 15))
+
+    -- apworld 0.8.0. All three default off, and an older world never sends
+    -- them, so an absent key reads as off - which is what it means there.
+    local per_course = opt("per_course_items", 0) ~= 0
+    set("percourse", per_course, per_course
+        and "Per-course unlocks: Apple, Pester Balls and PokeFlute are found one course at a time"
+        or  "Per-course unlocks: off, each tool works everywhere at once")
+
+    local hard = opt("hard_logic", 0) ~= 0
+    set("hardlogic", hard, "Hard logic: " .. onoff(hard)
+        .. (hard and " - some checks are in logic earlier with harder requirements" or ""))
+
+    -- It only bites when Good Technique photos exist at all, which is how the
+    -- world places the victory too.
+    local mewgt = opt("good_technique_mew_photo", 0) ~= 0 and bonuses >= 1
+    set("mewgt", mewgt, mewgt
+        and "Goal: a Good Technique photo of Mew is required to win"
+        or  "Goal: any photo of Mew wins")
 end

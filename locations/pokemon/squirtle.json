@@ -19,13 +19,17 @@
           "wonderful, loc105"
         ],
         "access_rules": [
-          "$can_wonderful, valley, pester"
+          "valley, $can_wonderful, $hard_logic_on",
+          "valley, $can_wonderful, pester",
+          "valley, $can_wonderful, pester_valley"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, valley, pester"
+          "valley, $can_multiple, $hard_logic_on, dash",
+          "valley, $can_multiple, pester",
+          "valley, $can_multiple, pester_valley"
         ],
         "visibility_rules": [
           "multiple, loc205"

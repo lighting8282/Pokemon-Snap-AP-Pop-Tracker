@@ -19,8 +19,9 @@
           "wonderful, loc112"
         ],
         "access_rules": [
-          "$can_wonderful, valley, pester",
-          "$can_wonderful, valley, dash"
+          "valley, $can_wonderful, dash",
+          "valley, $can_wonderful, pester",
+          "valley, $can_wonderful, pester_valley"
         ]
       }
     ]

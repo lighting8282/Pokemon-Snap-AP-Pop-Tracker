@@ -19,13 +19,13 @@
           "wonderful, loc140"
         ],
         "access_rules": [
-          "$can_wonderful, tunnel"
+          "tunnel, $can_wonderful"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, tunnel"
+          "tunnel, $can_multiple"
         ],
         "visibility_rules": [
           "multiple, loc240"

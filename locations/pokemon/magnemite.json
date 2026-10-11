@@ -10,7 +10,8 @@
           "normal, loc32"
         ],
         "access_rules": [
-          "tunnel, food"
+          "tunnel, food",
+          "tunnel, food_tunnel"
         ]
       },
       {
@@ -19,13 +20,15 @@
           "wonderful, loc132"
         ],
         "access_rules": [
-          "$can_wonderful, tunnel, food"
+          "tunnel, $can_wonderful, food",
+          "tunnel, $can_wonderful, food_tunnel"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, tunnel, food"
+          "tunnel, $can_multiple, food",
+          "tunnel, $can_multiple, food_tunnel"
         ],
         "visibility_rules": [
           "multiple, loc232"

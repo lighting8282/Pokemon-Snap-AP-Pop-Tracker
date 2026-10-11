@@ -67,11 +67,36 @@ function goal_unlocked()
     if GOAL_TYPE == 1 then
         have = Tracker:ProviderCountForCode("newpic")
     else
+        -- The world counts every sign picture received (HasGroup), including
+        -- duplicates from extra_sign_pictures and generic "Sign Picture"
+        -- items that do not say which sign they are. signcount tracks that.
+        -- Lit icons are still counted so a hand-tracked game works too.
+        local lit = 0
         for _, c in ipairs(SIGN_CODES) do
-            if Tracker:ProviderCountForCode(c) > 0 then have = have + 1 end
+            if Tracker:ProviderCountForCode(c) > 0 then lit = lit + 1 end
         end
+        have = math.max(lit, Tracker:ProviderCountForCode("signcount"))
     end
     return have >= GOAL_REQUIRED
+end
+
+-- A sign picture just arrived. Count it towards the goal, and if it is the
+-- generic kind light the next unlit sign icon: generic items carry no
+-- identity, so in that mode the icons are a count rather than a record of
+-- which sign was found, and there is nothing to hint for anyway.
+function countSignPicture(item_id)
+    if item_id ~= 6500 then
+        local counter = Tracker:FindObjectForCode("signcount")
+        if counter then counter.AcquiredCount = counter.AcquiredCount + 1 end
+        return
+    end
+    for _, code in ipairs(SIGN_ORDER or {}) do
+        local obj = Tracker:FindObjectForCode(code)
+        if obj and not obj.Active then
+            obj.Active = true
+            return
+        end
+    end
 end
 
 -- apworld 0.7.0 made photo scoring, film capacity and course unlocks per-seed.
@@ -84,6 +109,10 @@ function readOptionsFromSlotData(slot_data)
     FILM_CAP      = slot_data["maximum_film"] or 60
     MAP_FRAGMENTS = slot_data["map_fragments"] or 1
     RNG_CHECKS    = slot_data["rng_checks"] or 0
+    -- apworld 0.8.0
+    HARD_LOGIC    = slot_data["hard_logic"] or 0
+    PER_COURSE    = slot_data["per_course_items"] or 0
+    MEW_GT_GOAL   = slot_data["good_technique_mew_photo"] or 0
     if MAP_FRAGMENTS < 1 then MAP_FRAGMENTS = 1 end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
         print(string.format("options: photo_scoring=%s film=%s+%s cap %s, map_fragments=%s",
@@ -136,6 +165,26 @@ function refreshDerivedItems()
         -- slot_data before it can pick the right partial icon.
         local refresh = COURSE_REFRESH and COURSE_REFRESH[course]
         if refresh then refresh() end
+    end
+
+    -- per_course_items: show "3/7" on the Apple, Pester Ball and PokeFlute for
+    -- how many courses each has been unlocked in. The icon itself stays as it
+    -- is - lighting it would read as the all-courses version, which is not
+    -- what the player has.
+    for _, tool in ipairs(PER_COURSE_TOOLS or {}) do
+        local obj = Tracker:FindObjectForCode(tool)
+        if obj and obj.SetOverlay then
+            local n = 0
+            for _, course in ipairs(PER_COURSE_COURSES or {}) do
+                if Tracker:ProviderCountForCode(tool .. "_" .. course) > 0 then n = n + 1 end
+            end
+            if n > 0 then
+                obj:SetOverlay(string.format("%d/%d", n, #PER_COURSE_COURSES))
+                if obj.SetOverlayFontSize then obj:SetOverlayFontSize(11) end
+            else
+                obj:SetOverlay("")
+            end
+        end
     end
 end
 
@@ -309,8 +358,13 @@ function onItem(index, item_id, item_name, player_number)
         elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
             print(string.format("onItem: unknown item type %s for code %s", v[2], v[1]))
         end
-        -- a film upgrade or a map fragment changes something else on the board
-        if v[1] == "filmup" or (FRAGMENT_OF and v[1]:sub(1, 4) == "frag") then
+        if SIGN_PICTURE_IDS and SIGN_PICTURE_IDS[item_id] then
+            countSignPicture(item_id)
+        end
+        -- a film upgrade, map fragment or per-course tool changes something
+        -- else on the board
+        if v[1] == "filmup" or (FRAGMENT_OF and v[1]:sub(1, 4) == "frag")
+           or v[1]:find("_", 1, true) then
             refreshDerivedItems()
         end
         AUTOTRACK_BUSY = false

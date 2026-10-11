@@ -225,7 +225,7 @@
           {
             "name": "Constellation of Mewtwo",
             "access_rules": [
-              "sign"
+              "cave, sign"
             ],
             "visibility_rules": [
               "loc404"

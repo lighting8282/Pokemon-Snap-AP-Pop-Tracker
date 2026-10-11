@@ -19,13 +19,13 @@
           "wonderful, loc138"
         ],
         "access_rules": [
-          "$can_wonderful, river"
+          "river, $can_wonderful"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, river"
+          "river, $can_multiple"
         ],
         "visibility_rules": [
           "multiple, loc238"

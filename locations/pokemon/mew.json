@@ -7,11 +7,25 @@
       {
         "name": "Picture (Game Completion)",
         "access_rules": [
+          "$goal_unlocked, food",
+          "$goal_unlocked, food_cloud",
           "$goal_unlocked, pester",
-          "$goal_unlocked, food"
+          "$goal_unlocked, pester_cloud"
         ],
         "visibility_rules": [
           "normal, loc63"
+        ]
+      },
+      {
+        "name": "Wonderful Picture",
+        "visibility_rules": [
+          "wonderful, loc163"
+        ],
+        "access_rules": [
+          "$goal_unlocked, $can_wonderful, food",
+          "$goal_unlocked, $can_wonderful, food_cloud",
+          "$goal_unlocked, $can_wonderful, pester",
+          "$goal_unlocked, $can_wonderful, pester_cloud"
         ]
       }
     ]

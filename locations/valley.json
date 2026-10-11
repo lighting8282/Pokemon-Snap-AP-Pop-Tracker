@@ -89,7 +89,7 @@
           {
             "name": "Mt Dugtrio",
             "access_rules": [
-              "sign"
+              "valley, sign"
             ],
             "visibility_rules": [
               "loc405"
@@ -336,7 +336,8 @@
             "chest_unopened_img": "images/pokeball_closed.png",
             "chest_opened_img": "images/pokeball_open.png",
             "access_rules": [
-              "pester"
+              "valley, pester",
+              "valley, pester_valley"
             ],
             "visibility_rules": [
               "loc505"

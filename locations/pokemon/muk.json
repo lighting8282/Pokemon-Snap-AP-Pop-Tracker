@@ -10,7 +10,10 @@
           "normal, loc36"
         ],
         "access_rules": [
-          "$has_film_4, cave, pester"
+          "cave, $hard_logic_on, $has_film|2, pester",
+          "cave, $hard_logic_on, $has_film|2, pester_cave",
+          "cave, $has_film|4, pester",
+          "cave, $has_film|4, pester_cave"
         ]
       },
       {
@@ -19,7 +22,10 @@
           "wonderful, loc136"
         ],
         "access_rules": [
-          "$has_film_4, $can_wonderful, cave, pester"
+          "cave, $can_wonderful, $hard_logic_on, $has_film|2, pester",
+          "cave, $can_wonderful, $hard_logic_on, $has_film|2, pester_cave",
+          "cave, $can_wonderful, $has_film|4, pester",
+          "cave, $can_wonderful, $has_film|4, pester_cave"
         ]
       }
     ]

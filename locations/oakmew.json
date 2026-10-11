@@ -90,6 +90,10 @@
           {
             "name": "Picture (Game Completion)",
             "ref": "Mew/Picture (Game Completion)"
+          },
+          {
+            "name": "Wonderful Picture",
+            "ref": "Mew/Wonderful Picture"
           }
         ],
         "map_locations": [

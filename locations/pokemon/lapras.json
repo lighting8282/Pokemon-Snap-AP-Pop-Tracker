@@ -19,13 +19,15 @@
           "wonderful, loc153"
         ],
         "access_rules": [
-          "$has_film_5, $can_wonderful, beach"
+          "beach, $can_wonderful, $hard_logic_on, $has_film|2",
+          "beach, $can_wonderful, $has_film|5"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$has_film_5, $can_multiple, beach"
+          "beach, $can_multiple, $hard_logic_on, $has_film|2",
+          "beach, $can_multiple, $has_film|5"
         ],
         "visibility_rules": [
           "multiple, loc253"

@@ -10,7 +10,10 @@
           "normal, loc4"
         ],
         "access_rules": [
-          "volcano, @Logic/Throwable"
+          "volcano, food",
+          "volcano, food_volcano",
+          "volcano, pester",
+          "volcano, pester_volcano"
         ]
       },
       {
@@ -19,7 +22,10 @@
           "wonderful, loc104"
         ],
         "access_rules": [
-          "$can_wonderful, volcano, @Logic/Throwable"
+          "volcano, $can_wonderful, food",
+          "volcano, $can_wonderful, food_volcano",
+          "volcano, $can_wonderful, pester",
+          "volcano, $can_wonderful, pester_volcano"
         ]
       }
     ]

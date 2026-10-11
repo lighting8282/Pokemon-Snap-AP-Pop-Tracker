@@ -215,6 +215,7 @@ newSectionIDToAPID = {
 
     -- Rainbow Cloud
     ["Mew/Picture (Game Completion)"]           = {63, 1063},
+    ["Mew/Wonderful Picture"]                   = {163, 1163},
 
     -- Oak's Lab (apworld 0.6.0)
     ["Oak's Lab & Rainbow Cloud/Report Scores/24,000 PKMN Report Score"]= {601, 1601},

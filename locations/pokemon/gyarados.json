@@ -10,7 +10,8 @@
           "normal, loc52"
         ],
         "access_rules": [
-          "valley, pester"
+          "valley, pester",
+          "valley, pester_valley"
         ]
       },
       {
@@ -19,7 +20,8 @@
           "wonderful, loc152"
         ],
         "access_rules": [
-          "$can_wonderful, valley, pester"
+          "valley, $can_wonderful, pester",
+          "valley, $can_wonderful, pester_valley"
         ]
       }
     ]

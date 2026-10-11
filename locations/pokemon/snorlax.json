@@ -11,7 +11,9 @@
         ],
         "access_rules": [
           "beach, flute",
-          "beach, pester"
+          "beach, flute_beach",
+          "beach, pester",
+          "beach, pester_beach"
         ]
       },
       {
@@ -20,8 +22,10 @@
           "wonderful, loc157"
         ],
         "access_rules": [
-          "$can_wonderful, beach, flute",
-          "$can_wonderful, beach, pester"
+          "beach, $can_wonderful, flute",
+          "beach, $can_wonderful, flute_beach",
+          "beach, $can_wonderful, pester",
+          "beach, $can_wonderful, pester_beach"
         ]
       }
     ]

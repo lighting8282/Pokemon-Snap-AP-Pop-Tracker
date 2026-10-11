@@ -264,7 +264,12 @@
             "seedgoal"
           ],
           [
-            "seedfilm"
+            "seedfilm",
+            "seedpercourse"
+          ],
+          [
+            "seedhardlogic",
+            "seedmewgt"
           ]
         ]
       }

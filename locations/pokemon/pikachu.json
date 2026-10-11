@@ -19,7 +19,7 @@
           "wonderful, loc110"
         ],
         "access_rules": [
-          "$can_wonderful, beach"
+          "beach, $can_wonderful"
         ]
       },
       {
@@ -37,7 +37,7 @@
           "wonderful, loc170"
         ],
         "access_rules": [
-          "$can_wonderful, tunnel"
+          "tunnel, $can_wonderful"
         ]
       },
       {
@@ -55,7 +55,7 @@
           "wonderful, loc171"
         ],
         "access_rules": [
-          "$can_wonderful, river"
+          "river, $can_wonderful"
         ]
       },
       {
@@ -64,8 +64,11 @@
           "normal, loc72"
         ],
         "access_rules": [
+          "cave, $hard_logic_on",
           "cave, food",
-          "cave, pester"
+          "cave, food_cave",
+          "cave, pester",
+          "cave, pester_cave"
         ]
       },
       {
@@ -74,13 +77,18 @@
           "wonderful, loc172"
         ],
         "access_rules": [
-          "$can_wonderful, cave, @Logic/Throwable"
+          "cave, $can_wonderful, $hard_logic_on",
+          "cave, $can_wonderful, food",
+          "cave, $can_wonderful, food_cave",
+          "cave, $can_wonderful, pester",
+          "cave, $can_wonderful, pester_cave"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, beach, pester"
+          "beach, $can_multiple, pester",
+          "beach, $can_multiple, pester_beach"
         ],
         "visibility_rules": [
           "multiple, loc210"
@@ -89,7 +97,8 @@
       {
         "name": "Surfing Pikachu",
         "access_rules": [
-          "beach, food"
+          "beach, food",
+          "beach, food_beach"
         ],
         "visibility_rules": [
           "loc301"
@@ -98,7 +107,8 @@
       {
         "name": "Pikachu on a Stump",
         "access_rules": [
-          "beach, pester"
+          "beach, pester",
+          "beach, pester_beach"
         ],
         "visibility_rules": [
           "loc305"
@@ -107,7 +117,8 @@
       {
         "name": "Pikachu on a Ball",
         "access_rules": [
-          "$has_film_5, tunnel"
+          "tunnel, $hard_logic_on, $has_film|3",
+          "tunnel, $has_film|5"
         ],
         "visibility_rules": [
           "loc302"
@@ -116,9 +127,12 @@
       {
         "name": "Speed Pikachu",
         "access_rules": [
-          "river, $has_film_5",
+          "river, $hard_logic_on, $has_film|2",
+          "river, $has_film|5",
           "river, food",
-          "river, pester"
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
         ],
         "visibility_rules": [
           "loc304"
@@ -127,7 +141,10 @@
       {
         "name": "Balloon Pikachu",
         "access_rules": [
-          "cave, @Logic/Throwable"
+          "cave, food",
+          "cave, food_cave",
+          "cave, pester",
+          "cave, pester_cave"
         ],
         "visibility_rules": [
           "loc303"
@@ -136,7 +153,14 @@
       {
         "name": "Flying Pikachu",
         "access_rules": [
-          "cave, @Logic/Throwable, flute"
+          "cave, flute, food",
+          "cave, flute, food_cave",
+          "cave, flute, pester",
+          "cave, flute, pester_cave",
+          "cave, flute_cave, food",
+          "cave, flute_cave, food_cave",
+          "cave, flute_cave, pester",
+          "cave, flute_cave, pester_cave"
         ],
         "visibility_rules": [
           "loc306"

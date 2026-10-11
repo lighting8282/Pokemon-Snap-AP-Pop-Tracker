@@ -19,13 +19,13 @@
           "wonderful, loc129"
         ],
         "access_rules": [
-          "$can_wonderful, volcano"
+          "volcano, $can_wonderful"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, volcano"
+          "volcano, $can_multiple"
         ],
         "visibility_rules": [
           "multiple, loc229"

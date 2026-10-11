@@ -10,7 +10,8 @@
           "normal, loc11"
         ],
         "access_rules": [
-          "valley, pester"
+          "valley, pester",
+          "valley, pester_valley"
         ]
       },
       {
@@ -19,13 +20,17 @@
           "wonderful, loc111"
         ],
         "access_rules": [
-          "$can_wonderful, valley, pester"
+          "valley, $can_wonderful, pester",
+          "valley, $can_wonderful, pester_valley"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, valley, food, pester"
+          "valley, $can_multiple, food, pester",
+          "valley, $can_multiple, food, pester_valley",
+          "valley, $can_multiple, food_valley, pester",
+          "valley, $can_multiple, food_valley, pester_valley"
         ],
         "visibility_rules": [
           "multiple, loc211"

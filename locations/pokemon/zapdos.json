@@ -10,7 +10,10 @@
           "normal, loc59"
         ],
         "access_rules": [
-          "tunnel, food, flute"
+          "tunnel, flute, food",
+          "tunnel, flute, food_tunnel",
+          "tunnel, flute_tunnel, food",
+          "tunnel, flute_tunnel, food_tunnel"
         ]
       },
       {
@@ -19,7 +22,10 @@
           "wonderful, loc159"
         ],
         "access_rules": [
-          "$can_wonderful, tunnel, food, flute"
+          "tunnel, $can_wonderful, flute, food",
+          "tunnel, $can_wonderful, flute, food_tunnel",
+          "tunnel, $can_wonderful, flute_tunnel, food",
+          "tunnel, $can_wonderful, flute_tunnel, food_tunnel"
         ]
       }
     ]

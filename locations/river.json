@@ -101,7 +101,8 @@
           {
             "name": "Cubone Tree",
             "access_rules": [
-              "sign, flute"
+              "river, flute, sign",
+              "river, flute_river, sign"
             ],
             "visibility_rules": [
               "loc403"
@@ -284,7 +285,8 @@
             "chest_unopened_img": "images/pokeball_closed.png",
             "chest_opened_img": "images/pokeball_open.png",
             "access_rules": [
-              "pester"
+              "river, pester",
+              "river, pester_river"
             ],
             "visibility_rules": [
               "loc503"

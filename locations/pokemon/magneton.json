@@ -10,7 +10,8 @@
           "normal, loc33"
         ],
         "access_rules": [
-          "tunnel, food"
+          "tunnel, food",
+          "tunnel, food_tunnel"
         ]
       },
       {
@@ -19,7 +20,8 @@
           "wonderful, loc133"
         ],
         "access_rules": [
-          "$can_wonderful, tunnel, food"
+          "tunnel, $can_wonderful, food",
+          "tunnel, $can_wonderful, food_tunnel"
         ]
       }
     ]

@@ -10,7 +10,8 @@
           "normal, loc18"
         ],
         "access_rules": [
-          "$has_film_5, tunnel"
+          "tunnel, $hard_logic_on, $has_film|4",
+          "tunnel, $has_film|5"
         ]
       },
       {
@@ -19,13 +20,15 @@
           "wonderful, loc118"
         ],
         "access_rules": [
-          "$has_film_5, $can_wonderful, tunnel"
+          "tunnel, $can_wonderful, $hard_logic_on, $has_film|4",
+          "tunnel, $can_wonderful, $has_film|5"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$has_film_7, $can_multiple, tunnel"
+          "tunnel, $can_multiple, $hard_logic_on, $has_film|5",
+          "tunnel, $can_multiple, $has_film|7"
         ],
         "visibility_rules": [
           "multiple, loc218"

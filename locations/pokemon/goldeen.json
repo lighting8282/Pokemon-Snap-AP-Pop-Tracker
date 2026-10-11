@@ -10,7 +10,10 @@
           "normal, loc44"
         ],
         "access_rules": [
-          "valley, @Logic/Throwable"
+          "valley, food",
+          "valley, food_valley",
+          "valley, pester",
+          "valley, pester_valley"
         ]
       },
       {
@@ -19,7 +22,10 @@
           "wonderful, loc144"
         ],
         "access_rules": [
-          "$can_wonderful, valley, @Logic/Throwable"
+          "valley, $can_wonderful, food",
+          "valley, $can_wonderful, food_valley",
+          "valley, $can_wonderful, pester",
+          "valley, $can_wonderful, pester_valley"
         ]
       }
     ]

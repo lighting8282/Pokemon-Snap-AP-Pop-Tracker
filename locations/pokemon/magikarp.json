@@ -10,7 +10,10 @@
           "normal, loc51"
         ],
         "access_rules": [
-          "beach, @Logic/Throwable"
+          "beach, food",
+          "beach, food_beach",
+          "beach, pester",
+          "beach, pester_beach"
         ]
       },
       {
@@ -19,7 +22,10 @@
           "wonderful, loc151"
         ],
         "access_rules": [
-          "$can_wonderful, beach, @Logic/Throwable"
+          "beach, $can_wonderful, food",
+          "beach, $can_wonderful, food_beach",
+          "beach, $can_wonderful, pester",
+          "beach, $can_wonderful, pester_beach"
         ]
       },
       {
@@ -37,7 +43,7 @@
           "wonderful, loc165"
         ],
         "access_rules": [
-          "$can_wonderful, tunnel"
+          "tunnel, $can_wonderful"
         ]
       },
       {
@@ -46,7 +52,10 @@
           "normal, loc66"
         ],
         "access_rules": [
-          "volcano, @Logic/Throwable"
+          "volcano, food",
+          "volcano, food_volcano",
+          "volcano, pester",
+          "volcano, pester_volcano"
         ]
       },
       {
@@ -55,7 +64,10 @@
           "wonderful, loc166"
         ],
         "access_rules": [
-          "$can_wonderful, volcano, @Logic/Throwable"
+          "volcano, $can_wonderful, food",
+          "volcano, $can_wonderful, food_volcano",
+          "volcano, $can_wonderful, pester",
+          "volcano, $can_wonderful, pester_volcano"
         ]
       },
       {
@@ -64,7 +76,10 @@
           "normal, loc67"
         ],
         "access_rules": [
-          "river, @Logic/Throwable"
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
         ]
       },
       {
@@ -73,7 +88,10 @@
           "wonderful, loc167"
         ],
         "access_rules": [
-          "$can_wonderful, river, @Logic/Throwable"
+          "river, $can_wonderful, food",
+          "river, $can_wonderful, food_river",
+          "river, $can_wonderful, pester",
+          "river, $can_wonderful, pester_river"
         ]
       },
       {
@@ -82,7 +100,10 @@
           "normal, loc68"
         ],
         "access_rules": [
-          "cave, @Logic/Throwable"
+          "cave, food",
+          "cave, food_cave",
+          "cave, pester",
+          "cave, pester_cave"
         ]
       },
       {
@@ -91,7 +112,10 @@
           "wonderful, loc168"
         ],
         "access_rules": [
-          "$can_wonderful, cave, @Logic/Throwable"
+          "cave, $can_wonderful, food",
+          "cave, $can_wonderful, food_cave",
+          "cave, $can_wonderful, pester",
+          "cave, $can_wonderful, pester_cave"
         ]
       },
       {
@@ -100,9 +124,11 @@
           "normal, loc69"
         ],
         "access_rules": [
-          "valley, food",
           "valley, dash",
-          "valley, pester"
+          "valley, food",
+          "valley, food_valley",
+          "valley, pester",
+          "valley, pester_valley"
         ]
       },
       {
@@ -111,13 +137,19 @@
           "wonderful, loc169"
         ],
         "access_rules": [
-          "$can_wonderful, valley, @Logic/Throwable"
+          "valley, $can_wonderful, food",
+          "valley, $can_wonderful, food_valley",
+          "valley, $can_wonderful, pester",
+          "valley, $can_wonderful, pester_valley"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, valley, @Logic/Throwable"
+          "valley, $can_multiple, food",
+          "valley, $can_multiple, food_valley",
+          "valley, $can_multiple, pester",
+          "valley, $can_multiple, pester_valley"
         ],
         "visibility_rules": [
           "multiple, loc269"

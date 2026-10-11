@@ -10,7 +10,8 @@
           "normal, loc54"
         ],
         "access_rules": [
-          "cave, pester"
+          "cave, pester",
+          "cave, pester_cave"
         ]
       },
       {
@@ -19,13 +20,15 @@
           "wonderful, loc154"
         ],
         "access_rules": [
-          "$can_wonderful, cave, pester"
+          "cave, $can_wonderful, pester",
+          "cave, $can_wonderful, pester_cave"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, cave, pester"
+          "cave, $can_multiple, pester",
+          "cave, $can_multiple, pester_cave"
         ],
         "visibility_rules": [
           "multiple, loc254"

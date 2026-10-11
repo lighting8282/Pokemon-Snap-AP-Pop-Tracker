@@ -19,13 +19,16 @@
           "wonderful, loc150"
         ],
         "access_rules": [
-          "$can_wonderful, volcano"
+          "volcano, $can_wonderful"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, volcano, @Logic/Throwable"
+          "volcano, $can_multiple, food",
+          "volcano, $can_multiple, food_volcano",
+          "volcano, $can_multiple, pester",
+          "volcano, $can_multiple, pester_volcano"
         ],
         "visibility_rules": [
           "multiple, loc250"
@@ -34,7 +37,8 @@
       {
         "name": "Fighting Magmar",
         "access_rules": [
-          "volcano, food"
+          "volcano, food",
+          "volcano, food_volcano"
         ],
         "visibility_rules": [
           "loc311"

@@ -10,7 +10,8 @@
           "normal, loc47"
         ],
         "access_rules": [
-          "beach, pester"
+          "beach, pester",
+          "beach, pester_beach"
         ]
       },
       {
@@ -19,7 +20,8 @@
           "wonderful, loc147"
         ],
         "access_rules": [
-          "$can_wonderful, beach, pester"
+          "beach, $can_wonderful, pester",
+          "beach, $can_wonderful, pester_beach"
         ]
       }
     ]

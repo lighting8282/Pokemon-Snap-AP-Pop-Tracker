@@ -37,6 +37,10 @@ LABELS = {
     "fragments":     "Frags",
     "goal":          "Goal",
     "film":          "Film",
+    # apworld 0.8.0
+    "percourse":     "Per Course",
+    "hardlogic":     "Hard Logic",
+    "mewgt":         "Mew GT",
 }
 
 

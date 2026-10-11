@@ -19,7 +19,7 @@
           "wonderful, loc139"
         ],
         "access_rules": [
-          "$can_wonderful, tunnel"
+          "tunnel, $can_wonderful"
         ]
       }
     ]

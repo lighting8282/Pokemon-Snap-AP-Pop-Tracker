@@ -1266,5 +1266,11 @@
     "type": "toggle",
     "codes": "loc606",
     "initial_active_state": true
+  },
+  {
+    "name": "seed contains location 163",
+    "type": "toggle",
+    "codes": "loc163",
+    "initial_active_state": true
   }
 ]

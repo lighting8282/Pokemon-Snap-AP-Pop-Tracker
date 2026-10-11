@@ -19,7 +19,7 @@
           "wonderful, loc119"
         ],
         "access_rules": [
-          "$can_wonderful, beach"
+          "beach, $can_wonderful"
         ]
       }
     ]

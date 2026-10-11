@@ -164,7 +164,7 @@
     "name": "New Pokemon Pic",
     "type": "consumable",
     "img": "images/newpic.png",
-    "max_quantity": 63,
+    "max_quantity": 83,
     "overlay_font_size": "16",
     "codes": "newpic"
   },
@@ -587,5 +587,122 @@
     "type": "toggle",
     "img": "images/pokemon/Zubat.png",
     "codes": "dexzubat"
+  },
+  {
+    "name": "Apple (Beach)",
+    "type": "toggle",
+    "codes": "food_beach"
+  },
+  {
+    "name": "Pester Balls (Beach)",
+    "type": "toggle",
+    "codes": "pester_beach"
+  },
+  {
+    "name": "PokeFlute (Beach)",
+    "type": "toggle",
+    "codes": "flute_beach"
+  },
+  {
+    "name": "Apple (Tunnel)",
+    "type": "toggle",
+    "codes": "food_tunnel"
+  },
+  {
+    "name": "Pester Balls (Tunnel)",
+    "type": "toggle",
+    "codes": "pester_tunnel"
+  },
+  {
+    "name": "PokeFlute (Tunnel)",
+    "type": "toggle",
+    "codes": "flute_tunnel"
+  },
+  {
+    "name": "Apple (Volcano)",
+    "type": "toggle",
+    "codes": "food_volcano"
+  },
+  {
+    "name": "Pester Balls (Volcano)",
+    "type": "toggle",
+    "codes": "pester_volcano"
+  },
+  {
+    "name": "PokeFlute (Volcano)",
+    "type": "toggle",
+    "codes": "flute_volcano"
+  },
+  {
+    "name": "Apple (River)",
+    "type": "toggle",
+    "codes": "food_river"
+  },
+  {
+    "name": "Pester Balls (River)",
+    "type": "toggle",
+    "codes": "pester_river"
+  },
+  {
+    "name": "PokeFlute (River)",
+    "type": "toggle",
+    "codes": "flute_river"
+  },
+  {
+    "name": "Apple (Cave)",
+    "type": "toggle",
+    "codes": "food_cave"
+  },
+  {
+    "name": "Pester Balls (Cave)",
+    "type": "toggle",
+    "codes": "pester_cave"
+  },
+  {
+    "name": "PokeFlute (Cave)",
+    "type": "toggle",
+    "codes": "flute_cave"
+  },
+  {
+    "name": "Apple (Valley)",
+    "type": "toggle",
+    "codes": "food_valley"
+  },
+  {
+    "name": "Pester Balls (Valley)",
+    "type": "toggle",
+    "codes": "pester_valley"
+  },
+  {
+    "name": "PokeFlute (Valley)",
+    "type": "toggle",
+    "codes": "flute_valley"
+  },
+  {
+    "name": "Apple (Rainbow Cloud)",
+    "type": "toggle",
+    "codes": "food_cloud"
+  },
+  {
+    "name": "Pester Balls (Rainbow Cloud)",
+    "type": "toggle",
+    "codes": "pester_cloud"
+  },
+  {
+    "name": "PokeFlute (Rainbow Cloud)",
+    "type": "toggle",
+    "codes": "flute_cloud"
+  },
+  {
+    "name": "Sign Pictures received",
+    "type": "consumable",
+    "codes": "signcount",
+    "max_quantity": 12,
+    "increment": 1
+  },
+  {
+    "name": "Press L to Stop",
+    "type": "toggle",
+    "codes": "lstop"
   }
 ]

@@ -19,13 +19,15 @@
           "wonderful, loc137"
         ],
         "access_rules": [
-          "$can_wonderful, river, dash"
+          "river, $can_wonderful, $hard_logic_on",
+          "river, $can_wonderful, dash"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, river, dash"
+          "river, $can_multiple, $hard_logic_on",
+          "river, $can_multiple, dash"
         ],
         "visibility_rules": [
           "multiple, loc237"

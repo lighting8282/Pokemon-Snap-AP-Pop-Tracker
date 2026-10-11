@@ -10,7 +10,8 @@
           "normal, loc31"
         ],
         "access_rules": [
-          "river, food"
+          "river, food",
+          "river, food_river"
         ]
       },
       {
@@ -19,7 +20,8 @@
           "wonderful, loc131"
         ],
         "access_rules": [
-          "$can_wonderful, river, food"
+          "river, $can_wonderful, food",
+          "river, $can_wonderful, food_river"
         ]
       }
     ]

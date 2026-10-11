@@ -419,6 +419,8 @@ LOCATION_MAPPING = {
     -- Rainbow Cloud
     [63]   = {"@Mew/Picture (Game Completion)"},              -- Mew
     [1063] = {"@Mew/Picture (Game Completion)"},              -- Mew 2
+    [163]  = {"@Mew/Wonderful Picture"},                      -- Mew: Good Technique (apworld 0.8.0)
+    [1163] = {"@Mew/Wonderful Picture"},                      -- Mew: Good Technique 2
 
     -- Oak's Lab (apworld 0.6.0)
     [601]  = {"@Oak's Lab & Rainbow Cloud/Report Scores/24,000 PKMN Report Score"}, -- 24,000 PKMN Report Score

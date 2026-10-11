@@ -13,7 +13,8 @@
           {
             "name": "Koffing Smoke",
             "access_rules": [
-              "sign, pester"
+              "volcano, pester, sign",
+              "volcano, pester_volcano, sign"
             ],
             "visibility_rules": [
               "loc402"

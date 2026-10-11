@@ -56,11 +56,21 @@ function film_capacity()
     return total
 end
 
--- Access rules call these as $has_film_4 .. $has_film_9. PopTracker passes
--- rule arguments as strings after a '|', but a plain named function per
--- threshold keeps the location JSON readable, and there are only four.
-local function has_film(n)
+-- Access rules call this as $has_film|5. PopTracker passes rule arguments
+-- as strings, hence tonumber. apworld 0.8.0's hard logic added thresholds of
+-- 2 and 3 to the existing 4, 5, 7 and 9, so a single function with an
+-- argument replaced the one-function-per-threshold names below, which stay
+-- only so an older layout of the rules still resolves.
+function has_film(n)
+    n = tonumber(n) or 0
     return film_capacity() >= n and 1 or 0
+end
+
+-- apworld 0.8.0 hard_logic: about a dozen checks come into logic earlier,
+-- some with lower film requirements. Off unless slot_data turns it on.
+HARD_LOGIC = HARD_LOGIC or 0
+function hard_logic_on()
+    return (HARD_LOGIC ~= 0) and 1 or 0
 end
 
 function has_film_4() return has_film(4) end

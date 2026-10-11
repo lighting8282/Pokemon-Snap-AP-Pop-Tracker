@@ -19,13 +19,16 @@
           "wonderful, loc114"
         ],
         "access_rules": [
-          "$can_wonderful, cave"
+          "cave, $can_wonderful"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, cave, @Logic/Throwable"
+          "cave, $can_multiple, food",
+          "cave, $can_multiple, food_cave",
+          "cave, $can_multiple, pester",
+          "cave, $can_multiple, pester_cave"
         ],
         "visibility_rules": [
           "multiple, loc214"
@@ -34,7 +37,10 @@
       {
         "name": "Jigglypuff on Stage",
         "access_rules": [
-          "cave, @Logic/Throwable"
+          "cave, food",
+          "cave, food_cave",
+          "cave, pester",
+          "cave, pester_cave"
         ],
         "visibility_rules": [
           "loc308"
@@ -43,7 +49,10 @@
       {
         "name": "Jigglypuff Trio on Stage",
         "access_rules": [
-          "cave, @Logic/Throwable"
+          "cave, food",
+          "cave, food_cave",
+          "cave, pester",
+          "cave, pester_cave"
         ],
         "visibility_rules": [
           "loc312"

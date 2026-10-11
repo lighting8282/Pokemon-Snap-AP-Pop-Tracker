@@ -19,7 +19,10 @@
           "wonderful, loc143"
         ],
         "access_rules": [
-          "$can_wonderful, beach, @Logic/Throwable"
+          "beach, $can_wonderful, food",
+          "beach, $can_wonderful, food_beach",
+          "beach, $can_wonderful, pester",
+          "beach, $can_wonderful, pester_beach"
         ]
       }
     ]

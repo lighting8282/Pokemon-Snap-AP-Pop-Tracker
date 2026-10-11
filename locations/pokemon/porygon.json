@@ -10,7 +10,8 @@
           "normal, loc56"
         ],
         "access_rules": [
-          "river, pester"
+          "river, pester",
+          "river, pester_river"
         ]
       },
       {
@@ -19,14 +20,19 @@
           "wonderful, loc156"
         ],
         "access_rules": [
-          "$can_wonderful, river, pester"
+          "river, $can_wonderful, pester",
+          "river, $can_wonderful, pester_river"
         ]
       },
       {
         "name": "Same Pkmn",
         "access_rules": [
-          "$can_multiple, river, food, pester",
-          "$can_multiple, river, pester, $separate_scoring, $rng_checks_on"
+          "river, $can_multiple, $rng_checks_on, $separate_scoring, pester",
+          "river, $can_multiple, $rng_checks_on, $separate_scoring, pester_river",
+          "river, $can_multiple, food, pester",
+          "river, $can_multiple, food, pester_river",
+          "river, $can_multiple, food_river, pester",
+          "river, $can_multiple, food_river, pester_river"
         ],
         "visibility_rules": [
           "multiple, loc256"

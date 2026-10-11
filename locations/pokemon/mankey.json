@@ -19,7 +19,7 @@
           "wonderful, loc121"
         ],
         "access_rules": [
-          "$can_wonderful, valley"
+          "valley, $can_wonderful"
         ]
       }
     ]
