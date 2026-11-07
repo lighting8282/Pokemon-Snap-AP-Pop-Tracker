@@ -30,6 +30,16 @@
         "visibility_rules": [
           "multiple, loc229"
         ]
+      },
+      {
+        "name": "Pose: Oh! It's neighing.",
+        "visibility_rules": [
+          "loc129005"
+        ],
+        "access_rules": [
+          "volcano, food",
+          "volcano, food_volcano"
+        ]
       }
     ]
   }

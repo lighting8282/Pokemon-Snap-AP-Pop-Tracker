@@ -27,6 +27,28 @@
           "beach, $can_wonderful, pester",
           "beach, $can_wonderful, pester_beach"
         ]
+      },
+      {
+        "name": "Pose: Oh! It looks jolly.",
+        "visibility_rules": [
+          "loc142122"
+        ],
+        "access_rules": [
+          "beach, food",
+          "beach, food_beach"
+        ]
+      },
+      {
+        "name": "Pose: What a funny pose.",
+        "visibility_rules": [
+          "loc142161"
+        ],
+        "access_rules": [
+          "beach, food",
+          "beach, food_beach",
+          "beach, pester",
+          "beach, pester_beach"
+        ]
       }
     ]
   }

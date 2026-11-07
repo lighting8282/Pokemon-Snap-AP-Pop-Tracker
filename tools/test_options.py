@@ -8,6 +8,7 @@ visibility change can be checked in about a second.
     python tools/test_options.py <apworld> --photo-bonuses none
     python tools/test_options.py <apworld> --no-signs --no-poses
     python tools/test_options.py <apworld> --rng-checks --hard-checks
+    python tools/test_options.py <apworld> --posesanity 40 --rng-poses
     python tools/test_options.py <apworld> --all            # every combination
 
 How it works: __init__.py drops a location when its category is not enabled, or
@@ -54,11 +55,19 @@ def seed_locations(L, opts):
     if opts.get("report_photo_count", True): cats.add("PHOTO_COUNT")
     if opts.get("report_score_total", True): cats.add("REPORT_SCORE")
 
-    ids = set()
+    ids, poses = set(), []
     for table in L.location_tables.values():
         for d in table:
             if d.category.name == "BONUS_LOCATION":
                 continue          # created at random per seed, not by option
+            if d.category.name == "REGULAR_POSE":
+                # apworld 0.9.0 posesanity: a random pick among the eligible
+                if d.name in getattr(L, "RNG_POSES", ()) and not opts.get("rng_poses"):
+                    continue
+                if d.name in getattr(L, "HARD_POSES", ()) and not opts.get("hard_poses"):
+                    continue
+                poses.append(d.id)
+                continue
             if d.category.name not in cats:
                 continue
             if d.name in L.RNG_LOCATIONS and not opts["rng_checks"]:
@@ -66,6 +75,9 @@ def seed_locations(L, opts):
             if d.name in L.HARD_LOCATIONS and not opts["hard_checks"]:
                 continue
             ids.add(d.id)
+    import random
+    n = opts.get("posesanity", 0)
+    ids |= set(random.Random(n).sample(sorted(poses), min(n, len(poses))))
     return ids
 
 
@@ -75,7 +87,8 @@ def pack_sections():
     lua = lupa.LuaRuntime()
     lua.execute(open(PACK / "scripts/autotracking/location_mapping.lua", encoding="utf-8").read())
     lm = {int(k): list(v.values())[0].lstrip("@") for k, v in lua.globals().LOCATION_MAPPING.items()}
-    sec_id = {s: i for i, s in lm.items() if i < 1000}
+    # base ids only; bonus twins are id + 1000 (to 0.8.0) or id + 1,000,000
+    sec_id = {s: i for i, s in lm.items() if i < 1000 or 100_000 <= i < 1_000_000}
 
     out = {}
     for f in (PACK / "locations").rglob("*.json"):
@@ -126,7 +139,8 @@ def report(L, sections, opts, toggles, verbose):
 
 DEFAULTS = dict(photo_bonuses="technique_and_multiple", special_poses=True,
                 pokemon_signs=True, secret_exits=True, rng_checks=False, hard_checks=False,
-                report_photo_count=True, report_score_total=True)
+                report_photo_count=True, report_score_total=True,
+                posesanity=0, rng_poses=False, hard_poses=False)
 
 
 def main():
@@ -140,6 +154,9 @@ def main():
     ap.add_argument("--no-score-total", action="store_true")
     ap.add_argument("--rng-checks", action="store_true")
     ap.add_argument("--hard-checks", action="store_true")
+    ap.add_argument("--posesanity", type=int, default=0)
+    ap.add_argument("--rng-poses", action="store_true")
+    ap.add_argument("--hard-poses", action="store_true")
     ap.add_argument("--hide", default="", help="user toggles to turn off, e.g. wonderful,multiple")
     ap.add_argument("--all", action="store_true", help="run every option combination")
     ap.add_argument("-v", "--verbose", action="store_true")
@@ -160,6 +177,10 @@ def main():
         for flag in ["special_poses", "pokemon_signs", "secret_exits",
                      "report_photo_count", "report_score_total"]:
             report(L, sections, dict(DEFAULTS, **{flag: False}), toggles, a.verbose)
+        for n in (1, 40, 141):
+            for rng, hard in itertools.product([False, True], repeat=2):
+                report(L, sections, dict(DEFAULTS, posesanity=n, rng_poses=rng, hard_poses=hard),
+                       toggles, a.verbose)
         return 0
 
     opts = dict(DEFAULTS)
@@ -171,6 +192,9 @@ def main():
     if a.no_score_total: opts["report_score_total"] = False
     opts["rng_checks"] = a.rng_checks
     opts["hard_checks"] = a.hard_checks
+    opts["posesanity"] = a.posesanity
+    opts["rng_poses"] = a.rng_poses
+    opts["hard_poses"] = a.hard_poses
     report(L, sections, opts, toggles, a.verbose)
     return 0
 

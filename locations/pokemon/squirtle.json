@@ -34,6 +34,55 @@
         "visibility_rules": [
           "multiple, loc205"
         ]
+      },
+      {
+        "name": "Pose: You've thrown a PESTER BALL.",
+        "visibility_rules": [
+          "loc105074"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Pose: It's about to withdraw.",
+        "visibility_rules": [
+          "loc105077"
+        ],
+        "access_rules": [
+          "valley"
+        ]
+      },
+      {
+        "name": "Pose: I only see its shell.",
+        "visibility_rules": [
+          "loc105078"
+        ],
+        "access_rules": [
+          "valley"
+        ]
+      },
+      {
+        "name": "Pose: It's about to come out.",
+        "visibility_rules": [
+          "loc105079"
+        ],
+        "access_rules": [
+          "valley"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's happy!",
+        "visibility_rules": [
+          "loc105080"
+        ],
+        "access_rules": [
+          "valley, $hard_logic_on",
+          "valley, dash",
+          "valley, food",
+          "valley, food_valley"
+        ]
       }
     ]
   }

@@ -63,6 +63,26 @@
         "visibility_rules": [
           "multiple, loc264"
         ]
+      },
+      {
+        "name": "River Pose: You've thrown a PESTER BALL.",
+        "visibility_rules": [
+          "loc101096"
+        ],
+        "access_rules": [
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "River Pose: Oh! What a happy face!",
+        "visibility_rules": [
+          "loc101099"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river"
+        ]
       }
     ]
   }

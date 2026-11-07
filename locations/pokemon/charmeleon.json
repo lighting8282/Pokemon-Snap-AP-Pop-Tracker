@@ -27,6 +27,50 @@
           "volcano, $can_wonderful, pester",
           "volcano, $can_wonderful, pester_volcano"
         ]
+      },
+      {
+        "name": "Pose: It's about to fall.",
+        "visibility_rules": [
+          "loc103112"
+        ],
+        "access_rules": [
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
+      },
+      {
+        "name": "Pose: It seems to have fainted.",
+        "visibility_rules": [
+          "loc103113"
+        ],
+        "access_rules": [
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
+      },
+      {
+        "name": "Pose: It seems to have woken up.",
+        "visibility_rules": [
+          "loc103114"
+        ],
+        "access_rules": [
+          "volcano, food",
+          "volcano, food_volcano",
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's roaring!",
+        "visibility_rules": [
+          "loc103115"
+        ],
+        "access_rules": [
+          "volcano, food",
+          "volcano, food_volcano",
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
       }
     ]
   }

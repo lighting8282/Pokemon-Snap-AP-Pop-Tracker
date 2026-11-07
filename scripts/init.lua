@@ -84,6 +84,8 @@ Tracker:AddLocations("locations/river.json")
 Tracker:AddLocations("locations/cave.json")
 Tracker:AddLocations("locations/valley.json")
 Tracker:AddLocations("locations/oakmew.json")
+-- the Poses tab: every posesanity pose on one board (tools/make_poses_map.py)
+Tracker:AddLocations("locations/poses.json")
 
 ScriptHost:LoadScript("scripts/course_items.lua")
 -- Plates showing what the connected seed's yaml turned on. Also before the

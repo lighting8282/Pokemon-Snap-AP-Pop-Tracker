@@ -101,6 +101,15 @@
                 "type": "layout",
                 "key": "dex_grid"
               }
+            },
+            {
+              "title": "Poses",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "poses"
+                ]
+              }
             }
           ]
         }

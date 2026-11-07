@@ -1,0 +1,1326 @@
+[
+  {
+    "name": "Poses",
+    "children": [
+      {
+        "name": "Beach",
+        "children": [
+          {
+            "name": "Chansey",
+            "sections": [
+              {
+                "name": "Oh! It looks jolly.",
+                "ref": "Chansey/Pose: Oh! It looks jolly."
+              },
+              {
+                "name": "What a funny pose.",
+                "ref": "Chansey/Pose: What a funny pose."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 195,
+                "y": 61
+              }
+            ]
+          },
+          {
+            "name": "Doduo",
+            "sections": [
+              {
+                "name": "Oh! You hit 'em!",
+                "ref": "Doduo/Pose: Oh! You hit 'em!"
+              },
+              {
+                "name": "Oh! It just fainted.",
+                "ref": "Doduo/Pose: Oh! It just fainted."
+              },
+              {
+                "name": "Oh! It's about to wake up.",
+                "ref": "Doduo/Pose: Oh! It's about to wake up."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 263,
+                "y": 61
+              }
+            ]
+          },
+          {
+            "name": "Eevee",
+            "sections": [
+              {
+                "name": "Oh! It's happy.",
+                "ref": "Eevee/Pose: Oh! It's happy."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 331,
+                "y": 61
+              }
+            ]
+          },
+          {
+            "name": "Kangaskhan",
+            "sections": [
+              {
+                "name": "This angry shot is pretty cool.",
+                "ref": "Kangaskhan/Pose: This angry shot is pretty cool."
+              },
+              {
+                "name": "Oh! What an interesting pose!",
+                "ref": "Kangaskhan/Pose: Oh! What an interesting pose!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 399,
+                "y": 61
+              }
+            ]
+          },
+          {
+            "name": "Lapras",
+            "sections": [
+              {
+                "name": "This is a relaxed pose.",
+                "ref": "Lapras/Pose: This is a relaxed pose."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 467,
+                "y": 61
+              }
+            ]
+          },
+          {
+            "name": "Magikarp",
+            "sections": [
+              {
+                "name": "That's a good splash.",
+                "ref": "Magikarp/Beach Pose: That's a good splash."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 535,
+                "y": 61
+              }
+            ]
+          },
+          {
+            "name": "Meowth",
+            "sections": [
+              {
+                "name": "It's pretty funny.",
+                "ref": "Meowth/Pose: It's pretty funny."
+              },
+              {
+                "name": "It seems to have fainted.",
+                "ref": "Meowth/Pose: It seems to have fainted."
+              },
+              {
+                "name": "You've thrown a PESTER BALL.",
+                "ref": "Meowth/Pose: You've thrown a PESTER BALL."
+              },
+              {
+                "name": "Oh! A dancing MEOWTH!",
+                "ref": "Meowth/Pose: Oh! A dancing MEOWTH!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 603,
+                "y": 61
+              }
+            ]
+          },
+          {
+            "name": "Pidgey",
+            "sections": [
+              {
+                "name": "Oh! It seems to be screeching.",
+                "ref": "Pidgey/Pose: Oh! It seems to be screeching."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 671,
+                "y": 61
+              }
+            ]
+          },
+          {
+            "name": "Pikachu",
+            "sections": [
+              {
+                "name": "This pose zaps even me!",
+                "ref": "Pikachu/Beach Pose: This pose zaps even me!"
+              },
+              {
+                "name": "Oh! This is very lively!",
+                "ref": "Pikachu/Beach Pose: Oh! This is very lively!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 739,
+                "y": 61
+              }
+            ]
+          },
+          {
+            "name": "Scyther",
+            "sections": [
+              {
+                "name": "Oh! This is a fighting pose.",
+                "ref": "Scyther/Pose: Oh! This is a fighting pose."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 807,
+                "y": 61
+              }
+            ]
+          },
+          {
+            "name": "Snorlax",
+            "sections": [
+              {
+                "name": "That's SNORLAX for sure!",
+                "ref": "Snorlax/Pose: That's SNORLAX for sure!"
+              },
+              {
+                "name": "Oh! What a jolly dance!",
+                "ref": "Snorlax/Pose: Oh! What a jolly dance!"
+              },
+              {
+                "name": "It's about to get up.",
+                "ref": "Snorlax/Pose: It's about to get up."
+              },
+              {
+                "name": "It's scratching its tummy.",
+                "ref": "Snorlax/Pose: It's scratching its tummy."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 875,
+                "y": 61
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tunnel",
+        "children": [
+          {
+            "name": "Diglett",
+            "sections": [
+              {
+                "name": "It's trying to go underground.",
+                "ref": "Diglett/Pose: It's trying to go underground."
+              },
+              {
+                "name": "It's about to pop up.",
+                "ref": "Diglett/Pose: It's about to pop up."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 195,
+                "y": 133
+              }
+            ]
+          },
+          {
+            "name": "Dugtrio",
+            "sections": [
+              {
+                "name": "It's trying to go underground.",
+                "ref": "Dugtrio/Pose: It's trying to go underground."
+              },
+              {
+                "name": "It's about to pop up.",
+                "ref": "Dugtrio/Pose: It's about to pop up."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 263,
+                "y": 133
+              }
+            ]
+          },
+          {
+            "name": "Electabuzz",
+            "sections": [
+              {
+                "name": "It's a blast!",
+                "ref": "Electabuzz/Pose: It's a blast!"
+              },
+              {
+                "name": "Oh dear, it fainted.",
+                "ref": "Electabuzz/Pose: Oh dear, it fainted."
+              },
+              {
+                "name": "You've thrown a PESTER BALL.",
+                "ref": "Electabuzz/Pose: You've thrown a PESTER BALL."
+              },
+              {
+                "name": "It must be angry.",
+                "ref": "Electabuzz/Pose: It must be angry."
+              },
+              {
+                "name": "Oh! It looks yummy!",
+                "ref": "Electabuzz/Pose: Oh! It looks yummy!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 331,
+                "y": 133
+              }
+            ]
+          },
+          {
+            "name": "Electrode",
+            "sections": [
+              {
+                "name": "It's rolling...",
+                "ref": "Electrode/Pose: It's rolling..."
+              },
+              {
+                "name": "Oh! It exploded!",
+                "ref": "Electrode/Pose: Oh! It exploded!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 399,
+                "y": 133
+              }
+            ]
+          },
+          {
+            "name": "Magikarp",
+            "sections": [
+              {
+                "name": "It splashed!",
+                "ref": "Magikarp/Tunnel Pose: It splashed!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 467,
+                "y": 133
+              }
+            ]
+          },
+          {
+            "name": "Magnemite",
+            "sections": [
+              {
+                "name": "It sure is happy!",
+                "ref": "Magnemite/Pose: It sure is happy!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 535,
+                "y": 133
+              }
+            ]
+          },
+          {
+            "name": "Pikachu",
+            "sections": [
+              {
+                "name": "This pose zaps even me!",
+                "ref": "Pikachu/Tunnel Pose: This pose zaps even me!"
+              },
+              {
+                "name": "Oh! This is very lively!",
+                "ref": "Pikachu/Tunnel Pose: Oh! This is very lively!"
+              },
+              {
+                "name": "Oh! That's PIKA!",
+                "ref": "Pikachu/Tunnel Pose: Oh! That's PIKA!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 603,
+                "y": 133
+              }
+            ]
+          },
+          {
+            "name": "Zapdos",
+            "sections": [
+              {
+                "name": "Oh! What a Thunder Jolt!",
+                "ref": "Zapdos/Pose: Oh! What a Thunder Jolt!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 671,
+                "y": 133
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Volcano",
+        "children": [
+          {
+            "name": "Arcanine",
+            "sections": [
+              {
+                "name": "Oh! So many embers!",
+                "ref": "Arcanine/Pose: Oh! So many embers!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 195,
+                "y": 205
+              }
+            ]
+          },
+          {
+            "name": "Charizard",
+            "sections": [
+              {
+                "name": "It looks like it's shocked.",
+                "ref": "Charizard/Pose: It looks like it's shocked."
+              },
+              {
+                "name": "Oh! What a flame!",
+                "ref": "Charizard/Pose: Oh! What a flame!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 263,
+                "y": 205
+              }
+            ]
+          },
+          {
+            "name": "Charmander",
+            "sections": [
+              {
+                "name": "It's unstable...",
+                "ref": "Charmander/Pose: It's unstable..."
+              },
+              {
+                "name": "Hmm...",
+                "ref": "Charmander/Pose: Hmm..."
+              },
+              {
+                "name": "You've thrown a PESTER BALL.",
+                "ref": "Charmander/Pose: You've thrown a PESTER BALL."
+              },
+              {
+                "name": "Oh! It looks happy!",
+                "ref": "Charmander/Pose: Oh! It looks happy!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 331,
+                "y": 205
+              }
+            ]
+          },
+          {
+            "name": "Charmeleon",
+            "sections": [
+              {
+                "name": "It's about to fall.",
+                "ref": "Charmeleon/Pose: It's about to fall."
+              },
+              {
+                "name": "It seems to have fainted.",
+                "ref": "Charmeleon/Pose: It seems to have fainted."
+              },
+              {
+                "name": "It seems to have woken up.",
+                "ref": "Charmeleon/Pose: It seems to have woken up."
+              },
+              {
+                "name": "Oh! It's roaring!",
+                "ref": "Charmeleon/Pose: Oh! It's roaring!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 399,
+                "y": 205
+              }
+            ]
+          },
+          {
+            "name": "Growlithe",
+            "sections": [
+              {
+                "name": "Oh! Tons of embers!",
+                "ref": "Growlithe/Pose: Oh! Tons of embers!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 467,
+                "y": 205
+              }
+            ]
+          },
+          {
+            "name": "Magikarp",
+            "sections": [
+              {
+                "name": "That's a good splash.",
+                "ref": "Magikarp/Volcano Pose: That's a good splash."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 535,
+                "y": 205
+              }
+            ]
+          },
+          {
+            "name": "Magmar",
+            "sections": [
+              {
+                "name": "Interesting! It's dizzy!",
+                "ref": "Magmar/Pose: Interesting! It's dizzy!"
+              },
+              {
+                "name": "It's unstable...",
+                "ref": "Magmar/Pose: It's unstable..."
+              },
+              {
+                "name": "This is pretty funny!",
+                "ref": "Magmar/Pose: This is pretty funny!"
+              },
+              {
+                "name": "Ha, ha, ha! This is so funny!",
+                "ref": "Magmar/Pose: Ha, ha, ha! This is so funny!"
+              },
+              {
+                "name": "Oh! It looks hot!",
+                "ref": "Magmar/Pose: Oh! It looks hot!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 603,
+                "y": 205
+              }
+            ]
+          },
+          {
+            "name": "Moltres",
+            "sections": [
+              {
+                "name": "Oh! What a wonderful pose!",
+                "ref": "Moltres/Pose: Oh! What a wonderful pose!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 671,
+                "y": 205
+              }
+            ]
+          },
+          {
+            "name": "Rapidash",
+            "sections": [
+              {
+                "name": "Oh! It's neighing.",
+                "ref": "Rapidash/Pose: Oh! It's neighing."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 739,
+                "y": 205
+              }
+            ]
+          },
+          {
+            "name": "Vulpix",
+            "sections": [
+              {
+                "name": "You've thrown a PESTER BALL.",
+                "ref": "Vulpix/Pose: You've thrown a PESTER BALL."
+              },
+              {
+                "name": "Hmm... It looks happy.",
+                "ref": "Vulpix/Pose: Hmm... It looks happy."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 807,
+                "y": 205
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "River",
+        "children": [
+          {
+            "name": "Bulbasaur",
+            "sections": [
+              {
+                "name": "You've thrown a PESTER BALL.",
+                "ref": "Bulbasaur/River Pose: You've thrown a PESTER BALL."
+              },
+              {
+                "name": "Oh! What a happy face!",
+                "ref": "Bulbasaur/River Pose: Oh! What a happy face!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 195,
+                "y": 277
+              }
+            ]
+          },
+          {
+            "name": "Magikarp",
+            "sections": [
+              {
+                "name": "Oh! What a splash!",
+                "ref": "Magikarp/River Pose: Oh! What a splash!"
+              },
+              {
+                "name": "It splashed!",
+                "ref": "Magikarp/River Pose: It splashed!"
+              },
+              {
+                "name": "That's a good splash.",
+                "ref": "Magikarp/River Pose: That's a good splash."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 263,
+                "y": 277
+              }
+            ]
+          },
+          {
+            "name": "Pikachu",
+            "sections": [
+              {
+                "name": "This pose zaps even me!",
+                "ref": "Pikachu/River Pose: This pose zaps even me!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 331,
+                "y": 277
+              }
+            ]
+          },
+          {
+            "name": "Poliwag",
+            "sections": [
+              {
+                "name": "Nice jump.",
+                "ref": "Poliwag/Pose: Nice jump."
+              },
+              {
+                "name": "It's jumping.",
+                "ref": "Poliwag/Pose: It's jumping."
+              },
+              {
+                "name": "Oh! What a jump!",
+                "ref": "Poliwag/Pose: Oh! What a jump!"
+              },
+              {
+                "name": "It's dizzy.",
+                "ref": "Poliwag/Pose: It's dizzy."
+              },
+              {
+                "name": "Oh dear, it fainted.",
+                "ref": "Poliwag/Pose: Oh dear, it fainted."
+              },
+              {
+                "name": "Oh! It's about to wake up.",
+                "ref": "Poliwag/Pose: Oh! It's about to wake up."
+              },
+              {
+                "name": "Oh! It's about to jump in!",
+                "ref": "Poliwag/Pose: Oh! It's about to jump in!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 399,
+                "y": 277
+              }
+            ]
+          },
+          {
+            "name": "Porygon",
+            "sections": [
+              {
+                "name": "Hmm... It looks happy.",
+                "ref": "Porygon/Pose: Hmm... It looks happy."
+              },
+              {
+                "name": "Hmm... It looks jolly.",
+                "ref": "Porygon/Pose: Hmm... It looks jolly."
+              },
+              {
+                "name": "Oh! It sure is jolly!",
+                "ref": "Porygon/Pose: Oh! It sure is jolly!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 467,
+                "y": 277
+              }
+            ]
+          },
+          {
+            "name": "Psyduck",
+            "sections": [
+              {
+                "name": "Nice jump.",
+                "ref": "Psyduck/Pose: Nice jump."
+              },
+              {
+                "name": "It jumped.",
+                "ref": "Psyduck/Pose: It jumped."
+              },
+              {
+                "name": "Oh! What a jump!",
+                "ref": "Psyduck/Pose: Oh! What a jump!"
+              },
+              {
+                "name": "It's about to fall.",
+                "ref": "Psyduck/Pose: It's about to fall."
+              },
+              {
+                "name": "Quite unique!",
+                "ref": "Psyduck/Pose: Quite unique!"
+              },
+              {
+                "name": "It's submerging.",
+                "ref": "Psyduck/Pose: It's submerging."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 535,
+                "y": 277
+              }
+            ]
+          },
+          {
+            "name": "Shellder",
+            "sections": [
+              {
+                "name": "Oh! It's been caught!",
+                "ref": "Shellder/Pose: Oh! It's been caught!"
+              },
+              {
+                "name": "Oh! It's snapping!",
+                "ref": "Shellder/Pose: Oh! It's snapping!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 603,
+                "y": 277
+              }
+            ]
+          },
+          {
+            "name": "Slowbro",
+            "sections": [
+              {
+                "name": "Oh! It's enjoying the food.",
+                "ref": "Slowbro/Pose: Oh! It's enjoying the food."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 671,
+                "y": 277
+              }
+            ]
+          },
+          {
+            "name": "Slowpoke",
+            "sections": [
+              {
+                "name": "It looks like it's going to fish.",
+                "ref": "Slowpoke/Pose: It looks like it's going to fish."
+              },
+              {
+                "name": "Gone fishing...",
+                "ref": "Slowpoke/Pose: Gone fishing..."
+              },
+              {
+                "name": "Oh! It got a bite!",
+                "ref": "Slowpoke/Pose: Oh! It got a bite!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 739,
+                "y": 277
+              }
+            ]
+          },
+          {
+            "name": "Vileplume",
+            "sections": [
+              {
+                "name": "Isn't the Pokémon dance fun?",
+                "ref": "Vileplume/Pose: Isn't the Pokémon dance fun?"
+              },
+              {
+                "name": "Oh! It's rockin'!",
+                "ref": "Vileplume/Pose: Oh! It's rockin'!"
+              },
+              {
+                "name": "Oh! It's about to wake up!",
+                "ref": "Vileplume/Pose: Oh! It's about to wake up!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 807,
+                "y": 277
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cave",
+        "children": [
+          {
+            "name": "Articuno",
+            "sections": [
+              {
+                "name": "Oh! How beautiful!",
+                "ref": "Articuno/Pose: Oh! How beautiful!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 195,
+                "y": 349
+              }
+            ]
+          },
+          {
+            "name": "Ditto",
+            "sections": [
+              {
+                "name": "Oh! It's happy.",
+                "ref": "Ditto/Pose: Oh! It's happy."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 263,
+                "y": 349
+              }
+            ]
+          },
+          {
+            "name": "Grimer",
+            "sections": [
+              {
+                "name": "Oh! It's happy.",
+                "ref": "Grimer/Pose: Oh! It's happy."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 331,
+                "y": 349
+              }
+            ]
+          },
+          {
+            "name": "Jigglypuff",
+            "sections": [
+              {
+                "name": "JIGGLYPUFF's dance is great!",
+                "ref": "Jigglypuff/Pose: JIGGLYPUFF's dance is great!"
+              },
+              {
+                "name": "Oh! That's a shame...",
+                "ref": "Jigglypuff/Pose: Oh! That's a shame..."
+              },
+              {
+                "name": "Oh! It's singing cheerfully.",
+                "ref": "Jigglypuff/Pose: Oh! It's singing cheerfully."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 399,
+                "y": 349
+              }
+            ]
+          },
+          {
+            "name": "Jynx",
+            "sections": [
+              {
+                "name": "Oh! What a jolly dance!",
+                "ref": "Jynx/Pose: Oh! What a jolly dance!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 467,
+                "y": 349
+              }
+            ]
+          },
+          {
+            "name": "Koffing",
+            "sections": [
+              {
+                "name": "Oh! What a weird dance.",
+                "ref": "Koffing/Pose: Oh! What a weird dance."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 535,
+                "y": 349
+              }
+            ]
+          },
+          {
+            "name": "Magikarp",
+            "sections": [
+              {
+                "name": "Oh! What a splash!",
+                "ref": "Magikarp/Cave Pose: Oh! What a splash!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 603,
+                "y": 349
+              }
+            ]
+          },
+          {
+            "name": "Muk",
+            "sections": [
+              {
+                "name": "It looks happy.",
+                "ref": "Muk/Pose: It looks happy."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 671,
+                "y": 349
+              }
+            ]
+          },
+          {
+            "name": "Pikachu",
+            "sections": [
+              {
+                "name": "This pose zaps even me!",
+                "ref": "Pikachu/Cave Pose: This pose zaps even me!"
+              },
+              {
+                "name": "Oh! This is very lively!",
+                "ref": "Pikachu/Cave Pose: Oh! This is very lively!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 739,
+                "y": 349
+              }
+            ]
+          },
+          {
+            "name": "Victreebel",
+            "sections": [
+              {
+                "name": "Oh! It's about to leap out!",
+                "ref": "Victreebel/Pose: Oh! It's about to leap out!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 807,
+                "y": 349
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Valley",
+        "children": [
+          {
+            "name": "Dragonite",
+            "sections": [
+              {
+                "name": "Oh! It's DRAGONITE!",
+                "ref": "Dragonite/Pose: Oh! It's DRAGONITE!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 195,
+                "y": 421
+              }
+            ]
+          },
+          {
+            "name": "Dratini",
+            "sections": [
+              {
+                "name": "Oh! What an amazing jump!",
+                "ref": "Dratini/Pose: Oh! What an amazing jump!"
+              },
+              {
+                "name": "That's a pretty good jump.",
+                "ref": "Dratini/Pose: That's a pretty good jump."
+              },
+              {
+                "name": "It's jumping.",
+                "ref": "Dratini/Pose: It's jumping."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 263,
+                "y": 421
+              }
+            ]
+          },
+          {
+            "name": "Goldeen",
+            "sections": [
+              {
+                "name": "That's a good splash!",
+                "ref": "Goldeen/Pose: That's a good splash!"
+              },
+              {
+                "name": "It's splashing.",
+                "ref": "Goldeen/Pose: It's splashing."
+              },
+              {
+                "name": "Oh! What a splash!",
+                "ref": "Goldeen/Pose: Oh! What a splash!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 331,
+                "y": 421
+              }
+            ]
+          },
+          {
+            "name": "Graveler",
+            "sections": [
+              {
+                "name": "Oh! It's falling.",
+                "ref": "Graveler/Pose: Oh! It's falling."
+              },
+              {
+                "name": "Oh! It fell.",
+                "ref": "Graveler/Pose: Oh! It fell."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 399,
+                "y": 421
+              }
+            ]
+          },
+          {
+            "name": "Gyarados",
+            "sections": [
+              {
+                "name": "Oh! How powerful!",
+                "ref": "Gyarados/Pose: Oh! How powerful!"
+              },
+              {
+                "name": "It just showed its face.",
+                "ref": "Gyarados/Pose: It just showed its face."
+              },
+              {
+                "name": "Umm... looks scary!",
+                "ref": "Gyarados/Pose: Umm... looks scary!"
+              },
+              {
+                "name": "Oh! It's furious!",
+                "ref": "Gyarados/Pose: Oh! It's furious!"
+              },
+              {
+                "name": "Oh! It looks astonished!",
+                "ref": "Gyarados/Pose: Oh! It looks astonished!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 467,
+                "y": 421
+              }
+            ]
+          },
+          {
+            "name": "Magikarp",
+            "sections": [
+              {
+                "name": "Oh! What a splash!",
+                "ref": "Magikarp/Valley Pose: Oh! What a splash!"
+              },
+              {
+                "name": "It splashed!",
+                "ref": "Magikarp/Valley Pose: It splashed!"
+              },
+              {
+                "name": "That's a good splash.",
+                "ref": "Magikarp/Valley Pose: That's a good splash."
+              },
+              {
+                "name": "Oh! It's splashing.",
+                "ref": "Magikarp/Valley Pose: Oh! It's splashing."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 535,
+                "y": 421
+              }
+            ]
+          },
+          {
+            "name": "Mankey",
+            "sections": [
+              {
+                "name": "Oh! It's MANKEY in the sky!",
+                "ref": "Mankey/Pose: Oh! It's MANKEY in the sky!"
+              },
+              {
+                "name": "Oh! MANKEY got blasted!",
+                "ref": "Mankey/Pose: Oh! MANKEY got blasted!"
+              },
+              {
+                "name": "You've thrown a PESTER BALL.",
+                "ref": "Mankey/Pose: You've thrown a PESTER BALL."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 603,
+                "y": 421
+              }
+            ]
+          },
+          {
+            "name": "Sandshrew",
+            "sections": [
+              {
+                "name": "You've thrown a PESTER BALL.",
+                "ref": "Sandshrew/Pose: You've thrown a PESTER BALL."
+              },
+              {
+                "name": "Oh! It's about to pop up.",
+                "ref": "Sandshrew/Pose: Oh! It's about to pop up."
+              },
+              {
+                "name": "Hmm... It looks jolly.",
+                "ref": "Sandshrew/Pose: Hmm... It looks jolly."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 671,
+                "y": 421
+              }
+            ]
+          },
+          {
+            "name": "Sandslash",
+            "sections": [
+              {
+                "name": "It stumbled.",
+                "ref": "Sandslash/Pose: It stumbled."
+              },
+              {
+                "name": "Oh! It's about to pop up.",
+                "ref": "Sandslash/Pose: Oh! It's about to pop up."
+              },
+              {
+                "name": "It's about to go underground.",
+                "ref": "Sandslash/Pose: It's about to go underground."
+              },
+              {
+                "name": "Oh! It's happy.",
+                "ref": "Sandslash/Pose: Oh! It's happy."
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 739,
+                "y": 421
+              }
+            ]
+          },
+          {
+            "name": "Squirtle",
+            "sections": [
+              {
+                "name": "You've thrown a PESTER BALL.",
+                "ref": "Squirtle/Pose: You've thrown a PESTER BALL."
+              },
+              {
+                "name": "It's about to withdraw.",
+                "ref": "Squirtle/Pose: It's about to withdraw."
+              },
+              {
+                "name": "I only see its shell.",
+                "ref": "Squirtle/Pose: I only see its shell."
+              },
+              {
+                "name": "It's about to come out.",
+                "ref": "Squirtle/Pose: It's about to come out."
+              },
+              {
+                "name": "Oh! It's happy!",
+                "ref": "Squirtle/Pose: Oh! It's happy!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 807,
+                "y": 421
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rainbow Cloud",
+        "children": [
+          {
+            "name": "Mew",
+            "sections": [
+              {
+                "name": "Oh! Well done!",
+                "ref": "Mew/Pose: Oh! Well done!"
+              },
+              {
+                "name": "Oh! It's spinning.",
+                "ref": "Mew/Pose: Oh! It's spinning."
+              },
+              {
+                "name": "Why, it's perfect!",
+                "ref": "Mew/Pose: Why, it's perfect!"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "poses",
+                "x": 195,
+                "y": 493
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

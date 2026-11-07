@@ -24,6 +24,34 @@
           "beach, $can_wonderful, pester",
           "beach, $can_wonderful, pester_beach"
         ]
+      },
+      {
+        "name": "Pose: This angry shot is pretty cool.",
+        "visibility_rules": [
+          "loc143126"
+        ],
+        "access_rules": [
+          "beach, food",
+          "beach, food_beach",
+          "beach, pester",
+          "beach, pester_beach"
+        ]
+      },
+      {
+        "name": "Pose: Oh! What an interesting pose!",
+        "visibility_rules": [
+          "loc143127"
+        ],
+        "access_rules": [
+          "beach, flute, food",
+          "beach, flute, food_beach",
+          "beach, flute, pester",
+          "beach, flute, pester_beach",
+          "beach, flute_beach, food",
+          "beach, flute_beach, food_beach",
+          "beach, flute_beach, pester",
+          "beach, flute_beach, pester_beach"
+        ]
       }
     ]
   }

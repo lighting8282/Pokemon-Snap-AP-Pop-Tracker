@@ -23,6 +23,48 @@
           "valley, $can_wonderful, pester",
           "valley, $can_wonderful, pester_valley"
         ]
+      },
+      {
+        "name": "Pose: It stumbled.",
+        "visibility_rules": [
+          "loc112065"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's about to pop up.",
+        "visibility_rules": [
+          "loc112068"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Pose: It's about to go underground.",
+        "visibility_rules": [
+          "loc112069"
+        ],
+        "access_rules": [
+          "valley, $hard_logic_on",
+          "valley, dash"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's happy.",
+        "visibility_rules": [
+          "loc112070"
+        ],
+        "access_rules": [
+          "valley, food, pester",
+          "valley, food, pester_valley",
+          "valley, food_valley, pester",
+          "valley, food_valley, pester_valley"
+        ]
       }
     ]
   }

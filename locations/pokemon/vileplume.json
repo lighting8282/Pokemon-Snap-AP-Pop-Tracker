@@ -23,6 +23,36 @@
           "river, $can_wonderful, flute",
           "river, $can_wonderful, flute_river"
         ]
+      },
+      {
+        "name": "Pose: Isn't the Pokémon dance fun?",
+        "visibility_rules": [
+          "loc116084"
+        ],
+        "access_rules": [
+          "river, flute",
+          "river, flute_river"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's rockin'!",
+        "visibility_rules": [
+          "loc116085"
+        ],
+        "access_rules": [
+          "river, flute",
+          "river, flute_river"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's about to wake up!",
+        "visibility_rules": [
+          "loc116086"
+        ],
+        "access_rules": [
+          "river, flute",
+          "river, flute_river"
+        ]
       }
     ]
   }

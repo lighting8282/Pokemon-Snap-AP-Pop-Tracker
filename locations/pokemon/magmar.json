@@ -43,6 +43,62 @@
         "visibility_rules": [
           "loc311"
         ]
+      },
+      {
+        "name": "Pose: Interesting! It's dizzy!",
+        "visibility_rules": [
+          "loc150107"
+        ],
+        "access_rules": [
+          "volcano, food",
+          "volcano, food_volcano"
+        ]
+      },
+      {
+        "name": "Pose: It's unstable...",
+        "visibility_rules": [
+          "loc150108"
+        ],
+        "access_rules": [
+          "volcano, food",
+          "volcano, food_volcano",
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
+      },
+      {
+        "name": "Pose: This is pretty funny!",
+        "visibility_rules": [
+          "loc150109"
+        ],
+        "access_rules": [
+          "volcano, food",
+          "volcano, food_volcano",
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
+      },
+      {
+        "name": "Pose: Ha, ha, ha! This is so funny!",
+        "visibility_rules": [
+          "loc150110"
+        ],
+        "access_rules": [
+          "volcano, food",
+          "volcano, food_volcano",
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It looks hot!",
+        "visibility_rules": [
+          "loc150111"
+        ],
+        "access_rules": [
+          "volcano, food",
+          "volcano, food_volcano"
+        ]
       }
     ]
   }

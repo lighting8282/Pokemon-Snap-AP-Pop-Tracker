@@ -40,6 +40,90 @@
         "visibility_rules": [
           "multiple, loc224"
         ]
+      },
+      {
+        "name": "Pose: Nice jump.",
+        "visibility_rules": [
+          "loc124052"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "Pose: It's jumping.",
+        "visibility_rules": [
+          "loc124053"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "Pose: Oh! What a jump!",
+        "visibility_rules": [
+          "loc124054"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "Pose: It's dizzy.",
+        "visibility_rules": [
+          "loc124055"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "Pose: Oh dear, it fainted.",
+        "visibility_rules": [
+          "loc124056"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's about to wake up.",
+        "visibility_rules": [
+          "loc124057"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's about to jump in!",
+        "visibility_rules": [
+          "loc124058"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
       }
     ]
   }

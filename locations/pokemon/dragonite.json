@@ -23,6 +23,16 @@
           "valley, $can_wonderful, pester",
           "valley, $can_wonderful, pester_valley"
         ]
+      },
+      {
+        "name": "Pose: Oh! It's DRAGONITE!",
+        "visibility_rules": [
+          "loc162012"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
       }
     ]
   }

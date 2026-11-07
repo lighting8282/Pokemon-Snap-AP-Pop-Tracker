@@ -23,6 +23,16 @@
           "river, $can_wonderful, food",
           "river, $can_wonderful, food_river"
         ]
+      },
+      {
+        "name": "Pose: Oh! It's enjoying the food.",
+        "visibility_rules": [
+          "loc131011"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river"
+        ]
       }
     ]
   }

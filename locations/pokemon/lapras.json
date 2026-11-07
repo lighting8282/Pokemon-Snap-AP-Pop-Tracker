@@ -32,6 +32,16 @@
         "visibility_rules": [
           "multiple, loc253"
         ]
+      },
+      {
+        "name": "Pose: This is a relaxed pose.",
+        "visibility_rules": [
+          "loc153004"
+        ],
+        "access_rules": [
+          "beach, $hard_logic_on, $has_film|2",
+          "beach, $has_film|5"
+        ]
       }
     ]
   }

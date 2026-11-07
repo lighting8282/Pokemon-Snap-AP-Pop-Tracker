@@ -27,6 +27,42 @@
           "$goal_unlocked, $can_wonderful, pester",
           "$goal_unlocked, $can_wonderful, pester_cloud"
         ]
+      },
+      {
+        "name": "Pose: Oh! Well done!",
+        "visibility_rules": [
+          "loc163151"
+        ],
+        "access_rules": [
+          "$goal_unlocked, food",
+          "$goal_unlocked, food_cloud",
+          "$goal_unlocked, pester",
+          "$goal_unlocked, pester_cloud"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's spinning.",
+        "visibility_rules": [
+          "loc163152"
+        ],
+        "access_rules": [
+          "$goal_unlocked, food",
+          "$goal_unlocked, food_cloud",
+          "$goal_unlocked, pester",
+          "$goal_unlocked, pester_cloud"
+        ]
+      },
+      {
+        "name": "Pose: Why, it's perfect!",
+        "visibility_rules": [
+          "loc163153"
+        ],
+        "access_rules": [
+          "$goal_unlocked, food",
+          "$goal_unlocked, food_cloud",
+          "$goal_unlocked, pester",
+          "$goal_unlocked, pester_cloud"
+        ]
       }
     ]
   }

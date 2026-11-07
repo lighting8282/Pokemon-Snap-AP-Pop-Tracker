@@ -165,6 +165,118 @@
         "visibility_rules": [
           "loc306"
         ]
+      },
+      {
+        "name": "Beach Pose: This pose zaps even me!",
+        "visibility_rules": [
+          "loc110134"
+        ],
+        "access_rules": [
+          "beach, flute",
+          "beach, flute_beach"
+        ]
+      },
+      {
+        "name": "Beach Pose: Oh! This is very lively!",
+        "visibility_rules": [
+          "loc110135"
+        ],
+        "access_rules": [
+          "beach, food",
+          "beach, food_beach",
+          "beach, pester",
+          "beach, pester_beach"
+        ]
+      },
+      {
+        "name": "Tunnel Pose: This pose zaps even me!",
+        "visibility_rules": [
+          "loc170134"
+        ],
+        "access_rules": [
+          "tunnel, flute",
+          "tunnel, flute_tunnel"
+        ]
+      },
+      {
+        "name": "Tunnel Pose: Oh! This is very lively!",
+        "visibility_rules": [
+          "loc170135"
+        ],
+        "access_rules": [
+          "tunnel, flute, food",
+          "tunnel, flute, food_tunnel",
+          "tunnel, flute_tunnel, food",
+          "tunnel, flute_tunnel, food_tunnel"
+        ]
+      },
+      {
+        "name": "Tunnel Pose: Oh! That's PIKA!",
+        "visibility_rules": [
+          "loc170145"
+        ],
+        "access_rules": [
+          "tunnel, flute, food",
+          "tunnel, flute, food_tunnel",
+          "tunnel, flute_tunnel, food",
+          "tunnel, flute_tunnel, food_tunnel"
+        ]
+      },
+      {
+        "name": "River Pose: This pose zaps even me!",
+        "visibility_rules": [
+          "loc171134"
+        ],
+        "access_rules": [
+          "river, $hard_logic_on, $has_film|2, flute",
+          "river, $hard_logic_on, $has_film|2, flute_river",
+          "river, $has_film|5, flute",
+          "river, $has_film|5, flute_river",
+          "river, flute, food",
+          "river, flute, food_river",
+          "river, flute, pester",
+          "river, flute, pester_river",
+          "river, flute_river, food",
+          "river, flute_river, food_river",
+          "river, flute_river, pester",
+          "river, flute_river, pester_river"
+        ]
+      },
+      {
+        "name": "Cave Pose: This pose zaps even me!",
+        "visibility_rules": [
+          "loc172134"
+        ],
+        "access_rules": [
+          "cave, $hard_logic_on, flute",
+          "cave, $hard_logic_on, flute_cave",
+          "cave, flute, food",
+          "cave, flute, food_cave",
+          "cave, flute, pester",
+          "cave, flute, pester_cave",
+          "cave, flute_cave, food",
+          "cave, flute_cave, food_cave",
+          "cave, flute_cave, pester",
+          "cave, flute_cave, pester_cave"
+        ]
+      },
+      {
+        "name": "Cave Pose: Oh! This is very lively!",
+        "visibility_rules": [
+          "loc172135"
+        ],
+        "access_rules": [
+          "cave, $hard_logic_on, flute",
+          "cave, $hard_logic_on, flute_cave",
+          "cave, flute, food",
+          "cave, flute, food_cave",
+          "cave, flute, pester",
+          "cave, flute, pester_cave",
+          "cave, flute_cave, food",
+          "cave, flute_cave, food_cave",
+          "cave, flute_cave, pester",
+          "cave, flute_cave, pester_cave"
+        ]
       }
     ]
   }

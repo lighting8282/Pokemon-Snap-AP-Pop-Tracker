@@ -27,6 +27,18 @@
           "tunnel, $can_wonderful, flute_tunnel, food",
           "tunnel, $can_wonderful, flute_tunnel, food_tunnel"
         ]
+      },
+      {
+        "name": "Pose: Oh! What a Thunder Jolt!",
+        "visibility_rules": [
+          "loc159013"
+        ],
+        "access_rules": [
+          "tunnel, flute, food",
+          "tunnel, flute, food_tunnel",
+          "tunnel, flute_tunnel, food",
+          "tunnel, flute_tunnel, food_tunnel"
+        ]
       }
     ]
   }

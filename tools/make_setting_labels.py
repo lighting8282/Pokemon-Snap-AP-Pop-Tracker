@@ -26,13 +26,13 @@ TEXT = (255, 255, 255, 255)
 LABELS = {
     "goodtechnique": "Good Tech",
     "multiple":      "Multiple",
-    "poses":         "Poses",
+    "poses":         "Special Poses",
     "signs":         "Signs",
     "exits":         "Exits",
     "photocount":    "Photos",
     "scoretotal":    "Score",
-    "rng":           "RNG",
-    "hard":          "Hard",
+    "rng":           "RNG Photos",
+    "hard":          "Hard Photos",
     "scoring":       "Scoring",
     "fragments":     "Frags",
     "goal":          "Goal",
@@ -41,6 +41,10 @@ LABELS = {
     "percourse":     "Per Course",
     "hardlogic":     "Hard Logic",
     "mewgt":         "Mew GT",
+    # apworld 0.9.x
+    "posesanity":    "Posesanity",
+    "rngposes":      "RNG Poses",
+    "hardposes":     "Hard Poses",
 }
 
 

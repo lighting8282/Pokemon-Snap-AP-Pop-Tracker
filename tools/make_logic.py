@@ -17,7 +17,7 @@ What it writes, per section:
                            per-course copies food_beach, pester_cave, ...
     $has_film|N            film capacity of at least N
     $separate_scoring      photo_scoring is separate or separate_unlocks
-    $rng_checks_on         rng_checks is on
+    $rng_checks_on         include_rng_photos is on (rng_checks before 0.9.1)
     $hard_logic_on         hard_logic is on
 
 The world's has(tool, course) is "the global tool OR that course's copy".
@@ -49,7 +49,7 @@ TOOL_CODE = {
 }
 
 COMPILED = {"NORMAL_PHOTO", "WONDERFUL_PHOTO", "MULTIPLE_PHOTO",
-            "SPECIAL_POSE", "POKEMON_SIGN", "SECRET_EXIT"}
+            "SPECIAL_POSE", "POKEMON_SIGN", "SECRET_EXIT", "REGULAR_POSE"}
 
 FREE = frozenset()
 
@@ -78,9 +78,20 @@ def minimal(sets):
     return {a for a in sets if not any(b < a for b in sets)}
 
 
+# AP location name -> (its rule, its region token); filled in by main() so a
+# CanReachLocation can be expanded into the rule of the location it names
+TARGETS = {}
+
+
 def dnf(rule):
     """Rule object -> set of alternative token sets. Empty set = unreachable."""
     k = type(rule).__name__
+    if k == "CanReachLocation":
+        # posesanity (0.9.0): "you can reach Zapdos" is that photo's own rule
+        # plus its course, inlined. Every pose names a location on its own
+        # course, so the course token is already there and merges away.
+        target, region = TARGETS[rule.args[0]]
+        return minimal({a | {region} for a in dnf(target)})
     if k == "True_":
         return {FREE}
     if k == "False_":
@@ -137,6 +148,9 @@ def main(apworld):
     for name, cats in R.LOCATION_RULES.items():
         for cat, rule in cats.items():
             rule_for[R.location_name(name, cat)] = rule
+    for lid, (cat, level) in meta.items():
+        if locs.get(lid) in rule_for:
+            TARGETS[locs[lid]] = (rule_for[locs[lid]], REGION[level]) if level in REGION else None
 
     lm = {}
     txt = (PACK / "scripts/autotracking/location_mapping.lua").read_text(encoding="utf-8")
@@ -145,7 +159,9 @@ def main(apworld):
 
     want = {}                                      # section path -> rule list
     for lid, (cat, level) in sorted(meta.items()):
-        if lid >= 1000 or cat not in COMPILED or lid not in lm:
+        # base checks only: bonus twins sit at id + 1,000,000 (id + 1000 up
+        # to 0.8.0) and share their check's section
+        if lid >= 1_000_000 or 1000 <= lid < 100_000 or cat not in COMPILED or lid not in lm:
             continue
         rule = rule_for.get(locs[lid])
         alts = dnf(rule) if rule is not None else {FREE}
@@ -156,7 +172,7 @@ def main(apworld):
             head.append("$can_wonderful")
         if cat == "MULTIPLE_PHOTO":
             head.append("$can_multiple")
-        branches = sorted(", ".join(sorted(head + sorted(a), key=branch_order))
+        branches = sorted(", ".join(sorted(set(head) | a, key=branch_order))
                           for a in alts)
         want[lm[lid]] = branches
 

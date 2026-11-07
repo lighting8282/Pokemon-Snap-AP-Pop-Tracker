@@ -21,6 +21,48 @@
         "access_rules": [
           "beach, $can_wonderful"
         ]
+      },
+      {
+        "name": "Pose: It's pretty funny.",
+        "visibility_rules": [
+          "loc119128"
+        ],
+        "access_rules": [
+          "beach"
+        ]
+      },
+      {
+        "name": "Pose: It seems to have fainted.",
+        "visibility_rules": [
+          "loc119129"
+        ],
+        "access_rules": [
+          "beach"
+        ]
+      },
+      {
+        "name": "Pose: You've thrown a PESTER BALL.",
+        "visibility_rules": [
+          "loc119130"
+        ],
+        "access_rules": [
+          "beach, pester",
+          "beach, pester_beach"
+        ]
+      },
+      {
+        "name": "Pose: Oh! A dancing MEOWTH!",
+        "visibility_rules": [
+          "loc119131"
+        ],
+        "access_rules": [
+          "beach, flute",
+          "beach, flute_beach",
+          "beach, food",
+          "beach, food_beach",
+          "beach, pester",
+          "beach, pester_beach"
+        ]
       }
     ]
   }

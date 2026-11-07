@@ -270,6 +270,13 @@
           [
             "seedhardlogic",
             "seedmewgt"
+          ],
+          [
+            "seedposesanity",
+            "seedrngposes"
+          ],
+          [
+            "seedhardposes"
           ]
         ]
       }

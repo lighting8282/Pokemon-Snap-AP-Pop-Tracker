@@ -95,6 +95,14 @@
           {
             "name": "Muk: Wonderful Picture",
             "ref": "Muk/Wonderful Picture"
+          },
+          {
+            "name": "Pose: Oh! It's happy.",
+            "ref": "Grimer/Pose: Oh! It's happy."
+          },
+          {
+            "name": "Pose: It looks happy.",
+            "ref": "Muk/Pose: It looks happy."
           }
         ],
         "map_locations": [
@@ -131,6 +139,10 @@
           {
             "name": "Ditto: Same Pkmn",
             "ref": "Ditto/Same Pkmn"
+          },
+          {
+            "name": "Pose: Oh! It's happy.",
+            "ref": "Ditto/Pose: Oh! It's happy."
           }
         ],
         "map_locations": [
@@ -159,6 +171,10 @@
           {
             "name": "Koffing: Wonderful Picture",
             "ref": "Koffing/Wonderful Picture"
+          },
+          {
+            "name": "Pose: Oh! What a weird dance.",
+            "ref": "Koffing/Pose: Oh! What a weird dance."
           }
         ],
         "map_locations": [
@@ -179,6 +195,10 @@
           {
             "name": "Wonderful Picture",
             "ref": "Magikarp/Cave Wonderful Picture"
+          },
+          {
+            "name": "Pose: Oh! What a splash!",
+            "ref": "Magikarp/Cave Pose: Oh! What a splash!"
           }
         ],
         "map_locations": [
@@ -207,6 +227,10 @@
           {
             "name": "Victreebel: Wonderful Picture",
             "ref": "Victreebel/Wonderful Picture"
+          },
+          {
+            "name": "Pose: Oh! It's about to leap out!",
+            "ref": "Victreebel/Pose: Oh! It's about to leap out!"
           }
         ],
         "map_locations": [
@@ -294,6 +318,14 @@
           {
             "name": "Jynx: Same Pkmn",
             "ref": "Jynx/Same Pkmn"
+          },
+          {
+            "name": "Pose: Oh! What a jolly dance!",
+            "ref": "Jynx/Pose: Oh! What a jolly dance!"
+          },
+          {
+            "name": "Pose: Oh! How beautiful!",
+            "ref": "Articuno/Pose: Oh! How beautiful!"
           }
         ],
         "map_locations": [
@@ -338,6 +370,26 @@
           {
             "name": "Pikachu: Flying Pikachu",
             "ref": "Pikachu/Flying Pikachu"
+          },
+          {
+            "name": "Pose: JIGGLYPUFF's dance is great!",
+            "ref": "Jigglypuff/Pose: JIGGLYPUFF's dance is great!"
+          },
+          {
+            "name": "Pose: Oh! That's a shame...",
+            "ref": "Jigglypuff/Pose: Oh! That's a shame..."
+          },
+          {
+            "name": "Pose: Oh! It's singing cheerfully.",
+            "ref": "Jigglypuff/Pose: Oh! It's singing cheerfully."
+          },
+          {
+            "name": "Pose: This pose zaps even me!",
+            "ref": "Pikachu/Cave Pose: This pose zaps even me!"
+          },
+          {
+            "name": "Pose: Oh! This is very lively!",
+            "ref": "Pikachu/Cave Pose: Oh! This is very lively!"
           }
         ],
         "map_locations": [

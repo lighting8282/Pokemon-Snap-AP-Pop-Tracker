@@ -21,6 +21,36 @@
         "access_rules": [
           "valley, $can_wonderful"
         ]
+      },
+      {
+        "name": "Pose: Oh! It's MANKEY in the sky!",
+        "visibility_rules": [
+          "loc121044"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Pose: Oh! MANKEY got blasted!",
+        "visibility_rules": [
+          "loc121045"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Pose: You've thrown a PESTER BALL.",
+        "visibility_rules": [
+          "loc121046"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
       }
     ]
   }

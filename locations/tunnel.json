@@ -19,6 +19,18 @@
           {
             "name": "Pikachu on a Ball",
             "ref": "Pikachu/Pikachu on a Ball"
+          },
+          {
+            "name": "Pose: This pose zaps even me!",
+            "ref": "Pikachu/Tunnel Pose: This pose zaps even me!"
+          },
+          {
+            "name": "Pose: Oh! This is very lively!",
+            "ref": "Pikachu/Tunnel Pose: Oh! This is very lively!"
+          },
+          {
+            "name": "Pose: Oh! That's PIKA!",
+            "ref": "Pikachu/Tunnel Pose: Oh! That's PIKA!"
           }
         ],
         "map_locations": [
@@ -43,6 +55,14 @@
           {
             "name": "Same Pkmn",
             "ref": "Electrode/Same Pkmn"
+          },
+          {
+            "name": "Pose: It's rolling...",
+            "ref": "Electrode/Pose: It's rolling..."
+          },
+          {
+            "name": "Pose: Oh! It exploded!",
+            "ref": "Electrode/Pose: Oh! It exploded!"
           }
         ],
         "map_locations": [
@@ -127,6 +147,10 @@
           {
             "name": "Wonderful Picture",
             "ref": "Zapdos/Wonderful Picture"
+          },
+          {
+            "name": "Pose: Oh! What a Thunder Jolt!",
+            "ref": "Zapdos/Pose: Oh! What a Thunder Jolt!"
           }
         ],
         "map_locations": [
@@ -147,6 +171,10 @@
           {
             "name": "Wonderful Picture",
             "ref": "Magikarp/Tunnel Wonderful Picture"
+          },
+          {
+            "name": "Pose: It splashed!",
+            "ref": "Magikarp/Tunnel Pose: It splashed!"
           }
         ],
         "map_locations": [
@@ -199,6 +227,26 @@
           {
             "name": "Same Pkmn",
             "ref": "Electabuzz/Same Pkmn"
+          },
+          {
+            "name": "Pose: It's a blast!",
+            "ref": "Electabuzz/Pose: It's a blast!"
+          },
+          {
+            "name": "Pose: Oh dear, it fainted.",
+            "ref": "Electabuzz/Pose: Oh dear, it fainted."
+          },
+          {
+            "name": "Pose: You've thrown a PESTER BALL.",
+            "ref": "Electabuzz/Pose: You've thrown a PESTER BALL."
+          },
+          {
+            "name": "Pose: It must be angry.",
+            "ref": "Electabuzz/Pose: It must be angry."
+          },
+          {
+            "name": "Pose: Oh! It looks yummy!",
+            "ref": "Electabuzz/Pose: Oh! It looks yummy!"
           }
         ],
         "map_locations": [
@@ -219,6 +267,14 @@
           {
             "name": "Wonderful Picture",
             "ref": "Diglett/Wonderful Picture"
+          },
+          {
+            "name": "Pose: It's trying to go underground.",
+            "ref": "Diglett/Pose: It's trying to go underground."
+          },
+          {
+            "name": "Pose: It's about to pop up.",
+            "ref": "Diglett/Pose: It's about to pop up."
           }
         ],
         "map_locations": [
@@ -243,6 +299,14 @@
           {
             "name": "Same Pkmn",
             "ref": "Dugtrio/Same Pkmn"
+          },
+          {
+            "name": "Pose: It's trying to go underground.",
+            "ref": "Dugtrio/Pose: It's trying to go underground."
+          },
+          {
+            "name": "Pose: It's about to pop up.",
+            "ref": "Dugtrio/Pose: It's about to pop up."
           }
         ],
         "map_locations": [
@@ -301,6 +365,10 @@
           {
             "name": "Magneton: Wonderful Picture",
             "ref": "Magneton/Wonderful Picture"
+          },
+          {
+            "name": "Pose: It sure is happy!",
+            "ref": "Magnemite/Pose: It sure is happy!"
           }
         ],
         "map_locations": [

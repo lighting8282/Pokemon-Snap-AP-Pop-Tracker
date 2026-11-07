@@ -27,6 +27,46 @@
           "beach, $can_wonderful, pester",
           "beach, $can_wonderful, pester_beach"
         ]
+      },
+      {
+        "name": "Pose: That's SNORLAX for sure!",
+        "visibility_rules": [
+          "loc157132"
+        ],
+        "access_rules": [
+          "beach, flute",
+          "beach, flute_beach"
+        ]
+      },
+      {
+        "name": "Pose: Oh! What a jolly dance!",
+        "visibility_rules": [
+          "loc157133"
+        ],
+        "access_rules": [
+          "beach, flute",
+          "beach, flute_beach"
+        ]
+      },
+      {
+        "name": "Pose: It's about to get up.",
+        "visibility_rules": [
+          "loc157162"
+        ],
+        "access_rules": [
+          "beach, flute",
+          "beach, flute_beach"
+        ]
+      },
+      {
+        "name": "Pose: It's scratching its tummy.",
+        "visibility_rules": [
+          "loc157163"
+        ],
+        "access_rules": [
+          "beach, pester",
+          "beach, pester_beach"
+        ]
       }
     ]
   }

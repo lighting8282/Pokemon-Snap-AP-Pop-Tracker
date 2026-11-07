@@ -21,6 +21,16 @@
         "access_rules": [
           "cave, $can_wonderful"
         ]
+      },
+      {
+        "name": "Pose: Oh! What a weird dance.",
+        "visibility_rules": [
+          "loc141155"
+        ],
+        "access_rules": [
+          "cave, flute",
+          "cave, flute_cave"
+        ]
       }
     ]
   }

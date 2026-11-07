@@ -33,6 +33,18 @@
         "visibility_rules": [
           "multiple, loc254"
         ]
+      },
+      {
+        "name": "Pose: Oh! It's happy.",
+        "visibility_rules": [
+          "loc154014"
+        ],
+        "access_rules": [
+          "cave, food, pester",
+          "cave, food, pester_cave",
+          "cave, food_cave, pester",
+          "cave, food_cave, pester_cave"
+        ]
       }
     ]
   }

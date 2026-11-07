@@ -15,6 +15,18 @@
           {
             "name": "Wonderful Picture",
             "ref": "Goldeen/Wonderful Picture"
+          },
+          {
+            "name": "Pose: That's a good splash!",
+            "ref": "Goldeen/Pose: That's a good splash!"
+          },
+          {
+            "name": "Pose: It's splashing.",
+            "ref": "Goldeen/Pose: It's splashing."
+          },
+          {
+            "name": "Pose: Oh! What a splash!",
+            "ref": "Goldeen/Pose: Oh! What a splash!"
           }
         ],
         "map_locations": [
@@ -130,6 +142,18 @@
           {
             "name": "Sandshrew: Same Pkmn",
             "ref": "Sandshrew/Same Pkmn"
+          },
+          {
+            "name": "Pose: You've thrown a PESTER BALL.",
+            "ref": "Sandshrew/Pose: You've thrown a PESTER BALL."
+          },
+          {
+            "name": "Pose: Oh! It's about to pop up.",
+            "ref": "Sandshrew/Pose: Oh! It's about to pop up."
+          },
+          {
+            "name": "Pose: Hmm... It looks jolly.",
+            "ref": "Sandshrew/Pose: Hmm... It looks jolly."
           }
         ],
         "map_locations": [
@@ -158,6 +182,22 @@
           {
             "name": "Sandslash: Wonderful Picture",
             "ref": "Sandslash/Wonderful Picture"
+          },
+          {
+            "name": "Pose: It stumbled.",
+            "ref": "Sandslash/Pose: It stumbled."
+          },
+          {
+            "name": "Pose: Oh! It's about to pop up.",
+            "ref": "Sandslash/Pose: Oh! It's about to pop up."
+          },
+          {
+            "name": "Pose: It's about to go underground.",
+            "ref": "Sandslash/Pose: It's about to go underground."
+          },
+          {
+            "name": "Pose: Oh! It's happy.",
+            "ref": "Sandslash/Pose: Oh! It's happy."
           }
         ],
         "map_locations": [
@@ -198,6 +238,30 @@
           {
             "name": "Graveler Group Dance",
             "ref": "Graveler/Graveler's Group Dance"
+          },
+          {
+            "name": "Pose: Oh! It's falling.",
+            "ref": "Graveler/Pose: Oh! It's falling."
+          },
+          {
+            "name": "Pose: Oh! It fell.",
+            "ref": "Graveler/Pose: Oh! It fell."
+          },
+          {
+            "name": "Pose: Oh! What a splash!",
+            "ref": "Magikarp/Valley Pose: Oh! What a splash!"
+          },
+          {
+            "name": "Pose: It splashed!",
+            "ref": "Magikarp/Valley Pose: It splashed!"
+          },
+          {
+            "name": "Pose: That's a good splash.",
+            "ref": "Magikarp/Valley Pose: That's a good splash."
+          },
+          {
+            "name": "Pose: Oh! It's splashing.",
+            "ref": "Magikarp/Valley Pose: Oh! It's splashing."
           }
         ],
         "map_locations": [
@@ -218,6 +282,26 @@
           {
             "name": "Wonderful Picture",
             "ref": "Gyarados/Wonderful Picture"
+          },
+          {
+            "name": "Pose: Oh! How powerful!",
+            "ref": "Gyarados/Pose: Oh! How powerful!"
+          },
+          {
+            "name": "Pose: It just showed its face.",
+            "ref": "Gyarados/Pose: It just showed its face."
+          },
+          {
+            "name": "Pose: Umm... looks scary!",
+            "ref": "Gyarados/Pose: Umm... looks scary!"
+          },
+          {
+            "name": "Pose: Oh! It's furious!",
+            "ref": "Gyarados/Pose: Oh! It's furious!"
+          },
+          {
+            "name": "Pose: Oh! It looks astonished!",
+            "ref": "Gyarados/Pose: Oh! It looks astonished!"
           }
         ],
         "map_locations": [
@@ -286,6 +370,22 @@
           {
             "name": "Starmie: Same Pkmn",
             "ref": "Starmie/Same Pkmn"
+          },
+          {
+            "name": "Pose: Oh! What an amazing jump!",
+            "ref": "Dratini/Pose: Oh! What an amazing jump!"
+          },
+          {
+            "name": "Pose: That's a pretty good jump.",
+            "ref": "Dratini/Pose: That's a pretty good jump."
+          },
+          {
+            "name": "Pose: It's jumping.",
+            "ref": "Dratini/Pose: It's jumping."
+          },
+          {
+            "name": "Pose: Oh! It's DRAGONITE!",
+            "ref": "Dragonite/Pose: Oh! It's DRAGONITE!"
           }
         ],
         "map_locations": [
@@ -310,6 +410,26 @@
           {
             "name": "Same Pkmn",
             "ref": "Squirtle/Same Pkmn"
+          },
+          {
+            "name": "Pose: You've thrown a PESTER BALL.",
+            "ref": "Squirtle/Pose: You've thrown a PESTER BALL."
+          },
+          {
+            "name": "Pose: It's about to withdraw.",
+            "ref": "Squirtle/Pose: It's about to withdraw."
+          },
+          {
+            "name": "Pose: I only see its shell.",
+            "ref": "Squirtle/Pose: I only see its shell."
+          },
+          {
+            "name": "Pose: It's about to come out.",
+            "ref": "Squirtle/Pose: It's about to come out."
+          },
+          {
+            "name": "Pose: Oh! It's happy!",
+            "ref": "Squirtle/Pose: Oh! It's happy!"
           }
         ],
         "map_locations": [
@@ -342,6 +462,18 @@
             "visibility_rules": [
               "loc505"
             ]
+          },
+          {
+            "name": "Pose: Oh! It's MANKEY in the sky!",
+            "ref": "Mankey/Pose: Oh! It's MANKEY in the sky!"
+          },
+          {
+            "name": "Pose: Oh! MANKEY got blasted!",
+            "ref": "Mankey/Pose: Oh! MANKEY got blasted!"
+          },
+          {
+            "name": "Pose: You've thrown a PESTER BALL.",
+            "ref": "Mankey/Pose: You've thrown a PESTER BALL."
           }
         ],
         "map_locations": [

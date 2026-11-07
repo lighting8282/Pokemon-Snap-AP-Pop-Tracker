@@ -94,6 +94,18 @@
           {
             "name": "Wonderful Picture",
             "ref": "Mew/Wonderful Picture"
+          },
+          {
+            "name": "Pose: Oh! Well done!",
+            "ref": "Mew/Pose: Oh! Well done!"
+          },
+          {
+            "name": "Pose: Oh! It's spinning.",
+            "ref": "Mew/Pose: Oh! It's spinning."
+          },
+          {
+            "name": "Pose: Why, it's perfect!",
+            "ref": "Mew/Pose: Why, it's perfect!"
           }
         ],
         "map_locations": [

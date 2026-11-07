@@ -15,6 +15,18 @@
           {
             "name": "Wonderful Picture",
             "ref": "Magikarp/River Wonderful Picture"
+          },
+          {
+            "name": "Pose: Oh! What a splash!",
+            "ref": "Magikarp/River Pose: Oh! What a splash!"
+          },
+          {
+            "name": "Pose: It splashed!",
+            "ref": "Magikarp/River Pose: It splashed!"
+          },
+          {
+            "name": "Pose: That's a good splash.",
+            "ref": "Magikarp/River Pose: That's a good splash."
           }
         ],
         "map_locations": [
@@ -39,6 +51,34 @@
           {
             "name": "Same Pkmn",
             "ref": "Poliwag/Same Pkmn"
+          },
+          {
+            "name": "Pose: Nice jump.",
+            "ref": "Poliwag/Pose: Nice jump."
+          },
+          {
+            "name": "Pose: It's jumping.",
+            "ref": "Poliwag/Pose: It's jumping."
+          },
+          {
+            "name": "Pose: Oh! What a jump!",
+            "ref": "Poliwag/Pose: Oh! What a jump!"
+          },
+          {
+            "name": "Pose: It's dizzy.",
+            "ref": "Poliwag/Pose: It's dizzy."
+          },
+          {
+            "name": "Pose: Oh dear, it fainted.",
+            "ref": "Poliwag/Pose: Oh dear, it fainted."
+          },
+          {
+            "name": "Pose: Oh! It's about to wake up.",
+            "ref": "Poliwag/Pose: Oh! It's about to wake up."
+          },
+          {
+            "name": "Pose: Oh! It's about to jump in!",
+            "ref": "Poliwag/Pose: Oh! It's about to jump in!"
           }
         ],
         "map_locations": [
@@ -63,6 +103,14 @@
           {
             "name": "Same Pkmn",
             "ref": "Bulbasaur/River Same Pkmn"
+          },
+          {
+            "name": "Pose: You've thrown a PESTER BALL.",
+            "ref": "Bulbasaur/River Pose: You've thrown a PESTER BALL."
+          },
+          {
+            "name": "Pose: Oh! What a happy face!",
+            "ref": "Bulbasaur/River Pose: Oh! What a happy face!"
           }
         ],
         "map_locations": [
@@ -83,6 +131,18 @@
           {
             "name": "Wonderful Picture",
             "ref": "Vileplume/Wonderful Picture"
+          },
+          {
+            "name": "Pose: Isn't the Pokémon dance fun?",
+            "ref": "Vileplume/Pose: Isn't the Pokémon dance fun?"
+          },
+          {
+            "name": "Pose: Oh! It's rockin'!",
+            "ref": "Vileplume/Pose: Oh! It's rockin'!"
+          },
+          {
+            "name": "Pose: Oh! It's about to wake up!",
+            "ref": "Vileplume/Pose: Oh! It's about to wake up!"
           }
         ],
         "map_locations": [
@@ -159,6 +219,22 @@
           {
             "name": "Slowbro: Wonderful Picture",
             "ref": "Slowbro/Wonderful Picture"
+          },
+          {
+            "name": "Pose: It looks like it's going to fish.",
+            "ref": "Slowpoke/Pose: It looks like it's going to fish."
+          },
+          {
+            "name": "Pose: Gone fishing...",
+            "ref": "Slowpoke/Pose: Gone fishing..."
+          },
+          {
+            "name": "Pose: Oh! It got a bite!",
+            "ref": "Slowpoke/Pose: Oh! It got a bite!"
+          },
+          {
+            "name": "Pose: Oh! It's enjoying the food.",
+            "ref": "Slowbro/Pose: Oh! It's enjoying the food."
           }
         ],
         "map_locations": [
@@ -207,6 +283,30 @@
           {
             "name": "Same Pkmn",
             "ref": "Psyduck/Same Pkmn"
+          },
+          {
+            "name": "Pose: Nice jump.",
+            "ref": "Psyduck/Pose: Nice jump."
+          },
+          {
+            "name": "Pose: It jumped.",
+            "ref": "Psyduck/Pose: It jumped."
+          },
+          {
+            "name": "Pose: Oh! What a jump!",
+            "ref": "Psyduck/Pose: Oh! What a jump!"
+          },
+          {
+            "name": "Pose: It's about to fall.",
+            "ref": "Psyduck/Pose: It's about to fall."
+          },
+          {
+            "name": "Pose: Quite unique!",
+            "ref": "Psyduck/Pose: Quite unique!"
+          },
+          {
+            "name": "Pose: It's submerging.",
+            "ref": "Psyduck/Pose: It's submerging."
           }
         ],
         "map_locations": [
@@ -231,6 +331,18 @@
           {
             "name": "Same Pkmn",
             "ref": "Porygon/Same Pkmn"
+          },
+          {
+            "name": "Pose: Hmm... It looks happy.",
+            "ref": "Porygon/Pose: Hmm... It looks happy."
+          },
+          {
+            "name": "Pose: Hmm... It looks jolly.",
+            "ref": "Porygon/Pose: Hmm... It looks jolly."
+          },
+          {
+            "name": "Pose: Oh! It sure is jolly!",
+            "ref": "Porygon/Pose: Oh! It sure is jolly!"
           }
         ],
         "map_locations": [
@@ -267,6 +379,14 @@
           {
             "name": "Cloyster: Same Pkmn",
             "ref": "Cloyster/Same Pkmn"
+          },
+          {
+            "name": "Pose: Oh! It's been caught!",
+            "ref": "Shellder/Pose: Oh! It's been caught!"
+          },
+          {
+            "name": "Pose: Oh! It's snapping!",
+            "ref": "Shellder/Pose: Oh! It's snapping!"
           }
         ],
         "map_locations": [
@@ -315,6 +435,10 @@
           {
             "name": "Speed Pikachu",
             "ref": "Pikachu/Speed Pikachu"
+          },
+          {
+            "name": "Pose: This pose zaps even me!",
+            "ref": "Pikachu/River Pose: This pose zaps even me!"
           }
         ],
         "map_locations": [

@@ -27,6 +27,42 @@
           "valley, $can_wonderful, pester",
           "valley, $can_wonderful, pester_valley"
         ]
+      },
+      {
+        "name": "Pose: That's a good splash!",
+        "visibility_rules": [
+          "loc144071"
+        ],
+        "access_rules": [
+          "valley, food",
+          "valley, food_valley",
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Pose: It's splashing.",
+        "visibility_rules": [
+          "loc144072"
+        ],
+        "access_rules": [
+          "valley, food",
+          "valley, food_valley",
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Pose: Oh! What a splash!",
+        "visibility_rules": [
+          "loc144073"
+        ],
+        "access_rules": [
+          "valley, food",
+          "valley, food_valley",
+          "valley, pester",
+          "valley, pester_valley"
+        ]
       }
     ]
   }

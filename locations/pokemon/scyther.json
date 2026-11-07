@@ -23,6 +23,16 @@
           "beach, $can_wonderful, pester",
           "beach, $can_wonderful, pester_beach"
         ]
+      },
+      {
+        "name": "Pose: Oh! This is a fighting pose.",
+        "visibility_rules": [
+          "loc147002"
+        ],
+        "access_rules": [
+          "beach, pester",
+          "beach, pester_beach"
+        ]
       }
     ]
   }

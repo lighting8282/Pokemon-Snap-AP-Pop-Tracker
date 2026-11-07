@@ -57,6 +57,42 @@
         "visibility_rules": [
           "loc312"
         ]
+      },
+      {
+        "name": "Pose: JIGGLYPUFF's dance is great!",
+        "visibility_rules": [
+          "loc114024"
+        ],
+        "access_rules": [
+          "cave, food",
+          "cave, food_cave",
+          "cave, pester",
+          "cave, pester_cave"
+        ]
+      },
+      {
+        "name": "Pose: Oh! That's a shame...",
+        "visibility_rules": [
+          "loc114025"
+        ],
+        "access_rules": [
+          "cave, food",
+          "cave, food_cave",
+          "cave, pester",
+          "cave, pester_cave"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's singing cheerfully.",
+        "visibility_rules": [
+          "loc114026"
+        ],
+        "access_rules": [
+          "cave, food",
+          "cave, food_cave",
+          "cave, pester",
+          "cave, pester_cave"
+        ]
       }
     ]
   }

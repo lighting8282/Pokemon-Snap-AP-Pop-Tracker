@@ -43,6 +43,10 @@
           {
             "name": "Same Pkmn",
             "ref": "Rapidash/Same Pkmn"
+          },
+          {
+            "name": "Pose: Oh! It's neighing.",
+            "ref": "Rapidash/Pose: Oh! It's neighing."
           }
         ],
         "map_locations": [
@@ -67,6 +71,14 @@
           {
             "name": "Same Pkmn",
             "ref": "Vulpix/Same Pkmn"
+          },
+          {
+            "name": "Pose: You've thrown a PESTER BALL.",
+            "ref": "Vulpix/Pose: You've thrown a PESTER BALL."
+          },
+          {
+            "name": "Pose: Hmm... It looks happy.",
+            "ref": "Vulpix/Pose: Hmm... It looks happy."
           }
         ],
         "map_locations": [
@@ -123,6 +135,10 @@
           {
             "name": "Wonderful Picture",
             "ref": "Moltres/Wonderful Picture"
+          },
+          {
+            "name": "Pose: Oh! What a wonderful pose!",
+            "ref": "Moltres/Pose: Oh! What a wonderful pose!"
           }
         ],
         "map_locations": [
@@ -147,6 +163,22 @@
           {
             "name": "Same Pkmn",
             "ref": "Charmander/Same Pkmn"
+          },
+          {
+            "name": "Pose: It's unstable...",
+            "ref": "Charmander/Pose: It's unstable..."
+          },
+          {
+            "name": "Pose: Hmm...",
+            "ref": "Charmander/Pose: Hmm..."
+          },
+          {
+            "name": "Pose: You've thrown a PESTER BALL.",
+            "ref": "Charmander/Pose: You've thrown a PESTER BALL."
+          },
+          {
+            "name": "Pose: Oh! It looks happy!",
+            "ref": "Charmander/Pose: Oh! It looks happy!"
           }
         ],
         "map_locations": [
@@ -175,6 +207,26 @@
           {
             "name": "Fighting Magmar",
             "ref": "Magmar/Fighting Magmar"
+          },
+          {
+            "name": "Pose: Interesting! It's dizzy!",
+            "ref": "Magmar/Pose: Interesting! It's dizzy!"
+          },
+          {
+            "name": "Pose: It's unstable...",
+            "ref": "Magmar/Pose: It's unstable..."
+          },
+          {
+            "name": "Pose: This is pretty funny!",
+            "ref": "Magmar/Pose: This is pretty funny!"
+          },
+          {
+            "name": "Pose: Ha, ha, ha! This is so funny!",
+            "ref": "Magmar/Pose: Ha, ha, ha! This is so funny!"
+          },
+          {
+            "name": "Pose: Oh! It looks hot!",
+            "ref": "Magmar/Pose: Oh! It looks hot!"
           }
         ],
         "map_locations": [
@@ -211,6 +263,14 @@
           {
             "name": "Arcanine: Same Pkmn",
             "ref": "Arcanine/Same Pkmn"
+          },
+          {
+            "name": "Pose: Oh! Tons of embers!",
+            "ref": "Growlithe/Pose: Oh! Tons of embers!"
+          },
+          {
+            "name": "Pose: Oh! So many embers!",
+            "ref": "Arcanine/Pose: Oh! So many embers!"
           }
         ],
         "map_locations": [
@@ -239,6 +299,30 @@
           {
             "name": "Charizard: Wonderful Picture",
             "ref": "Charizard/Wonderful Picture"
+          },
+          {
+            "name": "Pose: It's about to fall.",
+            "ref": "Charmeleon/Pose: It's about to fall."
+          },
+          {
+            "name": "Pose: It seems to have fainted.",
+            "ref": "Charmeleon/Pose: It seems to have fainted."
+          },
+          {
+            "name": "Pose: It seems to have woken up.",
+            "ref": "Charmeleon/Pose: It seems to have woken up."
+          },
+          {
+            "name": "Pose: Oh! It's roaring!",
+            "ref": "Charmeleon/Pose: Oh! It's roaring!"
+          },
+          {
+            "name": "Pose: It looks like it's shocked.",
+            "ref": "Charizard/Pose: It looks like it's shocked."
+          },
+          {
+            "name": "Pose: Oh! What a flame!",
+            "ref": "Charizard/Pose: Oh! What a flame!"
           }
         ],
         "map_locations": [
@@ -259,6 +343,10 @@
           {
             "name": "Magikarp: Wonderful Picture",
             "ref": "Magikarp/Volcano Wonderful Picture"
+          },
+          {
+            "name": "Pose: That's a good splash.",
+            "ref": "Magikarp/Volcano Pose: That's a good splash."
           }
         ],
         "map_locations": [

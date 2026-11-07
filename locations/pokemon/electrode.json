@@ -30,6 +30,24 @@
         "visibility_rules": [
           "multiple, loc240"
         ]
+      },
+      {
+        "name": "Pose: It's rolling...",
+        "visibility_rules": [
+          "loc140027"
+        ],
+        "access_rules": [
+          "tunnel"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It exploded!",
+        "visibility_rules": [
+          "loc140028"
+        ],
+        "access_rules": [
+          "tunnel"
+        ]
       }
     ]
   }

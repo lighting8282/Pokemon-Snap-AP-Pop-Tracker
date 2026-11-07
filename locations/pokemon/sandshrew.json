@@ -35,6 +35,38 @@
         "visibility_rules": [
           "multiple, loc211"
         ]
+      },
+      {
+        "name": "Pose: You've thrown a PESTER BALL.",
+        "visibility_rules": [
+          "loc111059"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's about to pop up.",
+        "visibility_rules": [
+          "loc111062"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Pose: Hmm... It looks jolly.",
+        "visibility_rules": [
+          "loc111064"
+        ],
+        "access_rules": [
+          "valley, food, pester",
+          "valley, food, pester_valley",
+          "valley, food_valley, pester",
+          "valley, food_valley, pester_valley"
+        ]
       }
     ]
   }

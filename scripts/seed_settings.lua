@@ -22,8 +22,8 @@ local PLATES = {
     {"exits",         "exits",         "Secret exits"},
     {"photocount",    "photocount",    "Photo count rewards"},
     {"scoretotal",    "scoretotal",    "Report score rewards"},
-    {"rng",           "rng",           "RNG checks"},
-    {"hard",          "hard",          "Hard checks"},
+    {"rng",           "rng",           "RNG photos"},
+    {"hard",          "hard",          "Hard photos"},
     {"scoring",       "scoring",       "Photo scoring"},
     {"fragments",     "fragments",     "Map fragments"},
     {"goal",          "goal",          "Rainbow Cloud goal"},
@@ -32,6 +32,10 @@ local PLATES = {
     {"percourse",     "percourse",     "Per-course item unlocks"},
     {"hardlogic",     "hardlogic",     "Hard logic"},
     {"mewgt",         "mewgt",         "Good Technique Mew required"},
+    -- apworld 0.9.x
+    {"posesanity",    "posesanity",    "Posesanity"},
+    {"rngposes",      "rngposes",      "RNG poses"},
+    {"hardposes",     "hardposes",     "Hard poses"},
 }
 
 for _, p in ipairs(PLATES) do
@@ -92,12 +96,27 @@ function refreshSeedSettings(slot_data)
         {"exits",      "secret_exits",       1, "Secret exits"},
         {"photocount", "report_photo_count", 1, "Photo count rewards"},
         {"scoretotal", "report_score_total", 1, "Report score rewards"},
-        {"rng",        "rng_checks",         0, "RNG checks"},
-        {"hard",       "hard_checks",        0, "Hard checks"},
+        -- 0.9.1 split rng_checks / hard_checks into photos and poses; an
+        -- older world sends the old name, which meant the photos
+        {"rng",        {"include_rng_photos", "rng_checks"},   0, "RNG photos"},
+        {"hard",       {"include_hard_photos", "hard_checks"}, 0, "Hard photos"},
+        {"rngposes",   "include_rng_poses",                    0, "RNG poses"},
+        {"hardposes",  "include_hard_poses",                   0, "Hard poses"},
     }) do
-        local on = opt(t[2], t[3]) ~= 0
+        local v = t[3]
+        for _, name in ipairs(type(t[2]) == "table" and t[2] or {t[2]}) do
+            if d[name] ~= nil then v = d[name] break end
+        end
+        local on = v ~= 0
         set(t[1], on, t[4] .. ": " .. onoff(on))
     end
+
+    -- posesanity is a count: how many of the 141 regular poses are checks
+    local poses = opt("posesanity", 0)
+    set("posesanity", poses > 0,
+        poses > 0 and string.format("Posesanity: %d pose checks", poses)
+                   or "Posesanity: off",
+        tostring(poses))
 
     local scoring = opt("photo_scoring", 0)
     set("scoring", true,

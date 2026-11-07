@@ -20,7 +20,9 @@
         ],
         "access_rules": [
           "river, $can_wonderful, $hard_logic_on",
-          "river, $can_wonderful, dash"
+          "river, $can_wonderful, dash",
+          "river, $can_wonderful, food",
+          "river, $can_wonderful, food_river"
         ]
       },
       {
@@ -31,6 +33,26 @@
         ],
         "visibility_rules": [
           "multiple, loc237"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's been caught!",
+        "visibility_rules": [
+          "loc137087"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's snapping!",
+        "visibility_rules": [
+          "loc137088"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river"
         ]
       }
     ]

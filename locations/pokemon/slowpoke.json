@@ -21,6 +21,36 @@
         "access_rules": [
           "river, $can_wonderful"
         ]
+      },
+      {
+        "name": "Pose: It looks like it's going to fish.",
+        "visibility_rules": [
+          "loc130089"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river"
+        ]
+      },
+      {
+        "name": "Pose: Gone fishing...",
+        "visibility_rules": [
+          "loc130156"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It got a bite!",
+        "visibility_rules": [
+          "loc130157"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river"
+        ]
       }
     ]
   }

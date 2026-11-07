@@ -24,7 +24,7 @@ PACK = Path(__file__).resolve().parent.parent
 # The newest apworld this pack is built against. Ids the pack maps that are
 # missing from an OLDER world are expected; missing from this one they are a
 # real stale mapping. Bump it when the pack is updated for a new apworld.
-TARGET_APWORLD = "0.8.0"
+TARGET_APWORLD = "0.10.0"
 
 
 def _vtuple(v):
@@ -364,10 +364,19 @@ def _scoring_tokens(scoring, category):
     return {frozenset({"wdflscore" if wonderful else "multscore"})}
 
 
+# AP location name -> its world rule, for expanding CanReachLocation
+RULE_BY_NAME = {}
+
+
 def world_dnf(rule, cfg):
     """Reduce a world rule to requirement sets under one option configuration."""
     scoring, film, rng, hard = cfg
     k = type(rule).__name__
+    if k == "CanReachLocation":
+        # posesanity's "you can reach Zapdos": that location's own rule. Its
+        # course is region access, which this comparison leaves out anyway.
+        target = RULE_BY_NAME.get(rule.args[0])
+        return None if target is None else world_dnf(target, cfg)
     if k == "True_":
         return {FREE}
     if k == "False_":
@@ -523,6 +532,13 @@ def sweep(R, sections, name_to_section):
         src = ""
     # per_course_items arrived in 0.8.0; before it those item ids never exist
     PER_COURSE_EXISTS = "course_item" in src
+    RULE_BY_NAME.clear()
+    for name, categories in R.LOCATION_RULES.items():
+        for category, rule in categories.items():
+            try:
+                RULE_BY_NAME[R.location_name(name, category)] = rule
+            except Exception:
+                pass
     results = []
     for label, cfg in applicable_option_sets(R):
         diffs, compared, skipped = [], 0, 0
@@ -583,6 +599,14 @@ def main(apworld):
     # never contains them. Against the version the pack targets, a mapped id
     # the world lacks really is stale, and stays a failure.
     stale = sorted(set(lm) - set(locs))
+    # Bonus twins moved from id + 1000 to id + 1,000,000 in 0.9.0. The pack
+    # keeps the old ones so games generated before that still track; a newer
+    # world simply never sends them, which is not a stale mapping.
+    if _vtuple(version) >= (0, 9, 0):
+        legacy = [i for i in stale if 1000 <= i < 100_000 and i - 1000 in locs]
+        if legacy:
+            print(f"[2] note: {len(legacy)} pre-0.9.0 bonus id(s) kept for older games\n")
+        stale = [i for i in stale if i not in legacy]
     if stale:
         older = _vtuple(version) < _vtuple(TARGET_APWORLD)
         if older:

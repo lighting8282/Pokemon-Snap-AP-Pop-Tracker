@@ -33,6 +33,26 @@
         "visibility_rules": [
           "multiple, loc218"
         ]
+      },
+      {
+        "name": "Pose: It's trying to go underground.",
+        "visibility_rules": [
+          "loc118037"
+        ],
+        "access_rules": [
+          "tunnel, $hard_logic_on, $has_film|4",
+          "tunnel, $has_film|5"
+        ]
+      },
+      {
+        "name": "Pose: It's about to pop up.",
+        "visibility_rules": [
+          "loc118158"
+        ],
+        "access_rules": [
+          "tunnel, $hard_logic_on, $has_film|4",
+          "tunnel, $has_film|5"
+        ]
       }
     ]
   }

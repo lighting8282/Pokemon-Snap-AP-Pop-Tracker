@@ -27,6 +27,18 @@
           "cave, $can_wonderful, $has_film|4, pester",
           "cave, $can_wonderful, $has_film|4, pester_cave"
         ]
+      },
+      {
+        "name": "Pose: It looks happy.",
+        "visibility_rules": [
+          "loc136015"
+        ],
+        "access_rules": [
+          "cave, $hard_logic_on, $has_film|2, pester",
+          "cave, $hard_logic_on, $has_film|2, pester_cave",
+          "cave, $has_film|4, pester",
+          "cave, $has_film|4, pester_cave"
+        ]
       }
     ]
   }

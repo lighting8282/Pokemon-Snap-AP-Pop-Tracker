@@ -39,6 +39,15 @@
         "visibility_rules": [
           "loc307"
         ]
+      },
+      {
+        "name": "Pose: Oh! It seems to be screeching.",
+        "visibility_rules": [
+          "loc109001"
+        ],
+        "access_rules": [
+          "beach"
+        ]
       }
     ]
   }

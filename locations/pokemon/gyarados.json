@@ -23,6 +23,56 @@
           "valley, $can_wonderful, pester",
           "valley, $can_wonderful, pester_valley"
         ]
+      },
+      {
+        "name": "Pose: Oh! How powerful!",
+        "visibility_rules": [
+          "loc152019"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Pose: It just showed its face.",
+        "visibility_rules": [
+          "loc152020"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Pose: Umm... looks scary!",
+        "visibility_rules": [
+          "loc152021"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's furious!",
+        "visibility_rules": [
+          "loc152022"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It looks astonished!",
+        "visibility_rules": [
+          "loc152023"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
       }
     ]
   }

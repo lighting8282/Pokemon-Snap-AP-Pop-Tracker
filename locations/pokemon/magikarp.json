@@ -154,6 +154,136 @@
         "visibility_rules": [
           "multiple, loc269"
         ]
+      },
+      {
+        "name": "Beach Pose: That's a good splash.",
+        "visibility_rules": [
+          "loc151050"
+        ],
+        "access_rules": [
+          "beach, food",
+          "beach, food_beach",
+          "beach, pester",
+          "beach, pester_beach"
+        ]
+      },
+      {
+        "name": "Tunnel Pose: It splashed!",
+        "visibility_rules": [
+          "loc165049"
+        ],
+        "access_rules": [
+          "tunnel"
+        ]
+      },
+      {
+        "name": "Volcano Pose: That's a good splash.",
+        "visibility_rules": [
+          "loc166050"
+        ],
+        "access_rules": [
+          "volcano, food",
+          "volcano, food_volcano",
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
+      },
+      {
+        "name": "River Pose: Oh! What a splash!",
+        "visibility_rules": [
+          "loc167048"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "River Pose: It splashed!",
+        "visibility_rules": [
+          "loc167049"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "River Pose: That's a good splash.",
+        "visibility_rules": [
+          "loc167050"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "Cave Pose: Oh! What a splash!",
+        "visibility_rules": [
+          "loc168048"
+        ],
+        "access_rules": [
+          "cave, food",
+          "cave, food_cave",
+          "cave, pester",
+          "cave, pester_cave"
+        ]
+      },
+      {
+        "name": "Valley Pose: Oh! What a splash!",
+        "visibility_rules": [
+          "loc169048"
+        ],
+        "access_rules": [
+          "valley, dash",
+          "valley, food",
+          "valley, food_valley",
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Valley Pose: It splashed!",
+        "visibility_rules": [
+          "loc169049"
+        ],
+        "access_rules": [
+          "valley, dash",
+          "valley, food",
+          "valley, food_valley",
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Valley Pose: That's a good splash.",
+        "visibility_rules": [
+          "loc169050"
+        ],
+        "access_rules": [
+          "valley, dash",
+          "valley, food",
+          "valley, food_valley",
+          "valley, pester",
+          "valley, pester_valley"
+        ]
+      },
+      {
+        "name": "Valley Pose: Oh! It's splashing.",
+        "visibility_rules": [
+          "loc169051"
+        ],
+        "access_rules": [
+          "valley, pester",
+          "valley, pester_valley"
+        ]
       }
     ]
   }

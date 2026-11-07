@@ -21,6 +21,54 @@
         "access_rules": [
           "beach, $can_wonderful"
         ]
+      },
+      {
+        "name": "Pose: Oh! You hit 'em!",
+        "visibility_rules": [
+          "loc134123"
+        ],
+        "access_rules": [
+          "beach, $hard_logic_on, food",
+          "beach, $hard_logic_on, food_beach",
+          "beach, $hard_logic_on, pester",
+          "beach, $hard_logic_on, pester_beach",
+          "beach, dash, food",
+          "beach, dash, food_beach",
+          "beach, dash, pester",
+          "beach, dash, pester_beach"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It just fainted.",
+        "visibility_rules": [
+          "loc134124"
+        ],
+        "access_rules": [
+          "beach, $hard_logic_on, food",
+          "beach, $hard_logic_on, food_beach",
+          "beach, $hard_logic_on, pester",
+          "beach, $hard_logic_on, pester_beach",
+          "beach, dash, food",
+          "beach, dash, food_beach",
+          "beach, dash, pester",
+          "beach, dash, pester_beach"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It's about to wake up.",
+        "visibility_rules": [
+          "loc134125"
+        ],
+        "access_rules": [
+          "beach, $hard_logic_on, food",
+          "beach, $hard_logic_on, food_beach",
+          "beach, $hard_logic_on, pester",
+          "beach, $hard_logic_on, pester_beach",
+          "beach, dash, food",
+          "beach, dash, food_beach",
+          "beach, dash, pester",
+          "beach, dash, pester_beach"
+        ]
       }
     ]
   }

@@ -21,6 +21,24 @@
         "access_rules": [
           "tunnel, $can_wonderful"
         ]
+      },
+      {
+        "name": "Pose: It's trying to go underground.",
+        "visibility_rules": [
+          "loc117035"
+        ],
+        "access_rules": [
+          "tunnel"
+        ]
+      },
+      {
+        "name": "Pose: It's about to pop up.",
+        "visibility_rules": [
+          "loc117160"
+        ],
+        "access_rules": [
+          "tunnel"
+        ]
       }
     ]
   }

@@ -33,6 +33,33 @@
         "visibility_rules": [
           "multiple, loc261"
         ]
+      },
+      {
+        "name": "Pose: Oh! What an amazing jump!",
+        "visibility_rules": [
+          "loc161038"
+        ],
+        "access_rules": [
+          "valley"
+        ]
+      },
+      {
+        "name": "Pose: That's a pretty good jump.",
+        "visibility_rules": [
+          "loc161039"
+        ],
+        "access_rules": [
+          "valley"
+        ]
+      },
+      {
+        "name": "Pose: It's jumping.",
+        "visibility_rules": [
+          "loc161040"
+        ],
+        "access_rules": [
+          "valley"
+        ]
       }
     ]
   }

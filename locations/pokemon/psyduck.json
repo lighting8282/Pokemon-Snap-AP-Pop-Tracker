@@ -33,6 +33,75 @@
         "visibility_rules": [
           "multiple, loc220"
         ]
+      },
+      {
+        "name": "Pose: Nice jump.",
+        "visibility_rules": [
+          "loc120090"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "Pose: It jumped.",
+        "visibility_rules": [
+          "loc120091"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "Pose: Oh! What a jump!",
+        "visibility_rules": [
+          "loc120092"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "Pose: It's about to fall.",
+        "visibility_rules": [
+          "loc120093"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "Pose: Quite unique!",
+        "visibility_rules": [
+          "loc120094"
+        ],
+        "access_rules": [
+          "river, food",
+          "river, food_river",
+          "river, pester",
+          "river, pester_river"
+        ]
+      },
+      {
+        "name": "Pose: It's submerging.",
+        "visibility_rules": [
+          "loc120095"
+        ],
+        "access_rules": [
+          "river, dash"
+        ]
       }
     ]
   }

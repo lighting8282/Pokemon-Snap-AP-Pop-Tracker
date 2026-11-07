@@ -33,6 +33,58 @@
         "visibility_rules": [
           "multiple, loc249"
         ]
+      },
+      {
+        "name": "Pose: It's a blast!",
+        "visibility_rules": [
+          "loc149029"
+        ],
+        "access_rules": [
+          "tunnel"
+        ]
+      },
+      {
+        "name": "Pose: Oh dear, it fainted.",
+        "visibility_rules": [
+          "loc149030"
+        ],
+        "access_rules": [
+          "tunnel"
+        ]
+      },
+      {
+        "name": "Pose: You've thrown a PESTER BALL.",
+        "visibility_rules": [
+          "loc149031"
+        ],
+        "access_rules": [
+          "tunnel, pester",
+          "tunnel, pester_tunnel"
+        ]
+      },
+      {
+        "name": "Pose: It must be angry.",
+        "visibility_rules": [
+          "loc149032"
+        ],
+        "access_rules": [
+          "tunnel, food",
+          "tunnel, food_tunnel",
+          "tunnel, pester",
+          "tunnel, pester_tunnel"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It looks yummy!",
+        "visibility_rules": [
+          "loc149154"
+        ],
+        "access_rules": [
+          "tunnel, flute, food",
+          "tunnel, flute, food_tunnel",
+          "tunnel, flute_tunnel, food",
+          "tunnel, flute_tunnel, food_tunnel"
+        ]
       }
     ]
   }

@@ -50,10 +50,23 @@ AUTOTRACK_BUSY = false
 --
 -- Each mapped location has a hidden loc<id> flag that its section's visibility
 -- rule requires. Working per location rather than per category matters: options
--- like rng_checks and hard_checks drop eight individual Multiple photos while
+-- like include_rng_photos and include_hard_photos drop individual photos while
 -- leaving the other twenty-seven in place, which a category-level flag cannot
 -- express. This also covers photo_bonuses, special_poses, pokemon_signs and
--- secret_exits, and any future option, without naming any of them.
+-- secret_exits, and posesanity's random pick of poses, without naming any of
+-- them.
+--
+-- A check's id is its base id, or a bonus twin of it: id + 1,000,000 since
+-- apworld 0.9.0, id + 1000 before that. Pose ids are 100000 and up.
+function is_base_location(id)
+    return id < 1000 or (id >= 100000 and id < 1000000)
+end
+
+function base_of(id)
+    if id >= 1000000 then return id - 1000000 end
+    if id >= 1000 and id < 100000 then return id - 1000 end
+    return id
+end
 -- The Rainbow Cloud requirement is per seed since apworld 0.6.0: goal_type
 -- picks between sign pictures and Pokemon pictures, and signs_required /
 -- pokemon_required set how many. slot_data now carries all three, so Mew's
@@ -108,7 +121,9 @@ function readOptionsFromSlotData(slot_data)
     FILM_STEP     = slot_data["film_upgrade_amount"] or 5
     FILM_CAP      = slot_data["maximum_film"] or 60
     MAP_FRAGMENTS = slot_data["map_fragments"] or 1
-    RNG_CHECKS    = slot_data["rng_checks"] or 0
+    -- 0.9.1 renamed rng_checks to include_rng_photos (and added a separate
+    -- one for poses); the logic option is the photo one
+    RNG_CHECKS    = slot_data["include_rng_photos"] or slot_data["rng_checks"] or 0
     -- apworld 0.8.0
     HARD_LOGIC    = slot_data["hard_logic"] or 0
     PER_COURSE    = slot_data["per_course_items"] or 0
@@ -211,13 +226,13 @@ function applySeedContents()
     for _, list in ipairs({checked or {}, missing or {}}) do
         for _, id in ipairs(list) do
             present[id] = true
-            if id > 1000 then present[id - 1000] = true end   -- a bonus twin proves its base
+            present[base_of(id)] = true          -- a bonus twin proves its base
         end
     end
 
     local shown, hidden = 0, 0
     for id, _ in pairs(LOCATION_MAPPING) do
-        if id < 1000 then
+        if is_base_location(id) then
             local obj = Tracker:FindObjectForCode("loc" .. id)
             if obj then
                 local has = present[id] and true or false

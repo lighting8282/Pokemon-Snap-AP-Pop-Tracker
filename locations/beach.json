@@ -39,6 +39,18 @@
           {
             "name": "Wonderful Picture",
             "ref": "Doduo/Wonderful Picture"
+          },
+          {
+            "name": "Pose: Oh! You hit 'em!",
+            "ref": "Doduo/Pose: Oh! You hit 'em!"
+          },
+          {
+            "name": "Pose: Oh! It just fainted.",
+            "ref": "Doduo/Pose: Oh! It just fainted."
+          },
+          {
+            "name": "Pose: Oh! It's about to wake up.",
+            "ref": "Doduo/Pose: Oh! It's about to wake up."
           }
         ],
         "map_locations": [
@@ -150,6 +162,22 @@
           {
             "name": "Wonderful Picture",
             "ref": "Snorlax/Wonderful Picture"
+          },
+          {
+            "name": "Pose: That's SNORLAX for sure!",
+            "ref": "Snorlax/Pose: That's SNORLAX for sure!"
+          },
+          {
+            "name": "Pose: Oh! What a jolly dance!",
+            "ref": "Snorlax/Pose: Oh! What a jolly dance!"
+          },
+          {
+            "name": "Pose: It's about to get up.",
+            "ref": "Snorlax/Pose: It's about to get up."
+          },
+          {
+            "name": "Pose: It's scratching its tummy.",
+            "ref": "Snorlax/Pose: It's scratching its tummy."
           }
         ],
         "map_locations": [
@@ -230,6 +258,18 @@
           {
             "name": "Pikachu on a Stump",
             "ref": "Pikachu/Pikachu on a Stump"
+          },
+          {
+            "name": "Pose: This pose zaps even me!",
+            "ref": "Pikachu/Beach Pose: This pose zaps even me!"
+          },
+          {
+            "name": "Pose: Oh! This is very lively!",
+            "ref": "Pikachu/Beach Pose: Oh! This is very lively!"
+          },
+          {
+            "name": "Pose: Oh! This is a fighting pose.",
+            "ref": "Scyther/Pose: Oh! This is a fighting pose."
           }
         ],
         "map_locations": [
@@ -278,6 +318,18 @@
           {
             "name": "Eevee: Wonderful Picture",
             "ref": "Eevee/Wonderful Picture"
+          },
+          {
+            "name": "Pose: Oh! It looks jolly.",
+            "ref": "Chansey/Pose: Oh! It looks jolly."
+          },
+          {
+            "name": "Pose: What a funny pose.",
+            "ref": "Chansey/Pose: What a funny pose."
+          },
+          {
+            "name": "Pose: Oh! It's happy.",
+            "ref": "Eevee/Pose: Oh! It's happy."
           }
         ],
         "map_locations": [
@@ -302,6 +354,10 @@
           {
             "name": "Same Pkmn",
             "ref": "Lapras/Same Pkmn"
+          },
+          {
+            "name": "Pose: This is a relaxed pose.",
+            "ref": "Lapras/Pose: This is a relaxed pose."
           }
         ],
         "map_locations": [
@@ -322,6 +378,14 @@
           {
             "name": "Wonderful Picture",
             "ref": "Kangaskhan/Wonderful Picture"
+          },
+          {
+            "name": "Pose: This angry shot is pretty cool.",
+            "ref": "Kangaskhan/Pose: This angry shot is pretty cool."
+          },
+          {
+            "name": "Pose: Oh! What an interesting pose!",
+            "ref": "Kangaskhan/Pose: Oh! What an interesting pose!"
           }
         ],
         "map_locations": [
@@ -358,6 +422,26 @@
           {
             "name": "Pidgey: Gust-Using Pidgey",
             "ref": "Pidgey/Gust-Using Pidgey"
+          },
+          {
+            "name": "Pose: Oh! It seems to be screeching.",
+            "ref": "Pidgey/Pose: Oh! It seems to be screeching."
+          },
+          {
+            "name": "Pose: It's pretty funny.",
+            "ref": "Meowth/Pose: It's pretty funny."
+          },
+          {
+            "name": "Pose: It seems to have fainted.",
+            "ref": "Meowth/Pose: It seems to have fainted."
+          },
+          {
+            "name": "Pose: You've thrown a PESTER BALL.",
+            "ref": "Meowth/Pose: You've thrown a PESTER BALL."
+          },
+          {
+            "name": "Pose: Oh! A dancing MEOWTH!",
+            "ref": "Meowth/Pose: Oh! A dancing MEOWTH!"
           }
         ],
         "map_locations": [
@@ -378,6 +462,10 @@
           {
             "name": "Wonderful Picture",
             "ref": "Magikarp/Beach Wonderful Picture"
+          },
+          {
+            "name": "Pose: That's a good splash.",
+            "ref": "Magikarp/Beach Pose: That's a good splash."
           }
         ],
         "map_locations": [

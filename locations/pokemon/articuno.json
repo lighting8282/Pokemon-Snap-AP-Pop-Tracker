@@ -23,6 +23,16 @@
           "cave, $can_wonderful, flute",
           "cave, $can_wonderful, flute_cave"
         ]
+      },
+      {
+        "name": "Pose: Oh! How beautiful!",
+        "visibility_rules": [
+          "loc158018"
+        ],
+        "access_rules": [
+          "cave, flute",
+          "cave, flute_cave"
+        ]
       }
     ]
   }

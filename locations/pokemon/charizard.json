@@ -27,6 +27,28 @@
           "volcano, $can_wonderful, pester",
           "volcano, $can_wonderful, pester_volcano"
         ]
+      },
+      {
+        "name": "Pose: It looks like it's shocked.",
+        "visibility_rules": [
+          "loc104101"
+        ],
+        "access_rules": [
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
+      },
+      {
+        "name": "Pose: Oh! What a flame!",
+        "visibility_rules": [
+          "loc104102"
+        ],
+        "access_rules": [
+          "volcano, food",
+          "volcano, food_volcano",
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
       }
     ]
   }

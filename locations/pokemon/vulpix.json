@@ -33,6 +33,26 @@
         "visibility_rules": [
           "multiple, loc213"
         ]
+      },
+      {
+        "name": "Pose: You've thrown a PESTER BALL.",
+        "visibility_rules": [
+          "loc113116"
+        ],
+        "access_rules": [
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
+      },
+      {
+        "name": "Pose: Hmm... It looks happy.",
+        "visibility_rules": [
+          "loc113119"
+        ],
+        "access_rules": [
+          "volcano, food",
+          "volcano, food_volcano"
+        ]
       }
     ]
   }

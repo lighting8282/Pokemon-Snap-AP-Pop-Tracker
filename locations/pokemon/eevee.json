@@ -21,6 +21,16 @@
         "access_rules": [
           "beach, $can_wonderful"
         ]
+      },
+      {
+        "name": "Pose: Oh! It's happy.",
+        "visibility_rules": [
+          "loc155003"
+        ],
+        "access_rules": [
+          "beach, food",
+          "beach, food_beach"
+        ]
       }
     ]
   }

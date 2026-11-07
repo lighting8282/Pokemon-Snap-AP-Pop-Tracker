@@ -31,6 +31,16 @@
         "visibility_rules": [
           "multiple, loc248"
         ]
+      },
+      {
+        "name": "Pose: Oh! What a jolly dance!",
+        "visibility_rules": [
+          "loc148017"
+        ],
+        "access_rules": [
+          "cave, flute",
+          "cave, flute_cave"
+        ]
       }
     ]
   }

@@ -6,7 +6,11 @@ An auto-tracking [PopTracker](https://github.com/black-sliver/PopTracker) pack f
 ## Requirements
 
 - **PopTracker 0.28.0** or newer
-- **Pokemon Snap apworld 0.4.0 or newer** (0.8.0 recommended)
+- **Pokemon Snap apworld 0.4.0 or newer** (0.10.0 recommended)
+
+**If you play apworld 0.9.0 or newer, use pack 1.8.0.0 or newer.** 0.9.0 added posesanity and
+moved every bonus check to a new id, so older packs show no pose checks and never tick off a
+bonus check.
 
 **If you play apworld 0.8.0, use pack 1.7.0.0 or newer.** 0.8.0's default settings name
 pictures and the Apple differently, and older packs miss them: the Pokemon picture counter
@@ -18,7 +22,8 @@ Anything older used different location ids and will clear the wrong checks.
 0.5.0 and newer may also contain "bonus" locations - duplicates of random checks, created to
 hold surplus items. Which ones exist varies per seed and a seed may have none. Both the base
 check and its bonus twin map to the same entry here, which completes on whichever arrives
-first.
+first. The twin's id changed in 0.9.0 (id + 1,000,000, was id + 1000); both are mapped, so a
+game generated on an older apworld still tracks.
 
 ## Install
 
@@ -33,9 +38,21 @@ AP button.
 
 - **Every location** — photos, Good Technique photos, Multiple photos, the 11 special
   poses, the 6 Pokemon Signs, the 3 secret exits, the report score and photo count checks
-  added in 0.6.0, plus the bonus duplicates a seed may generate
+  added in 0.6.0, the 141 regular poses added in 0.9.0, plus the bonus duplicates a seed
+  may generate
+- **Posesanity** — 0.9.0's `posesanity` turns some of the poses Oak comments on into
+  checks: "It's pretty funny.", "Oh! It got a bite!" and so on, apart from the special poses.
+  A seed picks them at random, and only the ones it picked are shown, each under its Pokemon
+  as `Pose: <Oak's line>` (`Valley Pose: ...` for a Pokemon on several courses) and on that
+  Pokemon's pin on the course map. Many poses need you to be able to photograph another
+  Pokemon first - Zapdos's pose is in logic once Zapdos is - and that is followed too. The
+  `include_rng_poses` / `include_hard_poses` options decide which poses can be picked
+- **A Poses tab** — next to the Pokedex, every pose on one board: a row per course and a
+  pin on each Pokemon that has poses in your seed, so you can see what is left at a glance
+  without hunting through the course maps
 - **Only the checks your seed contains** — anything your yaml excluded is hidden, worked out
-  from the seed's own location list rather than the options
+  from the seed's own location list rather than the options. Pose checks stay hidden until you
+  connect, since a seed has none unless posesanity is on
 - **The goal** — 0.6.0 makes the Rainbow Cloud requirement configurable (sign pictures or
   Pokemon pictures, and how many), read from slot data. Every picture you are sent counts,
   as it does in Archipelago — including the duplicates `extra_sign_pictures` and
@@ -80,7 +97,8 @@ AP button.
   Before 1.6.0.2 all six showed as reachable from the moment the tracker opened
 - **What your seed rolled** — the Settings popup has a **Your Seed** panel listing every
   yaml option, lit when enabled and dimmed when not, with the value alongside for the ones
-  that are not on/off (scoring mode, fragments per course, goal requirement, starting film)
+  that are not on/off (scoring mode, fragments per course, goal requirement, starting film,
+  number of pose checks)
   and the setting spelled out in each tooltip
 - **Your starting course** — the randomly precollected course is detected on connect and its
   map tab is opened automatically
@@ -116,12 +134,22 @@ table and composing them with operators.
 `tools/test_options.py` shows what the tracker would display for a given set of yaml
 options, without generating a seed.
 
+`tools/make_poses.py` adds posesanity's pose checks - a section under each Pokemon, a ref on
+its course pin and a hidden seed flag - and rebuilds `location_mapping.lua`, `sectionID.lua`
+and `dex_mapping.lua` from the world's location table, keeping every existing section. Run it
+first when an apworld adds or moves locations.
+
+`tools/make_poses_map.py` then draws the Poses tab's board (`images/PosesMap.png`) and
+writes its pins (`locations/poses.json`) from the pose refs on the course maps.
+
 `tools/make_logic.py` **writes the access rules** for every photo, pose, sign and secret
 exit, compiled from the apworld's own rule table. Since 0.8.0 threaded hard logic and
 per-course tools through almost every rule, the rules are generated rather than edited by
 hand — so when a new apworld changes logic, run this and then `check_apworld.py`:
 
 ```
+python tools/make_poses.py "path/to/pokemon_snap.apworld"
+python tools/make_poses_map.py
 python tools/make_logic.py "path/to/pokemon_snap.apworld"
 python tools/check_apworld.py "path/to/pokemon_snap.apworld"
 ```
@@ -166,6 +194,8 @@ original pack, which differs slightly from the names Archipelago uses:
 | `Magikarp / Valley Picture` | `Magikarp (Valley)` |
 | `Pikachu / Surfing Pikachu` | `Surfing Pikachu` |
 | `Tunnel / Secret Exit / Tunnel` | `Tunnel: Secret Exit` |
+| `Meowth / Pose: It's pretty funny.` | `Meowth Pose: "It's pretty funny."` |
+| `Magikarp / Valley Pose: It splashed!` | `Magikarp (Valley) Pose: "It splashed!"` |
 
 This only matters if you are typing location names by hand, for example
 `/send_location <slot> Charmeleon: Good Technique`. Autotracking is keyed on ids, so the
@@ -183,8 +213,9 @@ the older `Manual_PokemonSnap_AliRobotnik` implementation, and has been ported t
   since 0.7.0 photo scoring 1500-1502 and map fragments 2100-2105, and since 0.8.0 the
   per-course tools 1010-1072 and 1110-1170, `Apples` 1101, `Press L to Stop` 1005, and the
   generic `Pokemon Picture` 5500 and `Sign Picture` 6500)
-- `location_mapping.lua` and `sectionID.lua` rebuilt against the apworld's 414 location ids,
-  and kept as exact inverses of each other
+- `location_mapping.lua` and `sectionID.lua` generated from the apworld's 348 checks (207
+  photos, signs, exits and rewards plus 141 poses) and both bonus-twin ranges, and kept as
+  exact inverses of each other
 - access rules corrected against the apworld's `rules.py`
 - locations that only existed in the Manual implementation were removed
 - `archipelago.lua` no longer reads Manual-era slot data (the native world sends none) and no

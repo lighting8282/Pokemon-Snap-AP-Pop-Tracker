@@ -33,6 +33,50 @@
         "visibility_rules": [
           "multiple, loc202"
         ]
+      },
+      {
+        "name": "Pose: It's unstable...",
+        "visibility_rules": [
+          "loc102103"
+        ],
+        "access_rules": [
+          "volcano, food",
+          "volcano, food_volcano",
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
+      },
+      {
+        "name": "Pose: Hmm...",
+        "visibility_rules": [
+          "loc102104"
+        ],
+        "access_rules": [
+          "volcano, food",
+          "volcano, food_volcano",
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
+      },
+      {
+        "name": "Pose: You've thrown a PESTER BALL.",
+        "visibility_rules": [
+          "loc102105"
+        ],
+        "access_rules": [
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It looks happy!",
+        "visibility_rules": [
+          "loc102106"
+        ],
+        "access_rules": [
+          "volcano, food",
+          "volcano, food_volcano"
+        ]
       }
     ]
   }

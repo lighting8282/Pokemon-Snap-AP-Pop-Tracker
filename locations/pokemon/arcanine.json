@@ -37,6 +37,16 @@
         "visibility_rules": [
           "multiple, loc223"
         ]
+      },
+      {
+        "name": "Pose: Oh! So many embers!",
+        "visibility_rules": [
+          "loc123006"
+        ],
+        "access_rules": [
+          "volcano, pester",
+          "volcano, pester_volcano"
+        ]
       }
     ]
   }

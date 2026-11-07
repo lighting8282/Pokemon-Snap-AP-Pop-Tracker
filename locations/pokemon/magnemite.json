@@ -33,6 +33,16 @@
         "visibility_rules": [
           "multiple, loc232"
         ]
+      },
+      {
+        "name": "Pose: It sure is happy!",
+        "visibility_rules": [
+          "loc132034"
+        ],
+        "access_rules": [
+          "tunnel, food",
+          "tunnel, food_tunnel"
+        ]
       }
     ]
   }

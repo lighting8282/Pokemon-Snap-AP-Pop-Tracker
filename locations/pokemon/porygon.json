@@ -37,6 +37,42 @@
         "visibility_rules": [
           "multiple, loc256"
         ]
+      },
+      {
+        "name": "Pose: Hmm... It looks happy.",
+        "visibility_rules": [
+          "loc156081"
+        ],
+        "access_rules": [
+          "river, food, pester",
+          "river, food, pester_river",
+          "river, food_river, pester",
+          "river, food_river, pester_river"
+        ]
+      },
+      {
+        "name": "Pose: Hmm... It looks jolly.",
+        "visibility_rules": [
+          "loc156082"
+        ],
+        "access_rules": [
+          "river, food, pester",
+          "river, food, pester_river",
+          "river, food_river, pester",
+          "river, food_river, pester_river"
+        ]
+      },
+      {
+        "name": "Pose: Oh! It sure is jolly!",
+        "visibility_rules": [
+          "loc156083"
+        ],
+        "access_rules": [
+          "river, food, pester",
+          "river, food, pester_river",
+          "river, food_river, pester",
+          "river, food_river, pester_river"
+        ]
       }
     ]
   }

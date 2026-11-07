@@ -27,6 +27,18 @@
           "cave, $can_wonderful, pester",
           "cave, $can_wonderful, pester_cave"
         ]
+      },
+      {
+        "name": "Pose: Oh! It's about to leap out!",
+        "visibility_rules": [
+          "loc126010"
+        ],
+        "access_rules": [
+          "cave, food",
+          "cave, food_cave",
+          "cave, pester",
+          "cave, pester_cave"
+        ]
       }
     ]
   }
