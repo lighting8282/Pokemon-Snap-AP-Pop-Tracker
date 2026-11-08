@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "package_version": "1.8.0.1",
+      "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.8.0.1/SnapTracker-1.8.0.1.zip",
+      "sha256": "a7f0d22226140dc5f7b50f579ad0b1c521ab2f956da0f5086ae0d775282cf641",
+      "changelog": [
+        "Per-course Apple, Pester Ball and PokeFlute unlocks are now shown: each course nameplate has its three tool icons beside it, lit once that course's copy arrives.",
+        "The icons can be clicked to track by hand, and the counts on the main tool icons follow."
+      ]
+    },
+    {
       "package_version": "1.8.0.0",
       "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.8.0.0/SnapTracker-1.8.0.0.zip",
       "sha256": "91991c00dd3408c6f1847e9c09719a674b98ea51a8cf338803d6d9c58f869883",
