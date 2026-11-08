@@ -591,107 +591,128 @@
   {
     "name": "Apple (Beach)",
     "type": "toggle",
-    "codes": "food_beach"
+    "codes": "food_beach",
+    "img": "images/food.png"
   },
   {
     "name": "Pester Balls (Beach)",
     "type": "toggle",
-    "codes": "pester_beach"
+    "codes": "pester_beach",
+    "img": "images/pester.png"
   },
   {
     "name": "PokeFlute (Beach)",
     "type": "toggle",
-    "codes": "flute_beach"
+    "codes": "flute_beach",
+    "img": "images/flute.png"
   },
   {
     "name": "Apple (Tunnel)",
     "type": "toggle",
-    "codes": "food_tunnel"
+    "codes": "food_tunnel",
+    "img": "images/food.png"
   },
   {
     "name": "Pester Balls (Tunnel)",
     "type": "toggle",
-    "codes": "pester_tunnel"
+    "codes": "pester_tunnel",
+    "img": "images/pester.png"
   },
   {
     "name": "PokeFlute (Tunnel)",
     "type": "toggle",
-    "codes": "flute_tunnel"
+    "codes": "flute_tunnel",
+    "img": "images/flute.png"
   },
   {
     "name": "Apple (Volcano)",
     "type": "toggle",
-    "codes": "food_volcano"
+    "codes": "food_volcano",
+    "img": "images/food.png"
   },
   {
     "name": "Pester Balls (Volcano)",
     "type": "toggle",
-    "codes": "pester_volcano"
+    "codes": "pester_volcano",
+    "img": "images/pester.png"
   },
   {
     "name": "PokeFlute (Volcano)",
     "type": "toggle",
-    "codes": "flute_volcano"
+    "codes": "flute_volcano",
+    "img": "images/flute.png"
   },
   {
     "name": "Apple (River)",
     "type": "toggle",
-    "codes": "food_river"
+    "codes": "food_river",
+    "img": "images/food.png"
   },
   {
     "name": "Pester Balls (River)",
     "type": "toggle",
-    "codes": "pester_river"
+    "codes": "pester_river",
+    "img": "images/pester.png"
   },
   {
     "name": "PokeFlute (River)",
     "type": "toggle",
-    "codes": "flute_river"
+    "codes": "flute_river",
+    "img": "images/flute.png"
   },
   {
     "name": "Apple (Cave)",
     "type": "toggle",
-    "codes": "food_cave"
+    "codes": "food_cave",
+    "img": "images/food.png"
   },
   {
     "name": "Pester Balls (Cave)",
     "type": "toggle",
-    "codes": "pester_cave"
+    "codes": "pester_cave",
+    "img": "images/pester.png"
   },
   {
     "name": "PokeFlute (Cave)",
     "type": "toggle",
-    "codes": "flute_cave"
+    "codes": "flute_cave",
+    "img": "images/flute.png"
   },
   {
     "name": "Apple (Valley)",
     "type": "toggle",
-    "codes": "food_valley"
+    "codes": "food_valley",
+    "img": "images/food.png"
   },
   {
     "name": "Pester Balls (Valley)",
     "type": "toggle",
-    "codes": "pester_valley"
+    "codes": "pester_valley",
+    "img": "images/pester.png"
   },
   {
     "name": "PokeFlute (Valley)",
     "type": "toggle",
-    "codes": "flute_valley"
+    "codes": "flute_valley",
+    "img": "images/flute.png"
   },
   {
     "name": "Apple (Rainbow Cloud)",
     "type": "toggle",
-    "codes": "food_cloud"
+    "codes": "food_cloud",
+    "img": "images/food.png"
   },
   {
     "name": "Pester Balls (Rainbow Cloud)",
     "type": "toggle",
-    "codes": "pester_cloud"
+    "codes": "pester_cloud",
+    "img": "images/pester.png"
   },
   {
     "name": "PokeFlute (Rainbow Cloud)",
     "type": "toggle",
-    "codes": "flute_cloud"
+    "codes": "flute_cloud",
+    "img": "images/flute.png"
   },
   {
     "name": "Sign Pictures received",
@@ -704,5 +725,11 @@
     "name": "Press L to Stop",
     "type": "toggle",
     "codes": "lstop"
+  },
+  {
+    "name": "Rainbow Cloud",
+    "type": "static",
+    "img": "images/rainbow.png",
+    "codes": "cloudplate"
   }
 ]

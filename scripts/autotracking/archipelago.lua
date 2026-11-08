@@ -519,6 +519,18 @@ ScriptHost:AddOnLocationSectionChangedHandler("manual", function(section)
 
 end)
 
+-- The per-course Apple / Pester Ball / PokeFlute icons can be clicked by hand
+-- too, so keep the "3/7" counts on the main tool icons in step with them
+-- rather than only refreshing when an item arrives.
+for _, course in ipairs(PER_COURSE_COURSES or {}) do
+    for _, tool in ipairs(PER_COURSE_TOOLS or {}) do
+        local code = tool .. "_" .. course
+        ScriptHost:AddWatchForCode("percourse_" .. code, code, function()
+            if not AUTOTRACK_BUSY then refreshDerivedItems() end
+        end)
+    end
+end
+
 -- add AP callbacks
 -- un-/comment as needed
 Archipelago:AddClearHandler("clear handler", onClear)
