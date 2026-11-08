@@ -85,7 +85,11 @@ AP button.
 - **Per-course unlocks** — with 0.8.0's `per_course_items`, the Apple, Pester Balls and
   PokeFlute are found one course at a time. Each course's checks use that course's copy, and
   the tool icons show how many courses you have it in (`3/7`) rather than lighting up as if
-  you had it everywhere
+  you had it everywhere. Each course nameplate gets its own Apple / Pester Ball / PokeFlute
+  icons beside it, plus a row for the Rainbow Cloud. On a seed without per-course items those
+  icons could never light, so the panel switches to a version without them when you connect.
+  Before connecting, or when tracking by hand, the **Per Course** switch in the Settings popup
+  picks the panel
 - **Hard logic** — 0.8.0's `hard_logic` brings about a dozen checks into logic earlier, some
   with less film. Followed automatically from slot data
 - **Logic** — access rules are generated from the apworld's own rule table, so a check shows

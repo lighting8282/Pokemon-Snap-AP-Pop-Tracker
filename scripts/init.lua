@@ -92,10 +92,14 @@ ScriptHost:LoadScript("scripts/course_items.lua")
 -- layouts, for the same reason: the layout places these items.
 ScriptHost:LoadScript("scripts/seed_settings.lua")
 
+-- the items panel; item_layout.lua swaps in the version without the
+-- per-course tool icons when the seed does not use per_course_items
+Tracker:AddLayouts("layouts/item_grid_percourse.json")
 Tracker:AddLayouts("layouts/items.json")
 Tracker:AddLayouts("layouts/tracker.json")
 Tracker:AddLayouts("layouts/broadcast.json")
 Tracker:AddLayouts("layouts/settings.json")
+ScriptHost:LoadScript("scripts/item_layout.lua")
 
 if PopVersion and PopVersion >= "0.18.0" then
     ScriptHost:LoadScript("scripts/autotracking.lua")

@@ -1,0 +1,163 @@
+{
+  "item_grid": {
+    "type": "array",
+    "orientation": "horizontal",
+    "margin": "0,0",
+    "content": [
+      {
+        "type": "itemgrid",
+        "h_alignment": "left",
+        "item_margin": "0,4",
+        "item_width": 176,
+        "item_height": 40,
+        "rows": [
+          [
+            "gobeach"
+          ],
+          [
+            "gotunnel"
+          ],
+          [
+            "govolcano"
+          ],
+          [
+            "goriver"
+          ],
+          [
+            "gocave"
+          ],
+          [
+            "govalley"
+          ],
+          [
+            "cloudplate"
+          ]
+        ]
+      },
+      {
+        "_percourse": true,
+        "type": "itemgrid",
+        "h_alignment": "left",
+        "item_margin": "2,4",
+        "item_width": 30,
+        "item_height": 40,
+        "rows": [
+          [
+            "food_beach",
+            "pester_beach",
+            "flute_beach"
+          ],
+          [
+            "food_tunnel",
+            "pester_tunnel",
+            "flute_tunnel"
+          ],
+          [
+            "food_volcano",
+            "pester_volcano",
+            "flute_volcano"
+          ],
+          [
+            "food_river",
+            "pester_river",
+            "flute_river"
+          ],
+          [
+            "food_cave",
+            "pester_cave",
+            "flute_cave"
+          ],
+          [
+            "food_valley",
+            "pester_valley",
+            "flute_valley"
+          ],
+          [
+            "food_cloud",
+            "pester_cloud",
+            "flute_cloud"
+          ]
+        ]
+      },
+      {
+        "type": "array",
+        "orientation": "vertical",
+        "margin": "0,0",
+        "content": [
+          {
+            "type": "itemgrid",
+            "h_alignment": "left",
+            "item_margin": "8,4",
+            "item_width": 40,
+            "item_height": 40,
+            "rows": [
+              [
+                "food",
+                "pester"
+              ],
+              [
+                "flute",
+                "dash"
+              ]
+            ]
+          },
+          {
+            "type": "itemgrid",
+            "h_alignment": "left",
+            "item_margin": "0,-24",
+            "item_width": 0,
+            "item_height": 0,
+            "rows": [
+              [
+                ""
+              ]
+            ]
+          },
+          {
+            "type": "itemgrid",
+            "h_alignment": "left",
+            "item_margin": "8,4",
+            "item_width": 55,
+            "item_height": 40,
+            "rows": [
+              [
+                "sign",
+                "progscore"
+              ],
+              [
+                "newpic",
+                "wdflscore"
+              ],
+              [
+                "film",
+                "multscore"
+              ]
+            ]
+          },
+          {
+            "_signs": true,
+            "type": "itemgrid",
+            "h_alignment": "left",
+            "item_margin": "8,4",
+            "item_width": 40,
+            "item_height": 40,
+            "rows": [
+              [
+                "signkingler",
+                "signpinsir"
+              ],
+              [
+                "signkoffing",
+                "signcubone"
+              ],
+              [
+                "signmewtwo",
+                "signdugtrio"
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

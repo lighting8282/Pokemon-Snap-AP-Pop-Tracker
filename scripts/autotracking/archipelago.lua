@@ -127,6 +127,9 @@ function readOptionsFromSlotData(slot_data)
     -- apworld 0.8.0
     HARD_LOGIC    = slot_data["hard_logic"] or 0
     PER_COURSE    = slot_data["per_course_items"] or 0
+    -- show the items panel that matches; worlds before 0.8.0 have no
+    -- per-course items, and an absent key reads as off
+    if setItemLayoutFromSeed then setItemLayoutFromSeed(PER_COURSE ~= 0) end
     MEW_GT_GOAL   = slot_data["good_technique_mew_photo"] or 0
     if MAP_FRAGMENTS < 1 then MAP_FRAGMENTS = 1 end
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then

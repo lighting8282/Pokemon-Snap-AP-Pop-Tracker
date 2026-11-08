@@ -730,6 +730,7 @@
     "name": "Rainbow Cloud",
     "type": "static",
     "img": "images/rainbow.png",
-    "codes": "cloudplate"
+    "codes": "cloudplate",
+    "img_mods": "@disabled"
   }
 ]

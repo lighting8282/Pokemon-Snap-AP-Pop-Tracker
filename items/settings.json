@@ -27,6 +27,13 @@
     "codes": "release"
   },
   {
+    "name": "Per-course tools: show the Apple / Pester Ball / PokeFlute icons beside each course (set from your seed on connect)",
+    "type": "toggle",
+    "img": "images/settings/percourse.png",
+    "codes": "percourseui",
+    "initial_active_state": true
+  },
+  {
     "name": "Complete",
     "type": "toggle",
     "codes": "complete"
