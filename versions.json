@@ -1,6 +1,15 @@
 {
   "versions": [
     {
+      "package_version": "1.8.0.2",
+      "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.8.0.2/SnapTracker-1.8.0.2.zip",
+      "sha256": "ceaa366fb95c6fc63bb3ba84ab19c83cd9c317c492f91eda6b5571950cc4e2da",
+      "changelog": [
+        "The items panel follows your seed: per-course tool icons are shown only when per_course_items is on.",
+        "A Per Course switch in Settings picks the panel before connecting or when tracking by hand."
+      ]
+    },
+    {
       "package_version": "1.8.0.1",
       "download_url": "https://github.com/lighting8282/Pokemon-Snap-AP-Pop-Tracker/releases/download/v1.8.0.1/SnapTracker-1.8.0.1.zip",
       "sha256": "a7f0d22226140dc5f7b50f579ad0b1c521ab2f956da0f5086ae0d775282cf641",
